@@ -18,5 +18,5 @@ nav_order: 2
 	<figcaption>Flair installation prompt that appears after the viewport drag-and-drop.</figcaption>
 </figure>
 
-If MNPRX May 2021 or a previous version was installed for the Maya version where you are installing Flair, you will need to first uninstall MNPRX.
+If MNPRX May 2021 or a previous version was installed where you are installing Flair, you will need to first uninstall MNPRX first.
 {: .warning }
