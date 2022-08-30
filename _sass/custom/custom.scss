@@ -1,11 +1,26 @@
 // Here you can define custom CSS using SCSS
-figcaption {
-    font-size: small;
-    text-align: center;
-    font-style: italic;
-    line-height: 1;
+figure {
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    figcaption {
+        font-size: small;
+        text-align: center;
+        font-style: italic;
+    }
+    &.aio-ui {
+        img {
+            width: 100%;
+        }
+    }
 }
 
 .aio-page-footer {
     font-size: small;
 }
+
+// media queries (https://just-the-docs.github.io/just-the-docs/docs/utilities/responsive-modifiers/)
+// @include mq(sm) {
+//     max-width: 70%;
+// }
