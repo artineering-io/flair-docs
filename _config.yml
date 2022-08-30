@@ -96,15 +96,12 @@ color_scheme: artineering
 
 callouts:
   warning:
-    title: Warning
     color: yellow
 
   info:
-    title: Information
     color: blue
 
   awesome:
-    title: Awesome
     color: green
 
 # Google Analytics Tracking (optional)
