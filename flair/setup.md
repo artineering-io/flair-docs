@@ -177,10 +177,6 @@ After a successful migration, the license in the **other computer will automatic
 
 
 ---
-## FAQ
-### Activation failure
-In case the activation key is not valid, or the existing license is no longer valid, an error message will appear.
-**Retry** will prompt you to enter a valid activation key, and **Cancel** will run MNPRX as demo this session.
 
-Make sure to also check within your spam folder in case you cannot find the email. 
-If the license still has not arrived within an hour [contact us](https://artineering.io/contact) to help you get started.
+## FAQ
+{% include faq/section.html file="setup.md" self-contained=true %}
