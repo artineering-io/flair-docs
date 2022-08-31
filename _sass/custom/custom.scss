@@ -1,4 +1,16 @@
-// Here you can define custom CSS using SCSS
+// Here you can define custom CSS overriding the theme using SCSS
+.main-content h3 {
+    margin-bottom: 0.5em;
+}
+
+.main-content p {
+    text-align: justify;
+}
+
+li {
+    margin: 0.05em auto;
+}
+
 figure {
     img, video {
         display: block;
@@ -14,6 +26,7 @@ figure {
             width: 100%;
         }
     }
+    margin: 0.5rem auto;
 }
 
 p .aio-btn {
@@ -35,7 +48,6 @@ p .aio-btn {
     }
 }
   
-
 .aio-page-footer {
     font-size: small;
 }
