@@ -14,6 +14,8 @@ The engine consists of **two core elements**:
 
 The core components are complemented by our custom materials
 
+Each page has a Table of Contents that will allow you to easily jump to the right section within the documentation.
+
 Why real-time? Stylized rendering thrives when creative choices can be taken immediately instead of waiting for images to render, so we don't settle for less.
 
 However, real-time engines also have their limitations and Flair is no exception. The more complex the scene and the effects that you want to have are, the more powerful of a computer youo will need, so make sure to check the recommended [requirements](#requirements).

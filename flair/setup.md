@@ -6,7 +6,7 @@ nav_order: 2
 # Setup
 {: .no_toc }
 
-<details open markdown="block">
+<details close markdown="block">
   <summary>
     Table of contents
   </summary>
@@ -16,7 +16,6 @@ nav_order: 2
 </details>
 
 
----
 ## Pre-requisites
 
 - Install latest **Visual C++ Redistributable** ([download](https://aka.ms/vs/17/release/vc_redist.x64.exe))
@@ -53,12 +52,12 @@ Installing Flair is as simple as a drag-and-drop.
 3. Open the folder where you extracted Flair in
 4. Drag-and-drop the `install_maya.mel` file onto the Maya viewport
 5. Select for whom you want to install Flair for and click `Accept` ([see options](#installation-options))
-	<figure class="aio-ui">
+	<figure class="aio-ui aio-window">
 		<img src="/media/setup/installation.png" alt="Flair installation prompt">
 		<figcaption>Flair installation prompt that appears after the viewport drag-and-drop.</figcaption>
 	</figure>
 6. Upon successful installation, a restart prompt will appear
-    <figure class="aio-ui">
+    <figure class="aio-ui aio-window">
         <img src="/media/setup/success.png" alt="Dialog stating that the changes were successful">
         <figcaption>Flair has been successfully installed.</figcaption>
     </figure>
@@ -96,7 +95,7 @@ Licenses can be **migrated between computers after 12 hours** have passed from a
 ### First time activation
 The first time Flair is run, you will be prompted with the following dialog:
 
-<figure class="aio-ui">
+<figure class="aio-ui aio-window">
 	<img src="/media/setup/activation_activate.png" alt="First-time activation dialog">
 	<figcaption>Select how you want to activate Flair.</figcaption>
 </figure>
@@ -107,14 +106,14 @@ The first time Flair is run, you will be prompted with the following dialog:
 
 After clicking `Activate with key`, enter the activation key you received when purchasing Flair and click `OK`.
 
-<figure class="aio-ui">
+<figure class="aio-ui aio-window">
 	<img src="/media/setup/activation_key.png" alt="Enter activation key dialog">
 	<figcaption>Enter your activation key in the text box.</figcaption>
 </figure>
 
 Once activated, if the license has never been activated, you will be prompted with the **End-User-License Agreement** (EULA):
 
-<figure class="aio-ui">
+<figure class="aio-ui aio-window">
 	<img src="/media/setup/activation_eula.png" alt="End-User-License Agreement dialog">
 	<figcaption>End-User-License Agreement (EULA).</figcaption>
 </figure>
@@ -127,7 +126,7 @@ The EULAs for each version of Flair can be found below:
 
 Once you have read and agreed to the End-User License Agreement, click on **I Agree**. You will then be asked to confirm the activation on this computer. 
 
-<figure class="aio-ui">
+<figure class="aio-ui aio-window">
 	<img src="/media/setup/activation_confirm.png" alt="Confirm activation dialog">
 	<figcaption>Confirm activation by clicking "Activate".</figcaption>
 </figure>
@@ -146,7 +145,7 @@ You can activate a different license by **installing Flair** again and choosing 
 1. Open the folder where Flair was installed from
 2. Drag-and-drop the `install_maya.mel` file onto the Maya viewport
 3. When prompted if you wish to keep the existing license, click `No`
-    <figure class="aio-ui">
+    <figure class="aio-ui aio-window">
         <img src="/media/setup/installation_license_confirmation.png" alt="License found prompt">
         <figcaption>License found prompt.</figcaption>
     </figure>
@@ -166,7 +165,7 @@ To migrate the license, just follow the same **steps as for the [re-activation](
 
 After inputting the **activation key on the new computer**, you will be prompted to **confirm the migration** of the license.
 
-<figure class="aio-ui">
+<figure class="aio-ui aio-window">
 	<img src="/media/setup/activation_migration.png" alt="Flair migration prompt">
 	<figcaption>Flair license prompt that appears if an existing license is found.</figcaption>
 </figure>
