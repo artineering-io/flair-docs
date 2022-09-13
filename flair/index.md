@@ -3,22 +3,45 @@ title: Overview
 layout: home
 nav_order: 1
 ---
-
 # Overview
-Flair is a **real-time stylized rendering engine** for Autodesk Maya.
-The engine consists of **two core elements**:
+{: .no_toc }
 
-* The **art-direction toolset** contains the tools to art-direct the different stylization effects available for each style. These will allow you to direct the style towards your vision.
+<details close markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
-* The **stylizations** are the shading pipelines that generate the style. Flair features signature styles out-of-the-box such as watercolor, frayed, sketch, cutout and the cat style. In addition, the new Flair graph shader allows you to modify or even generate your own shading pipelines to create your own unique style.
+## Flair breakdown
 
-The core components are complemented by our custom materials
+Flair is a **real-time stylized rendering engine** for Autodesk Maya which consists of **three core elements**
 
-Each page has a Table of Contents that will allow you to easily jump to the right section within the documentation.
+* The [**stylizations**](./stylizations) generate a style using shader pipelines.
 
-Why real-time? Stylized rendering thrives when creative choices can be taken immediately instead of waiting for images to render, so we don't settle for less.
+* The [**materials**](./materials) render the 3D shading information and AOVs of objects.
 
-However, real-time engines also have their limitations and Flair is no exception. The more complex the scene and the effects that you want to have are, the more powerful of a computer youo will need, so make sure to check the recommended [requirements](#requirements).
+* The [**art-direction tools**](./art-direction) control the different stylization effects available for each style.
 
+The **combination** of these core elements **make Flair a unique framework** to produce **stylized art-directed 3D graphics**.
+This is **complemented by the real-time** performance making creative choices immediate, allowing you to **iterate faster towards your final vision**.
 
+Each core element is thoroughly documented here, together with the [**setup and activation**](./setup) of Flair, the [**rendering tools**](./rendering) and other miscellaneous functions found in the [**Flair toolbox**](./toolbox).
 
+Finally, while Flair is production-proven and continuously improved, we have made sure to also document its [**limitations**](./limitations) compared to other offline (non-realtime) renderers.
+
+## Documentation structure
+
+This documentation is structured to be read from top to bottom.
+
+If you haven't installed Flair yet, we recommend starting with the Flair [setup](./setup).  
+Otherwise, you can continue to [Getting Started](./getting-started) to start learning how to use Flair.
+
+Apart from the **search bar at the top**, we've made the effort to provide some **useful features on each page** to make browsing and learning easier:
+* **Table of Contents** at the top to jump to different sections of the page.
+* **Hyperlink Headings** (to the left when hovering over a title) to easily share exact links to them. 
+* **FAQ sections** at the bottom with the most asked questions about the topics covered in each page.
+
+If something is missing in this documentation, feel free to reach out to us via email or Discord.
