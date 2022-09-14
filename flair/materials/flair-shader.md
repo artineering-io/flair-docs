@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Uber Material
+title: Flair shader
 parent: Materials
 nav_order: 2
 ---
@@ -15,7 +15,7 @@ A _ShaderFX_ material has two types of 'attributes': [**Settings**](.#settings) 
 -------------
 
 <figure class="float-right bottom-1 aio-ui">
-	<img src="/media/uber-material/node-AE.png" alt="MNPR uber material node">
+	<img src="/media/flair-shader/node-AE.png" alt="MNPR uber material node">
 	<figcaption>The default mnpr_uber material in the Attribute Editor.</figcaption>
 </figure>
 
@@ -34,7 +34,7 @@ Painterly shading attributes focus on bringing colors into the foreground of sha
 _Cangiante_ illumination changes the hue of the lit area towards a brighter and saturated related color. This attributes can also be used to enhance the color of any applied [_Albedo Texture_](#albedo-texture).
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/cangiante.mp4" type="video/mp4">
+        <source src="/media/flair-shader/cangiante.mp4" type="video/mp4">
     </video>
     <figcaption>Cangiante illumination (0...2.0)</figcaption>
 </figure>
@@ -43,7 +43,7 @@ _Cangiante_ illumination changes the hue of the lit area towards a brighter and 
 _Cangiante Wrap_ defines the area of effect for the [_Cangiante_](#cangiante) illumination attribute.
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/cangiante-wrap.mp4" type="video/mp4">
+        <source src="/media/flair-shader/cangiante-wrap.mp4" type="video/mp4">
     </video>
     <figcaption>Cangiante Wrap (0...1.0)</figcaption>
 </figure>
@@ -52,7 +52,7 @@ _Cangiante Wrap_ defines the area of effect for the [_Cangiante_](#cangiante) il
 _Light_ (prev. Dilute Paint) changes the color of the lit area towards the [_Light Color_](#light-color).
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/light.mp4" type="video/mp4">
+        <source src="/media/flair-shader/light.mp4" type="video/mp4">
     </video>
     <figcaption>Light (0...1.0)</figcaption>
 </figure>
@@ -61,7 +61,7 @@ _Light_ (prev. Dilute Paint) changes the color of the lit area towards the [_Lig
 _Light Wrap_ (prev. Dilute Area) defines the area of effect for the [_Light_](#light) attribute.
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/light-wrap.mp4" type="video/mp4">
+        <source src="/media/flair-shader/light-wrap.mp4" type="video/mp4">
     </video>
     <figcaption>Light Wrap (0...1.0)</figcaption>
 </figure>
@@ -70,7 +70,7 @@ _Light Wrap_ (prev. Dilute Area) defines the area of effect for the [_Light_](#l
 _Light Color_ (prev. Dilute Color) defines a custom color used by the [_Light_](#light) and [_Highlight_](#highlight) attributes.
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/light-color.mp4" type="video/mp4">
+        <source src="/media/flair-shader/light-color.mp4" type="video/mp4">
     </video>
     <figcaption>Different light colors</figcaption>
 </figure>
@@ -79,7 +79,7 @@ _Light Color_ (prev. Dilute Color) defines a custom color used by the [_Light_](
 _Colored Shading_ toggles colored shading of objects, which is then done with the [_Shade Color_](#shade-color) instead of black.
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/colored-shading.mp4" type="video/mp4">
+        <source src="/media/flair-shader/colored-shading.mp4" type="video/mp4">
     </video>
     <figcaption>Colored Shading on/off</figcaption>
 </figure>
@@ -88,7 +88,7 @@ _Colored Shading_ toggles colored shading of objects, which is then done with th
 _Diffuse Factor_ defines the amount of diffuse shading within the material. `0` will be flat shading (entirely lit), `1` will be completely diffuse.
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/diffuse-factor.mp4" type="video/mp4">
+        <source src="/media/flair-shader/diffuse-factor.mp4" type="video/mp4">
     </video>
     <figcaption>Diffuse Factor (0...1.0)</figcaption>
 </figure>
@@ -97,7 +97,7 @@ _Diffuse Factor_ defines the amount of diffuse shading within the material. `0` 
 _Shade_ (prev. Shade Wrap) changes the color of the shade area towards the [_Shade Color_](#shade-color).
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/shade.mp4" type="video/mp4">
+        <source src="/media/flair-shader/shade.mp4" type="video/mp4">
     </video>
     <figcaption>Shade (0...1.0)</figcaption>
 </figure>
@@ -106,7 +106,7 @@ _Shade_ (prev. Shade Wrap) changes the color of the shade area towards the [_Sha
 _Shade Wrap_ defines the area of effect for the _Shade_ attribute. It behaves like the [_Light Wrap_](#light-wrap), but for the shade of an object.
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/shade-wrap.mp4" type="video/mp4">
+        <source src="/media/flair-shader/shade-wrap.mp4" type="video/mp4">
     </video>
     <figcaption>Shade Wrap (0...1.0)</figcaption>
 </figure>
@@ -115,7 +115,7 @@ _Shade Wrap_ defines the area of effect for the _Shade_ attribute. It behaves li
 _Shade Color_ defines a custom color used by the [_Colored Shading_](#colored-shading) and the [_Shade_](#shade) attributes.
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/shade-color.mp4" type="video/mp4">
+        <source src="/media/flair-shader/shade-color.mp4" type="video/mp4">
     </video>
     <figcaption>Different shade colors showcased with the Colored Shading attribute on</figcaption>
 </figure>
@@ -129,7 +129,7 @@ Shading attributes focus on common attributes found in photorealistic materials,
 _Shading_ defines the amount of shading within the material. `0` will be flat shading (entirely unlit), `1` will be shaded. It's the opposite of [_Diffuse Factor_](#diffuse-factor) and won't affect lighting from [_Light Maps_](#lightmap).
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/shading.mp4" type="video/mp4">
+        <source src="/media/flair-shader/shading.mp4" type="video/mp4">
     </video>
     <figcaption>Shading (0...1.0)</figcaption>
 </figure>
@@ -138,7 +138,7 @@ _Shading_ defines the amount of shading within the material. `0` will be flat sh
 _Color Tint_ defines a custom tint color. If no [_Albedo Textures_](#albedo-texture) are used, the color tint will define the overall color of the material. With textures, the color tint will multiply with the albedo texture to tint it accordingly. Leave the color tint white if you only want the color of the albedo texture.
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/color-tint.mp4" type="video/mp4">
+        <source src="/media/flair-shader/color-tint.mp4" type="video/mp4">
     </video>
     <figcaption>Different tint colors showcased with a Diffuse Factor of 0.6</figcaption>
 </figure>
@@ -150,7 +150,7 @@ _Albedo Texture_ is an image which contains the raw colors of the object, withou
 Specifies the file path to the _Albedo Texture_. The path can be absolute or relative to the project root directory.  
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/albedo-tint.mp4" type="video/mp4">
+        <source src="/media/flair-shader/albedo-tint.mp4" type="video/mp4">
     </video>
     <figcaption>Albedo Texture with different tint colors and a Diffuse Factor of 0.85</figcaption>
 </figure>
@@ -166,7 +166,7 @@ Specifies the file path to the _Normal Map_. The path can be absolute or relativ
 Defines the intensity of the normal inclinations in the [_Normal Map_](#normal-map).
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/normal-map.mp4" type="video/mp4">
+        <source src="/media/flair-shader/normal-map.mp4" type="video/mp4">
     </video>
     <figcaption>Normal Map with Bump Depth (0...3.0)</figcaption>
 </figure>
@@ -182,7 +182,7 @@ As not all normal maps are encoded the same way, there is a [_NormalMapTweaks_](
 When the [_NoiseFX_](./../noisefx) tool has been used on the material, the _Stylization (procedural)_ section will appear at the bottom of the _Attribute Editor_. This section contains all the procedural attributes that the _NoiseFX_ tool creates and modifies. Therefore, you can mostly ignore these attributes within the material.
 
 <figure class="aio-ui">
-	<img src="/media/uber-material/stylization-proc-AE.png" alt="Stylization (procedural) attributes">
+	<img src="/media/flair-shader/stylization-proc-AE.png" alt="Stylization (procedural) attributes">
 	<figcaption>Some procedural stylization attributes created through NoiseFX.</figcaption>
 </figure>
 
@@ -199,10 +199,10 @@ The _Reflectance Model_ setting defines the shading algorithm used by the _mnpr_
 
 <figure>
     <div class="d-flex">
-        <img src="/media/uber-material/lambert.png" alt="lambert" style="height:150px">
-        <img src="/media/uber-material/half-lambert.png" alt="half-lambert" style="height:150px">
-        <img src="/media/uber-material/extended-lambert.png" alt="extended-lambert" style="height:150px">
-        <img src="/media/uber-material/angular-lambert.png" alt="angular-lambert" style="height:150px">
+        <img src="/media/flair-shader/lambert.png" alt="lambert" style="height:150px">
+        <img src="/media/flair-shader/half-lambert.png" alt="half-lambert" style="height:150px">
+        <img src="/media/flair-shader/extended-lambert.png" alt="extended-lambert" style="height:150px">
+        <img src="/media/flair-shader/angular-lambert.png" alt="angular-lambert" style="height:150px">
     </div>
 	<figcaption>Available reflectance models: Lambert, Half Lambert, Extended Lambert and Angular Lambert.</figcaption>
 </figure>
@@ -240,7 +240,7 @@ The _Flip-Back-Faces_ setting flips the normals of faces that might be pointing 
 ### Transparency
 The _Transparent_ setting enables the use of alpha masks in the material and unlocks the _Semi-Transparent_ and _Blend-All_ settings directly underneath.
 <figure class="aio-ui">
-	<img src="/media/uber-material/transparent-AE.png" alt="Transparency and Semi-Transparency attributes">
+	<img src="/media/flair-shader/transparent-AE.png" alt="Transparency and Semi-Transparency attributes">
 	<figcaption>The Transparent and Semi-Transparent section in the Attribute Editor.</figcaption>
 </figure>
 
@@ -254,7 +254,7 @@ Specifies the file path to the _Alpha Mask_. The path can be absolute or relativ
 The grayscale value at which the [_Alpha Mask_](#alpha-mask) is transparent. Defines the boundary of the alpha mask in case there are grey values.
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/alpha-mask.mp4" type="video/mp4">
+        <source src="/media/flair-shader/alpha-mask.mp4" type="video/mp4">
     </video>
     <figcaption>Alpha Mask with Alpha Mask Cutoff (0.1...0.9).</figcaption>
 </figure>
@@ -269,7 +269,7 @@ _Transparency Map_ is a greyscale image which embeds the semi-transparency of th
 Specifies the file path to the _Transparency Map_. The path can be absolute or relative to the project root directory.  
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/transparency-map.mp4" type="video/mp4">
+        <source src="/media/flair-shader/transparency-map.mp4" type="video/mp4">
     </video>
     <figcaption>Transparency Map, featuring semi-transparency.</figcaption>
 </figure>
@@ -278,7 +278,7 @@ Specifies the file path to the _Transparency Map_. The path can be absolute or r
 _Transparency_ defines the overall semi-transparency of the material.
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/transparency.mp4" type="video/mp4">
+        <source src="/media/flair-shader/transparency.mp4" type="video/mp4">
     </video>
     <figcaption>Transparency (0...1.0)</figcaption>
 </figure>
@@ -295,7 +295,7 @@ The _Blend-All_ setting (which shows up once the _Semi-Transparency_ setting has
 The _Light Map_ setting enables the use of light maps within the material and creates a new section with light map attributes. Light maps are grayscale maps that define which parts of the material are lit. These can be baked from offline renderers, painted manually or [set up procedurally](#procedural) using _ShaderFX_.
 
 <figure class="aio-ui">
-	<img src="/media/uber-material/light-map-AE.png" alt="Light Map attributes">
+	<img src="/media/flair-shader/light-map-AE.png" alt="Light Map attributes">
 	<figcaption>The Light Map section in the Attribute Editor.</figcaption>
 </figure>
 
@@ -307,12 +307,12 @@ If this attribute is enabled, [_Light Maps_](#lightmap) will add both light and 
 
 <div class="d-flex">
 	<figure>
-		<img src="/media/uber-material/light-map-map.png" alt="Light map used in video"  style="height: 150px">
+		<img src="/media/flair-shader/light-map-map.png" alt="Light map used in video"  style="height: 150px">
 		<figcaption>Light Map supporting Shade in Light Map.</figcaption>
 	</figure>
 	<figure>
 		<video autoplay loop muted playsinline style="height:150px">
-			<source src="/media/uber-material/light-map.mp4" type="video/mp4">
+			<source src="/media/flair-shader/light-map.mp4" type="video/mp4">
 		</video>
 		<figcaption>Light Map applied.</figcaption>
 	</figure>
@@ -330,13 +330,13 @@ _Rim Light_ controls the intensity of the rim light. A value of `0` means that t
 <div class="d-flex">
     <figure>
         <video autoplay loop muted playsinline style="width:200px">
-            <source src="/media/uber-material/rim-light.mp4" type="video/mp4">
+            <source src="/media/flair-shader/rim-light.mp4" type="video/mp4">
         </video>
         <figcaption>Rim Light (0...1.0).</figcaption>
     </figure>
     <figure>
         <video autoplay loop muted playsinline style="width:200px">
-            <source src="/media/uber-material/rim-light-opp.mp4" type="video/mp4">
+            <source src="/media/flair-shader/rim-light-opp.mp4" type="video/mp4">
         </video>
         <figcaption>Rim Light Opposite (0...1.0).</figcaption>
     </figure>
@@ -348,13 +348,13 @@ _Rim Light Wrap_ defines the area of effect of the rim light.
 <div class="d-flex">
     <figure>
         <video autoplay loop muted playsinline style="width:200px">
-            <source src="/media/uber-material/rim-wrap.mp4" type="video/mp4">
+            <source src="/media/flair-shader/rim-wrap.mp4" type="video/mp4">
         </video>
         <figcaption>Rim Light Wrap (0...1).</figcaption>
     </figure>
     <figure>
         <video autoplay loop muted playsinline style="width:200px">
-            <source src="/media/uber-material/rim-wrap-opp.mp4" type="video/mp4">
+            <source src="/media/flair-shader/rim-wrap-opp.mp4" type="video/mp4">
         </video>
         <figcaption>Rim Light Wrap Opposite (0...1).</figcaption>
     </figure>
@@ -365,7 +365,7 @@ Controls the color of the rim light effect. The color is additively blended on t
 
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/rim-color.mp4" type="video/mp4">
+        <source src="/media/flair-shader/rim-color.mp4" type="video/mp4">
     </video>
     <figcaption>Varying the hue of the rim light color.</figcaption>
 </figure>
@@ -375,7 +375,7 @@ Controls the color of the rim light effect. The color is additively blended on t
 ### Highlight
 The _Highlight_ setting generates the [_Highlight Roll Off_](#highlight-roll-off) and [_Highlight Transparency_](#highlight-transparency) attributes in the _Painterly Shading_ material section. These attributes generate a sharp highlight with the [_Light Color_](#light-color).
 <figure class="aio-ui">
-	<img src="/media/uber-material/highlight-AE.png" alt="Highlight attributes">
+	<img src="/media/flair-shader/highlight-AE.png" alt="Highlight attributes">
 	<figcaption>The Highlight attributes in the Paintery Shading section within the Attribute Editor.</figcaption>
 </figure>
 
@@ -384,7 +384,7 @@ _Highlight Roll Off_ defines the size of the highlight in the lit area of object
 
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/highlight-roll-off.mp4" type="video/mp4">
+        <source src="/media/flair-shader/highlight-roll-off.mp4" type="video/mp4">
     </video>
     <figcaption>Highlight Roll Off with an orange Light Color (0...1.0)</figcaption>
 </figure>
@@ -394,7 +394,7 @@ _Highlight Diffusion_ defines how diffuse (blurred) the highlight should be.
 
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/highlight-diffusion.mp4" type="video/mp4">
+        <source src="/media/flair-shader/highlight-diffusion.mp4" type="video/mp4">
     </video>
     <figcaption>Highlight Diffusion (0...1.0)</figcaption>
 </figure>
@@ -404,7 +404,7 @@ _Highlight Transparency_ defines the transparency of the highlight.
 
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/uber-material/highlight-transparency.mp4" type="video/mp4">
+        <source src="/media/flair-shader/highlight-transparency.mp4" type="video/mp4">
     </video>
     <figcaption>Highlight Transparency (0...1.0).</figcaption>
 </figure>
@@ -415,7 +415,7 @@ _Highlight Transparency_ defines the transparency of the highlight.
 The _Specularity_ setting enables the use of [specular reflectance models](#specularmodel) within the material and creates new attributes within the Shading section. Once enabled, two new settings appear underneath: [_specularModel_](#specularmodel) and [_Specular-In-Alpha_](#specular-in-alpha) (if the [_Transparent_](#transparent-and-semi-transparent) setting is also enabled).
 
 <figure class="aio-ui">
-	<img src="/media/uber-material/specularity-AE.png" alt="Specularity settings">
+	<img src="/media/flair-shader/specularity-AE.png" alt="Specularity settings">
 	<figcaption>The Specularity settings in the Attribute Editor.</figcaption>
 </figure>
 
@@ -424,8 +424,8 @@ The _specularModel_ setting defines the shading algorithm used by the _mnpr_uber
 
 <figure>
     <div class="d-flex">
-        <img src="/media/uber-material/blinn.png" alt="Blinn" style="height:150px">
-        <img src="/media/uber-material/anisotropic.png" alt="Anisotropic" style="height:150px">
+        <img src="/media/flair-shader/blinn.png" alt="Blinn" style="height:150px">
+        <img src="/media/flair-shader/anisotropic.png" alt="Anisotropic" style="height:150px">
 	</div>
     <figcaption>Available specular reflectance models: Blinn and Anisotropic.</figcaption>
 </figure>
@@ -435,11 +435,11 @@ Depending on which specular model is selected, different specularity attributes 
 
 <div class="d-flex">
 	<figure class="aio-ui">
-		<img src="/media/uber-material/blinn-AE.png" alt="Blinn specularity attributes">
+		<img src="/media/flair-shader/blinn-AE.png" alt="Blinn specularity attributes">
 		<figcaption>Blinn specularity attributes.</figcaption>
 	</figure>
 	<figure class="aio-ui">
-		<img src="/media/uber-material/anisotropic-AE.png" alt="Anisotropic specularity attributes">
+		<img src="/media/flair-shader/anisotropic-AE.png" alt="Anisotropic specularity attributes">
 		<figcaption>Red: Anisotropic specularity attributes. Cyan: Specular-In-Alpha attributes.</figcaption>
 	</figure>
 </div>
@@ -454,7 +454,7 @@ _Specular Map_ is a greyscale image which defines the specularity within the mat
 Specifies the file path to the _Specular Map_. The path can be absolute or relative to the project root directory.  
 <figure>
     <video autoplay loop muted playsinline style="width:150px">
-        <source src="/media/uber-material/specular-map.mp4" type="video/mp4">
+        <source src="/media/flair-shader/specular-map.mp4" type="video/mp4">
     </video>
     <figcaption>(1) without specularity; (2) with specularity; (3) with specularity and a Specular Map.</figcaption>
 </figure>
@@ -465,19 +465,19 @@ _Specular Roll Off_, _Horizontal Roll Off_ and _Vertical Roll Off_ define the si
 <div class="d-flex">
 	<figure>
 		<video autoplay loop muted playsinline style="height:150px">
-			<source src="/media/uber-material/roll-off.mp4" type="video/mp4">
+			<source src="/media/flair-shader/roll-off.mp4" type="video/mp4">
 		</video>
 		<figcaption style="width:17em">Blinn: Roll Off (0...1.0).</figcaption>
 	</figure>
 	<figure>
 		<video autoplay loop muted playsinline style="height:150px">
-			<source src="/media/uber-material/h-roll-off.mp4" type="video/mp4">
+			<source src="/media/flair-shader/h-roll-off.mp4" type="video/mp4">
 		</video>
 		<figcaption style="width:17em">Anisotropic: Horizontal Roll Off (0...0.5).</figcaption>
 	</figure>
 	<figure>
 		<video autoplay loop muted playsinline style="height:150px">
-			<source src="/media/uber-material/v-roll-off.mp4" type="video/mp4">
+			<source src="/media/flair-shader/v-roll-off.mp4" type="video/mp4">
 		</video>
 		<figcaption style="width:17em">Anisotropic: Vertical Roll Off (0...0.5).</figcaption>
 	</figure>
@@ -490,10 +490,10 @@ _Specular Deffusion_ defines how diffuse or sharp a specular highlight is.
 	<figure>
         <div class="d-flex">
             <video autoplay loop muted playsinline style="height:150px;">
-                <source src="/media/uber-material/blinn-diffusion.mp4" type="video/mp4">
+                <source src="/media/flair-shader/blinn-diffusion.mp4" type="video/mp4">
             </video>
             <video autoplay loop muted playsinline style="height:150px;">
-                <source src="/media/uber-material/anisotropic-diffusion.mp4" type="video/mp4">
+                <source src="/media/flair-shader/anisotropic-diffusion.mp4" type="video/mp4">
             </video>
         </div>
 		<figcaption>Specular Diffusion (0...1.0).</figcaption>
@@ -506,7 +506,7 @@ _Specular Transparency_ defines the transparency of the specular highlight.
 <div>
 	<figure>
 		<video autoplay loop muted playsinline style="height:150px">
-			<source src="/media/uber-material/specular-transparency.mp4" type="video/mp4">
+			<source src="/media/flair-shader/specular-transparency.mp4" type="video/mp4">
 		</video>
 		<figcaption>Specular Transparency (0...1.0).</figcaption>
 	</figure>
@@ -517,11 +517,11 @@ The _Specular-In-Alpha_ setting is only visible if the [_Specularity_](#specular
 
 <div class="d-flex">
 	<figure>
-		<img src="/media/uber-material/no-specular-in-alpha.png" alt="Without Specular-In-Alpha"  style="height: 150px">
+		<img src="/media/flair-shader/no-specular-in-alpha.png" alt="Without Specular-In-Alpha"  style="height: 150px">
 		<figcaption>Without Specular-In-Alpha</figcaption>
 	</figure>
 	<figure>
-		<img src="/media/uber-material/specular-in-alpha.png" alt="With Specular-In-Alpha"  style="height: 150px">
+		<img src="/media/flair-shader/specular-in-alpha.png" alt="With Specular-In-Alpha"  style="height: 150px">
 		<figcaption>With Specular-In-Alpha</figcaption>
 	</figure>
 </div>
@@ -532,7 +532,7 @@ _Alpha Tint_ darkens the alpha parts of the material with a specified color. Thi
 <div>
 	<figure>
 		<video autoplay loop muted playsinline style="height:150px">
-			<source src="/media/uber-material/alpha-tint.mp4" type="video/mp4">
+			<source src="/media/flair-shader/alpha-tint.mp4" type="video/mp4">
 		</video>
 		<figcaption>Alpha Tint with a light red color.</figcaption>
 	</figure>
@@ -544,7 +544,7 @@ _Alpha Tint_ darkens the alpha parts of the material with a specified color. Thi
 The _Displacement_ setting enables the use of displacement within the material and creates a _Displacement_ section with [displacement attributes](#tessellation-factor) in the _Attribute Editor_. Once enabled, a new _Setting_ also appears underneath: [_displacementModel_](#displacementmodel).
 
 <figure class="aio-ui">
-	<img src="/media/uber-material/displacement-AE.png" alt="Displacement section">
+	<img src="/media/flair-shader/displacement-AE.png" alt="Displacement section">
 	<figcaption>The Displacement section in the Attribute Editor.</figcaption>
 </figure>
 
@@ -556,7 +556,7 @@ _Tessellation Factor_ defines the amount of subdivision within each polygon. The
 
 <figure>
     <video autoplay loop muted playsinline style="width:150px">
-        <source src="/media/uber-material/tessellation-factor.mp4" type="video/mp4">
+        <source src="/media/flair-shader/tessellation-factor.mp4" type="video/mp4">
     </video>
     <figcaption>Displacement with different Tesselation Factors (1.0...10.0).</figcaption>
 </figure>
@@ -569,7 +569,7 @@ _Displacement Multiplier_ defines the amount of displacement to use. The higher 
 
 <figure>
     <video autoplay loop muted playsinline style="width:150px">
-        <source src="/media/uber-material/displacement-multiplier.mp4" type="video/mp4">
+        <source src="/media/flair-shader/displacement-multiplier.mp4" type="video/mp4">
     </video>
     <figcaption>Displacement Multiplier (0...0.5).</figcaption>
 </figure>
@@ -579,7 +579,7 @@ _Flat Tessellation Blend_ defines the amount of flatness within the tessellation
 
 <figure>
     <video autoplay loop muted playsinline style="width:150px">
-        <source src="/media/uber-material/flat-tessellation-blend.mp4" type="video/mp4">
+        <source src="/media/flair-shader/flat-tessellation-blend.mp4" type="video/mp4">
     </video>
     <figcaption>Flat Tessellation Blend (0...1.0).</figcaption>
 </figure>
@@ -589,7 +589,7 @@ _Displacement Offset_ offsets parts of the displacement inward, instead of only 
 
 <figure>
     <video autoplay loop muted playsinline style="width:150px">
-        <source src="/media/uber-material/displacement-offset.mp4" type="video/mp4">
+        <source src="/media/flair-shader/displacement-offset.mp4" type="video/mp4">
     </video>
     <figcaption>Displacement Offset (0...1.0).</figcaption>
 </figure>
@@ -603,7 +603,7 @@ _Clipping Bias Add_ defines a small default value to avoid vertices clipping awa
 The _NormalMapTweaks_ setting enables more refined control over the [_Normal Map_](#normal-map) by creating the [_Invert U_ and _Invert V_](#invert) attributes within the _Shading_ section.
 
 <figure class="aio-ui">
-	<img src="/media/uber-material/normal-map-tweaks-AE.png" alt="Normal Map Tweak attributes">
+	<img src="/media/flair-shader/normal-map-tweaks-AE.png" alt="Normal Map Tweak attributes">
 	<figcaption>Invert U and Invert V attributes created by the Normal Map Tweaks setting.</figcaption>
 </figure>
 
@@ -614,10 +614,10 @@ _Invert U_ and _Invert V_ invert the normal inclinations either horizontally or 
 	<figure>
         <div class="d-flex">
             <video autoplay loop muted playsinline style="height:150px;">
-                <source src="/media/uber-material/invert-u.mp4" type="video/mp4">
+                <source src="/media/flair-shader/invert-u.mp4" type="video/mp4">
             </video>
             <video autoplay loop muted playsinline style="height:150px;">
-                <source src="/media/uber-material/invert-v.mp4" type="video/mp4">
+                <source src="/media/flair-shader/invert-v.mp4" type="video/mp4">
             </video>
         </div>
 		<figcaption>Invert U and Invert V.</figcaption>

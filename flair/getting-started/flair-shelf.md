@@ -25,7 +25,7 @@ Don't like working with shelves? The last shelf tool will popup the shelf into i
 The art-direction tools can be found in the left side of the shelf, ordered from highest to lowest level of control.
 1. **FLAIR** - opens the browser with the [Flair documentation](/).
 1. **STYLE** - opens the _Stylization Presets_ to load/save styles and their parameters [[docs](../style-presets)].
-1. **GLOB** - selects the global node to change style attributes [[docs](../config)].
+1. **GLOB** - selects the global node to change style attributes [[docs](../globals)].
 1. **PRES** - opens the _Material Presets_ to load/save predefined Flair materials and their parameters [[docs](../material-presets)].  
 1. **MAT** - selects the materials of currently selected objects or components.   
 `Double click` refreshes the _Attribute Editor_ of the material, fixing any issues that might happen.  
@@ -50,7 +50,10 @@ The lighting and testing tools allow to easily create the supported lights withi
 `Right click -> Custom float viewport` opens a floating viewport with a custom resolution set through a small dialog.
 1. **RENDR** - opens the _Viewport Renderer_, which quickly allows to save screenshots or playblasts [[docs](../rendering#rendr)].
 1. **SEQ** - opens the _Sequence Renderer_, which allows to render sequences and all different passes for production [[docs](../rendering/#target-sequence-renderer)].
-1. **IM/EX** - opens the _Stylization Import/Export_ tool to import or export _.style_ files [[docs](../import-export)]
+1. **IM/EX** - opens the _Stylization Import/Export_ tool to import or export _.style_ files [[docs](../import-export)]  
+`Right click -> Custom auto-import` function found in: `flair_import_export.auto_import_style()`.  
+`Right click -> Custom import` function found in: `flair_import_export.custom_import()`.  
+Custom import functions can be overriden depending on the project's pipeline.
 1. **SUPP.** - opens the browser straight to [support at the Artineering page](https://artineering.io/support/).
 
 ## Popup shelf
