@@ -1,9 +1,11 @@
 ---
 layout: default
 title: Cat
-parent: Style Library
+parent: Style library
 grand_parent: Styles
 nav_order: 5
 ---
 
-Coming soon...
+# Cat Style
+
+<i class="fas fa-construction"></i> Coming soon...

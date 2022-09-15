@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Sketch
-parent: Style Library
+parent: Style library
 grand_parent: Styles
 nav_order: 6
 ---
 
-Coming soon...
+<i class="fas fa-construction"></i> Coming soon...

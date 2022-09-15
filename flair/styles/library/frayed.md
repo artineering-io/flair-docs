@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Frayed
-parent: Style Library
+parent: Style library
 grand_parent: Styles
 nav_order: 3
 ---

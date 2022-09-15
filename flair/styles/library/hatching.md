@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Hatching
-parent: Style Library
+parent: Style library
 grand_parent: Styles
 nav_order: 4
 ---

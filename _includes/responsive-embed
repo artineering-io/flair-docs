@@ -1,0 +1,19 @@
+{%- if include.width -%}
+  {%- assign width = include.width -%}
+{%- else -%}
+  {%- assign width = '100%' -%}
+{%- endif -%}
+
+<figure class="aio-responsive-embed" style="width:{{width}};margin-right:auto;margin-left:auto;">
+{%- if jekyll.environment == 'production' -%}
+  <iframe src="{{ include.url }}" frameborder="0" allowfullscreen></iframe>
+{%- else -%}
+  {%- if include.local -%}
+    <video controls>
+      <source src="/media{{ include.local }}" type="video/mp4">
+    </video>
+  {%- else -%}
+    <iframe src="{{ include.url }}" frameborder="0" allowfullscreen></iframe>
+  {%- endif -%}
+{%- endif -%}
+</figure>

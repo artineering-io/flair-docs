@@ -75,6 +75,13 @@ p .aio-btn {
         color: $grey-dk-100;
     }
 }
+
+.aio-responsive-embed{
+    iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+}
   
 .aio-page-footer {
     font-size: small;
