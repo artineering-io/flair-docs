@@ -37,13 +37,13 @@ This ideal workflow is also encouraged through the [Flair shelf](./flair-shelf),
 	<figcaption>The tools in the Flair shelf go from the highest (left) to the lowest level of control (right).</figcaption>
 </figure>
 
-The art-direction at each level of control is bound to the 3D scene. However, one can easily export and import the art-direction across scenes using the [Import/Export tool](/flair/stylizations/import-export/).
+The art-direction at each level of control is bound to the 3D scene. However, one can easily export and import the art-direction across scenes using the [Import/Export tool](/flair/styles/import-export/).
 {: .info}
 
 Each level of control is introduced in the sections below, click on the hyperlinks to open the documentation of the different tools.
 
 ## Style presets and global control
-At the top level of control are [_Style Presets_](/flair/stylizations/presets/) (`STYLE` button in the [_Flair Shelf_](./flair-shelf/)), which allow to quickly change the style that Flair is running.
+At the top level of control are [_Style Presets_](/flair/styles/presets/) (`STYLE` button in the [_Flair Shelf_](./flair-shelf/)), which allow to quickly change the style that Flair is running.
 
 <figure>
  <video autoplay loop muted playsinline>
@@ -54,7 +54,7 @@ At the top level of control are [_Style Presets_](/flair/stylizations/presets/) 
 
 _Style Presets_ save and load predefined attributes (parameters) of the Flair [_globals node_](./globals/).
 
-The Flair [_globals node_](./globals/) (`GLOB` button in the [_Flair Shelf_](./flair-shelf/)) contains every global attribute available in the engine and active stylization. Being globals, these attributes usually affect the entire image.
+The Flair [_globals node_](./globals/) (`GLOB` button in the [_Flair Shelf_](./flair-shelf/)) contains every global attribute available in the engine and active style. Being globals, these attributes usually affect the entire image.
 
 <figure>
  <video autoplay loop muted playsinline>
@@ -89,7 +89,7 @@ Painterly materials are crucial to develop styles that do not conform to physica
 By not being constrained to photorealism, the same material can look completely different even under the same lighting conditions. However, painterly materials still need to work in unison to form a coherent look. For this purpose, you can change attributes of multiple materials at the same time using the [Bulk Attribute](/flair/art-direction/bulkattr/) tool (`BULK` button in the [_Flair Shelf_](./flair-shelf/)).
 {: .info}
 
-Our custom materials can also drive stylization effects procedurally through the use of [_NoiseFX_](/flair/art-direction/noisefx/).
+Our custom materials can also drive style effects procedurally through the use of [_NoiseFX_](/flair/art-direction/noisefx/).
 
 ### NoiseFX
 The [_NoiseFX_](/flair/art-direction/noisefx/) tool (`NFX` button in the [_Flair Shelf_](./flair-shelf/)) allows to control effects procedurally from within the material. When used subtly, the tool can quickly produce natural-looking fluctuations within effects. 
@@ -105,7 +105,7 @@ The [_NoiseFX_](/flair/art-direction/noisefx/) tool (`NFX` button in the [_Flair
 
 The lowest level of control is mapped control, which are parameters mapped onto objects either at the vertex- (_VertexFX_) or texture-space level.
 ### VertexFX
-The [_VertexFX_](/flair/art-direction/vertexfx/) tool (`VFX` button in the [_Flair Shelf_](./flair-shelf/)), allows to paint effects onto the 3D objects at the vertex level (effects are assigned per vertex). The tool can provide meticulous local control over the stylization.
+The [_VertexFX_](/flair/art-direction/vertexfx/) tool (`VFX` button in the [_Flair Shelf_](./flair-shelf/)), allows to paint effects onto the 3D objects at the vertex level (effects are assigned per vertex). The tool can provide meticulous local control over the style.
 
 <figure>
  <video autoplay loop muted playsinline>
@@ -117,7 +117,7 @@ The [_VertexFX_](/flair/art-direction/vertexfx/) tool (`VFX` button in the [_Fla
 
 ## Proxy control
 
-In parallel to all levels of control are [_Proxies_](/flair/materials/proxy-material/) (created by loading the _\_proxy_ material preset: `PRES` button in the [_Flair Shelf_](./flair-shelf/)). Proxies are invisible objects that control your stylization.
+In parallel to all levels of control are [_Proxies_](/flair/materials/proxy-material/) (created by loading the _\_proxy_ material preset: `PRES` button in the [_Flair Shelf_](./flair-shelf/)). Proxies are invisible objects that control your style.
 
 Geometry proxies can take the form of arbitrary 3D objects i.e., spheres, complex objects or planes. All proxies can be placed in your scene to control and stylize whatever is behind them. Their usage in 3D is versatile, as they can be placed onto a small part of your scene, or over the entire scene, in the form of a filter plane.
 

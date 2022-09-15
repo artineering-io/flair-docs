@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Flair Graph
-parent: Stylizations
+parent: Styles
 nav_order: 3
 has_children: true
 ---

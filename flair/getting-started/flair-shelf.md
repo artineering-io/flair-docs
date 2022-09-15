@@ -24,7 +24,7 @@ Don't like working with shelves? The last shelf tool will popup the shelf into i
 ## Art-direction
 The art-direction tools can be found in the left side of the shelf, ordered from highest to lowest level of control.
 1. **FLAIR** - opens the browser with the [Flair documentation](/).
-1. **STYLE** - opens the _Stylization Presets_ to load/save styles and their parameters [[docs](../presets)].
+1. **STYLE** - opens the _Style Presets_ to load/save styles and their parameters [[docs](../presets)].
 1. **GLOB** - selects the global node to change style attributes [[docs](../globals)].
 1. **PRES** - opens the _Material Presets_ to load/save predefined Flair materials and their parameters [[docs](../material-presets)].  
 1. **MAT** - selects the materials of currently selected objects or components.   
@@ -38,7 +38,7 @@ The art-direction tools can be found in the left side of the shelf, ordered from
 ## Lighting/Testing
 The lighting and testing tools allow to easily create the supported lights within Flair and to troubleshoot if things are not looking quite right.
 1. **Supported lights** - shelf icons for the four different supported lights: ambient, directional, point (no shadow maps) and spot light.
-1. **PASS** - opens the _Pass Inspector_, which lets you toggle on/off each stylization pass and troubleshoot the inner workings of the stylization itself.
+1. **PASS** - opens the _Pass Inspector_, which lets you toggle on/off each style pass and troubleshoot the inner workings of the style itself.
 1. **TEST** - creates our favourite sphere with default lighting.
 
 
@@ -50,7 +50,7 @@ The lighting and testing tools allow to easily create the supported lights withi
 `Right click -> Custom float viewport` opens a floating viewport with a custom resolution set through a small dialog.
 1. **RENDR** - opens the _Viewport Renderer_, which quickly allows to save screenshots or playblasts [[docs](../rendering#rendr)].
 1. **SEQ** - opens the _Sequence Renderer_, which allows to render sequences and all different passes for production [[docs](../rendering/#target-sequence-renderer)].
-1. **IM/EX** - opens the _Stylization Import/Export_ tool to import or export _.style_ files [[docs](../import-export)]  
+1. **IM/EX** - opens the _Import/Export_ tool to import or export _.style_ files [[docs](../import-export)]  
 `Right click -> Custom auto-import` function found in: `flair_import_export.auto_import_style()`.  
 `Right click -> Custom import` function found in: `flair_import_export.custom_import()`.  
 Custom import functions can be overriden depending on the project's pipeline.

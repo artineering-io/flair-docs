@@ -2,7 +2,7 @@
 layout: default
 title: Frayed
 parent: Style Library
-grand_parent: Stylizations
+grand_parent: Styles
 nav_order: 3
 ---
 

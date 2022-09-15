@@ -9,7 +9,7 @@ _VertexFX_ is a tool which grants [localized control of effects](#showcase) at t
 
 <figure class="float-right aio-ui" style="margin-top:-1em;">
 	<img src="/media/vertexFX/vertexFX.png" alt="VertexFX tool window">
-	<figcaption>VertexFX of the watercolor stylization.</figcaption>
+	<figcaption>VertexFX of the watercolor style.</figcaption>
 </figure>
 
 Each _MNPRX_ material ([uber](../uber) and [proxy](../proxy)) supports _VertexFX_, but the effects driven by _VertexFX_ depend on the loaded style. To use _VertexFX_ select an object with an _MNPRX_ material and click on the paint icon of the effect that you want to paint with.
@@ -32,7 +32,7 @@ The next row of icons allow you to set the brush stamp to use when painting the 
 
 
 ## Paint Widgets
-Each style has different effects, therefore, the paint widgets (sections) will vary depending on the currently loaded stylization. Each widget (section) handles a specific effect/behaviour within the style e.g., _Lighting_, _Pigment turbulence_, _Color bleeding_.
+Each style has different effects, therefore, the paint widgets (sections) will vary depending on the currently loaded style. Each widget (section) handles a specific effect/behaviour within the style e.g., _Lighting_, _Pigment turbulence_, _Color bleeding_.
 
 On the left side of each widget, you will find a term for the generalized behaviour of each effect. This is followed by a _Brush_, indicating what the behavior/effect does. By clicking on the _Brush_ you can quickly start painting the effect with the currently defined values on selected objects. Before going into more details on painting, underneath the _Brush_ icon, you will find three buttons, which will allow to animate _VertexFX_ values.
 

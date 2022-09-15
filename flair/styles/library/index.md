@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Style Library
-parent: Stylizations
+parent: Styles
 nav_order: 2
 has_children: true
 ---

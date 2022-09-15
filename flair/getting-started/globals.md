@@ -17,27 +17,27 @@ nav_order: 2
 {:toc}
 </details>
 
-The Flair Globals node gets selected when clicking on the `GLOB` icon in the [*Flair shelf*](../flair-shelf) and looks somewhat similar to the figure below---depending on the active stylization. This node contains every global parameter available in the active stylization and each value is usually applied over the entire image.
+The Flair Globals node gets selected when clicking on the `GLOB` icon in the [*Flair shelf*](../flair-shelf) and looks somewhat similar to the figure below---depending on the active styke. This node contains every global parameter available in the active style and each value is usually applied over the entire image.
 
-It is imperative to understand what each attribute does and how it affects the stylization, but it is also fun to simply experiment with them and make happy accidents. The attributes in the style configuration node are separated into three groups: [*Engine*](#engine), [*Style*](#style) and [*Canvas*](#canvas).
+It is imperative to understand what each attribute does and how it affects the style, but it is also fun to simply experiment with them and make happy accidents. The attributes in the style configuration node are separated into three groups: [*Engine*](#engine), [*Style*](#style) and [*Canvas*](#canvas).
 
 <figure class="aio-ui">
 	<img src="/media/globals/globals.png" alt="Style globals node">
-	<figcaption>The globals node showing all the watercolor stylization attributes.</figcaption>
+	<figcaption>The globals node showing all the watercolor style attributes.</figcaption>
 </figure>
 
 ## Engine
-Engine attributes remain the same across stylizations and contain attributes directly related to the Flair engine. These attributes can change the fidelity and performance of the stylization.
+Engine attributes remain the same across styles and contain attributes directly related to the Flair engine. These attributes can change the fidelity and performance of the stylization.
 
 ### Style
 Defines the style that Flair is currently running in.
-* [**Graph**](/flair/stylizations/graph/) - The Flair Graph stylization (customizable)
-* [**Watercolor**](/flair/stylizations/library/watercolor/) - The watercolor stylization (default)
-* [**Cutout**](/flair/stylizations/library/cutout/) - 3D Cutout stylization
-* [**Hatching**](/flair/stylizations/library/hatching/) - Hatching and stippling stylization
-* [**Frayed**](/flair/stylizations/library/frayed/) - Frayed edges stylization
-* [**Cat**](/flair/stylizations/library/cat/) - Cat stylization
-* [**Sketch**](/flair/stylizations/library/sketch/) - Sketch and outlines stylization
+* [**Graph**](/flair/styles/graph/) - The Flair Graph style (customizable)
+* [**Watercolor**](/flair/styles/library/watercolor/) - The watercolor style (default)
+* [**Cutout**](/flair/styles/library/cutout/) - 3D Cutout style
+* [**Hatching**](/flair/styles/library/hatching/) - Hatching and stippling style
+* [**Frayed**](/flair/styles/library/frayed/) - Frayed edges style
+* [**Cat**](/flair/styles/library/cat/) - Cat style
+* [**Sketch**](/flair/styles/library/sketch/) - Sketch and outlines style
 
 ### Quality
 Defines the quality of rendering.
@@ -58,7 +58,7 @@ Anti-aliasing makes edges appear smoother and less pixelated, you can find more 
 </figure>
 
 ### World Scale
-Defines how many _Maya_ units is considered one "meter" in the virtual world. Since most projects work with assets at different scales, setting up the _World Scale_ right will help the stylization behave correctly.
+Defines how many _Maya_ units is considered one "meter" in the virtual world. Since most projects work with assets at different scales, setting up the _World Scale_ right will help the style behave correctly.
 
 Example: if your character is supposed to be one meter high in his world, but is actually 5 units high in _Maya_, the _World Scale_ attribute should be set to 5.
 {: .info}
@@ -97,16 +97,16 @@ These locators can also be constrained/parented to a camera to have the front an
 
 
 ## Style
-Style attributes contain the attributes of the currently loaded stylization. In the case of the figure above: watercolor.
+Style attributes contain the attributes of the currently loaded style. In the case of the figure above: watercolor.
 
-These attributes allow to globally control the stylization parameters and are documented for each style.
+These attributes allow to globally control the parameters the style and are documented below.
 
-* [**Watercolor**](/flair/stylizations/library/watercolor/)
-* [**Cutout**](/flair/stylizations/library/cutout/)
-* [**Hatching**](/flair/stylizations/library/frayed/)
-* [**Frayed**](/flair/stylizations/library/frayed/)
-* [**Cat**](/flair/stylizations/library/cat/)
-* [**Sketch**](/flair/stylizations/library/sketch/)
+* [**Watercolor**](/flair/styles/library/watercolor/)
+* [**Cutout**](/flair/styles/library/cutout/)
+* [**Hatching**](/flair/styles/library/frayed/)
+* [**Frayed**](/flair/styles/library/frayed/)
+* [**Cat**](/flair/styles/library/cat/)
+* [**Sketch**](/flair/styles/library/sketch/)
 
 When using a custom _Graph_ style, the style attributes will auto-populate depending on the _Globals_ defined in the graph.
 {: .info}
@@ -114,7 +114,7 @@ When using a custom _Graph_ style, the style attributes will auto-populate depen
 -----------
 
 ## Canvas
-Canvas attributes contain the attributes of the texture where paint is applied on, be it paper or canvas. Altering these attributes will affect all effects that depend on the canvas for its stylization.
+Canvas attributes contain the attributes of the texture where paint is applied on, be it paper or canvas. Altering these attributes will affect all effects that depend on the canvas for its style.
 
 ### Canvas Synthesis
 Defines if an infinite canvas should be created from the given texture. Infinite canvases are completely seamless and can be generated from any heightmap texture within the `textures` folder of Flair.
@@ -184,7 +184,7 @@ Advection can only be seen if the _VelocityPV_ attribute is checked and the anim
 ---
 
 ### Main Canvas
-Contains the attributes that define the main canvas texture of the stylization.
+Contains the attributes that define the main canvas texture of the style.
 
 #### Canvas Texture
 Defines the main texture that is going to be used as the canvas. Flair comes with more than 10 different canvas heightmaps to choose from. You can load any heightmap, as long as they are in the `textures` folder within Flair.
@@ -252,7 +252,7 @@ Enables to smoothly blend two canvas tiles. That means that the _Canvas Tile_ at
 
 
 ### Alternate Canvas
-Contains the attributes that control the alternate canvas texture of the stylization, for styles that make use of two canvas textures. Control of this canvas is independent from the main canvas.
+Contains the attributes that control the alternate canvas texture of the style, for styles that make use of two canvas textures. Control of this canvas is independent from the main canvas.
 This group is closed by default, but can be opened by clicking on it.  
 The attributes are the same as the main canvas: see above for the corresponding documentation.
 

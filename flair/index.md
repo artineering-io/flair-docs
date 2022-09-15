@@ -19,11 +19,11 @@ nav_order: 1
 
 Flair is a **real-time stylized rendering engine** for Autodesk Maya which consists of **three core elements**
 
-* The [**stylizations**](./stylizations) generate a style using shader pipelines.
+* The [**styles**](./styles) stylize images using shader pipelines.
 
 * The [**materials**](./materials) render the 3D shading information and AOVs of objects.
 
-* The [**art-direction tools**](./art-direction) control the different stylization effects available for each style.
+* The [**art-direction tools**](./art-direction) control the different effects available for each style.
 
 The **combination** of these core elements **make Flair a unique framework** to produce **stylized art-directed 3D graphics**.
 This is **complemented by the real-time** performance making creative choices immediate, allowing you to **iterate faster towards your final vision**.

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Style Presets
-parent: Stylizations
+parent: Styles
 nav_order: 1
 ---
 

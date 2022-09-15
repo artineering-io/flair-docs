@@ -20,7 +20,7 @@ The _NoiseFX_ tool simplifies the [procedural control of effects](#showcase) on 
 
 <figure class="float-right aio-ui aio-window">
 	<img src="/media/noisefx/noiseFX.png" alt="NoiseFX tool window">
-	<figcaption>NoiseFX of the watercolor stylization.</figcaption>
+	<figcaption>NoiseFX of the watercolor style.</figcaption>
 </figure>
 
 Each Flair material supports NoiseFX, but the effects driven by NoiseFX depend on the loaded style. To apply NoiseFX, select an object with a Flair material and modify the desired slider.
@@ -38,7 +38,7 @@ On the top-right, you will find the `Bake 3D` button. This button toggles the `D
 
 
 ## Noise widgets
-Each style has different effects, therefore, the noise widgets (sections) will vary depending on the currently loaded stylization. Each widget (section) handles a specific effect/behaviour within the style e.g., _Lighting_, _Pigment turbulence_, _Color bleeding_.
+Each style has different effects, therefore, the noise widgets (sections) will vary depending on the currently loaded style. Each widget (section) handles a specific effect/behaviour within the style e.g., _Lighting_, _Pigment turbulence_, _Color bleeding_.
 
 ### Toggle/reset
 On the left side of each widget, you will find a term for the generalized behaviour of each effect. This is followed by a sphere preview, visually showcasing what the behavior/effect does. Underneath the preview, you will find two buttons.
@@ -47,7 +47,7 @@ On the left side of each widget, you will find a term for the generalized behavi
 	<img src="/media/ui/icons/io.png" alt="NoiseFX toggle"  style="max-height: 32px">
 </figure>
 
-This button toggles the NoiseFX on/off to visualize the influence that the noise makes for the stylization.
+This button toggles the NoiseFX on/off to visualize the influence that the noise makes for the style.
 
 <figure class="float-left">
  <img src="/media/ui/icons/reset.png" alt="Reset NoiseFX"  style="max-height: 32px">
@@ -80,8 +80,8 @@ The NoiseFX tool simplifies the toggling and modifying of procedural attributes 
 These can be found within each material when opening the NoiseFX group in the Attribute editor.
 
 <figure class="aio-ui">
-	<img src="/media/noisefx/noiseFX_AE.png" alt="Stylization (procedural) attributes">
-	<figcaption>Some procedural stylization attributes within the material, created through NoiseFX.</figcaption>
+	<img src="/media/noisefx/noiseFX_AE.png" alt="NoiseFX attributes">
+	<figcaption>Some procedural attributes within the material, created through NoiseFX.</figcaption>
 </figure>
 
 ## FAQ

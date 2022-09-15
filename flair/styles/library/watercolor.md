@@ -2,7 +2,7 @@
 layout: default
 title: Watercolor
 parent: Style Library
-grand_parent: Stylizations
+grand_parent: Styles
 nav_order: 1
 ---
 

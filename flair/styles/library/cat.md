@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Sketch
+title: Cat
 parent: Style Library
-grand_parent: Stylizations
-nav_order: 6
+grand_parent: Styles
+nav_order: 5
 ---
 
 Coming soon...
