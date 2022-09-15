@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Stylization Presets
+title: Style Presets
 parent: Stylizations
 nav_order: 1
 ---
@@ -8,7 +8,7 @@ nav_order: 1
 _Stylization presets_ allow artists to easily switch between styles and stylization parameters within MNPRX. This tool can be opened by clicking on the `style` [shelf icon](../shelf).
 
 <figure class="aio-ui">
-	<img src="/media/style-presets/style-2.png" alt="Stylization presets window">
+	<img src="/media/presets/style-2.png" alt="Stylization presets window">
 	<figcaption>The Stylization presets window will look similar to this, depending on which presets you have available.</figcaption>
 </figure>
 

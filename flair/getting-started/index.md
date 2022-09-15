@@ -43,7 +43,7 @@ The art-direction at each level of control is bound to the 3D scene. However, on
 Each level of control is introduced in the sections below, click on the hyperlinks to open the documentation of the different tools.
 
 ## Style presets and global control
-At the top level of control are [_Style Presets_](/flair/stylizations/style-presets/) (`STYLE` button in the [_Flair Shelf_](./flair-shelf/)), which allow to quickly change the style that Flair is running.
+At the top level of control are [_Style Presets_](/flair/stylizations/presets/) (`STYLE` button in the [_Flair Shelf_](./flair-shelf/)), which allow to quickly change the style that Flair is running.
 
 <figure>
  <video autoplay loop muted playsinline>

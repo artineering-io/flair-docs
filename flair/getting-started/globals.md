@@ -19,7 +19,7 @@ nav_order: 2
 
 The Flair Globals node gets selected when clicking on the `GLOB` icon in the [*Flair shelf*](../flair-shelf) and looks somewhat similar to the figure below---depending on the active stylization. This node contains every global parameter available in the active stylization and each value is usually applied over the entire image.
 
-It is imperative to understand what each attribute does and how it affects the stylization, but it is also fun to simply experiment with them and make happy accidents. The attributes in the style configuration node are separated into three groups: *Engine*, *Style* and *Canvas*.
+It is imperative to understand what each attribute does and how it affects the stylization, but it is also fun to simply experiment with them and make happy accidents. The attributes in the style configuration node are separated into three groups: [*Engine*](#engine), [*Style*](#style) and [*Canvas*](#canvas).
 
 <figure class="aio-ui">
 	<img src="/media/globals/globals.png" alt="Style globals node">
@@ -94,76 +94,23 @@ These locators can also be constrained/parented to a camera to have the front an
 {: .info}
 
 -----------
------------
 
 
 ## Style
-Style attributes change depending on the active stylization that Flair is currently running. These attributes change the overall look of effects on the entire image.
+Style attributes contain the attributes of the currently loaded stylization. In the case of the figure above: watercolor.
 
----
-### Bloom
-Bloom, sometimes also referred to as Glow, leaks light from bright areas into surrounding areas.
+These attributes allow to globally control the stylization parameters and are documented for each style.
 
-#### Bloom Intensity
-Defines the intensity/amount of the bloom effect.
+* [**Watercolor**](/flair/stylizations/library/watercolor/)
+* [**Cutout**](/flair/stylizations/library/cutout/)
+* [**Hatching**](/flair/stylizations/library/frayed/)
+* [**Frayed**](/flair/stylizations/library/frayed/)
+* [**Cat**](/flair/stylizations/library/cat/)
+* [**Sketch**](/flair/stylizations/library/sketch/)
 
-#### Bloom Size
-Defines the threshold at which a pixel is bright enough to be considered for the bloom effect.
-
-#### Bloom Blur
-Defines the radious of light leakage to the surrounding areas.
-
----
-
-### Ambient Occlusion
-
-Ambient Occlusion (AO) darkens the image in areas that are hard to reach for the ambient light due to the local shape of the geometry (e.g. concavities, crevices, holes). Note that this effect depends only on the geometry (and the viewpoint, to a lesser extent), and not on the lights present in the scene.
-
-Flair currently uses a screen-space implementation of ambient occlusion based on the _Ground-Truth Ambient Occlusion_ algorithm (GTAO).
+When using a custom _Graph_ style, the style attributes will auto-populate depending on the _Globals_ defined in the graph.
 {: .info}
 
-#### AO Blend Mode
-Defines how the computed ambient occlusion is applied on the final image.
-* **None**: AO is not applied.
-* **Multiply**: the AO is multiplied over the image.
-* **Color Burn**: same as above, except that the AO is blended over the image using the _Color Burn_ blending mode.
-* **Style-specific**: AO is applied by the current style so the effect depends on the style implementation. (default)
-	* With styles other than the *Graph* styles, the AO modulates the *pigment density*, resulting in darker colors in occluded areas.
-
-#### AO Radius
-Defines the radius used by the ambient occlusion filter: larger radius results in larger darkened areas.
-
-#### AO Strength
-Defines the strength of ambient occlusion: higher values make the ambient occlusion darker.
-
----
-
-#### Watercolor
-### Atmosphere Tint
-Defines a custom atmospheric perspective color, making things at distance tint towards the specified color.
-
-### Atmosphere Range
-Defines the range at which the atmospheric tint will start and end.
-
-The units work as meter/cm, so keep the  _World Scale_ in mind when setting up this attribute.
-{: .info}
-
-
-
-
------------
------------
-
-
-## Style Attributes
-Style attributes contain the attributes of the currently loaded stylization, in the case of the figure above: watercolor. These attributes allow to globally tweak the stylization parameters and are documented for each style.
-
-* [Watercolor](/styles/watercolor/#style-attributes)
-* [Cutout](/styles/cutout/#style-attributes)
-* [Hatching](/styles/hatching/#style-attributes)
-* [Frayed](/styles/frayed/#style-attributes)
-
------------
 -----------
 
 ## Canvas
@@ -218,17 +165,17 @@ Defines how much the canvas should be panned vertically.
 ---
 
 
-## Advection
-Advection attaches the canvas to the undelaying animation, reducing the _shower door_ effect commonly known in non-photorealistic rendering when the canvas appears to float above the animation.  
+### Advection
+Advection attaches the canvas to the underlaying animation, reducing the _shower door_ effect commonly known in non-photorealistic rendering when the canvas appears to float above the animation.  
 This group is closed by default, but can be opened by clicking on it.
 
-### Canvas Advection
+#### Canvas Advection
 Enables/Disables canvas advection in the scene.
 
 Big amounts of motion will distort canvas-based effects. It is recommended to refresh the canvas with the _Canvas Tile_ attribute once in a while to reset the texture or use _Canvas Advection_ with _Canvas Regeneration_ to attach the texture to the underlaying motion.
 {: .info}
 
-### Canvas Regeneration
+#### Canvas Regeneration
 Defines the speed of regeneration in seconds for distorted canvases.
 
 Advection can only be seen if the _VelocityPV_ attribute is checked and the animation is playing.
@@ -236,25 +183,25 @@ Advection can only be seen if the _VelocityPV_ attribute is checked and the anim
 
 ---
 
-## Main Canvas
+### Main Canvas
 Contains the attributes that define the main canvas texture of the stylization.
 
-### Canvas Texture
+#### Canvas Texture
 Defines the main texture that is going to be used as the canvas. Flair comes with more than 10 different canvas heightmaps to choose from. You can load any heightmap, as long as they are in the `textures` folder within Flair.
 
 The _Canvas Synthesis_ attribute will automatically make an infinite canvas of any heightmap texture. Feel free to add your own textures and experiment with different canvas blends.
 {: .info}
 
-### Canvas Color
+#### Canvas Color
 Defines the color of the canvas.
 
-###	Canvas Scale
+####	Canvas Scale
 Defines the linear scale of the canvas texture.
 
-### Canvas Rotation
+#### Canvas Rotation
 Defines the rotation in degrees of the canvas texture. The center of the viewport is used as the rotation pivot.
 
-###	Canvas Roughness
+####	Canvas Roughness
 Defines the global roughness of the canvas.
 
 <figure>
@@ -264,10 +211,10 @@ Defines the global roughness of the canvas.
 	<figcaption>Roughness between 0 and 5.0.</figcaption>
 </figure>
 
-_Canvas Roughness_ will affect **all** canvas-based effects.
+_Canvas Roughness_ will affect **ALL** canvas-based effects.
 {: .warning}
 
-###	Canvas Shading
+####	Canvas Shading
 Defines the amount of external diffuse shading of the canvas.
 
 <figure>
@@ -280,7 +227,7 @@ Defines the amount of external diffuse shading of the canvas.
 The shading is caused by the _Canvas Light Dir_ and _Canvas Light Tilt_ attributes.
 {: .info}
 
-### Canvas Tile
+#### Canvas Tile
 Loads a new canvas tile at every round number i.e., `1.0`, `2.0`, `3.0`.
 <figure>
 	<video autoplay loop muted playsinline>
@@ -292,7 +239,7 @@ Loads a new canvas tile at every round number i.e., `1.0`, `2.0`, `3.0`.
 Loading a new _Canvas Tile_ will present a new texture pattern and reset every canvas-dependent effect.
 {: .info}
 
-### Canvas Tile Blend
+#### Canvas Tile Blend
 Enables to smoothly blend two canvas tiles. That means that the _Canvas Tile_ attribute will smoothly blend the tiles e.g., a _Canvas Tile_ attribute of `1.5` will be a blend of the tile at 1.0 and the tile at 2.0.
 <figure>
 	<video autoplay loop muted playsinline>
@@ -304,22 +251,10 @@ Enables to smoothly blend two canvas tiles. That means that the _Canvas Tile_ at
 ---
 
 
-## Alternate Canvas
+### Alternate Canvas
 Contains the attributes that control the alternate canvas texture of the stylization, for styles that make use of two canvas textures. Control of this canvas is independent from the main canvas.
-This group is closed by default, but can be opened by clicking on it.
+This group is closed by default, but can be opened by clicking on it.  
 The attributes are the same as the main canvas: see above for the corresponding documentation.
 
-The alternate canvas is used if the _Canvas Blend_ option is not 0, and also in a style-dependent manner (e.g. cutout).
+The alternate canvas is used if the _Canvas Blend_ option is not 0 or in in styles that depend on more than one canvas e.g., Cutout.
 {: .info}
-
------------
------------
-
-
-## Post Processing
-Post Processing attributes contain simple but useful self-explanatory post-processing filters
-*	Saturation
-* Contrast
-* Brightness
-
-This group is closed by default, but can be opened by clicking on it.

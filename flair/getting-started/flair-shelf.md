@@ -24,7 +24,7 @@ Don't like working with shelves? The last shelf tool will popup the shelf into i
 ## Art-direction
 The art-direction tools can be found in the left side of the shelf, ordered from highest to lowest level of control.
 1. **FLAIR** - opens the browser with the [Flair documentation](/).
-1. **STYLE** - opens the _Stylization Presets_ to load/save styles and their parameters [[docs](../style-presets)].
+1. **STYLE** - opens the _Stylization Presets_ to load/save styles and their parameters [[docs](../presets)].
 1. **GLOB** - selects the global node to change style attributes [[docs](../globals)].
 1. **PRES** - opens the _Material Presets_ to load/save predefined Flair materials and their parameters [[docs](../material-presets)].  
 1. **MAT** - selects the materials of currently selected objects or components.   

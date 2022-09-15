@@ -2,7 +2,7 @@
 layout: default
 title: Import/Export Tool
 parent: Stylizations
-nav_order: 2
+nav_order: 4
 ---
 
 Importing/exporting the stylization is crucial for professional production workflows and can be done with the _Import/Export Tool_. The tool windowcan be opened by clicking on the `im/ex` [shelf icon](../shelf).
