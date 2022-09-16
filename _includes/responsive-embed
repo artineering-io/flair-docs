@@ -16,4 +16,7 @@
     <iframe src="{{ include.url }}" frameborder="0" allowfullscreen></iframe>
   {%- endif -%}
 {%- endif -%}
+{%- if include.caption -%}
+<figcaption>{{ include.caption }}</figcaption>
+{%- endif -%}
 </figure>

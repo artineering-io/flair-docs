@@ -21,6 +21,9 @@ nav_order: 1
 {:toc}
 </details>
 
+[Back to Watercolor Features](https://artineering.io/styles/watercolor
+){: .aio-btn .d-block}
+
 A series of watercolor attributes are provided within the [globals node](/flair/getting-started/globals/) to control and refine the style.
 
 <figure class="aio-ui">

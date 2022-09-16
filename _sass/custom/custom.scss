@@ -17,6 +17,10 @@
     }
 }
 
+.d-flex {
+    flex-wrap: wrap;
+}
+
 .float-right {
     float: none !important;
     @include mq(md) {
@@ -37,6 +41,7 @@ figure {
     img, video {
         display: block;
         margin: 0 auto;
+        max-width: 100%;
     }
     figcaption {
         font-size: small;
