@@ -22,7 +22,7 @@ nav_order: 2
 {:toc}
 </details>
 
-[Back to Cutout Page](https://artineering.io/styles/cutout
+[Back to Cutout Features](https://artineering.io/styles/cutout
 ){: .aio-btn .d-block}
 
 ## Style breakdown

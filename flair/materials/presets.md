@@ -7,8 +7,8 @@ nav_order: 1
 
 _Material presets_ allow artists to create and load stylized materials within MNPRX. This tool can be opened by clicking on the `mPre` [shelf icon](../shelf).
 
-<figure class="aio-ui">
-	<img src="/media/material-presets/material-presets-2.png" alt="Material presets window">
+<figure class="aio-ui aio-window">
+	<img src="/media/materials/presets/material-presets.png" alt="Material presets window">
 	<figcaption>The Material presets window will look similar to this, depending on which presets you have available.</figcaption>
 </figure>
 
