@@ -11,7 +11,7 @@ nav_order: 3
 To refine and customize the frayed edges style, a series of global frayed attributes are provided within the [style configuration node](/software/MNPRX/docs/config#style-attributes).
 
 <figure class="aio-ui">
-    <img src="/media/frayed/style-attrs.png" alt="Style attributes">
+    <img src="/media/styles/frayed/style-attrs.png" alt="Style attributes">
     <figcaption>Style attributes in the configuration node</figcaption>
 </figure>
 
