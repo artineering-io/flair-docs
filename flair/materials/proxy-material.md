@@ -4,7 +4,10 @@ title: Proxy material
 parent: Materials
 nav_order: 3
 ---
-# Proxy Material
+# Proxy Materials
+
+<i class="fas fa-construction"></i> Updating soon...
+
 Proxy materials are invisible materials that only render to the stylization control maps within MNPRX, modifying stylization effects. As this may sound abstract, please watch the following tutorial demonstrating its usage within the watercolor stylization.
 
 

@@ -5,6 +5,8 @@ parent: Art-direction Tools
 nav_order: 3
 ---
 
+<i class="fas fa-construction"></i> Updating soon...
+
 _VertexFX_ is a tool which grants [localized control of effects](#showcase) at the vertex level of control. The tool can be opened by clicking on the **pFX** shelf icon and shares the same window with [_VertexFX_](../noisefx).
 
 <figure class="float-right aio-ui" style="margin-top:-1em;">

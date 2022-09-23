@@ -4,6 +4,8 @@ title: Flair Toolbox
 nav_order: 7
 ---
 
+<i class="fas fa-construction"></i> Updating soon...
+
 The _MNPRX toolbox_ is a handy collection of tools to use MNPRX in production. The toolbox can be opened by clicking on the `tbox` [shelf icon](../shelf).
 
 <figure class="aio-ui">

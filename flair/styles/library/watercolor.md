@@ -72,7 +72,10 @@ Defines the radius used by the ambient occlusion filter: larger radius results i
 Defines the strength of ambient occlusion: higher values make the ambient occlusion darker.
 
 ---
-## Watercolor
+
+## Atmospheric Effects
+
+Atmospheric effects are useful to add depth to bigger scenes by changing the color within a specific range. 
 
 ### Atmosphere Tint
 Defines a custom atmospheric perspective color, making things at distance tint towards the specified color.
@@ -86,6 +89,8 @@ The units work as meter/cm, so keep the  _World Scale_ in mind when setting up t
 {: .info}
 
 ---
+
+## Watercolor
 
 ### Pigment Density
 The concentration of pigments, giving the render either a diluted or a more saturated and darker look.

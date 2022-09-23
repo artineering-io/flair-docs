@@ -6,6 +6,26 @@ grand_parent: Styles
 nav_order: 4
 ---
 
+<i class="fas fa-construction"></i> Updating soon...
+
+# Hatching and Stippling
+{: .no_toc }
+
+<details close markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+[Back to Hatching Features](https://artineering.io/styles/hatching
+){: .aio-btn .d-block}
+
+A series of hatching and stippling attributes are provided within the [globals node](/flair/getting-started/globals/) to control and refine the style.
+
+a
 ## Style attributes
 
 To refine and customize the hatching style, a series of global hatching attributes are provided within the [style configuration node](/software/MNPRX/docs/config#style-attributes).

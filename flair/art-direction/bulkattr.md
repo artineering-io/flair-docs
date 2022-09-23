@@ -5,6 +5,8 @@ parent: Art-direction Tools
 nav_order: 1
 ---
 
+<i class="fas fa-construction"></i> Updating soon...
+
 The bulk attribute tool allows to easily change settings and attributes of multiple _MNPRX_ materials at the same time. Its functionality resembles the _Attribute Editor_, but it allows to modify all selected objects at once. The tool window can be opened by clicking on the `blk` [shelf icon](../shelf).
 
 <figure class="float-right top-1 aio-ui">

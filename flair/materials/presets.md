@@ -5,6 +5,8 @@ parent: Materials
 nav_order: 1
 ---
 
+<i class="fas fa-construction"></i> Updating soon...
+
 _Material presets_ allow artists to create and load stylized materials within MNPRX. This tool can be opened by clicking on the `mPre` [shelf icon](../shelf).
 
 <figure class="aio-ui aio-window">
