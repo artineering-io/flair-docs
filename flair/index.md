@@ -15,6 +15,46 @@ nav_order: 1
 {:toc}
 </details>
 
+<!-- HEAD-->
+<link rel="stylesheet" href="https://docs.artineering.io/assets/css/twentytwenty/twentytwenty.css" type="text/css" media="screen"/>
+
+<!-- EMBED -->
+<figure class="flair-hero">
+    <div id="flair-comparison" class="twentytwenty-container">
+        <!-- The before image is first -->
+        <img src="https://docs.artineering.io/media/styles/with_flair.jpg" style="width: 100vw"/>
+        <!-- The after image is last -->
+        <img src="https://docs.artineering.io/media/styles/without_flair.jpg" style="width: 100vw"/>
+    </div>
+</figure>
+
+<style>
+    body { margin: 0 }
+    .flair-hero { margin: 0; cursor: none;}
+    .twentytwenty-handle { cursor: none; }
+</style>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous">
+</script>
+
+<script>
+  $(function(){
+    $("#flair-comparison").twentytwenty({
+    move_slider_on_hover: true,
+    no_overlay: true,
+    });
+  });
+</script>
+
+<!-- FOOTER -->
+<script src="https://docs.artineering.io/assets/js/twentytwenty/jquery.event.move.js" type="text/javascript"></script>
+<script src="https://docs.artineering.io/assets/js/twentytwenty/jquery.twentytwenty.js" type="text/javascript"></script>
+
+
+
 ## Flair breakdown
 
 Flair is a **real-time stylized rendering engine** for Autodesk Maya which consists of **three core elements**

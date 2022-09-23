@@ -53,21 +53,6 @@
 			}
 		);
 	})();
-	
-	// Shim for customEvent
-	// see https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent#Polyfill
-	(function () {
-		if ( typeof window.CustomEvent === "function" ) return false;
-		function CustomEvent ( event, params ) {
-			params = params || { bubbles: false, cancelable: false, detail: undefined };
-			var evt = document.createEvent( 'CustomEvent' );
-			evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
-			return evt;
-		}
-		
-		CustomEvent.prototype = window.Event.prototype;
-		window.CustomEvent = CustomEvent;
-	})();
 
 	var ignoreTags = {
 			textarea: true,
@@ -95,7 +80,7 @@
 
 	var eventOptions = { bubbles: true, cancelable: true };
 
-	var eventsSymbol = typeof Symbol === "function" ? Symbol('events') : {};
+	var eventsSymbol = Symbol('events');
 
 	function createEvent(type) {
 		return new CustomEvent(type, eventOptions);
@@ -155,12 +140,12 @@
 
 
 	// Constructors
-
+	
 	function Timer(fn){
 		var callback = fn,
 		    active = false,
 		    running = false;
-
+		
 		function trigger(time) {
 			if (active){
 				callback();
@@ -172,17 +157,17 @@
 				running = false;
 			}
 		}
-
+		
 		this.kick = function(fn) {
 			active = true;
 			if (!running) { trigger(); }
 		};
-
+		
 		this.end = function(fn) {
 			var cb = callback;
-
+			
 			if (!fn) { return; }
-
+			
 			// If the timer is not running, simply call the end callback.
 			if (!running) {
 				fn();
@@ -192,9 +177,9 @@
 			// just the end callback.
 			else {
 				callback = active ?
-					function(){ cb(); fn(); } :
+					function(){ cb(); fn(); } : 
 					fn ;
-
+				
 				active = true;
 			}
 		};
@@ -204,7 +189,7 @@
 	// Functions
 
 	function noop() {}
-
+	
 	function preventDefault(e) {
 		e.preventDefault();
 	}
@@ -225,13 +210,13 @@
 		if (touchList.identifiedTouch) {
 			return touchList.identifiedTouch(id);
 		}
-
+		
 		// touchList.identifiedTouch() does not exist in
 		// webkit yet… we must do the search ourselves...
-
+		
 		i = -1;
 		l = touchList.length;
-
+		
 		while (++i < l) {
 			if (touchList[i].identifier === id) {
 				return touchList[i];
@@ -255,7 +240,7 @@
 
 
 	// Handlers that decide when the first movestart is triggered
-
+	
 	function mousedown(e){
 		// Ignore non-primary buttons
 		if (!isPrimaryButton(e)) { return; }
@@ -447,7 +432,7 @@
 		event.distY =  touch.pageY - event.startY;
 		event.deltaX = touch.pageX - event.pageX;
 		event.deltaY = touch.pageY - event.pageY;
-
+		
 		// Average the velocity of the last few events using a decay
 		// curve to even out spurious jumps in values.
 		event.velocityX = 0.3 * event.velocityX + 0.7 * event.deltaX / time;

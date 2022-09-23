@@ -37,7 +37,7 @@
       container.addClass("twentytwenty-container");
       beforeImg.addClass("twentytwenty-before");
       afterImg.addClass("twentytwenty-after");
-
+      
       var calcOffset = function(dimensionPct) {
         var w = beforeImg.width();
         var h = beforeImg.height();
@@ -59,7 +59,6 @@
           afterImg.css("clip", "rect(0,"+offset.w+","+offset.h+","+offset.cw+")");
     	}
         container.css("height", offset.h);
-        container.css("max-width", offset.w); // See https://github.com/zurb/twentytwenty/issues/50
       };
 
       var adjustSlider = function(pct) {
@@ -101,8 +100,8 @@
         container.addClass("active");
         offsetX = container.offset().left;
         offsetY = container.offset().top;
-        imgWidth = beforeImg.width();
-        imgHeight = beforeImg.height();
+        imgWidth = beforeImg.width(); 
+        imgHeight = beforeImg.height();          
       };
       var onMove = function(e) {
         if (container.hasClass("active")) {
