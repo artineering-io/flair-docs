@@ -27,7 +27,7 @@ This change is not only a rebranding but a whole evolution of our plugin. There 
 
 {% include responsive-embed url="https://www.youtube.com/embed/k4Mq0a6mewE" %}
 
-### New material
+### New Material
 
 We developed a new real-time material from scratch outside of *Maya*’s *ShaderFX* framework. In other words we now control the entire rendering pipeline and have brought native support over new features such as light-linking, file nodes, full resolution UDIMs, hypershade previews and even render per-vertex motion vectors and crypto mattes—all in real-time in the viewport!
 
@@ -50,7 +50,7 @@ All MNPRX styles have been ported over to Flair to use OpenGL instead of DirectX
 	</figure>
 </div>
 
-### Opening up our framework
+### Opening up our Framework
 
 The biggest limitation of MNPRX was that you could only use the styles it came with. That starts to change with Flair, as you can use the new Flair Graph to modify and even create your own shader styles from scratch! While still in beta stages, we have decided to release it to gather feedback as soon as possible and learn your thoughts and wishes for it.
 
@@ -59,11 +59,11 @@ The biggest limitation of MNPRX was that you could only use the styles it came w
     <figcaption>Using the Flair graph to mix/match/write shaders to create your own style in Flair</figcaption>
 </figure>
 
-### Sharing feedback
+### Sharing Feedback
 
 As a small team (currently only Santiago is at Artineering), we can’t develop all the features we wish to have at once—we need to focus our development efforts. For this purpose, we are opening a [feedback board](https://flair.nolt.io/) to suggest, aggregate, and vote on different features to implement in Flair. The most requested features will be developed and included in future updates. So, please help us spread the word and guide our future development. 
 
-### Showreel
+### Demo Reel
 
 Finally, to bid the MNPRX name farewell and welcome Flair, we have decided to release our first demo reel! After three years of existence, you have created some amazing productions, which we wish to celebrate and highlight. Thank you for using MNPRX/Flair and for your continuous support!!
 
