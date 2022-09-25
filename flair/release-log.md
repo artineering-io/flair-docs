@@ -1,0 +1,70 @@
+---
+layout: default
+title: Release Log
+nav_order: 9
+---
+
+# Release Log
+{: .no_toc }
+
+<details close markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+---
+
+## Flair 1.0.0
+> Released 25.09.2022
+
+Finally, after more than 3 years of development, MNPRX has become [Flair](https://artineering.io/flair).
+
+This change is not only a rebranding but a whole evolution of our plugin. There are so many internal and external changes that it is impossible to write them all down here. What matters is that Flair is getting closer to our vision of our ideal stylized renderer, as seen in our new feature reel.
+
+{% include responsive-embed url="https://www.youtube.com/embed/k4Mq0a6mewE" %}
+
+### New material
+
+We developed a new real-time material from scratch outside of *Maya*’s *ShaderFX* framework. In other words we now control the entire rendering pipeline and have brought native support over new features such as light-linking, file nodes, full resolution UDIMs, hypershade previews and even render per-vertex motion vectors and crypto mattes—all in real-time in the viewport!
+
+### New 3D Styles
+
+All MNPRX styles have been ported over to Flair to use OpenGL instead of DirectX for future cross-platform compatibility. However, we have also created some exciting new shader styles. These include the Sketch and Cat styles as seen above. They are still evolving as we continue to refine them, so make sure to test them out and share your thoughts with us.
+
+<div class="d-flex">
+	<figure>
+		<video autoplay loop muted playsinline style="height:350px;">
+			<source src="/media/release-log/bristleback_web.mp4" type="video/mp4">
+		</video>
+    <figcaption>3D model by Nikolay Tsys.</figcaption>
+  </figure>
+  <figure>
+		<video autoplay loop muted playsinline style="height:350px;">
+			<source src="/media/release-log/cat_web.mp4" type="video/mp4">
+		</video>
+		<figcaption>3D model by Jose Diaz.</figcaption>
+	</figure>
+</div>
+
+### Opening up our framework
+
+The biggest limitation of MNPRX was that you could only use the styles it came with. That starts to change with Flair, as you can use the new Flair Graph to modify and even create your own shader styles from scratch! While still in beta stages, we have decided to release it to gather feedback as soon as possible and learn your thoughts and wishes for it.
+
+<figure>
+    <img src="/media/release-log/flair-graph-beta.jpg" alt="Flair graph beta screenshot">
+    <figcaption>Using the Flair graph to mix/match/write shaders to create your own style in Flair</figcaption>
+</figure>
+
+### Sharing feedback
+
+As a small team (currently only Santiago is at Artineering), we can’t develop all the features we wish to have at once—we need to focus our development efforts. For this purpose, we are opening a [feedback board](https://flair.nolt.io/) to suggest, aggregate, and vote on different features to implement in Flair. The most requested features will be developed and included in future updates. So, please help us spread the word and guide our future development. 
+
+### Showreel
+
+Finally, to bid the MNPRX name farewell and welcome Flair, we have decided to release our first demo reel! After three years of existence, you have created some amazing productions, which we wish to celebrate and highlight. Thank you for using MNPRX/Flair and for your continuous support!!
+
+{% include responsive-embed url="https://www.youtube.com/embed/R2Ibp1e7SVo" %}
