@@ -6,7 +6,9 @@ grand_parent: Styles
 nav_order: 4
 ---
 
-<i class="fas fa-construction"></i> Updating soon...
+<figure>
+ <img src="/media/styles/hatching/header.jpg" alt="Hatching header image">
+</figure>
 
 # Hatching and Stippling
 {: .no_toc }
@@ -23,23 +25,29 @@ nav_order: 4
 [Back to Hatching Features](https://artineering.io/styles/hatching
 ){: .aio-btn .d-block}
 
-A series of hatching and stippling attributes are provided within the [globals node](/flair/getting-started/globals/) to control and refine the style.
+## Style breakdown
 
-a
-## Style attributes
+The Hatching shader style emulates hatched animation that traditionally uses fine, tightly-packed lines to depict shading on objects. The same shader style can also be used to emulate stippling when the [hatching length](#length) is set to 0 (zero).
 
-To refine and customize the hatching style, a series of global hatching attributes are provided within the [style configuration node](/software/MNPRX/docs/config#style-attributes).
+The hatching shader style depends on a [custom material](/flair/materials/others#hatching-material), which can be assigned onto any poly object. This material generates 3D noise that is by default fractalized, maintaining its pixel size, disregarding the distance to the object. That way the size and density of the noise is preserved--never becoming too small or too big. When the fractalized noise is stretched along the object's flow (curvature), stipples become hatches that follow the surface of the object.
+
+This style is still in early development. If you wish for us to refine it further for your production, please consider [working with us](https://artineering.io/agency) to polish the look exactly to your requirements and pipeline.
+{: .warning}
+
+## Attributes
+
+A series of hatching and stippling attributes are provided within the [globals node](/flair/getting-started/globals/) to control and refine the hatching shader style.
 
 <figure class="aio-ui">
-    <img src="/media/hatching/style-attrs.png" alt="Style attributes">
-    <figcaption>Style attributes in the configuration node</figcaption>
+    <img src="/media/styles/hatching/style-attrs.png" alt="Style attributes">
+    <figcaption>Style attributes in the globals node</figcaption>
 </figure>
 
 ### Length
 Length of the hatching lines. If set to zero, produces a stippling effect.
 <figure>
 	<video autoplay loop muted playsinline>
-	    <source src="/media/hatching/length.mp4" type="video/mp4">
+	    <source src="/media/styles/hatching/length.mp4" type="video/mp4">
 	</video>
 	<figcaption>Varying length between 0 and 40</figcaption>
 </figure>
@@ -48,7 +56,7 @@ Length of the hatching lines. If set to zero, produces a stippling effect.
 Average width (thickness) of the hatching lines in pixels. A width of zero is invisible.
 <figure>
 	<video autoplay loop muted playsinline>
-	    <source src="/media/hatching/width.mp4" type="video/mp4">
+	    <source src="/media/styles/hatching/width.mp4" type="video/mp4">
 	</video>
 	<figcaption>Varying width between 0 and 6</figcaption>
 </figure>
@@ -57,7 +65,7 @@ Average width (thickness) of the hatching lines in pixels. A width of zero is in
 Controls the extent of the diffuse lighting gradient. A value of zero results in a binary shading style.
 <figure>
 	<video autoplay loop muted playsinline>
-	    <source src="/media/hatching/wrap.mp4" type="video/mp4">
+	    <source src="/media/styles/hatching/wrap.mp4" type="video/mp4">
 	</video>
 	<figcaption>Varying gradient between 0 and 2</figcaption>
 </figure>
@@ -66,55 +74,28 @@ Controls the extent of the diffuse lighting gradient. A value of zero results in
 Smoothes the vector field used to orient the hatching lines. Higher values produce less abrupt changes in orientation.  
 <figure>
 	<video autoplay loop muted playsinline>
-	    <source src="/media/hatching/smoothness.mp4" type="video/mp4">
+	    <source src="/media/styles/hatching/smoothness.mp4" type="video/mp4">
 	</video>
 	<figcaption>Varying smoothness between 1 and 5</figcaption>
 </figure>
 
-------------------------
-------------------------
-
-
-## Hatching Material
-
-The _hatching_ style requires its own material: to set this material on an object, select an object and load one of the "_hatching" material presets (see [material presets](/software/MNPRX/docs/material-presets)). Note that this material inherits most of the attributes of the *uber* material, which control the backdrop of the hatching lines. See [uber](/software/MNPRX/docs/uber) for a description of those attributes.
-
-#### Hatching > Density
-Controls the overall density of the hatching lines.
-
-<figure>
-	<video autoplay loop muted playsinline>
-	    <source src="/media/hatching/density.mp4" style="width:300px" type="video/mp4">
-	</video>
-	<figcaption>Varying density between 10 and 200</figcaption>
-</figure>
-
-#### Hatching > Dynamic Noise
-If checked, enables the _fractalization_ pass that ensures a constant line density regardless of camera position and zoom. This sometimes produces a slight "blending effect" when moving. Disable this attribute if your shot keeps the object at the same camera distance and zoom level.
-
-<div class="d-flex">
-    <figure>
-        <video autoplay loop muted playsinline style="width:300px">
-            <source src="/media/hatching/fract_on.mp4" type="video/mp4">
-        </video>
-        <figcaption>Dynamic noise enabled.</figcaption>
-    </figure>
-    <figure>
-        <video autoplay loop muted playsinline style="width:300px">
-            <source src="/media/hatching/fract_off.mp4" type="video/mp4">
-        </video>
-        <figcaption>Dynamic noise disabled.</figcaption>
-    </figure>
-</div>
 
 ------------------------
-------------------------
-
 
 ## Art-direction
-The width and the local orientation of the hatching lines can be art-directed procedurally with noiseFX and/or locally by painting with paintFX. See [noiseFX](/software/MNPRX/docs/noisefx/) and [paintFX](/software/MNPRX/docs/paintfx/) for usage information.
+The width and the local orientation of the hatching lines can be art-directed procedurally with [NoiseFX](/flair/art-direction/noisefx) and/or locally by painting with [VertexFX](/flair/art-direction/vertexfx).
 
 <figure class="aio-ui">
-	<img src="/media/hatching/noisefx.png" alt="MNPRX noiseFX window">
+	<img src="/media/styles/hatching/noisefx.png" alt="MNPRX noiseFX window">
 	<figcaption>Art-directable parameters of the hatching style.</figcaption>
 </figure>
+
+---
+
+## Considerations
+
+### Attach hatching/stippling onto objects
+Activate the `Deformed` attribute within the materials to bake the fractalized noise onto animated objects.
+
+### Nurbs surfaces
+Nurbs surfaces can't save any data in vertex colors, so hatching/stippling won't stick onto the objects and it won't be possible to use VertexFX on them.

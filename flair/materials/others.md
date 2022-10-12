@@ -20,13 +20,13 @@ nav_order: 4
 Flair features other bespoke materials used for certain styles that require different AOVs than the Flair shader material provides.
 
 <figure class="float-right aio-ui">
-	<img src="/media/materials/others/cutout-ae.png" alt="Cutout material node">
+	<img src="/media/materials/others/cutout-mat-ae.png" alt="Cutout material node">
 	<figcaption>The default cutout material in the Attribute Editor.</figcaption>
 </figure>
 
 ## Cutout material
 
-The cutout material is required by the [**Cutout style**](/flair/styles/library/cutout) and generates the cutout stencil which needs to be set on all cutout objects. To assign this material on an object, select an object and load the "_\_cutout_" material preset (see [material presets](/flair/materials/presets)).
+The cutout material is required by the [**Cutout shader style**](/flair/styles/library/cutout) and generates the cutout stencil which needs to be set on all cutout objects. To assign this material on an object, select an object and load the "_\_cutout_" material preset (see [material presets](/flair/materials/presets)).
 
 The cutout material controls how objects affect the cutout stencil and the paper color and is divided in optional _Settings_ and _Attributes_.
    
@@ -65,10 +65,54 @@ Specifies the file path to the _Cutout Mask_. In _Cutout Masks_, white is cut, w
 #### Color Tint
 The color of the canvas is overridden with the custom color set by this attribute. This attribute is only available if the _Colored_ setting is enabled.
 
+---
+
+<figure class="float-right aio-ui">
+	<img src="/media/materials/others/hatching-mat-ae.png" alt="Cutout material node">
+	<figcaption>The default cutout material in the Attribute Editor.</figcaption>
+</figure>
+
+## Hatching Material
+
+The hatching material is required by the [**Hatching shader style**](/flair/styles/library/hatching) and generates the required fractalized noise on all hatching/stippling objects. To assign this material on an object, select an object and load any "_\_hatching_" material preset (see [material presets](/flair/materials/presets)).
+
+The hatching material shares most of the attributes of the normal Flair material, controlling whatever is behind the hatching lines. See the [Flair shader](/flair/materials/flair-shader) for a description on any undocumented attribute below.
+
+Activate the `Deformed` setting attribute within Hatching materials to bake the hatching/stippling lines/points onto animated objects.
+{: .info}
+
+### Density
+Controls the overall density of the hatching lines.
+
+<figure>
+	<video autoplay loop muted playsinline>
+	    <source src="/media/styles/hatching/density.mp4" style="width:300px" type="video/mp4">
+	</video>
+	<figcaption>Varying density between 10 and 200</figcaption>
+</figure>
+
+### Dynamic Noise
+If checked, enables the _fractalization_ that ensures a constant line density regardless of camera position and zoom. This may produces a slight "blending effect" when moving. Disable this attribute if the shot keeps the object at the same camera distance and zoom level.
+
+<div class="d-flex">
+    <figure>
+        <video autoplay loop muted playsinline style="width:300px">
+            <source src="/media/styles/hatching/fract_on.mp4" type="video/mp4">
+        </video>
+        <figcaption>Dynamic noise enabled.</figcaption>
+    </figure>
+    <figure>
+        <video autoplay loop muted playsinline style="width:300px">
+            <source src="/media/styles/hatching/fract_off.mp4" type="video/mp4">
+        </video>
+        <figcaption>Dynamic noise disabled.</figcaption>
+    </figure>
+</div>
+
 ------------------
 
-### Stylization (proc.)
-When the [_NoiseFX_](/flair/art-direction/noisefx) tool has been used on the material, the _Stylization (procedural)_ section will appear at the bottom of the _Attribute Editor_. This section contains all the procedural attributes that the _NoiseFX_ tool creates and modifies. Therefore, you can mostly ignore these attributes within the material, unless you want to key and animate them.
+## Stylization (proc.)
+When the [_NoiseFX_](/flair/art-direction/noisefx) tool has been used on these custom material, the _Stylization (procedural)_ section will appear at the bottom of the _Attribute Editor_ within the material. This section contains all the procedural attributes that the _NoiseFX_ tool creates and modifies. Therefore, you can mostly ignore these attributes within the material, unless you want to key and animate them.
 
 <figure class="aio-ui">
 	<img src="/media/materials/others/noisefx-ae.png" alt="Stylization (procedural) attributes">
