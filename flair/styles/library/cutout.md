@@ -7,7 +7,7 @@ nav_order: 2
 ---
 
 <figure>
- <img src="/media/styles/cutout/header.jpg" alt="Cutout header">
+ <img src="/media/styles/cutout/header.jpg" alt="Cutout header image">
 </figure>
 
 # Cutout
@@ -27,15 +27,16 @@ nav_order: 2
 
 ## Style breakdown
 
-Cutout animations are tedious to create manually using scissors and hundreds of paper sheets, therefore, reproducing this style digitally presents a refreshing take, which can benefit from the flexibility given by 3D animation. No more trees or fingers are harmed during its creation and one can playfully compose and create the animation, taking complete advantage of digital tools and the 3D environment.
+The cutout shader style emulates traditional paper cutout animation in 3D,
+without using scissors and hundreds of paper sheets. No more trees or fingers are harmed when animating.
 
-There are three fundamental elements within the cutout style which require to be controlled:
+There are three fundamental elements within the cutout shader style which need to be controlled:
 * Papers
 * Cutout stencils
 * External lighting
 
 ### Papers
-The top and bottom layers of paper (canvases) are controlled respectively by the _Main canvas_ and _Alternate canvas_ attribute groups. There are over ten distinct _canvas textures_ to choose from and you can even add your own. These can be customized in _color_, _scale_, _rotation_, _roughness_, _shading_, and _tiles_. See the [_canvas_ documentation](/flair/getting-started/globals/#canvas) for a description of these attributes.
+The top and bottom layers of paper (canvases) are controlled respectively by the _Main canvas_ and _Alternate canvas_ attribute groups. There are over ten distinct _canvas textures_ (heightmaps) to choose from and you can even add your own. These can be customized in _color_, _scale_, _rotation_, _roughness_, _shading_, and _tiles_. See the [_canvas_ documentation](/flair/getting-started/globals/#canvas) for a description of these attributes.
 
 ### Cutout Stencils
 The cutout stencils are created through the **[cutout material](/flair/materials/others/#cutout-material)**, which can easily be created and assigned using the [material presets](/flair/materials/presets/). Each cutout material automatically creates a stencil of the object it is assigned too. The cutout stencil can further be controlled and art-directed using [VertexFX](/flair/art-direction/vertexfx/) and [NoiseFX](/flair/art-direction/noisefx/).
@@ -60,7 +61,7 @@ External lighting affects the cast shadow (drop shadow) and bevel of the cutout,
 
 Lighting is controlled globally through the canvas light defined by the [Canvas Light Tilt](/flair/getting-started/globals/#canvas-light-tilt) and [Canvas Light Dir](/flair/getting-started/globals/#canvas-light-dir) attributes.
 
-Only the two sheets of paper need to be lit within the style. There will not be any shading control within the cutout material assigned to objects in the scene.
+Only the two sheets of paper need to be lit within the cutout shader style. There will not be any shading control within the cutout material assigned to objects in the scene.
 
 <figure>
 	<video autoplay loop muted playsinline>
@@ -87,7 +88,7 @@ A series of cutout attributes are provided within the [globals node](/flair/gett
 
 <figure class="aio-ui">
     <img src="/media/styles/cutout/style-attrs.png" alt="Style attributes">
-    <figcaption>Style attributes in the configuration node</figcaption>
+    <figcaption>Style attributes in the globals node</figcaption>
 </figure>
 
 The cutout style also requires a custom cutout material. The cutout material is documented [here](/flair/materials/others/#cutout-material).

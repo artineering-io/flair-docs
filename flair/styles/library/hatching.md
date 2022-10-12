@@ -27,16 +27,18 @@ nav_order: 4
 
 ## Style breakdown
 
-The Hatching shader style emulates hatched animation that traditionally uses fine, tightly-packed lines to depict shading on objects. The same shader style can also be used to emulate stippling when the [hatching length](#length) is set to 0 (zero).
+The hatching shader style emulates traditional hatching animation in 3D. While the hatching style contains tightly-packed lines to depict shading on objects, the same shader style can also be used to emulate stippling when the [hatching length](#length) is set to 0 (zero).
 
-The hatching shader style depends on a [custom material](/flair/materials/others#hatching-material), which can be assigned onto any poly object. This material generates 3D noise that is by default fractalized, maintaining its pixel size, disregarding the distance to the object. That way the size and density of the noise is preserved--never becoming too small or too big. When the fractalized noise is stretched along the object's flow (curvature), stipples become hatches that follow the surface of the object.
+This shader style depends on a [custom material](/flair/materials/others#hatching-material), which can be assigned onto any poly object. The material generates 3D noise that can be fractalized, maintaining its pixel size, disregarding the distance to the object. That way the size and density of the noise is preserved--never becoming too small or too big. When the fractalized noise is stretched along the object's flow (curvature), stipples become hatches that follow the surface of the object.
+
+In this page, we only document global attributes specific to the hatching shader style. To learn more about other global attributes, please see the [globals node documentation](/flair/getting-started/globals).
 
 This style is still in early development. If you wish for us to refine it further for your production, please consider [working with us](https://artineering.io/agency) to polish the look exactly to your requirements and pipeline.
 {: .warning}
 
 ## Attributes
 
-A series of hatching and stippling attributes are provided within the [globals node](/flair/getting-started/globals/) to control and refine the hatching shader style.
+A series of hatching and stippling attributes are provided within the globals node to control and refine the hatching shader style.
 
 <figure class="aio-ui">
     <img src="/media/styles/hatching/style-attrs.png" alt="Style attributes">
