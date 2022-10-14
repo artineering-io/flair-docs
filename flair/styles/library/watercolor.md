@@ -9,7 +9,7 @@ nav_order: 1
  <img src="/media/styles/watercolor/header.jpg" alt="Watercolor render">
 </figure>
 
-# Watercolor
+# Watercolor shader style
 {: .no_toc }
 
 <details close markdown="block">

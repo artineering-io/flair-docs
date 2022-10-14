@@ -10,7 +10,7 @@ nav_order: 2
  <img src="/media/styles/cutout/header.jpg" alt="Cutout header image">
 </figure>
 
-# Cutout
+# Cutout shader style
 {: .no_toc }
 
 <details close markdown="block">

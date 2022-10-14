@@ -10,7 +10,7 @@ nav_order: 4
  <img src="/media/styles/hatching/header.jpg" alt="Hatching header image">
 </figure>
 
-# Hatching and Stippling
+# Hatching and Stippling shader styles
 {: .no_toc }
 
 <details close markdown="block">
@@ -31,9 +31,16 @@ The hatching shader style emulates traditional hatching animation in 3D. While t
 
 This shader style depends on a [custom material](/flair/materials/others#hatching-material), which can be assigned onto any poly object. The material generates 3D noise that can be fractalized, maintaining its pixel size, disregarding the distance to the object. That way the size and density of the noise is preserved--never becoming too small or too big. When the fractalized noise is stretched along the object's flow (curvature), stipples become hatches that follow the surface of the object.
 
+<figure>
+	<video autoplay loop muted playsinline>
+	    <source src="/media/styles/hatching/example1.mp4" type="video/mp4">
+	</video>
+	<figcaption>Small example of the hatching style with a black canvas.</figcaption>
+</figure>
+
 In this page, we only document global attributes specific to the hatching shader style. To learn more about other global attributes, please see the [globals node documentation](/flair/getting-started/globals).
 
-This style is still in early development. If you wish for us to refine it further for your production, please consider [working with us](https://artineering.io/agency) to polish the look exactly to your requirements and pipeline.
+This style is still in early development. If you wish for us to refine it further for your production, [contact us and let's work together]](https://artineering.io/agency) to develop exactly the requirements for your look and pipeline.
 {: .warning}
 
 ## Attributes

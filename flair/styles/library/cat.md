@@ -6,6 +6,6 @@ grand_parent: Styles
 nav_order: 5
 ---
 
-# Cat Style
+# Cat shader style
 
 <i class="fas fa-construction"></i> Coming soon...
