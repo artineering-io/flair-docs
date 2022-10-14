@@ -35,7 +35,7 @@ This shader style depends on a [custom material](/flair/materials/others#hatchin
 	<video autoplay loop muted playsinline>
 	    <source src="/media/styles/hatching/example1.mp4" type="video/mp4">
 	</video>
-	<figcaption>Small example of the hatching style with a black canvas.</figcaption>
+	<figcaption>Example of the hatching style with a black canvas. 3D Model by Luis Fernandez Jesus.</figcaption>
 </figure>
 
 In this page, we only document global attributes specific to the hatching shader style. To learn more about other global attributes, please see the [globals node documentation](/flair/getting-started/globals).
@@ -105,6 +105,9 @@ The width and the local orientation of the hatching lines can be art-directed pr
 
 ### Attach hatching/stippling onto objects
 Activate the `Deformed` attribute within the materials to bake the fractalized noise onto animated objects.
+
+### Jittering
+You can reduce jittering present in hatches and stipples by narrowing down the near and far clip planes within the Maya camera shapes.
 
 ### Nurbs surfaces
 Nurbs surfaces can't save any data in vertex colors, so hatching/stippling won't stick onto the objects and it won't be possible to use VertexFX on them.
