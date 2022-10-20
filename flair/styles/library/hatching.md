@@ -109,5 +109,8 @@ Activate the `Deformed` attribute within the materials to bake the fractalized n
 ### Jittering
 You can reduce jittering present in hatches and stipples by narrowing down the near and far clip planes within the Maya camera shapes.
 
+### Rendering at different resolutions
+Hatching is currently sensitive to the resolution that you are working/rendering with. For best (consistent) results, try to keep the working resolution close to the rendering resolution.
+
 ### Nurbs surfaces
 Nurbs surfaces can't save any data in vertex colors, so hatching/stippling won't stick onto the objects and it won't be possible to use VertexFX on them.

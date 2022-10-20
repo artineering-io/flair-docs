@@ -18,6 +18,39 @@ nav_order: 9
 
 ---
 
+## Flair 1.0.1
+> Released 20.10.2022
+
+Based on your feedback this first month, we are releasing our first patch update! 
+
+We will continue releasing patch updates alongside feature updates to improve the experience of working with Flair for everyone. Don’t forget to continue sharing your feedback in the [Flair board](https://flair.nolt.io/) so that we can prioritize fixes and new features.
+
+<div class="d-flex">
+	<figure>
+		<video autoplay loop muted playsinline style="max-height:480px;">
+			<source src="/media/release-log/1.0.1.mp4" type="video/mp4">
+		</video>
+    <figcaption>Steam Cowboy 3D model by Black Spire.</figcaption>
+  </figure>
+</div>
+
+### Materials
+* Fixed - Colored shading not working with cast shadows
+* Fixed - Semi-transparent objects not contributing to cryptomattes under certain circumstances
+
+### Shader styles
+* Improved - Pigment density effect with dark colored canvases
+* Improved - Coexistence of drybrush and granulation effects
+* Fixed - Canvas texture dissapearing after shaders were reloaded
+
+### Flair Graph
+* Fixed - Graph not opening after changes in the graph were not saved.
+* Fixed - C++ graph not loading automatically when style was changed and Graph was discarded.
+
+More changes under the hood that will become evident in future releases.
+
+---
+
 ## Flair 1.0.0
 > Released 25.09.2022
 
@@ -37,13 +70,13 @@ All MNPRX styles have been ported over to Flair to use OpenGL instead of DirectX
 
 <div class="d-flex">
 	<figure>
-		<video autoplay loop muted playsinline style="height:350px;">
+		<video autoplay loop muted playsinline style="max-height:350px;">
 			<source src="/media/release-log/bristleback_web.mp4" type="video/mp4">
 		</video>
     <figcaption>3D model by Nikolay Tsys.</figcaption>
   </figure>
   <figure>
-		<video autoplay loop muted playsinline style="height:350px;">
+		<video autoplay loop muted playsinline style="max-height:350px;">
 			<source src="/media/release-log/cat_web.mp4" type="video/mp4">
 		</video>
 		<figcaption>3D model by Jose Diaz.</figcaption>
