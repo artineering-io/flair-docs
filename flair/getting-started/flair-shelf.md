@@ -25,14 +25,14 @@ Don't like working with shelves? The last shelf tool will popup the shelf into i
 The art-direction tools can be found in the left side of the shelf, ordered from highest to lowest level of control.
 1. **FLAIR** - opens the browser with the [Flair documentation](/).
 1. **STYLE** - opens the _Style Presets_ to load/save styles and their parameters [[docs](/flair/styles/presets/)].
-1. **GLOB** - selects the global node to change style attributes [[docs](../globals)].
-1. **PRES** - opens the _Material Presets_ to load/save predefined Flair materials and their parameters [[docs](../material-presets)].  
+1. **GLOB** - selects the global node to change style attributes [[docs](/flair/getting-started/globals/)].
+1. **PRES** - opens the _Material Presets_ to load/save predefined Flair materials and their parameters [[docs](/flair/materials/presets)].  
 1. **MAT** - selects the materials of currently selected objects or components.   
 `Double click` refreshes the _Attribute Editor_ of the material, fixing any issues that might happen.  
 `Right click -> Select objects with material` will select all objects that share the same material.
 1. **BULK** - opens the _Bulk Attribute_ tool. An attribute editor that lets you modify multiple Flair materials at once (in bulk).
 1. **NFX** - opens the _NoiseFX_ tool that lets you control effects procedurally on Flair materials [[docs](/flair/art-direction/noisefx)].
-1. **VFX** - opens the _VertexFX_ window that lets you paint each effect directly onto your 3D models [[docs](../paintfx)].
+1. **VFX** - opens the _VertexFX_ window that lets you paint each effect directly onto your 3D models [[docs](/flair/art-direction/vertexfx)].
 
 
 ## Lighting/Testing
@@ -43,18 +43,18 @@ The lighting and testing tools allow to easily create the supported lights withi
 
 
 ## Rendering
-1. **TBOX** - opens the _Flair Toolbox_, containing useful functions to work with Flair in production [[docs](../toolbox)].
+1. **TBOX** - opens the _Flair Toolbox_, containing useful functions to work with Flair in production [[docs](/flair/toolbox/)].
 1. **FLOAT** - opens a floating viewport with a 1280 x 720 resolution.  
 `Right click -> Float viewport 1024 x 540` opens a floating viewport with a 1024 x 540 resolution.  
 `Right click -> Float viewport 1920 x 1080` opens a floating viewport with a 1920 x 1080 resolution (Full HD).  
 `Right click -> Custom float viewport` opens a floating viewport with a custom resolution set through a small dialog.
-1. **RENDR** - opens the _Viewport Renderer_, which quickly allows to save screenshots or playblasts [[docs](../rendering#rendr)].
-1. **SEQ** - opens the _Sequence Renderer_, which allows to render sequences and all different passes for production [[docs](../rendering/#target-sequence-renderer)].
-1. **IM/EX** - opens the _Import/Export_ tool to import or export _.style_ files [[docs](../import-export)]  
+1. **RENDR** - opens the _Viewport Renderer_, which quickly allows to save screenshots or playblasts [[docs](/flair/rendering/#rendr)].
+1. **SEQ** - opens the _Sequence Renderer_, which allows to render sequences and all different passes for production [[docs](/flair/rendering/#target-sequence-renderer)].
+1. **IM/EX** - opens the _Import/Export_ tool to import or export _.style_ files [[docs](/flair/styles/import-export)]  
 `Right click -> Custom auto-import` function found in: `flair_import_export.auto_import_style()`.  
 `Right click -> Custom import` function found in: `flair_import_export.custom_import()`.  
 Custom import functions can be overriden depending on the project's pipeline.
-1. **SUPP.** - opens the browser straight to [support at the Artineering page](https://artineering.io/support/).
+1. **SUPP.** - opens the browser straight to [support at the Artineering page](https://artineering.io/support).
 
 ## Popup shelf
 Opens a popup shelf so that you can always access the Flair tools while using other shelves.
