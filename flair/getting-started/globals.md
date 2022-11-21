@@ -103,7 +103,7 @@ These attributes allow to globally control the parameters the style and are docu
 
 * [**Watercolor**](/flair/styles/library/watercolor/)
 * [**Cutout**](/flair/styles/library/cutout/)
-* [**Hatching**](/flair/styles/library/frayed/)
+* [**Hatching**](/flair/styles/library/hatching/)
 * [**Frayed**](/flair/styles/library/frayed/)
 * [**Cat**](/flair/styles/library/cat/)
 * [**Sketch**](/flair/styles/library/sketch/)
