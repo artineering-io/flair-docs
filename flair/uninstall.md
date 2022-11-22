@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Uninstall
-nav_order: 10
+nav_order: 11
 ---
 
 # Uninstall Flair

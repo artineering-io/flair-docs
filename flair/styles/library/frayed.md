@@ -3,7 +3,7 @@ layout: default
 title: Frayed
 parent: Style library
 grand_parent: Styles
-nav_order: 3
+nav_order: 4
 ---
 
 <figure>

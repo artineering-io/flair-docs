@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Release Log
-nav_order: 9
+nav_order: 10
 ---
 
 # Release Log

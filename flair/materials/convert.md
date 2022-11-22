@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Flair Graph
-parent: Styles
-nav_order: 3
-has_children: true
+title: Convert Materials
+parent: Materials
+nav_order: 5
 ---
 
 <i class="fas fa-construction"></i> Coming soon...

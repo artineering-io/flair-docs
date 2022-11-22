@@ -3,7 +3,7 @@ layout: default
 title: Sketch
 parent: Style library
 grand_parent: Styles
-nav_order: 6
+nav_order: 7
 ---
 
 # Sketch shader style

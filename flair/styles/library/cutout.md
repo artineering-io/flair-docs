@@ -3,7 +3,7 @@ layout: default
 title: Cutout
 parent: Style library
 grand_parent: Styles
-nav_order: 2
+nav_order: 3
 ---
 
 <figure>

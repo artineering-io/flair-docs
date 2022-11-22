@@ -7,8 +7,6 @@ nav_order: 2
 
 <i class="fas fa-construction"></i> Updating soon...
 
-Materials give the surface properties to 3D objects, which are then projected to an image. Therefore, it is crucial to understand what features materials can provide, especially in a non-photorealistic rendering context where everything is possible.
-
 The _mnpr_uber_ material is developed to meet most painterly shading requirements in real-time. Built using the _ShaderFX_ framework, it is entirely contained within the node-based [_ShaderFX Graph_](#shaderfx-graph) and can be modified to fit any shading requirements by look development artists. However, most _settings_ and _attributes_ are easily accessible from the _Attribute Editor_ when the material is selected, as shown below.
 
 A _ShaderFX_ material has two types of 'attributes': [**Settings**](.#settings) and [**Attributes**](.#painterly-shading). They work differently so consider them as separate entities.

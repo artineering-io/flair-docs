@@ -3,7 +3,7 @@ layout: default
 title: Watercolor
 parent: Style library
 grand_parent: Styles
-nav_order: 1
+nav_order: 2
 ---
 <figure>
  <img src="/media/styles/watercolor/header.jpg" alt="Watercolor render">

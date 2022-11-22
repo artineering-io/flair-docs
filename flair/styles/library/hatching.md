@@ -3,7 +3,7 @@ layout: default
 title: Hatching
 parent: Style library
 grand_parent: Styles
-nav_order: 4
+nav_order: 5
 ---
 
 <figure>
