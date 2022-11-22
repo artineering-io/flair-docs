@@ -6,11 +6,11 @@ has_children: true
 has_toc: false
 ---
 
+# Materials
+
 <figure>
  <img src="/media/materials/header.png" alt="Materials header image">
 </figure>
-
-# Materials
 
 Materials give the surface properties to 3D objects, which are then projected onto an image. Therefore, it is crucial to understand what features materials provide--especially in a stylized/non-photorealistic rendering context where everything is possible.
 

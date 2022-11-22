@@ -6,11 +6,11 @@ has_children: true
 has_toc: false
 ---
 
+# Shader Styles
+
 <figure>
  <img src="/media/styles/header.png" alt="Styles header image">
 </figure>
-
-# Shader Styles
 
 Styles within Flair are created through shader pipelines that are defined either internally or using the [Flair graph](./graph).
 These pipelines are controlled via parameters that are normally exposed as attributes in the [globals node](/flair/getting-started/globals/) of the style.

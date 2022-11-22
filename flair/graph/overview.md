@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Interface Overview
+parent: Flair Graph
 ---
 
 <i class="fas fa-construction"></i> Updating soon...
@@ -31,4 +32,4 @@ The globals panel defines the globals that will be available in the Maya attribu
 The control definition panel defines the noiseFX and vertexFX controls available for the style in Maya.
 
 ### Settings
-The settings panel defines the graph settings...
+The settings panel defines the graph settings
