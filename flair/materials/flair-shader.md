@@ -5,33 +5,38 @@ parent: Materials
 nav_order: 2
 ---
 
-<i class="fas fa-construction"></i> Updating soon...
+# Flair Shader
+{: .no_toc }
 
-The _mnpr_uber_ material is developed to meet most painterly shading requirements in real-time. Built using the _ShaderFX_ framework, it is entirely contained within the node-based [_ShaderFX Graph_](#shaderfx-graph) and can be modified to fit any shading requirements by look development artists. However, most _settings_ and _attributes_ are easily accessible from the _Attribute Editor_ when the material is selected, as shown below.
+<details close markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
-A _ShaderFX_ material has two types of 'attributes': [**Settings**](.#settings) and [**Attributes**](.#painterly-shading). They work differently so consider them as separate entities.
+The _Flair Shader_ material was developed to meet most painterly shading requirements, support art-direction and render the necessary AOVs (Arbitrary Object Values i.e., normals, motion vectors...) in real-time. Built from scratch using the Maya API, it was conceived for artists, offering features only when needed.
+
+A _Flair Shader_ material has two types of 'attributes': [**Settings**](.#settings) and normal [**Attributes**](.#painterly-shading).
 {: .info}
 
--------------
-
-<figure class="float-right bottom-1 aio-ui">
-	<img src="/media/flair-shader/node-AE.png" alt="MNPR uber material node">
-	<figcaption>The default mnpr_uber material in the Attribute Editor.</figcaption>
+<figure class="aio-ui">
+	<img src="/media/flair-shader/node-AE.png" alt="Flair Shader material node attributes">
+	<figcaption>The default Flair Shader material in the Attribute Editor.</figcaption>
 </figure>
 
-The first element within the _mnpr_uber_ material is the `Open ShaderFX` button, which opens the _ShaderFX Graph_. This graph allows complete control to customize the material with nodes. The graph is intended for shader writers or advanced users who know how to manipulate and work with the _ShaderFX_ framework. Using the _ShaderFX_ framework is outside of the scope of this documentation, but you can learn a lot by watching [these tutorials](https://www.youtube.com/playlist?list=PLtiFs_CcTAQ5bewy6WwDrak9q9Pw2O6pu) and reading the [advanced documentation](#advanced).
-
-The first section, when opened, provides the material [**Settings**](.#settings) that allow to customize what optional features the _mnpr_uber_ material should have. The section is closed by default, as these settings enable/disable material properties. We'll go into detail with each setting [further on](#settings). Let us concentrate first on the default material [**Attributes**](.#painterly-shading).
-
-**Almost all attributes shown in the _mnpr_uber_ material go between `0` and `1`. The ShaderFX framework unfortunately maxes out the sliders of attributes at their default value if they are not `0`.**
-{: .info}
-
+The first section of a Flair Shader material within the attribute editor, provides the [**Settings**](.#settings) that allow to enable/disable what features the material should have. Therefore, we document the default material [**Attributes**](.#painterly-shading) first.
 
 ## Painterly Shading
-Painterly shading attributes focus on bringing colors into the foreground of shading control and work differently than most attributes found in photorealistic renderers. This doesn't mean that they can't be combined with normal [_Shading_](#shading) parameters, but they require 3D artists to go back to thinking in terms of colors and light. The first group of attributes control the color in the lit parts of the objects, whereas the second group of attributes (from [_Colored Shading_](#colored-shading) onwards) control the color in the shade of objects.
+Painterly shading attributes focus on bringing colors into the foreground of shading control and work differently than most attributes found in PBR materials. This doesn't mean that they can't be combined with normal [_Shading_](#shading) parameters, but they require 3D artists to go back to thinking in terms of colors and light. The first group of attributes control the color in the lit parts of objects, whereas the second group of attributes (from [_Colored Shading_](#colored-shading) onwards) control the color in the shade of objects.
+
+Painterly shading attributes are baked onto albedo AOVs and can't be separated for compositing purposes.
+{: .info}
 
 ### Cangiante
-_Cangiante_ illumination changes the hue of the lit area towards a brighter and saturated related color. This attributes can also be used to enhance the color of any applied [_Albedo Texture_](#albedo-texture).
+_Cangiante_ illumination changes the hue of the lit area towards a brighter and saturated related color. This attributes can also be used to enhance the color of any applied [_Albedo_](#albedo).
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
         <source src="/media/flair-shader/cangiante.mp4" type="video/mp4">
@@ -39,7 +44,7 @@ _Cangiante_ illumination changes the hue of the lit area towards a brighter and 
     <figcaption>Cangiante illumination (0...2.0)</figcaption>
 </figure>
 
-#### Cangiante Wrap
+### Cangiante Wrap
 _Cangiante Wrap_ defines the area of effect for the [_Cangiante_](#cangiante) illumination attribute.
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
@@ -48,35 +53,35 @@ _Cangiante Wrap_ defines the area of effect for the [_Cangiante_](#cangiante) il
     <figcaption>Cangiante Wrap (0...1.0)</figcaption>
 </figure>
 
-### Light
-_Light_ (prev. Dilute Paint) changes the color of the lit area towards the [_Light Color_](#light-color).
+### Custom Light
+_Custom Light_ changes the color of the lit area towards the [_Custom Light Color_](#custom-light-color).
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
         <source src="/media/flair-shader/light.mp4" type="video/mp4">
     </video>
-    <figcaption>Light (0...1.0)</figcaption>
+    <figcaption>Custom Light (0...1.0)</figcaption>
 </figure>
 
-#### Light Wrap
-_Light Wrap_ (prev. Dilute Area) defines the area of effect for the [_Light_](#light) attribute.
+### Custom Light Wrap
+_Custom Light Wrap_ defines the area of effect for the [_Custom Light_](#custom-light) attribute.
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
         <source src="/media/flair-shader/light-wrap.mp4" type="video/mp4">
     </video>
-    <figcaption>Light Wrap (0...1.0)</figcaption>
+    <figcaption>Custom Light Wrap (0...1.0)</figcaption>
 </figure>
 
-#### Light Color
-_Light Color_ (prev. Dilute Color) defines a custom color used by the [_Light_](#light) and [_Highlight_](#highlight) attributes.
+### Custom Light Color
+_Custom Light Color_ defines a custom color used by the [_Custom Light_](#custom-light) and [_Highlight_](#highlight) attributes.
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
         <source src="/media/flair-shader/light-color.mp4" type="video/mp4">
     </video>
-    <figcaption>Different light colors</figcaption>
+    <figcaption>Different custom light colors</figcaption>
 </figure>
 
 ### Colored Shading
-_Colored Shading_ toggles colored shading of objects, which is then done with the [_Shade Color_](#shade-color) instead of black.
+_Colored Shading_ toggles colored shading of objects, which is then done with the [_Custom Shade Color_](#custom-shade-color) instead of black.
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
         <source src="/media/flair-shader/colored-shading.mp4" type="video/mp4">
@@ -93,37 +98,40 @@ _Diffuse Factor_ defines the amount of diffuse shading within the material. `0` 
     <figcaption>Diffuse Factor (0...1.0)</figcaption>
 </figure>
 
-### Shade
-_Shade_ (prev. Shade Wrap) changes the color of the shade area towards the [_Shade Color_](#shade-color).
+For scenes that require strong contrasts in shading (e.g., at night), keep the _Diffuse Factor_ close to `1`.
+{: .info}
+
+### Custom Shade
+_Custom Shade_ changes the color of the shade area towards the [_Custom Shade Color_](#custom-shade-color).
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
         <source src="/media/flair-shader/shade.mp4" type="video/mp4">
     </video>
-    <figcaption>Shade (0...1.0)</figcaption>
+    <figcaption>Custom Shade (0...1.0)</figcaption>
 </figure>
 
-### Shade Wrap
-_Shade Wrap_ defines the area of effect for the _Shade_ attribute. It behaves like the [_Light Wrap_](#light-wrap), but for the shade of an object.
+### Custom Shade Wrap
+_Custom Shade Wrap_ defines the area of effect for the _Custom Shade_ attribute. It behaves like the [_Custom Light Wrap_](#custom-light-wrap), but for the shade of an object.
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
         <source src="/media/flair-shader/shade-wrap.mp4" type="video/mp4">
     </video>
-    <figcaption>Shade Wrap (0...1.0)</figcaption>
+    <figcaption>Custom Shade Wrap (0...1.0)</figcaption>
 </figure>
 
-### Shade Color
-_Shade Color_ defines a custom color used by the [_Colored Shading_](#colored-shading) and the [_Shade_](#shade) attributes.
+### Custom Shade Color
+_Custom Shade Color_ defines a custom color used by the [_Colored Shading_](#colored-shading) and the [_Custom Shade_](#custom-shade) attributes.
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
         <source src="/media/flair-shader/shade-color.mp4" type="video/mp4">
     </video>
-    <figcaption>Different shade colors showcased with the Colored Shading attribute on</figcaption>
+    <figcaption>Different custom shade colors showcased with the Colored Shading enabled</figcaption>
 </figure>
 
 -----------------
 
 ## Shading
-Shading attributes focus on common attributes found in photorealistic materials, including various uses of texture mapping for different shading effects. Further attributes can be shown in this section by enabling the [_Specularity_](#specularity) and [_NormalMapTweaks_](#normalmaptweaks) Settings.
+Shading attributes focus on common attributes found in materials, including various uses of texture mapping for different shading effects.
 
 ### Shading
 _Shading_ defines the amount of shading within the material. `0` will be flat shading (entirely unlit), `1` will be shaded. It's the opposite of [_Diffuse Factor_](#diffuse-factor) and won't affect lighting from [_Light Maps_](#lightmap).
@@ -135,7 +143,7 @@ _Shading_ defines the amount of shading within the material. `0` will be flat sh
 </figure>
 
 ### Color Tint
-_Color Tint_ defines a custom tint color. If no [_Albedo Textures_](#albedo-texture) are used, the color tint will define the overall color of the material. With textures, the color tint will multiply with the albedo texture to tint it accordingly. Leave the color tint white if you only want the color of the albedo texture.
+_Color Tint_ defines a custom tint color. It is especially useful when mixing an additional color to the albedo color or textures. The color tint will multiply with the albedo to tint it accordingly. So, leave the color tint white if you only want the color of the albedo texture.
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
         <source src="/media/flair-shader/color-tint.mp4" type="video/mp4">
@@ -143,11 +151,9 @@ _Color Tint_ defines a custom tint color. If no [_Albedo Textures_](#albedo-text
     <figcaption>Different tint colors showcased with a Diffuse Factor of 0.6</figcaption>
 </figure>
 
-### Albedo Texture
-_Albedo Texture_ is an image which contains the raw colors of the object, without any lighting information. This attribute toggles the use of the [_Albedo Texture File_](#albedo-texture-file).
+### Albedo
+_Albedo_ contains the raw colors of the object, without any lighting information. Use a plain color or click on the checkerboard icon to select a texture.
 
-#### Albedo Texture File
-Specifies the file path to the _Albedo Texture_. The path can be absolute or relative to the project root directory.  
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
         <source src="/media/flair-shader/albedo-tint.mp4" type="video/mp4">
@@ -156,13 +162,9 @@ Specifies the file path to the _Albedo Texture_. The path can be absolute or rel
 </figure>
 
 ### Normal Map
-_Normal Map_ is an image which contains the normal inclination deviations of the surface in the red and green channels. This texture is used to add geometric detail through
-normal modulations.
+_Normal Map_ is a texture which contains normal inclination deviations of the surface in the red and green channels, adding geometric detail without using polygons. Click on the checkerboard icon to select a texture.
 
-#### Normal Map File
-Specifies the file path to the _Normal Map_. The path can be absolute or relative to the project root directory.  
-
-#### Bump Depth
+### Bump Depth
 Defines the intensity of the normal inclinations in the [_Normal Map_](#normal-map).
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
@@ -171,54 +173,140 @@ Defines the intensity of the normal inclinations in the [_Normal Map_](#normal-m
     <figcaption>Normal Map with Bump Depth (0...3.0)</figcaption>
 </figure>
 
-As not all normal maps are encoded the same way, there is a [_NormalMapTweaks_](#normalmaptweaks) setting that helps to invert the U or V direction of the normal map, if necessary.
-{: .info}
-
-------------------
-------------------
-
-
-## Stylization (proc.)
-When the [_NoiseFX_](./../noisefx) tool has been used on the material, the _Stylization (procedural)_ section will appear at the bottom of the _Attribute Editor_. This section contains all the procedural attributes that the _NoiseFX_ tool creates and modifies. Therefore, you can mostly ignore these attributes within the material.
-
-<figure class="aio-ui">
-	<img src="/media/flair-shader/stylization-proc-AE.png" alt="Stylization (procedural) attributes">
-	<figcaption>Some procedural stylization attributes created through NoiseFX.</figcaption>
-</figure>
-
 ------------------
 ------------------
 
 
 ## Settings
 
-Settings is the first section within the _Attribute Editor_, but it is closed by default. Once opened, each _Setting_ allows you to customize what optional features the _mnpr_uber_ material should have. Most of these settings are disabled by default, as to avoid unnecessary computations and clutter for artists. If needed, enabling settings will provide the necessary attributes to configure them.
+Additional material attributes for optional features can be created on-demand by enabling different settings.
+
+Setting attributes are found in the first section of the _Attribute Editor_. Most settings are disabled by default, as to avoid unnecessary computations and clutter for artists. When needed, enabling settings will show the necessary attributes in the Attribute Editor, any copied tabs thereof, and in the Property Editor of the Hypershade window.
 
 ### Reflectance Model
-The _Reflectance Model_ setting defines the shading algorithm used by the _mnpr_uber_ shader. A shading algorithm dictates how light is reflected along the surface of the object. Here is a visual comparison of each shading algorithm.
+The _Reflectance Model_ setting defines the shading algorithm used by the _Flair Shader_. A shading algorithm dictates how light is reflected along the surface of the object. Here is a visual comparison of each shading algorithm.
 
 <figure>
     <div class="d-flex">
-        <img src="/media/flair-shader/lambert.png" alt="lambert" style="height:150px">
-        <img src="/media/flair-shader/half-lambert.png" alt="half-lambert" style="height:150px">
-        <img src="/media/flair-shader/extended-lambert.png" alt="extended-lambert" style="height:150px">
-        <img src="/media/flair-shader/angular-lambert.png" alt="angular-lambert" style="height:150px">
+        <img src="/media/flair-shader/lambert.png" alt="lambert" style="height:152px">
+        <img src="/media/flair-shader/half-lambert.png" alt="half-lambert" style="height:152px">
+        <img src="/media/flair-shader/extended-lambert.png" alt="extended-lambert" style="height:152px">
+        <img src="/media/flair-shader/angular-lambert.png" alt="angular-lambert" style="height:152px">
     </div>
 	<figcaption>Available reflectance models: Lambert, Half Lambert, Extended Lambert and Angular Lambert.</figcaption>
 </figure>
 
-Some reflectance models may not be compatible with all material features on this documentation page. Only the _Lambert_ reflectance model has been thoroughly tried and tested.
+Some reflectance models may not be compatible with all material features on this documentation page. Only the _Lambert_ reflectance model will work with cast shadows and has been thoroughly tried and tested.
 {: .warning}
 
 ------------------
+
+### Toon Shaded
+
+The _Toon Shaded_ setting activates toon/cell shading based on the active reflectance model. Toon shading within Flair separates the reflectance of light into three regions i.e., shade, mid and light region. Each region can be controlled through the toon shading attributes in the Attribute Editor.
+
+<figure class="aio-ui">
+	<img src="/media/flair-shader/toon-AE.png" alt="Toon Shading attributes in the Attribute Editor">
+	<figcaption>The Toon Shading section in the Attribute Editor.</figcaption>
+</figure>
+
+#### Toon Shade Color
+The _Toon Shade Color_ defines the color of the shade toon region.
+<figure>
+    <video autoplay loop muted playsinline style="height:152px">
+        <source src="/media/flair-shader/toon-shade-color.mp4" type="video/mp4">
+    </video>
+    <figcaption>Different toon shade colors</figcaption>
+</figure>
+
+#### Toon Shade Wrap
+The _Toon Shade Wrap_ defines the area of effect for the toon shade region.
+<figure>
+    <video autoplay loop muted playsinline style="height:152px">
+        <source src="/media/flair-shader/toon-shade-wrap.mp4" type="video/mp4">
+    </video>
+    <figcaption>Toon shade wrap (0...1)</figcaption>
+</figure>
+
+#### Toon Shade Blur
+The _Toon Shade Blur_ defines the softness between the shade and mid toon regions.
+<figure>
+    <video autoplay loop muted playsinline style="height:152px">
+        <source src="/media/flair-shader/toon-shade-blur.mp4" type="video/mp4">
+    </video>
+    <figcaption>Toon shade blur (0...1)</figcaption>
+</figure>
+
+#### Toon Mid Color
+The _Toon Mid Color_ defines the color of the mid toon region.
+<figure>
+    <video autoplay loop muted playsinline style="height:152px">
+        <source src="/media/flair-shader/toon-mid-color.mp4" type="video/mp4">
+    </video>
+    <figcaption>Different toon mid colors</figcaption>
+</figure>
+
+#### Toon Mid Wrap
+The _Toon Mid Wrap_ defines the area of effect for the toon mid region.
+<figure>
+    <video autoplay loop muted playsinline style="height:152px">
+        <source src="/media/flair-shader/toon-mid-wrap.mp4" type="video/mp4">
+    </video>
+    <figcaption>Toon mid wrap (0.6...0...1)</figcaption>
+</figure>
+
+You can use the _Toon Mid Wrap_ attribute to reduce toon shading to only two regions instead of three, should the style require it.
+{: .info}
+
+#### Toon Mid Blur
+The _Toon Mid Blur_ defines the softness between the mid and light toon regions.
+<figure>
+    <video autoplay loop muted playsinline style="height:152px">
+        <source src="/media/flair-shader/toon-mid-blur.mp4" type="video/mp4">
+    </video>
+    <figcaption>Toon mid blur (0...1)</figcaption>
+</figure>
+
+#### Toon Light Color
+The _Toon Light Color_ defines the color of the light toon region.
+<figure>
+    <video autoplay loop muted playsinline style="height:152px">
+        <source src="/media/flair-shader/toon-light-color.mp4" type="video/mp4">
+    </video>
+    <figcaption>Different toon light colors</figcaption>
+</figure>
+
+
+---
+
+### Transparent
+The _Transparent_ setting enables the use of transparency and alpha masks in the material and toggles the attributes in the Attribute Editor.
+<figure class="aio-ui">
+	<img src="/media/flair-shader/transparent-AE.png" alt="Transparency and alpha masking attributes">
+	<figcaption>Transparency and alpha masking section in the Attribute Editor.</figcaption>
+</figure>
+
+#### Transparency Map
+
+#### Transparency
+
+#### BlendFX
+
+#### BlendAOVs
+
+#### Alpha Mask
+
+#### Alpha Mask Cutoff
+
+---
 
 ### Deformed
 The _Deformed_ setting bakes the current position of vertices so that effects that rely on the 3D position of objects can stay in place when objects are animated/deformed. If this setting is not enabled, things like _NoiseFX_ or _FeatureNoise_ would float around in 3D space and not move with the objects.
 
 ------------------
 
-### VtxControl
-The _VtxControl_ setting enables the control of stylization effects through the vertex colors. This attribute is automatically managed by MNPRX and is activated as soon as you start using [_PaintFX_](./../paintfx).
+### VertexFX
+The _VertexFX_ setting enables the control of stylization effects through the vertex colors. This attribute is automatically managed by MNPRX and is activated as soon as you start using [_PaintFX_](./../paintfx).
 
 ------------------
 
@@ -234,15 +322,6 @@ The _Receive Shadows_ setting enables receiving cast shadows from other objects 
 
 ### Flip-Back-Faces
 The _Flip-Back-Faces_ setting flips the normals of faces that might be pointing away from the camera view. This is useful to obtain better results for thin objects like leaves.
-
-------------------
-
-### Transparency
-The _Transparent_ setting enables the use of alpha masks in the material and unlocks the _Semi-Transparent_ and _Blend-All_ settings directly underneath.
-<figure class="aio-ui">
-	<img src="/media/flair-shader/transparent-AE.png" alt="Transparency and Semi-Transparency attributes">
-	<figcaption>The Transparent and Semi-Transparent section in the Attribute Editor.</figcaption>
-</figure>
 
 #### Alpha Mask
 _Alpha Mask_ is a black and white image which embeds the alpha of the material. White is opaque, black is transparent. Use the alpha masks if you want that cast shadows respect the transparency.
@@ -307,11 +386,11 @@ If this attribute is enabled, [_Light Maps_](#lightmap) will add both light and 
 
 <div class="d-flex">
 	<figure>
-		<img src="/media/flair-shader/light-map-map.png" alt="Light map used in video"  style="height: 150px">
+		<img src="/media/flair-shader/light-map-map.png" alt="Light map used in video"  style="height: 152px">
 		<figcaption>Light Map supporting Shade in Light Map.</figcaption>
 	</figure>
 	<figure>
-		<video autoplay loop muted playsinline style="height:150px">
+		<video autoplay loop muted playsinline style="height:152px">
 			<source src="/media/flair-shader/light-map.mp4" type="video/mp4">
 		</video>
 		<figcaption>Light Map applied.</figcaption>
@@ -420,12 +499,12 @@ The _Specularity_ setting enables the use of [specular reflectance models](#spec
 </figure>
 
 ### specularModel
-The _specularModel_ setting defines the shading algorithm used by the _mnpr_uber_ material for specularity (shininess). A shading algorithm dictates how light is reflected along the surface of the object.
+The _specularModel_ setting defines the shading algorithm used by the _Flair Shader_ material for specularity (shininess). A shading algorithm dictates how light is reflected along the surface of the object.
 
 <figure>
     <div class="d-flex">
-        <img src="/media/flair-shader/blinn.png" alt="Blinn" style="height:150px">
-        <img src="/media/flair-shader/anisotropic.png" alt="Anisotropic" style="height:150px">
+        <img src="/media/flair-shader/blinn.png" alt="Blinn" style="height:152px">
+        <img src="/media/flair-shader/anisotropic.png" alt="Anisotropic" style="height:152px">
 	</div>
     <figcaption>Available specular reflectance models: Blinn and Anisotropic.</figcaption>
 </figure>
@@ -453,7 +532,7 @@ _Specular Map_ is a greyscale image which defines the specularity within the mat
 #### Specular Map File
 Specifies the file path to the _Specular Map_. The path can be absolute or relative to the project root directory.  
 <figure>
-    <video autoplay loop muted playsinline style="width:150px">
+    <video autoplay loop muted playsinline style="width:152px">
         <source src="/media/flair-shader/specular-map.mp4" type="video/mp4">
     </video>
     <figcaption>(1) without specularity; (2) with specularity; (3) with specularity and a Specular Map.</figcaption>
@@ -464,19 +543,19 @@ _Specular Roll Off_, _Horizontal Roll Off_ and _Vertical Roll Off_ define the si
 
 <div class="d-flex">
 	<figure>
-		<video autoplay loop muted playsinline style="height:150px">
+		<video autoplay loop muted playsinline style="height:152px">
 			<source src="/media/flair-shader/roll-off.mp4" type="video/mp4">
 		</video>
 		<figcaption style="width:17em">Blinn: Roll Off (0...1.0).</figcaption>
 	</figure>
 	<figure>
-		<video autoplay loop muted playsinline style="height:150px">
+		<video autoplay loop muted playsinline style="height:152px">
 			<source src="/media/flair-shader/h-roll-off.mp4" type="video/mp4">
 		</video>
 		<figcaption style="width:17em">Anisotropic: Horizontal Roll Off (0...0.5).</figcaption>
 	</figure>
 	<figure>
-		<video autoplay loop muted playsinline style="height:150px">
+		<video autoplay loop muted playsinline style="height:152px">
 			<source src="/media/flair-shader/v-roll-off.mp4" type="video/mp4">
 		</video>
 		<figcaption style="width:17em">Anisotropic: Vertical Roll Off (0...0.5).</figcaption>
@@ -489,10 +568,10 @@ _Specular Deffusion_ defines how diffuse or sharp a specular highlight is.
 <div>
 	<figure>
         <div class="d-flex">
-            <video autoplay loop muted playsinline style="height:150px;">
+            <video autoplay loop muted playsinline style="height:152px;">
                 <source src="/media/flair-shader/blinn-diffusion.mp4" type="video/mp4">
             </video>
-            <video autoplay loop muted playsinline style="height:150px;">
+            <video autoplay loop muted playsinline style="height:152px;">
                 <source src="/media/flair-shader/anisotropic-diffusion.mp4" type="video/mp4">
             </video>
         </div>
@@ -505,7 +584,7 @@ _Specular Transparency_ defines the transparency of the specular highlight.
 
 <div>
 	<figure>
-		<video autoplay loop muted playsinline style="height:150px">
+		<video autoplay loop muted playsinline style="height:152px">
 			<source src="/media/flair-shader/specular-transparency.mp4" type="video/mp4">
 		</video>
 		<figcaption>Specular Transparency (0...1.0).</figcaption>
@@ -517,11 +596,11 @@ The _Specular-In-Alpha_ setting is only visible if the [_Specularity_](#specular
 
 <div class="d-flex">
 	<figure>
-		<img src="/media/flair-shader/no-specular-in-alpha.png" alt="Without Specular-In-Alpha"  style="height: 150px">
+		<img src="/media/flair-shader/no-specular-in-alpha.png" alt="Without Specular-In-Alpha"  style="height: 152px">
 		<figcaption>Without Specular-In-Alpha</figcaption>
 	</figure>
 	<figure>
-		<img src="/media/flair-shader/specular-in-alpha.png" alt="With Specular-In-Alpha"  style="height: 150px">
+		<img src="/media/flair-shader/specular-in-alpha.png" alt="With Specular-In-Alpha"  style="height: 152px">
 		<figcaption>With Specular-In-Alpha</figcaption>
 	</figure>
 </div>
@@ -531,7 +610,7 @@ _Alpha Tint_ darkens the alpha parts of the material with a specified color. Thi
 
 <div>
 	<figure>
-		<video autoplay loop muted playsinline style="height:150px">
+		<video autoplay loop muted playsinline style="height:152px">
 			<source src="/media/flair-shader/alpha-tint.mp4" type="video/mp4">
 		</video>
 		<figcaption>Alpha Tint with a light red color.</figcaption>
@@ -549,13 +628,13 @@ The _Displacement_ setting enables the use of displacement within the material a
 </figure>
 
 ### displacementModel
-The _displacementModel_ setting defines the displacement algorithm used by the _mnpr_uber_ shader. More importantly, it defines what kind of [_Displacement Map_](#displacement-map) it expects. Depending on where you got your displacement map from, this becomes quite relevant. _GrayScale_ is the simplest form of displacement map, in which the intensity of the map (white value) defines the amount of displacement given to the geometry.
+The _displacementModel_ setting defines the displacement algorithm used by the _Flair Shader_ shader. More importantly, it defines what kind of [_Displacement Map_](#displacement-map) it expects. Depending on where you got your displacement map from, this becomes quite relevant. _GrayScale_ is the simplest form of displacement map, in which the intensity of the map (white value) defines the amount of displacement given to the geometry.
 
 #### Tessellation Factor
 _Tessellation Factor_ defines the amount of subdivision within each polygon. The higher the factor, the more polygons are subdivided, giving more points to displace. There is no magic number, so you will need to find out how much tessellation is enough for your displacement purposes depending on the topology of each model.  
 
 <figure>
-    <video autoplay loop muted playsinline style="width:150px">
+    <video autoplay loop muted playsinline style="width:152px">
         <source src="/media/flair-shader/tessellation-factor.mp4" type="video/mp4">
     </video>
     <figcaption>Displacement with different Tesselation Factors (1.0...10.0).</figcaption>
@@ -568,7 +647,7 @@ Specifies the file path to the _Displacement Map_. The path can be absolute or r
 _Displacement Multiplier_ defines the amount of displacement to use. The higher the value, the more displacement there will be.
 
 <figure>
-    <video autoplay loop muted playsinline style="width:150px">
+    <video autoplay loop muted playsinline style="width:152px">
         <source src="/media/flair-shader/displacement-multiplier.mp4" type="video/mp4">
     </video>
     <figcaption>Displacement Multiplier (0...0.5).</figcaption>
@@ -578,7 +657,7 @@ _Displacement Multiplier_ defines the amount of displacement to use. The higher 
 _Flat Tessellation Blend_ defines the amount of flatness within the tessellations (subdivisions). By default, tessellations smoothen the transitions between flat polygons, unless specified through this attribute.
 
 <figure>
-    <video autoplay loop muted playsinline style="width:150px">
+    <video autoplay loop muted playsinline style="width:152px">
         <source src="/media/flair-shader/flat-tessellation-blend.mp4" type="video/mp4">
     </video>
     <figcaption>Flat Tessellation Blend (0...1.0).</figcaption>
@@ -588,7 +667,7 @@ _Flat Tessellation Blend_ defines the amount of flatness within the tessellation
 _Displacement Offset_ offsets parts of the displacement inward, instead of only outward.
 
 <figure>
-    <video autoplay loop muted playsinline style="width:150px">
+    <video autoplay loop muted playsinline style="width:152px">
         <source src="/media/flair-shader/displacement-offset.mp4" type="video/mp4">
     </video>
     <figcaption>Displacement Offset (0...1.0).</figcaption>
@@ -613,10 +692,10 @@ _Invert U_ and _Invert V_ invert the normal inclinations either horizontally or 
 <div>
 	<figure>
         <div class="d-flex">
-            <video autoplay loop muted playsinline style="height:150px;">
+            <video autoplay loop muted playsinline style="height:152px;">
                 <source src="/media/flair-shader/invert-u.mp4" type="video/mp4">
             </video>
-            <video autoplay loop muted playsinline style="height:150px;">
+            <video autoplay loop muted playsinline style="height:152px;">
                 <source src="/media/flair-shader/invert-v.mp4" type="video/mp4">
             </video>
         </div>
@@ -639,7 +718,21 @@ The _Color-Plane_ setting defines a material as a color plane. Objects assigned 
 ### maxLights
 The _maxLights_ setting defines the maximum amount of lights considered by the material for its calculations.
 
----------------
+
+------------------
+------------------
+
+
+## NoiseFX
+The _NoiseFX_ section (closed by default) at the bottom contains the attributes that are automatically set by the [_NoiseFX_](/art-direction/noisefx) tool. You can mostly ignore these attributes within the material, unless you want to key and animate NoiseFX values.
+
+<figure class="aio-ui">
+	<img src="/media/flair-shader/noisefx.png" alt="Stylization (procedural) attributes">
+	<figcaption>All NoiseFX attributes</figcaption>
+</figure>
+
+------------------
+------------------
 
 
 ## Advanced
@@ -650,7 +743,7 @@ The _maxLights_ setting defines the maximum amount of lights considered by the m
 1. Change the _CustomGraph_ node at the top-level from `false` to `true`. This will avoid overwriting your changes upon a _ShaderFX_ update.
 1. Modify the material to your heart's content and [create your own ShaderFX material](#creating-shaderfx), if needed.
 
-**Set your own NoiseFX algorithms within the mnpr_uber material**
+**Set your own NoiseFX algorithms within the Flair Shader material**
 
 1. Remember which attribute is being modified within the material's _Stylization (procedural)_ section when modifying the desired _NoiseFX_ values.
 1. Open the [_ShaderFX graph_](#shaderfx-graph) within the desired material.
@@ -660,7 +753,7 @@ The _maxLights_ setting defines the maximum amount of lights considered by the m
 **Create your own ShaderFX materials**
 
 You can create your own _ShaderFX_ materials and continue using the MNPRX tools with them.
-1. [Modify](#modifying-shaderfx) the _mnpr_uber_ material to create your custom _ShaderFX_ network.
+1. [Modify](#modifying-shaderfx) the _Flair Shader_ material to create your custom _ShaderFX_ network.
 1. At the top-level of the _ShaderFX_ material, set the desired name of the graph in the _GraphName_ node.
 1. If previously modified, change the _CustomGraph_ node from `true` to `false`. This will enable quick _ShaderFX_ updates in the future for materials with your graph name.
 1. Export the entire graph `File->Export Graph` into `MNPRX->shaders` under the new graph name.
