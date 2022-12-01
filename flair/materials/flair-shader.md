@@ -237,6 +237,9 @@ The _Toon Shade Blur_ defines the softness between the shade and mid toon region
     <figcaption>Toon shade blur (0...1)</figcaption>
 </figure>
 
+Toon region blur can also be controlled locally with VertexFX and NoiseFX, by enabling the _Toon Toolset_: `Fair Toolbox -> Toon Settings -> Toon Toolset`.
+{: .info}
+
 #### Toon Mid Color
 The _Toon Mid Color_ defines the color of the mid toon region.
 <figure>
@@ -280,23 +283,121 @@ The _Toon Light Color_ defines the color of the light toon region.
 ---
 
 ### Transparent
-The _Transparent_ setting enables the use of transparency and alpha masks in the material and toggles the attributes in the Attribute Editor.
+The _Transparent_ setting activates the use of transparency and alpha masks in the material and toggles the attributes in the Attribute Editor.
 <figure class="aio-ui">
 	<img src="/media/flair-shader/transparent-AE.png" alt="Transparency and alpha masking attributes">
 	<figcaption>Transparency and alpha masking section in the Attribute Editor.</figcaption>
 </figure>
 
 #### Transparency Map
+_Transparency Map_ is a greyscale texture which embeds the semi-transparency of the material. Click on the checkerboard icon to select a texture.
+
+##### This is a header 5
+
+<figure>
+    <video autoplay loop muted playsinline style="width:200px">
+        <source src="/media/flair-shader/transparency-map.mp4" type="video/mp4">
+    </video>
+    <figcaption>Transparency Map, featuring semi-transparency.</figcaption>
+</figure>
+
+As with [_Alpha Masks_](#alpha-mask): white is opaque, grey values are semi-transparent, black is transparent. The darker the value of the _Transparency Map_, the more transparent the material will be.
+{: .info}
 
 #### Transparency
+_Transparency_ defines the overall semi-transparency of the material.
+<figure>
+    <video autoplay loop muted playsinline style="width:200px">
+        <source src="/media/flair-shader/transparency.mp4" type="video/mp4">
+    </video>
+    <figcaption>Transparency (0...1.0)</figcaption>
+</figure>
 
-#### BlendFX
+#### Blend FX
+_Blend FX_ defines if the control masks of effects (NoiseFX, VertexFX) should blend with transparency or not.
 
-#### BlendAOVs
+#### Blend AOVs
+_Blend AOVs_ defines if AOVs (depth and normals) should blend with transparency or not. This attribute also shows the _AOV Blend_ attribute, which helps to blend AOVs further so that effects can look better on semi-transparent objects.
+
+##### AOV Blend
+_AOV Blend_, which only appears appears once _Blend AOVs_ is enabled, defines how much the AOVs should blend. A value of 0 will make the AOVs (depth and normals) of the material dissapear, while a value of 1 will blend AOVs as much as the color.
 
 #### Alpha Mask
+_Alpha Mask_ is a black and white image which embeds the alpha of the material. Alpha masks are binary and can only distinguish between opaque or fully transparent (white is opaque, black is transparent). Click on the checkerboard icon to select a texture.
+
+Use the alpha masks if you want cast shadows to respect the transparency.
+{: .info}
 
 #### Alpha Mask Cutoff
+The grayscale value at which the [_Alpha Mask_](#alpha-mask) is transparent. Defines the threshold/boundary of the alpha mask in case there are grey values.
+<figure>
+    <video autoplay loop muted playsinline style="width:200px">
+        <source src="/media/flair-shader/alpha-mask.mp4" type="video/mp4">
+    </video>
+    <figcaption>Alpha Mask with Alpha Mask Cutoff (0.1...0.9).</figcaption>
+</figure>
+
+
+<i class="fas fa-construction"></i>Documentation updated until here...
+
+---
+
+### Displacement
+The _Displacement_ setting enables the use of displacement within the material and creates a _Displacement_ section with [displacement attributes](#tessellation-factor) in the _Attribute Editor_. Once enabled, a new _Setting_ also appears underneath: [_displacementModel_](#displacementmodel).
+
+<figure class="aio-ui">
+	<img src="/media/flair-shader/displacement-AE.png" alt="Displacement section">
+	<figcaption>The Displacement section in the Attribute Editor.</figcaption>
+</figure>
+
+### displacementModel
+The _displacementModel_ setting defines the displacement algorithm used by the _Flair Shader_ shader. More importantly, it defines what kind of [_Displacement Map_](#displacement-map) it expects. Depending on where you got your displacement map from, this becomes quite relevant. _GrayScale_ is the simplest form of displacement map, in which the intensity of the map (white value) defines the amount of displacement given to the geometry.
+
+#### Tessellation Factor
+_Tessellation Factor_ defines the amount of subdivision within each polygon. The higher the factor, the more polygons are subdivided, giving more points to displace. There is no magic number, so you will need to find out how much tessellation is enough for your displacement purposes depending on the topology of each model.  
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/tessellation-factor.mp4" type="video/mp4">
+    </video>
+    <figcaption>Displacement with different Tesselation Factors (1.0...10.0).</figcaption>
+</figure>
+
+#### Displacement Map
+Specifies the file path to the _Displacement Map_. The path can be absolute or relative to the project root directory. The displacement map is different depending on what [_displacementModel_](#displacementmodel) is selected in _Settings_.  
+
+#### Displacement Multiplier
+_Displacement Multiplier_ defines the amount of displacement to use. The higher the value, the more displacement there will be.
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/displacement-multiplier.mp4" type="video/mp4">
+    </video>
+    <figcaption>Displacement Multiplier (0...0.5).</figcaption>
+</figure>
+
+#### Flat Tessellation Blend
+_Flat Tessellation Blend_ defines the amount of flatness within the tessellations (subdivisions). By default, tessellations smoothen the transitions between flat polygons, unless specified through this attribute.
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/flat-tessellation-blend.mp4" type="video/mp4">
+    </video>
+    <figcaption>Flat Tessellation Blend (0...1.0).</figcaption>
+</figure>
+
+#### Displacement Offset
+_Displacement Offset_ offsets parts of the displacement inward, instead of only outward.
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/displacement-offset.mp4" type="video/mp4">
+    </video>
+    <figcaption>Displacement Offset (0...1.0).</figcaption>
+</figure>
+
+#### Clipping Bias Add
+_Clipping Bias Add_ defines a small default value to avoid vertices clipping away from light view during the shadow map calculations.
 
 ---
 
@@ -322,51 +423,6 @@ The _Receive Shadows_ setting enables receiving cast shadows from other objects 
 
 ### Flip-Back-Faces
 The _Flip-Back-Faces_ setting flips the normals of faces that might be pointing away from the camera view. This is useful to obtain better results for thin objects like leaves.
-
-#### Alpha Mask
-_Alpha Mask_ is a black and white image which embeds the alpha of the material. White is opaque, black is transparent. Use the alpha masks if you want that cast shadows respect the transparency.
-
-#### Alpha Texture File
-Specifies the file path to the _Alpha Mask_. The path can be absolute or relative to the project root directory. While similar to [_Transparency Map_](#transparency-map), the alpha mask is binary and can only distinguish between opaque or fully transparent.
-
-#### Alpha Mask Cutoff
-The grayscale value at which the [_Alpha Mask_](#alpha-mask) is transparent. Defines the boundary of the alpha mask in case there are grey values.
-<figure>
-    <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/flair-shader/alpha-mask.mp4" type="video/mp4">
-    </video>
-    <figcaption>Alpha Mask with Alpha Mask Cutoff (0.1...0.9).</figcaption>
-</figure>
-
-#### Transparency Map
-_Transparency Map_ is a greyscale image which embeds the semi-transparency of the material. This attribute toggles the use of the [_Transparency Texture File_](#transparency-texture-file) and is only available if the _Transparent_ and  _Semi-Transparent_ setting have been enabled.
-
-**As with [_Alpha Masks_](#alpha-mask): white is opaque, grey values are semi-transparent, black is transparent. The darker the value of the _Transparency Map_, the more transparent the material will be.**
-{: .info}
-
-#### Transparency Texture File
-Specifies the file path to the _Transparency Map_. The path can be absolute or relative to the project root directory.  
-<figure>
-    <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/flair-shader/transparency-map.mp4" type="video/mp4">
-    </video>
-    <figcaption>Transparency Map, featuring semi-transparency.</figcaption>
-</figure>
-
-#### Transparency
-_Transparency_ defines the overall semi-transparency of the material.
-<figure>
-    <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/flair-shader/transparency.mp4" type="video/mp4">
-    </video>
-    <figcaption>Transparency (0...1.0)</figcaption>
-</figure>
-
-When working with [_Transparency Map_](#transparency-map) or [_Alpha Mask_](#alpha-mask), you can set the _Transparency_ attribute to `0`, as the textures will normally handle the transparency, instead.
-{: .info}
-
-#### Blend-All setting
-The _Blend-All_ setting (which shows up once the _Semi-Transparency_ setting has been enabled) makes all underlaying data semi-transparent, blending it with whatever is underneath. While this setting is experimental, you can use it in case semi-transparent objects are having adverse effects on your renders.
 
 ------------------
 
@@ -616,65 +672,6 @@ _Alpha Tint_ darkens the alpha parts of the material with a specified color. Thi
 		<figcaption>Alpha Tint with a light red color.</figcaption>
 	</figure>
 </div>
-
-------------------
-
-### Displacement
-The _Displacement_ setting enables the use of displacement within the material and creates a _Displacement_ section with [displacement attributes](#tessellation-factor) in the _Attribute Editor_. Once enabled, a new _Setting_ also appears underneath: [_displacementModel_](#displacementmodel).
-
-<figure class="aio-ui">
-	<img src="/media/flair-shader/displacement-AE.png" alt="Displacement section">
-	<figcaption>The Displacement section in the Attribute Editor.</figcaption>
-</figure>
-
-### displacementModel
-The _displacementModel_ setting defines the displacement algorithm used by the _Flair Shader_ shader. More importantly, it defines what kind of [_Displacement Map_](#displacement-map) it expects. Depending on where you got your displacement map from, this becomes quite relevant. _GrayScale_ is the simplest form of displacement map, in which the intensity of the map (white value) defines the amount of displacement given to the geometry.
-
-#### Tessellation Factor
-_Tessellation Factor_ defines the amount of subdivision within each polygon. The higher the factor, the more polygons are subdivided, giving more points to displace. There is no magic number, so you will need to find out how much tessellation is enough for your displacement purposes depending on the topology of each model.  
-
-<figure>
-    <video autoplay loop muted playsinline style="width:152px">
-        <source src="/media/flair-shader/tessellation-factor.mp4" type="video/mp4">
-    </video>
-    <figcaption>Displacement with different Tesselation Factors (1.0...10.0).</figcaption>
-</figure>
-
-#### Displacement Map
-Specifies the file path to the _Displacement Map_. The path can be absolute or relative to the project root directory. The displacement map is different depending on what [_displacementModel_](#displacementmodel) is selected in _Settings_.  
-
-#### Displacement Multiplier
-_Displacement Multiplier_ defines the amount of displacement to use. The higher the value, the more displacement there will be.
-
-<figure>
-    <video autoplay loop muted playsinline style="width:152px">
-        <source src="/media/flair-shader/displacement-multiplier.mp4" type="video/mp4">
-    </video>
-    <figcaption>Displacement Multiplier (0...0.5).</figcaption>
-</figure>
-
-#### Flat Tessellation Blend
-_Flat Tessellation Blend_ defines the amount of flatness within the tessellations (subdivisions). By default, tessellations smoothen the transitions between flat polygons, unless specified through this attribute.
-
-<figure>
-    <video autoplay loop muted playsinline style="width:152px">
-        <source src="/media/flair-shader/flat-tessellation-blend.mp4" type="video/mp4">
-    </video>
-    <figcaption>Flat Tessellation Blend (0...1.0).</figcaption>
-</figure>
-
-#### Displacement Offset
-_Displacement Offset_ offsets parts of the displacement inward, instead of only outward.
-
-<figure>
-    <video autoplay loop muted playsinline style="width:152px">
-        <source src="/media/flair-shader/displacement-offset.mp4" type="video/mp4">
-    </video>
-    <figcaption>Displacement Offset (0...1.0).</figcaption>
-</figure>
-
-#### Clipping Bias Add
-_Clipping Bias Add_ defines a small default value to avoid vertices clipping away from light view during the shadow map calculations.
 
 ------------------
 
