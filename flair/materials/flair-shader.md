@@ -258,7 +258,7 @@ The _Toon Mid Wrap_ defines the area of effect for the toon mid region.
     <figcaption>Toon mid wrap (0.6...0...1)</figcaption>
 </figure>
 
-You can use the _Toon Mid Wrap_ attribute to reduce toon shading to only two regions instead of three, should the style require it.
+You can use the _Toon Mid Wrap_ attribute to reduce toon shading to only two regions instead of three.
 {: .info}
 
 #### Toon Mid Blur
@@ -291,8 +291,6 @@ The _Transparent_ setting activates the use of transparency and alpha masks in t
 
 #### Transparency Map
 _Transparency Map_ is a greyscale texture which embeds the semi-transparency of the material. Click on the checkerboard icon to select a texture.
-
-##### This is a header 5
 
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
@@ -337,34 +335,20 @@ The grayscale value at which the [_Alpha Mask_](#alpha-mask) is transparent. Def
     <figcaption>Alpha Mask with Alpha Mask Cutoff (0.1...0.9).</figcaption>
 </figure>
 
-
-<i class="fas fa-construction"></i>Documentation updated until here...
-
 ---
 
 ### Displacement
-The _Displacement_ setting enables the use of displacement within the material and creates a _Displacement_ section with [displacement attributes](#tessellation-factor) in the _Attribute Editor_. Once enabled, a new _Setting_ also appears underneath: [_displacementModel_](#displacementmodel).
+The _Displacement_ setting activates the use of displacement within the material and toggles the attributes in the _Attribute Editor_.
 
 <figure class="aio-ui">
 	<img src="/media/flair-shader/displacement-AE.png" alt="Displacement section">
 	<figcaption>The Displacement section in the Attribute Editor.</figcaption>
 </figure>
 
-### displacementModel
-The _displacementModel_ setting defines the displacement algorithm used by the _Flair Shader_ shader. More importantly, it defines what kind of [_Displacement Map_](#displacement-map) it expects. Depending on where you got your displacement map from, this becomes quite relevant. _GrayScale_ is the simplest form of displacement map, in which the intensity of the map (white value) defines the amount of displacement given to the geometry.
-
-#### Tessellation Factor
-_Tessellation Factor_ defines the amount of subdivision within each polygon. The higher the factor, the more polygons are subdivided, giving more points to displace. There is no magic number, so you will need to find out how much tessellation is enough for your displacement purposes depending on the topology of each model.  
-
-<figure>
-    <video autoplay loop muted playsinline style="width:152px">
-        <source src="/media/flair-shader/tessellation-factor.mp4" type="video/mp4">
-    </video>
-    <figcaption>Displacement with different Tesselation Factors (1.0...10.0).</figcaption>
-</figure>
+_GrayScale_ is the simplest form of displacement map, in which the intensity of the map (white value) defines the amount of displacement given to the geometry.
 
 #### Displacement Map
-Specifies the file path to the _Displacement Map_. The path can be absolute or relative to the project root directory. The displacement map is different depending on what [_displacementModel_](#displacementmodel) is selected in _Settings_.  
+_Displacement Map_ is a greyscale texture which embeds the displacement in the form of a heightmap. Click on the checkerboard icon to select a texture.
 
 #### Displacement Multiplier
 _Displacement Multiplier_ defines the amount of displacement to use. The higher the value, the more displacement there will be.
@@ -376,18 +360,8 @@ _Displacement Multiplier_ defines the amount of displacement to use. The higher 
     <figcaption>Displacement Multiplier (0...0.5).</figcaption>
 </figure>
 
-#### Flat Tessellation Blend
-_Flat Tessellation Blend_ defines the amount of flatness within the tessellations (subdivisions). By default, tessellations smoothen the transitions between flat polygons, unless specified through this attribute.
-
-<figure>
-    <video autoplay loop muted playsinline style="width:152px">
-        <source src="/media/flair-shader/flat-tessellation-blend.mp4" type="video/mp4">
-    </video>
-    <figcaption>Flat Tessellation Blend (0...1.0).</figcaption>
-</figure>
-
 #### Displacement Offset
-_Displacement Offset_ offsets parts of the displacement inward, instead of only outward.
+_Displacement Offset_ offsets the displacement inward, so that displacement can be inside and outside of the object.
 
 <figure>
     <video autoplay loop muted playsinline style="width:152px">
@@ -396,10 +370,19 @@ _Displacement Offset_ offsets parts of the displacement inward, instead of only 
     <figcaption>Displacement Offset (0...1.0).</figcaption>
 </figure>
 
-#### Clipping Bias Add
-_Clipping Bias Add_ defines a small default value to avoid vertices clipping away from light view during the shadow map calculations.
+
+#### Tessellation Factor
+_Tessellation Factor_ defines the amount of subdivision within each polygon. The higher the factor, the more polygons are subdivided, giving more points to displace. There is no magic number, so you will need to find out how much tessellation is enough for your displacement purposes depending on the topology of each model.  
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/tessellation-factor.mp4" type="video/mp4">
+    </video>
+    <figcaption>Displacement with different Tesselation Factors (1.0...10.0).</figcaption>
+</figure>
 
 ---
+<i class="fas fa-construction"></i>Documentation updated until here...
 
 ### Deformed
 The _Deformed_ setting bakes the current position of vertices so that effects that rely on the 3D position of objects can stay in place when objects are animated/deformed. If this setting is not enabled, things like _NoiseFX_ or _FeatureNoise_ would float around in 3D space and not move with the objects.
