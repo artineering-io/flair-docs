@@ -345,8 +345,6 @@ The _Displacement_ setting activates the use of displacement within the material
 	<figcaption>The Displacement section in the Attribute Editor.</figcaption>
 </figure>
 
-_GrayScale_ is the simplest form of displacement map, in which the intensity of the map (white value) defines the amount of displacement given to the geometry.
-
 #### Displacement Map
 _Displacement Map_ is a greyscale texture which embeds the displacement in the form of a heightmap. Click on the checkerboard icon to select a texture.
 
@@ -409,35 +407,100 @@ If this attribute is enabled, _Light Maps_ will add both light and shade to the 
 	</figure>
 </div>
 
+---
 
+### Specularity
+The _Specularity_ setting activates the use of [specular reflectance models](#specular-model) within the material and toggles the attributes in the Specularity section.
+
+<figure class="aio-ui">
+    <img src="/media/flair-shader/blinn-AE.png" alt="Blinn specularity attributes">
+    <figcaption>Blinn specularity attributes.</figcaption>
+</figure>
+
+#### Specular Model
+The _specularModel_ setting defines the shading algorithm used by the _Flair Shader_ material for specularity (shininess). A shading algorithm dictates how light is reflected along the surface of the object.
+
+<figure>
+    <div class="d-flex">
+        <img src="/media/flair-shader/blinn.png" alt="Blinn" style="height:152px">
+        <img src="/media/flair-shader/anisotropic.png" alt="Anisotropic" style="height:152px">
+	</div>
+    <figcaption>Available specular reflectance models: Blinn and Anisotropic.</figcaption>
+</figure>
+
+Depending on the specular model, different attributes will appear in the _Specularity_ section.
+{: #specular-AE}
+
+<figure class="aio-ui">
+    <img src="/media/flair-shader/anisotropic-AE.png" alt="Anisotropic specularity attributes">
+    <figcaption>Anisotropic specularity attributes.</figcaption>
+</figure>
+
+#### Roll Offs
+_Specular Roll Off_, _Horizontal Roll Off_ and _Vertical Roll Off_ define the size of the specular highlight.
+
+<div class="d-flex">
+	<figure>
+		<video autoplay loop muted playsinline style="height:152px">
+			<source src="/media/flair-shader/roll-off.mp4" type="video/mp4">
+		</video>
+		<figcaption style="width:17em">Blinn: Roll Off (0...1.0).</figcaption>
+	</figure>
+	<figure>
+		<video autoplay loop muted playsinline style="height:152px">
+			<source src="/media/flair-shader/h-roll-off.mp4" type="video/mp4">
+		</video>
+		<figcaption style="width:17em">Anisotropic: Horizontal Roll Off (0...0.5).</figcaption>
+	</figure>
+	<figure>
+		<video autoplay loop muted playsinline style="height:152px">
+			<source src="/media/flair-shader/v-roll-off.mp4" type="video/mp4">
+		</video>
+		<figcaption style="width:17em">Anisotropic: Vertical Roll Off (0...0.5).</figcaption>
+	</figure>
+</div>
+
+#### Specular Diffusion
+_Specular Deffusion_ defines how diffuse or sharp a specular highlight is.
+
+<figure>
+    <div class="d-flex">
+        <video autoplay loop muted playsinline style="height:152px;">
+            <source src="/media/flair-shader/blinn-diffusion.mp4" type="video/mp4">
+        </video>
+        <video autoplay loop muted playsinline style="height:152px;">
+            <source src="/media/flair-shader/anisotropic-diffusion.mp4" type="video/mp4">
+        </video>
+    </div>
+    <figcaption>Specular Diffusion (0...1.0).</figcaption>
+</figure>
+
+#### Specular Transparency
+_Specular Transparency_ defines the transparency of the specular highlight.
+
+<figure>
+    <video autoplay loop muted playsinline style="height:152px">
+        <source src="/media/flair-shader/specular-transparency.mp4" type="video/mp4">
+    </video>
+    <figcaption>Specular Transparency (0...1.0).</figcaption>
+</figure>
+
+#### Specular Map
+_Specular Maps_ are greyscale texture maps which mask the specularity within the material. Otherwise, the specularity will be even throughout the material.Click on the checkerboard icon to select a texture.
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/specular-map.mp4" type="video/mp4">
+    </video>
+    <figcaption>(1) without specularity; (2) with specularity; (3) with specularity and a Specular Map.</figcaption>
+</figure>
+
+**The specularity within the specular map is encoded within the intensity (white values) of the texture. White is specular, grey is semi-specular, black is diffuse.**
+{: .info}
 
 ---
-<i class="fas fa-construction"></i>Documentation updated until here...
 
-### Deformed
-The _Deformed_ setting bakes the current position of vertices so that effects that rely on the 3D position of objects can stay in place when objects are animated/deformed. If this setting is not enabled, things like _NoiseFX_ or _FeatureNoise_ would float around in 3D space and not move with the objects.
-
-------------------
-
-### VertexFX
-The _VertexFX_ setting enables the control of stylization effects through the vertex colors. This attribute is automatically managed by MNPRX and is activated as soon as you start using [_PaintFX_](./../paintfx).
-
-------------------
-
-### Cast-Shadows
-The _Cast Shadows_ setting enables cast shadows of the material on other surfaces. If disabled, the objects with the material won't _cast_ any shadows onto other objects.
-
-------------------
-
-### Receive-Shadows
-The _Receive Shadows_ setting enables receiving cast shadows from other objects on the material. If disabled, the objects with the material won't receive shadows from other objects.
-
-------------------
-
-### Flip-Back-Faces
-The _Flip-Back-Faces_ setting flips the normals of faces that might be pointing away from the camera view. This is useful to obtain better results for thin objects like leaves.
-
-------------------
+<i class="fas fa-construction"></i> Documentation updated until here...
 
 ### Rim light / Rim light opp.
 The _Rim Light_ and _Rim light opp._ settings control the appearance of the rim lighting effect around the silhouette of objects, on areas facing respectively away and towards the light.
@@ -489,6 +552,31 @@ Controls the color of the rim light effect. The color is additively blended on t
     <figcaption>Varying the hue of the rim light color.</figcaption>
 </figure>
 
+---
+
+### Deformed
+The _Deformed_ setting bakes the current position of vertices so that effects that rely on the 3D position of objects can stay in place when objects are animated/deformed. If this setting is not enabled, things like _NoiseFX_ or _FeatureNoise_ would float around in 3D space and not move with the objects.
+
+------------------
+
+### VertexFX
+The _VertexFX_ setting enables the control of stylization effects through the vertex colors. This attribute is automatically managed by MNPRX and is activated as soon as you start using [_PaintFX_](./../paintfx).
+
+------------------
+
+### Cast-Shadows
+The _Cast Shadows_ setting enables cast shadows of the material on other surfaces. If disabled, the objects with the material won't _cast_ any shadows onto other objects.
+
+------------------
+
+### Receive-Shadows
+The _Receive Shadows_ setting enables receiving cast shadows from other objects on the material. If disabled, the objects with the material won't receive shadows from other objects.
+
+------------------
+
+### Flip-Back-Faces
+The _Flip-Back-Faces_ setting flips the normals of faces that might be pointing away from the camera view. This is useful to obtain better results for thin objects like leaves.
+
 ------------------
 
 ### Highlight
@@ -527,135 +615,6 @@ _Highlight Transparency_ defines the transparency of the highlight.
     </video>
     <figcaption>Highlight Transparency (0...1.0).</figcaption>
 </figure>
-
-------------------
-
-### Specularity
-The _Specularity_ setting enables the use of [specular reflectance models](#specularmodel) within the material and creates new attributes within the Shading section. Once enabled, two new settings appear underneath: [_specularModel_](#specularmodel) and [_Specular-In-Alpha_](#specular-in-alpha) (if the [_Transparent_](#transparent-and-semi-transparent) setting is also enabled).
-
-<figure class="aio-ui">
-	<img src="/media/flair-shader/specularity-AE.png" alt="Specularity settings">
-	<figcaption>The Specularity settings in the Attribute Editor.</figcaption>
-</figure>
-
-### specularModel
-The _specularModel_ setting defines the shading algorithm used by the _Flair Shader_ material for specularity (shininess). A shading algorithm dictates how light is reflected along the surface of the object.
-
-<figure>
-    <div class="d-flex">
-        <img src="/media/flair-shader/blinn.png" alt="Blinn" style="height:152px">
-        <img src="/media/flair-shader/anisotropic.png" alt="Anisotropic" style="height:152px">
-	</div>
-    <figcaption>Available specular reflectance models: Blinn and Anisotropic.</figcaption>
-</figure>
-
-Depending on which specular model is selected, different specularity attributes will appear in the _Shading_ section.
-{: #specular-AE}
-
-<div class="d-flex">
-	<figure class="aio-ui">
-		<img src="/media/flair-shader/blinn-AE.png" alt="Blinn specularity attributes">
-		<figcaption>Blinn specularity attributes.</figcaption>
-	</figure>
-	<figure class="aio-ui">
-		<img src="/media/flair-shader/anisotropic-AE.png" alt="Anisotropic specularity attributes">
-		<figcaption>Red: Anisotropic specularity attributes. Cyan: Specular-In-Alpha attributes.</figcaption>
-	</figure>
-</div>
-
-#### Specular Map
-_Specular Map_ is a greyscale image which defines the specularity within the material. Otherwise, the specularity will be even throughout the material. This attribute toggles the use of the [_Specular Map File_](#specular-map-file).
-
-**The specularity within the specular map is encoded within the intensity (white values) of the texture. White is specular, grey is semi-specular, black is diffuse.**
-{: .info}
-
-#### Specular Map File
-Specifies the file path to the _Specular Map_. The path can be absolute or relative to the project root directory.  
-<figure>
-    <video autoplay loop muted playsinline style="width:152px">
-        <source src="/media/flair-shader/specular-map.mp4" type="video/mp4">
-    </video>
-    <figcaption>(1) without specularity; (2) with specularity; (3) with specularity and a Specular Map.</figcaption>
-</figure>
-
-#### Roll Offs
-_Specular Roll Off_, _Horizontal Roll Off_ and _Vertical Roll Off_ define the size of the specular highlight.
-
-<div class="d-flex">
-	<figure>
-		<video autoplay loop muted playsinline style="height:152px">
-			<source src="/media/flair-shader/roll-off.mp4" type="video/mp4">
-		</video>
-		<figcaption style="width:17em">Blinn: Roll Off (0...1.0).</figcaption>
-	</figure>
-	<figure>
-		<video autoplay loop muted playsinline style="height:152px">
-			<source src="/media/flair-shader/h-roll-off.mp4" type="video/mp4">
-		</video>
-		<figcaption style="width:17em">Anisotropic: Horizontal Roll Off (0...0.5).</figcaption>
-	</figure>
-	<figure>
-		<video autoplay loop muted playsinline style="height:152px">
-			<source src="/media/flair-shader/v-roll-off.mp4" type="video/mp4">
-		</video>
-		<figcaption style="width:17em">Anisotropic: Vertical Roll Off (0...0.5).</figcaption>
-	</figure>
-</div>
-
-#### Specular Diffusion
-_Specular Deffusion_ defines how diffuse or sharp a specular highlight is.
-
-<div>
-	<figure>
-        <div class="d-flex">
-            <video autoplay loop muted playsinline style="height:152px;">
-                <source src="/media/flair-shader/blinn-diffusion.mp4" type="video/mp4">
-            </video>
-            <video autoplay loop muted playsinline style="height:152px;">
-                <source src="/media/flair-shader/anisotropic-diffusion.mp4" type="video/mp4">
-            </video>
-        </div>
-		<figcaption>Specular Diffusion (0...1.0).</figcaption>
-	</figure>
-</div>
-
-#### Specular Transparency
-_Specular Transparency_ defines the transparency of the specular highlight.
-
-<div>
-	<figure>
-		<video autoplay loop muted playsinline style="height:152px">
-			<source src="/media/flair-shader/specular-transparency.mp4" type="video/mp4">
-		</video>
-		<figcaption>Specular Transparency (0...1.0).</figcaption>
-	</figure>
-</div>
-
-### Specular-In-Alpha
-The _Specular-In-Alpha_ setting is only visible if the [_Specularity_](#specularity) and [_Transparent_](#transparent-and-semi-transparent) settings are enabled. The setting forces the specularity on the transparent parts of an object, which were set through the [_Alpha Mask_](#alpha-mask) attribute. The specular in alpha setting also generates the [_Alpha Tint_](#alpha-tint) attribute in the _Shading_ section ([cyan attribute](#specular-AE))
-
-<div class="d-flex">
-	<figure>
-		<img src="/media/flair-shader/no-specular-in-alpha.png" alt="Without Specular-In-Alpha"  style="height: 152px">
-		<figcaption>Without Specular-In-Alpha</figcaption>
-	</figure>
-	<figure>
-		<img src="/media/flair-shader/specular-in-alpha.png" alt="With Specular-In-Alpha"  style="height: 152px">
-		<figcaption>With Specular-In-Alpha</figcaption>
-	</figure>
-</div>
-
-#### Alpha Tint
-_Alpha Tint_ darkens the alpha parts of the material with a specified color. This attribute is especially useful for materials like tinted windows.
-
-<div>
-	<figure>
-		<video autoplay loop muted playsinline style="height:152px">
-			<source src="/media/flair-shader/alpha-tint.mp4" type="video/mp4">
-		</video>
-		<figcaption>Alpha Tint with a light red color.</figcaption>
-	</figure>
-</div>
 
 ------------------
 
