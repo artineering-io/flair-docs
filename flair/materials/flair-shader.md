@@ -382,6 +382,36 @@ _Tessellation Factor_ defines the amount of subdivision within each polygon. The
 </figure>
 
 ---
+
+### Light Map
+The _Light Map_ setting activates the use of light maps within the material and toggles light map attributes in the Attribute Editor. 
+<figure class="aio-ui">
+	<img src="/media/flair-shader/light-map-AE.png" alt="Light Map attributes">
+	<figcaption>The Light Map section in the Attribute Editor.</figcaption>
+</figure>
+
+#### Light Map File
+_Light maps_ are grayscale texture maps that add light to the material (white is light). These can be baked from offline renderers, painted with VertexFX or assigned procedurally through NoiseFX. Click on the checkerboard icon to select a texture.
+
+#### Shade in Light Map
+If this attribute is enabled, _Light Maps_ will add both light and shade to the object. White `1.0` will add light, neutral grey `0.5` won't add anything, black `0` will add shade to the object.
+
+<div class="d-flex">
+	<figure>
+		<img src="/media/flair-shader/light-map-map.png" alt="Light map used in video"  style="height: 152px">
+		<figcaption>Light Map supporting Shade in Light Map.</figcaption>
+	</figure>
+	<figure>
+		<video autoplay loop muted playsinline style="height:152px">
+			<source src="/media/flair-shader/light-map.mp4" type="video/mp4">
+		</video>
+		<figcaption>Light Map applied.</figcaption>
+	</figure>
+</div>
+
+
+
+---
 <i class="fas fa-construction"></i>Documentation updated until here...
 
 ### Deformed
@@ -406,35 +436,6 @@ The _Receive Shadows_ setting enables receiving cast shadows from other objects 
 
 ### Flip-Back-Faces
 The _Flip-Back-Faces_ setting flips the normals of faces that might be pointing away from the camera view. This is useful to obtain better results for thin objects like leaves.
-
-------------------
-
-### LightMap
-The _Light Map_ setting enables the use of light maps within the material and creates a new section with light map attributes. Light maps are grayscale maps that define which parts of the material are lit. These can be baked from offline renderers, painted manually or [set up procedurally](#procedural) using _ShaderFX_.
-
-<figure class="aio-ui">
-	<img src="/media/flair-shader/light-map-AE.png" alt="Light Map attributes">
-	<figcaption>The Light Map section in the Attribute Editor.</figcaption>
-</figure>
-
-##### Light Map File
-Specifies the file path to the _Light Map_. The path can be absolute or relative to the project root directory.  
-
-#### Shade in Light Map
-If this attribute is enabled, [_Light Maps_](#lightmap) will add both light and shade to the object. White `1.0` will add light, neutral grey `0.5` won't add anything, black `0` will add shade to the object.
-
-<div class="d-flex">
-	<figure>
-		<img src="/media/flair-shader/light-map-map.png" alt="Light map used in video"  style="height: 152px">
-		<figcaption>Light Map supporting Shade in Light Map.</figcaption>
-	</figure>
-	<figure>
-		<video autoplay loop muted playsinline style="height:152px">
-			<source src="/media/flair-shader/light-map.mp4" type="video/mp4">
-		</video>
-		<figcaption>Light Map applied.</figcaption>
-	</figure>
-</div>
 
 ------------------
 
