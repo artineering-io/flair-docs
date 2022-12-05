@@ -541,38 +541,11 @@ Controls the color of the rim light. The color is additively blended on top of t
 
 ---
 
-<i class="fas fa-construction"></i> Documentation updated until here...
-
-### Deformed
-The _Deformed_ setting bakes the current position of vertices so that effects that rely on the 3D position of objects can stay in place when objects are animated/deformed. If this setting is not enabled, things like _NoiseFX_ or _FeatureNoise_ would float around in 3D space and not move with the objects.
-
-------------------
-
-### VertexFX
-The _VertexFX_ setting enables the control of stylization effects through the vertex colors. This attribute is automatically managed by MNPRX and is activated as soon as you start using [_PaintFX_](./../paintfx).
-
-------------------
-
-### Cast-Shadows
-The _Cast Shadows_ setting enables cast shadows of the material on other surfaces. If disabled, the objects with the material won't _cast_ any shadows onto other objects.
-
-------------------
-
-### Receive-Shadows
-The _Receive Shadows_ setting enables receiving cast shadows from other objects on the material. If disabled, the objects with the material won't receive shadows from other objects.
-
-------------------
-
-### Flip-Back-Faces
-The _Flip-Back-Faces_ setting flips the normals of faces that might be pointing away from the camera view. This is useful to obtain better results for thin objects like leaves.
-
-------------------
-
 ### Highlight
-The _Highlight_ setting generates the [_Highlight Roll Off_](#highlight-roll-off) and [_Highlight Transparency_](#highlight-transparency) attributes in the _Painterly Shading_ material section. These attributes generate a sharp highlight with the [_Light Color_](#light-color).
+The _Highlight_ setting activates the use of highlights to generate a sharp highlight with the [_Custom-Light Color_](#custom-light-color).
 <figure class="aio-ui">
 	<img src="/media/flair-shader/highlight-AE.png" alt="Highlight attributes">
-	<figcaption>The Highlight attributes in the Paintery Shading section within the Attribute Editor.</figcaption>
+	<figcaption>The highlight attributes.</figcaption>
 </figure>
 
 #### Highlight Roll Off
@@ -604,6 +577,33 @@ _Highlight Transparency_ defines the transparency of the highlight.
     </video>
     <figcaption>Highlight Transparency (0...1.0).</figcaption>
 </figure>
+
+---
+
+<i class="fas fa-construction"></i> Documentation updated until here...
+
+### Deformed
+The _Deformed_ setting bakes the current position of vertices so that effects that rely on the 3D position of objects can stay in place when objects are animated/deformed. If this setting is not enabled, things like _NoiseFX_ or _FeatureNoise_ would float around in 3D space and not move with the objects.
+
+------------------
+
+### VertexFX
+The _VertexFX_ setting enables the control of stylization effects through the vertex colors. This attribute is automatically managed by MNPRX and is activated as soon as you start using [_PaintFX_](./../paintfx).
+
+------------------
+
+### Cast-Shadows
+The _Cast Shadows_ setting enables cast shadows of the material on other surfaces. If disabled, the objects with the material won't _cast_ any shadows onto other objects.
+
+------------------
+
+### Receive-Shadows
+The _Receive Shadows_ setting enables receiving cast shadows from other objects on the material. If disabled, the objects with the material won't receive shadows from other objects.
+
+------------------
+
+### Flip-Back-Faces
+The _Flip-Back-Faces_ setting flips the normals of faces that might be pointing away from the camera view. This is useful to obtain better results for thin objects like leaves.
 
 ------------------
 
