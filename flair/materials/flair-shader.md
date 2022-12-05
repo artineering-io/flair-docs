@@ -500,50 +500,37 @@ _Specular Maps_ are greyscale texture maps which mask the specularity within the
 
 ---
 
-<i class="fas fa-construction"></i> Documentation updated until here...
+### Rim light
+The _Rim Light_ settings activates the the use of 3D rim lighting effect around the silhouette of objects on areas facing the light or opposite to it.
 
-### Rim light / Rim light opp.
-The _Rim Light_ and _Rim light opp._ settings control the appearance of the rim lighting effect around the silhouette of objects, on areas facing respectively away and towards the light.
-The settings described below are the same for both rim light (facing away) and rim light opposite (facing towards the light).
+<figure class="aio-ui">
+    <img src="/media/flair-shader/rim-light-AE.png" alt="Rim light attributes in the Attribute Editor">
+    <figcaption>Rim light attributes.</figcaption>
+</figure>
 
-#### Rim Light
-_Rim Light_ controls the intensity of the rim light. A value of `0` means that the rim light is invisible.
 
-<div class="d-flex">
-    <figure>
-        <video autoplay loop muted playsinline style="width:200px">
-            <source src="/media/flair-shader/rim-light.mp4" type="video/mp4">
-        </video>
-        <figcaption>Rim Light (0...1.0).</figcaption>
-    </figure>
-    <figure>
-        <video autoplay loop muted playsinline style="width:200px">
-            <source src="/media/flair-shader/rim-light-opp.mp4" type="video/mp4">
-        </video>
-        <figcaption>Rim Light Opposite (0...1.0).</figcaption>
-    </figure>
-</div>
+#### Rim Light Intensity
+_Rim Light_ controls the intensity of the rim light. Positive values adds the rim light, whereas negative values subtracts it.
+
+<figure>
+    <video autoplay loop muted playsinline style="width:200px">
+        <source src="/media/flair-shader/rim-light.mp4" type="video/mp4">
+    </video>
+    <figcaption>Rim Light (-1,5...1,5).</figcaption>
+</figure>
 
 #### Rim Light Wrap
-_Rim Light Wrap_ defines the area of effect of the rim light.
+_Rim Light Wrap_ defines the area of effect of the rim light in either the lit or shaded areas of the object.
 
-<div class="d-flex">
-    <figure>
-        <video autoplay loop muted playsinline style="width:200px">
-            <source src="/media/flair-shader/rim-wrap.mp4" type="video/mp4">
-        </video>
-        <figcaption>Rim Light Wrap (0...1).</figcaption>
-    </figure>
-    <figure>
-        <video autoplay loop muted playsinline style="width:200px">
-            <source src="/media/flair-shader/rim-wrap-opp.mp4" type="video/mp4">
-        </video>
-        <figcaption>Rim Light Wrap Opposite (0...1).</figcaption>
-    </figure>
-</div>
+<figure>
+    <video autoplay loop muted playsinline style="width:200px">
+        <source src="/media/flair-shader/rim-wrap.mp4" type="video/mp4">
+    </video>
+    <figcaption>Rim Light Wrap (-1...1).</figcaption>
+</figure>
 
 #### Rim Light Color
-Controls the color of the rim light effect. The color is additively blended on top of the underlaying shading.
+Controls the color of the rim light. The color is additively blended on top of the underlaying shading.
 
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
@@ -553,6 +540,8 @@ Controls the color of the rim light effect. The color is additively blended on t
 </figure>
 
 ---
+
+<i class="fas fa-construction"></i> Documentation updated until here...
 
 ### Deformed
 The _Deformed_ setting bakes the current position of vertices so that effects that rely on the 3D position of objects can stay in place when objects are animated/deformed. If this setting is not enabled, things like _NoiseFX_ or _FeatureNoise_ would float around in 3D space and not move with the objects.
