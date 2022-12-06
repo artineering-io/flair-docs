@@ -580,59 +580,38 @@ _Highlight Transparency_ defines the transparency of the highlight.
 
 ---
 
-<i class="fas fa-construction"></i> Documentation updated until here...
+### Flip Back Faces
+The _Flip Back Faces_ setting flips the normals of faces that are pointing away from the camera view. This is useful to obtain better results from single polygon objects like tree leaves.
 
-### Deformed
-The _Deformed_ setting bakes the current position of vertices so that effects that rely on the 3D position of objects can stay in place when objects are animated/deformed. If this setting is not enabled, things like _NoiseFX_ or _FeatureNoise_ would float around in 3D space and not move with the objects.
-
-------------------
+---
 
 ### VertexFX
-The _VertexFX_ setting enables the control of stylization effects through the vertex colors. This attribute is automatically managed by MNPRX and is activated as soon as you start using [_PaintFX_](./../paintfx).
+The _VertexFX_ setting toggles the control of stylization effects through the vertex colors. The attribute is automatically enabled by Flair and is toggled as soon as you start painting with the [_VertexFX_](/flair/art-direction/vertexfx/) tool.
 
-------------------
+---
 
-### Cast-Shadows
-The _Cast Shadows_ setting enables cast shadows of the material on other surfaces. If disabled, the objects with the material won't _cast_ any shadows onto other objects.
+### Deformed
+The _Deformed_ setting bakes the current position of vertices so that the effects that rely on the 3D position of objects can stay in place when objects are deformed/animated. If this setting is not enabled, features like _NoiseFX_ or _FeatureNoise_ would float around in 3D space and not move with the objects.
 
-------------------
-
-### Receive-Shadows
-The _Receive Shadows_ setting enables receiving cast shadows from other objects on the material. If disabled, the objects with the material won't receive shadows from other objects.
-
-------------------
-
-### Flip-Back-Faces
-The _Flip-Back-Faces_ setting flips the normals of faces that might be pointing away from the camera view. This is useful to obtain better results for thin objects like leaves.
-
-------------------
-
-### NormalMapTweaks
-The _NormalMapTweaks_ setting enables more refined control over the [_Normal Map_](#normal-map) by creating the [_Invert U_ and _Invert V_](#invert) attributes within the _Shading_ section.
-
-<figure class="aio-ui">
-	<img src="/media/flair-shader/normal-map-tweaks-AE.png" alt="Normal Map Tweak attributes">
-	<figcaption>Invert U and Invert V attributes created by the Normal Map Tweaks setting.</figcaption>
+<figure>
+    <video autoplay loop muted playsinline style="height:152px">
+        <source src="/media/flair-shader/not-deformed.mp4" type="video/mp4">
+    </video>
+    <figcaption>NoiseFX without the Deformed setting.</figcaption>
 </figure>
 
-#### Invert
-_Invert U_ and _Invert V_ invert the normal inclinations either horizontally or vertically, respectively.
+<figure>
+    <video autoplay loop muted playsinline style="height:152px">
+        <source src="/media/flair-shader/deformed.mp4" type="video/mp4">
+    </video>
+    <figcaption>NoiseFX with the Deformed setting.</figcaption>
+</figure>
 
-<div>
-	<figure>
-        <div class="d-flex">
-            <video autoplay loop muted playsinline style="height:152px;">
-                <source src="/media/flair-shader/invert-u.mp4" type="video/mp4">
-            </video>
-            <video autoplay loop muted playsinline style="height:152px;">
-                <source src="/media/flair-shader/invert-v.mp4" type="video/mp4">
-            </video>
-        </div>
-		<figcaption>Invert U and Invert V.</figcaption>
-	</figure>
-</div>
+---
 
-------------------
+<i class="fas fa-construction"></i> Documentation updated until here...
+
+### Velocity
 
 ### FeatureNoise
 The _FeatureNoise_ setting creates fractalized 3D noise that is used for styles that require it i.e., hatching.
@@ -641,11 +620,6 @@ The _FeatureNoise_ setting creates fractalized 3D noise that is used for styles 
 
 ### Color-Plane
 The _Color-Plane_ setting defines a material as a color plane. Objects assigned to a color plane material won't be affected by the _Atmosphere Color_ attribute that is set in the configuration node. This allows you to use color planes at different distances from the camera, without any atmospheric tint affecting them.
-
-------------------
-
-### maxLights
-The _maxLights_ setting defines the maximum amount of lights considered by the material for its calculations.
 
 
 ------------------
