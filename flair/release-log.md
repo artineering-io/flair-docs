@@ -23,7 +23,7 @@ nav_order: 10
 
 Based on your feedback this first month, we are releasing our first patch update! 
 
-We will continue releasing patch updates alongside feature updates to improve the experience of working with Flair for everyone. Don't forget to continue sharing your feedback in the [Discord server](https://discord.gg/kdTQCRM) so that we can prioritize fixes and new features.
+We will continue releasing patch updates alongside feature updates to improve the experience of working with Flair for everyone. Don't forget to continue sharing your feedback in the [Discord server]({{site.discord-invite}}) so that we can prioritize fixes and new features.
 
 <div class="d-flex">
 	<figure>
@@ -94,7 +94,7 @@ The biggest limitation of MNPRX was that you could only use the styles it came w
 
 ### Sharing Feedback
 
-As a small team (currently only Santiago is at Artineering), we can’t develop all the features we wish to have at once—we need to focus our development efforts. For this purpose, we are opening a *#vote-on-features* channel on our [Discord server](https://discord.gg/kdTQCRM) to suggest, aggregate, and vote on different features to implement in Flair. The most requested features will be developed and included in future updates. So, please help us spread the word and guide our future development. 
+As a small team (currently only Santiago is at Artineering), we can’t develop all the features we wish to have at once—we need to focus our development efforts. For this purpose, we are opening a *#vote-on-features* channel on our [Discord server]({{site.discord-invite}}) to suggest, aggregate, and vote on different features to implement in Flair. The most requested features will be developed and included in future updates. So, please help us spread the word and guide our future development. 
 
 ### Demo Reel
 

@@ -609,18 +609,19 @@ The _Deformed_ setting bakes the current position of vertices so that the effect
 
 ---
 
-<i class="fas fa-construction"></i> Documentation updated until here...
-
 ### Velocity
+The _Velocity_ setting activates the calculation and rendering of motion vectors by the material. However, velocity will only be calculated if the [_VelocityPV_ global](/flair/getting-started/globals/#velocity-pv) is enabled. 
 
-### FeatureNoise
-The _FeatureNoise_ setting creates fractalized 3D noise that is used for styles that require it i.e., hatching.
+Velocity is enabled by default, but it can be deactivated per material if motion vectors are not required.
+{: .info}
+
+### Feature Noise
+The _Feature Noise_ setting activates the fractalized 3D noise that is used for shader styles such as hatching, cat and sketch. Fractalized noise will always be the same pixel size, no matter how close or far the camera is from objects. This makes it ideal to recreate 2D effects which also preserve the pixel size on a canvas.
 
 ------------------
 
 ### Color-Plane
-The _Color-Plane_ setting defines a material as a color plane. Objects assigned to a color plane material won't be affected by the _Atmosphere Color_ attribute that is set in the configuration node. This allows you to use color planes at different distances from the camera, without any atmospheric tint affecting them.
-
+The _Color-Plane_ setting activates a color plane functionality on the material. Objects assigned to a color plane material are not affected by the _Atmosphere Color_ attribute that is set in the globals node. This allows you to use color planes at different distances from the camera, without any color change affecting them.
 
 ------------------
 ------------------
@@ -640,26 +641,5 @@ The _NoiseFX_ section (closed by default) at the bottom contains the attributes 
 
 ## Advanced
 
-**Modifying nodes inside of the ShaderFX material**
-
-1. Open the [_ShaderFX graph_](#shaderfx-graph) within the desired material.
-1. Change the _CustomGraph_ node at the top-level from `false` to `true`. This will avoid overwriting your changes upon a _ShaderFX_ update.
-1. Modify the material to your heart's content and [create your own ShaderFX material](#creating-shaderfx), if needed.
-
-**Set your own NoiseFX algorithms within the Flair Shader material**
-
-1. Remember which attribute is being modified within the material's _Stylization (procedural)_ section when modifying the desired _NoiseFX_ values.
-1. Open the [_ShaderFX graph_](#shaderfx-graph) within the desired material.
-1. Navigate to: `Material -> ForwardRenderPasses -> Color-DiffusePass -> Control Sets -> Procedural Control -> X Procedural`, where `X` is the procedural attribute that modifies the desired effect.
-1. Depending on what kind of noise algorithm you use, you can hook up your own nodes within the _Noise2D_ or _Noise3D_ node.
-
-**Create your own ShaderFX materials**
-
-You can create your own _ShaderFX_ materials and continue using the MNPRX tools with them.
-1. [Modify](#modifying-shaderfx) the _Flair Shader_ material to create your custom _ShaderFX_ network.
-1. At the top-level of the _ShaderFX_ material, set the desired name of the graph in the _GraphName_ node.
-1. If previously modified, change the _CustomGraph_ node from `true` to `false`. This will enable quick _ShaderFX_ updates in the future for materials with your graph name.
-1. Export the entire graph `File->Export Graph` into `MNPRX->shaders` under the new graph name.
-1. Create a new preset with the [_mPre_](./../material-presets) tool
-
-Every time you load your preset, your shaderfx graph will now be loaded.
+### Modifying the shader source code
+You may edit the source code of the material should you need to. The GLSL source files can be found in the Flair directory under `/maya/shader/material`. Please reach out on [Discord]({{site.discord-invite}}) to guide you further and learn what was missing for you. Maybe we can also help implement things for you.
