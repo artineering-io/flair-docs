@@ -5,38 +5,46 @@ parent: Materials
 nav_order: 3
 ---
 # Proxy Materials
+{: .no_toc }
 
-<i class="fas fa-construction"></i> Updating soon...
+<details close markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
-Proxy materials are invisible materials that only render to the stylization control maps within MNPRX, modifying stylization effects. As this may sound abstract, please watch the following tutorial demonstrating its usage within the watercolor stylization.
+Proxy materials are invisible materials that only render to the stylization control maps within Flair, thereby only modifying effects on the final image.
 
+Being separate stylization elements in the scene, these provide unique versatility. They can help art-direct effects at all levels of control. For example, they can affect the entire image by being placed in front of the camera as a proxy card, or affect only a specific part of the scene in 3D space by being placed in front of it. The tutorial below showcases this versatility.
 
--> YOUTUBE VIDEO EMBEDDED <-
+{% include responsive-embed url="https://www.youtube.com/embed/A_gdVg4K7Uc" %}
 
-
-It may take some time to get used to working with proxy materials, but these provide a unique versatility, as they are separate stylization elements in the scene. They can help stylize at a high level of control---affecting the whole image by being placed in front of the camera---, down to a low level of control---affecting a specific part in 3D space.
-
-Built using the _ShaderFX_ framework, it is entirely contained within the node-based [_ShaderFX Graph_](#shaderfx-graph) and can be modified to fit any requirements by look development artists. However, most settings and attributes are easily accessible from the _Attribute Editor_ when the material is selected, as shown below.
-
--------------
+The proxy material can be created and assigned from the [material presets tool](/flair/materials/presets/#special-presets) and are divided into optional _Settings_ and _Attributes_.
 
 <figure class="aio-ui">
-	<img src="/media/other-materials/node-AE.png" alt="MNPRX proxy material node">
+	<img src="/media/other-materials/proxy_AE.png" alt="Flair proxy material node">
 	<figcaption>The proxy material in the Attribute Editor.</figcaption>
 </figure>
 
-The first element within the _mnpr_uber_ material is the `Open ShaderFX` button, which opens the _ShaderFX Graph_. This graph allows complete control to customize the material with nodes. The graph is intended for shader writers or advanced users who know how to manipulate and work with the _ShaderFX_ framework. Using the _ShaderFX_ framework is outside of the scope of this documentation, but you can learn a lot by watching [these tutorials](https://www.youtube.com/playlist?list=PLtiFs_CcTAQ5bewy6WwDrak9q9Pw2O6pu).
+The first element within the _proxy_ material is the `Open ShaderFX` button, which opens the _ShaderFX Graph_. This graph allows complete control to customize the material with nodes. The graph is intended for shader writers or advanced users who know how to manipulate and work with the _ShaderFX_ framework. Using the _ShaderFX_ framework is outside of the scope of this documentation, but you can learn a lot by watching [these tutorials](https://www.youtube.com/playlist?list=PLtiFs_CcTAQ5bewy6WwDrak9q9Pw2O6pu).
 
-The first section, when opened, provides the material **Settings** that allow to customize what optional features the _proxy_ material should have. The section is closed by default, as the only setting in the proxy material is handled by the [_PaintFX_](./../paintfx) tool.
+---
+
+## Settings
+
+The first section, when opened, provides the material **Settings** that allow to customize what optional features the _proxy_ material should have.
 
 ### VtxControl
-The _VtxControl_ setting enables the control of stylization effects through the vertex colors. This attribute is automatically managed by MNPRX and is activated as soon as you start using [_PaintFX_](./../paintfx).
+The _VtxControl_ setting enables the control of stylization effects through the vertex colors. This attribute is automatically managed by Flair and is activated as soon as you start using [_VertexFX_](/flair/art-direction/vertexfx).
 
-------------------
+---
 
 
 ## Attributes
-The proxy material offers only a few default parameters, as it is mostly controlled through the [_PaintFX_](./../paintfx) and [_NoiseFX_](./../noisefx) tools
+The proxy material offers only a few default parameters, as it is mostly controlled through the [_VertexFX_](/flair/art-direction/vertexfx) and [_NoiseFX_](/flair/art-direction/noisefx) tools
 
 ### Color Tint
 _Color Tint_ darkens the material with a specified color. This attribute is especially useful for materials like tinted windows.
@@ -87,9 +95,9 @@ _Invert Cookie_ inverts the applied _Cookie Mask_ values.
 ------------------
 
 ## Stylization (procedural)
-When the [_NoiseFX_](./../noisefx) tool has been used on the material, the _Stylization (procedural)_ section will appear at the bottom of the _Attribute Editor_. This section contains all the procedural attributes that the _NoiseFX_ tool creates and modifies. Therefore, you can mostly ignore these attributes within the material.
+When the [_NoiseFX_](/flair/art-direction/noisefx) tool has been used on the material, the _Stylization (procedural)_ section will appear at the bottom of the _Attribute Editor_. This section contains all the procedural attributes that the _NoiseFX_ tool creates and modifies. Therefore, you can mostly ignore these attributes within the material.
 
 <figure class="aio-ui">
-	<img src="/media/other-materials/stylization-proc-AE.png" alt="Stylization (procedural) attributes">
+	<img src="/media/other-materials/stylization_proc_AE.png" alt="Stylization (procedural) attributes">
 	<figcaption>Some procedural stylization attributes created through NoiseFX.</figcaption>
 </figure>
