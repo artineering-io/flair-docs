@@ -80,7 +80,7 @@ Once the `+` button is clicked, the "Add a Global" window appears to add or cust
 
 1. New Global attribute name (some names are reserved by Flair, including names starting with "_").
 2. Type of Global attribute to create
-3. Properties of the Global attribute, this will change depending on the type of Global being created.
+3. Properties of the Global attribute, this will change depending on the type of Global being created. For `enum` globals, the first field you indicate will be set as the default field.
 4. `Ok` will create the global.
 
 When a global is added, it can be used by its name in parameter expressions and will be automatically appear in the _Attribute Editor_ within _Autodesk Maya_. The global can be set and keyed in Maya for each frame and is automatically udated in the Flair graph.
