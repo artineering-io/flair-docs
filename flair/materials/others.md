@@ -28,7 +28,7 @@ Flair features other bespoke materials used for certain styles that require diff
 
 The cutout material is required by the [**Cutout shader style**](/flair/styles/library/cutout) and generates the cutout stencil which needs to be set on all cutout objects. To assign this material on an object, select an object and load the "_\_cutout_" material preset (see [material presets](/flair/materials/presets)).
 
-The cutout material controls how objects affect the cutout stencil and the paper color and is divided in optional _Settings_ and _Attributes_.
+The cutout material controls how objects affect the cutout stencil and the paper color, and is divided in optional _Settings_ and _Attributes_.
    
 ### Settings
 Closed by default, once opened, each _Setting_ allows you to customize what optional features the cutout material should have. Most of these settings are disabled by default, as to avoid unnecessary computations and clutter for artists. If needed, enabling settings will provide the necessary attributes to configure them.
