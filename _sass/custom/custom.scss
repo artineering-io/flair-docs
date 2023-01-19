@@ -100,6 +100,18 @@ p .aio-btn {
     }
 }
   
+.aio-uniform-list {
+    h2 {
+        font-size: 1.1rem !important;
+        code {
+            float: right;
+        }
+    }
+    p {
+        font-size: 0.9rem !important;
+    }
+}
+
 .aio-page-footer {
     font-size: small;
 }
