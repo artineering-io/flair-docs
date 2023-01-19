@@ -26,6 +26,9 @@
 
 .d-flex {
     flex-wrap: wrap;
+    &.aio-code {
+        justify-content: space-evenly;
+    }
 }
 
 .float-right {
