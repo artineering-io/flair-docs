@@ -27,7 +27,7 @@ Node _presets_ can facilitate the creation of one or multiple nodes with the cli
 ## Loading a preset
 To load a preset, simply select it from the right-click context menu (see above).
 
-## Creating a Preset
+## Creating a preset
 Creating a preset unfortunately requires a bit more work.
 
 Selected nodes can be serialized to _json_ by simply copying them `Ctrl + c`. These can in turn be pasted `Ctrl + v` in other Flair graphs or even sent via email for someone else to paste it in their Flair graphs.
