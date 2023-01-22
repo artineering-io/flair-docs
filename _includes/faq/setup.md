@@ -32,3 +32,12 @@ If activation key is not valid, or the existing license is no longer valid, an e
 `Retry` will prompt you to enter a valid activation key, and `Cancel` will run Flair as demo this session.
 </div>
 
+The viewport is all black and I get the Error compiling GLSL code. 
+<div markdown="1">
+This can happen when the viewport is forced to use DirectX (e.g., with an environment variable) instead of OpenGL.During installation, we try to automatically set the Viewport 2.0 rendering engine to OpenGL, but this can fail depending on your setup.  Check your Maya setup for anything that might force the viewport to use DirectX and remove it. Then, manually set the rendering engine to OpenGL (Preferences->Display->Viewport 2.0->Rendering Engine->OpenGL Core Profile). Maya will prompt to restart the application and Flair will be able to run after restarting.
+</div>
+
+
+
+
+

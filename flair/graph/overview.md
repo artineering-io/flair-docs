@@ -30,7 +30,7 @@ This page contains an overview on how to interact with Flair and where to dive d
 The node graph is the central node interface defining the shader pipeline.
 In this panel, you can create nodes, select them to modify their properties and connect them to each other to build an image-processing shader pipeline. You can consider it the "document" where the shader pipeline is "written" with nodes.
 
-Further documentation on how to interact and what can be done with the node graph can be found here [here](/flair/graph/graph-interface).
+Further documentation on how to interact and what can be done with the node graph can be found [here](/flair/graph/node-graph).
 
 ### 2. Parameters
 The parameters panel is context sensitive, showing the parameters of selected nodes in the graph. If no node is selected, it will be blank. In Maya, this would be the equivalent of the _Attribute Editor_. When a node is selected, the Parameters panel will show the available parameters.
