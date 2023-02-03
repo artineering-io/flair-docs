@@ -250,6 +250,24 @@ This group is closed by default, but can be opened by clicking on it.
 ------------------------
 ------------------------
 
+## Frayed Settings
+
+The Frayed settings allow additional functionality for the Frayed shader style. The available settings can be found in the [Flair toolbox](/flair/toolbox), once you click on the `Frayed settings` button.
+
+<figure class="aio-ui aio-window">
+    <img src="/media/toolbox/frayed_settings.png" alt="The window with frayed settings">
+    <figcaption>The Frayed settings window</figcaption>
+</figure>
+
+### Toggle instance on selected
+This button will toggle the inflated instance on the selected objects on/off. Especially useful for transparent objects, so that only objects behind fray the end result.
+
+### Bake effect positions on selected
+This button is a convenience function that will check the `Deformed` setting attribute on materials where the selected objects have been assigned into.
+
+------------------------
+------------------------
+
 
 ## Considerations
 
