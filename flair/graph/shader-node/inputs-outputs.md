@@ -314,7 +314,21 @@ widget = "checkbox"
 
 <figure class="aio-ui">
 	<img src="/media/graph/nodes/param_integer_check.png" alt="Integer parameter with check box interface">
-	<figcaption>Integer parameter with check box interface.</figcaption>
+	<figcaption>Integer parameter with a check box interface.</figcaption>
+</figure>
+
+```yaml
+# TOML
+[[uniforms]]
+name = "Combobox"
+type = "int"
+widget = "combobox"
+toggle = ["Option 0", "Option 1", "Option 2"]
+```
+
+<figure class="aio-ui">
+	<img src="/media/graph/nodes/param_integer_combobox.png" alt="Integer parameter with combo box interface">
+	<figcaption>Integer parameter with a combo box interface.</figcaption>
 </figure>
 
 For `vec3` and `vec4` parameters can also represent colors, the color widget is defined as follows:
