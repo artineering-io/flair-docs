@@ -140,6 +140,3 @@ Allows to set a directory, which other file paths can be relative from. This is 
 #### World Scale
 
 Defines a global world scale for converting between different 3D measurement units.
-
-#### Image 
-These are the settings for rendering images when using the graph in standalone mode. Rendering in standalone mode can be done via the [Display node](/flair/graph/display-node).
