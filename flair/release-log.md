@@ -78,7 +78,7 @@ Read below for a full list of changes.
 - *Improved* - Robustness of Import/Export when mesh objects can’t be wrappend in *MFnMesh*.
 - *Improved* - Adding additional resolutions for floating viewport (1080x1080, 2048 x 1152).
 - *Improved* - Splash window to be non-blocking and only show once fully loaded.
-- *Improved* - Splash window to only appear once per Maya session.
+- *Improved* - Splash window to only appear once per day.
 
 **_Fixed_** - Flair not working on *Intel* and *AMD* graphics cards. We will now test before each release with the integrated Intel graphics card and our in-house AMD SteamDeck!
 {: .info}
