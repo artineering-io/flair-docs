@@ -18,6 +18,76 @@ nav_order: 10
 
 ---
 
+## Flair 1.0.2
+> Released 08.03.2023
+
+This massive patch update focuses on fixes, stability and improvements over existing tools and styles that have been highlighted these past months. From improvements to the Sequence Renderer to accept name tags, to fixing VRAM memory leaks that happened when changing styles since the MNPR days. We are also happy to add support for Intel and AMD graphics cards! 
+Read below for a full list of changes.
+
+<div class="d-flex">
+  <figure>
+    <img src="/media/release-log/1.0.2/walk-cycle.gif" alt="Walk cycle demo scene in a cutout style" style="max-height:300px;">
+    <figcaption>Nurbs Walk-Cycle availablle in Demo Scenes</figcaption>
+  </figure>
+  <figure>
+	<video autoplay loop muted playsinline style="max-height:300px;">
+	  <source src="/media/release-log/1.0.2/cryptomatte_update.mp4" type="video/mp4">
+	  </video>
+	  <figcaption>Improved Cryptomattes with TAA</figcaption>
+  </figure>
+</div>
+
+### Materials
+- *Fixed* - Nurbs not seen in the Flair viewport.
+- *Fixed* - Cryptomatte irregularities due to first pass offsets making pixels from different passes not match.
+- *Improved* - Removed *Specular in Alpha* attributes and made specularity support transparency.
+
+### Shader styles
+- *New* - Cat style - Adding experimental versions for bleeding (*Algorithm* attribute).
+- *New* - Cat style - Support for resolution-independent effects.
+- *Fixed* - Frayed style - Feathering effect not working.
+- *Fixed* - Frayed style - Problem where meshes couldn’t be selected with camera-based selection.
+- *Fixed* - Cutout style - Colored cutouts not working.
+- *Fixed* - Blurry edges and cryptomatte fringe due to FXAA being active while using TAA.
+- *Fixed* - Style changing not working for *Demo* versions at high resolutions.
+- *Fixed* - Support for non-synthesized canvases.
+- *Improved* - Making Bloom optional in shader styles.
+
+### Sequence renderer
+- *Improved* - Storing sequence renderer GUI preferences with the style.
+- *Improved* - Adding name tags <> to sequence renderer name (insert via right-click).
+- *Improved* - Adding time remaining to render progress dialog.
+- *Fixed* - Double file extension when rendering single files.
+
+### Flair Graph
+- *New* - Added multiply color shader.
+- *Fixed* - Guassian blur implementation not working with radius 0.
+- *Fixed* - Ranges of Global Spinboxes being too narrow.
+- *Improved* - Removed unimplemented Graph settings to avoid confusion.
+- *Improved* - Updating shader dialog *Docs* button.
+
+### Miscellaneous
+- *Fixed* - *Batch Render* not working when Flair was installed.
+- *Fixed* - Heads-up-display (HUD) not being removed from playblasts for non-Demo versions.
+- *Fixed* - HUD appearing on presets created with the Demo version.
+- *Fixed* - VertexFX brush tip not changing.
+- *Fixed* - Motion vectors not showing under certain conditions.
+- *Fixed* - VRAM Memory leak when unloading and reloading shader styles (leak existed since MNPR!).
+- *Fixed* - Crash due to using *Point Lights* with transparent shadows enabled in *Rendering Globals*.
+- *Improved* - wording in Import/Export UI.
+- *Improved* - Robustness of Import/Export when mesh objects can’t be wrappend in *MFnMesh*.
+- *Improved* - Adding additional resolutions for floating viewport (1080x1080, 2048 x 1152).
+- *Improved* - Splash window to be non-blocking and only show once fully loaded.
+- *Improved* - Splash window to only appear once per Maya session.
+- *Fixed* - Flair not working on *Intel* and *AMD* graphics cards. We will now test before each release with the integrated Intel graphics card and our in-house AMD SteamDeck!
+
+<figure>
+  <img src="/media/release-log/1.0.2/steam-deck.jpg" alt="Steam Deck running Flair for Maya" style="max-height:300px;">
+  <figcaption>Steam Deck running Flair for Maya on Windows.</figcaption>
+</figure>
+
+---
+
 ## Flair 1.0.1
 > Released 20.10.2022
 
@@ -35,13 +105,13 @@ We will continue releasing patch updates alongside feature updates to improve th
 </div>
 
 ### Materials
-* Fixed - Colored shading not working with cast shadows
-* Fixed - Semi-transparent objects not contributing to cryptomattes under certain circumstances
+* Fixed - Colored shading not working with cast shadows.
+* Fixed - Semi-transparent objects not contributing to cryptomattes under certain circumstances.
 
 ### Shader styles
-* Improved - Pigment density effect with dark colored canvases
-* Improved - Coexistence of drybrush and granulation effects
-* Fixed - Canvas texture dissapearing after shaders were reloaded
+* Improved - Pigment density effect with dark colored canvases.
+* Improved - Coexistence of drybrush and granulation effects.
+* Fixed - Canvas texture dissapearing after shaders were reloaded.
 
 ### Flair Graph
 * Fixed - Graph not opening after changes in the graph were not saved.
