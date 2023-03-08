@@ -79,7 +79,9 @@ Read below for a full list of changes.
 - *Improved* - Adding additional resolutions for floating viewport (1080x1080, 2048 x 1152).
 - *Improved* - Splash window to be non-blocking and only show once fully loaded.
 - *Improved* - Splash window to only appear once per Maya session.
-- *Fixed* - Flair not working on *Intel* and *AMD* graphics cards. We will now test before each release with the integrated Intel graphics card and our in-house AMD SteamDeck!
+
+**_Fixed_** - Flair not working on *Intel* and *AMD* graphics cards. We will now test before each release with the integrated Intel graphics card and our in-house AMD SteamDeck!
+{: .info}
 
 <figure>
   <img src="/media/release-log/1.0.2/steam-deck.jpg" alt="Steam Deck running Flair for Maya" style="max-height:300px;">
