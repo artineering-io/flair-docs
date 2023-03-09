@@ -21,6 +21,15 @@ nav_order: 10
 ## Flair 1.0.2
 > Released 08.03.2023
 
+<div>
+	<figure>
+		<video autoplay loop muted playsinline style="max-height:100px;">
+			<source src="/media/release-log/1.0.2/1_0_2.mp4" type="video/mp4">
+		</video>
+    <figcaption>OUT NOW!</figcaption>
+  </figure>
+</div>
+
 This massive patch update focuses on fixes, stability and improvements over existing tools and styles that have been highlighted these past months. From improvements to the Sequence Renderer to accept name tags, to fixing VRAM memory leaks that happened when changing styles since the MNPR days. We are also happy to add support for Intel and AMD graphics cards! 
 Read below for a full list of changes.
 
