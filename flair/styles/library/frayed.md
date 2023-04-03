@@ -57,44 +57,12 @@ A series of frayed attributes are provided within the [globals node](/flair/gett
 </figure>
 
 ---
-## Bloom
-Bloom, sometimes also referred to as Glow, leaks light from bright areas into surrounding areas.
 
-{% include responsive-embed url="https://www.youtube.com/embed/f2CxshwgK-k" width="60%" %}
-
-### Bloom Intensity
-Defines the intensity/amount of the bloom effect.
-
-### Bloom Size
-Defines the threshold at which a pixel is bright enough to be considered for the bloom effect.
-
-### Bloom Blur
-Defines the radious of light leakage to the surrounding areas.
+{% include /effects/bloom.md %}
 
 ---
 
-## Ambient Occlusion
-
-Ambient Occlusion (AO) darkens the image in areas that are hard to reach for the ambient light due to the local shape of the geometry (e.g. concavities, crevices, holes). Note that this effect depends only on the geometry (and the viewpoint, to a lesser extent), and not on the lights present in the scene.
-
-{% include responsive-embed url="https://www.youtube.com/embed/FZfnh0KFKPg" width="60%" %}
-
-Flair currently uses a screen-space implementation of ambient occlusion based on the _Ground-Truth Ambient Occlusion_ algorithm (GTAO).
-{: .info}
-
-### AO Blend Mode
-Defines how the computed ambient occlusion is applied on the final image.
-* **None**: AO is not applied.
-* **Multiply**: the AO is multiplied over the image.
-* **Color Burn**: same as above, except that the AO is blended over the image using the _Color Burn_ blending mode.
-* **Style-specific**: AO is applied by the current style, so the effect depends on the style implementation. (default)
-	* With styles other than the *Graph* styles, the AO modulates the *pigment density*, resulting in darker colors in occluded areas.
-
-### AO Radius
-Defines the radius used by the ambient occlusion filter: larger radius results in larger darkened areas.
-
-### AO Strength
-Defines the strength of ambient occlusion: higher values make the ambient occlusion darker.
+{% include /effects/ao.md %}
 
 ---
 

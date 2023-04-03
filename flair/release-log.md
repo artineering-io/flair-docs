@@ -18,13 +18,46 @@ nav_order: 10
 
 ---
 
+## Flair 1.0.3
+> Released 10.04.2023
+
+This patch update includes the new wobble effect, the production-ready fur style (previously cat), support for the Flair material on normal Viewport 2.0, and other smaller fixes/improvements including support for Maya 2024!
+
+### Wobble effect
+The wobble effect allows to add imperfections to geometry by deforming it in 3D (see image above). 
+The global and per-material controls customize the wobble on-demand, whereas the vertexFX and noiseFX allows to meticulously art-direct the effect. 
+
+The *amplitude* defines the amount of wobble, the *frequency* the regularity of the effect and the *phase* the form of the wobble.
+
+Additionally, inspired by the "Painting with polygons" [paper](https://dl.acm.org/doi/10.1145/1597990.1598012) by Isaac Botkin, we added an additional jitter control to wobble differently at each TAA sample, achieving a similar effect in real-time. So, now artists can use the wobble jitter to add soft edges to the watercolor and fur styles when needed (other shader styles coming soon). 
+
+### Fur style
+- *Improved* - Streamlined cryptomattes for production
+- *Improved* - Polished vertexFX and noiseFX controls
+
+### Materials
+- *Improved* - Flair shader material now showing in normal Viewport 2.0
+- *Fixed* - Color plane materials not being excluded from light compositing
+- *Fixed* - Cast shadows matte not supporting multiple lights
+
+### Miscellaneous
+- *New* - Added support for Maya 2024
+- *Improved* - Removed legacy "textured" presets that were causing confusion
+- *Fixed* - Canvas Tile Blend not working correctly
+- *Fixed* - Inherit preset not handling normals maps properly
+- *Fixed* - VertexFX painting resetting the style every frame with TAA
+
+
+
+---
+
 ## Flair 1.0.2
 > Released 08.03.2023
 
 <div>
 	<figure>
 		<video autoplay loop muted playsinline style="max-height:100px;">
-			<source src="/media/release-log/1.0.2/1_0_2.mp4" type="video/mp4">
+			<source src="https://docs.artineering.io/media/release-log/1.0.2/1_0_2.mp4" type="video/mp4">
 		</video>
     <figcaption>OUT NOW!</figcaption>
   </figure>

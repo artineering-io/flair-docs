@@ -36,7 +36,7 @@ Defines the style that Flair is currently running in.
 * [**Cutout**](/flair/styles/library/cutout/) - 3D Cutout style
 * [**Hatching**](/flair/styles/library/hatching/) - Hatching and stippling style
 * [**Frayed**](/flair/styles/library/frayed/) - Frayed edges style
-* [**Cat**](/flair/styles/library/cat/) - Cat style
+* [**Fur**](/flair/styles/library/fur/) - Fur style
 * [**Sketch**](/flair/styles/library/sketch/) - Sketch and outlines style
 
 ### Quality
@@ -95,6 +95,10 @@ These locators can also be constrained/parented to a camera to have the front an
 
 -----------
 
+{% include /effects/bloom.md %}
+{% include /effects/wobble.md %}
+
+-----------
 
 ## Style
 Style attributes contain the attributes of the currently loaded style. In the case of the figure above: watercolor.
@@ -105,7 +109,7 @@ These attributes allow to globally control the parameters the style and are docu
 * [**Cutout**](/flair/styles/library/cutout/)
 * [**Hatching**](/flair/styles/library/hatching/)
 * [**Frayed**](/flair/styles/library/frayed/)
-* [**Cat**](/flair/styles/library/cat/)
+* [**Fur**](/flair/styles/library/fur/)
 * [**Sketch**](/flair/styles/library/sketch/)
 
 When using a custom _Graph_ style, the style attributes will auto-populate depending on the _Globals_ defined in the graph.

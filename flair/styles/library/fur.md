@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Cat
+title: Fur
 parent: Style library
 grand_parent: Styles
 nav_order: 6
 ---
 
-# Cat shader style
+# Fur shader style
 
 <i class="fas fa-construction"></i> Coming soon...
