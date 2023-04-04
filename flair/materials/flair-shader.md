@@ -381,6 +381,64 @@ _Tessellation Factor_ defines the amount of subdivision within each polygon. The
 
 ---
 
+### Wobble
+The _Wobble_ setting activates the use of wobble offsets within the material and toggles its attributes in the _Attribute Editor_. These material attributes offset the global wobble values set in the [globals node](/flair/getting-started/globals/#geometry-wobble), so make sure to enable and set the wobble effect globally first.
+
+<figure class="aio-ui">
+	<img src="/media/flair-shader/wobble-ae.png" alt="Wobble offsets section">
+	<figcaption>The Wobble Offsets section in the Attribute Editor.</figcaption>
+</figure>
+
+Once the wobble attribute has been enabled globally, material presets will default as wobbled.
+{: .info}
+
+#### Wobble Frequency
+Offsets the regularity of the wobble. A higher frequency will make the wobble more "irregular", whereas a lower frequency will make it more "regular". The frequency is directly linked to the global [World Scale](/flair/getting-started/globals/#world-scale).
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/wobble-frequency.mp4" type="video/mp4">
+    </video>
+    <figcaption>Wobble Frequency (0...5).</figcaption>
+</figure>
+
+
+#### Wobble Amplitude
+Defines the amount of wobble. A higher amplitude will deform more than a lower amplitude. The amplitude is directly linked to the global [World Scale](/flair/getting-started/globals/#world-scale).
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/wobble-amplitude.mp4" type="video/mp4">
+    </video>
+    <figcaption>Wobble Amplitude (0...2.5).</figcaption>
+</figure>
+
+#### Wobble Phase
+Defines the form of the wobble. Useful when you want a different wobble deformation or want to vary the wobble on a frame-by-frame basis.
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/wobble-phase.mp4" type="video/mp4">
+    </video>
+    <figcaption>Wobble Phase (0...3).</figcaption>
+</figure>
+
+As wobble is generated from noise in 3D, make sure to toggle the *deformed* attribute in materials if they are animated/deformed so that the wobble is baked in place.
+{:.info}
+
+
+#### Wobble Jitter (TAA)
+Defines the amount of jitter for each TAA sample, generating a soft edge by avaraging different wobble positions.
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/wobble-jitter.mp4" type="video/mp4">
+    </video>
+    <figcaption>Wobble jitter (0...1).</figcaption>
+</figure>
+
+---
+
 ### Light Map
 The _Light Map_ setting activates the use of light maps within the material and toggles light map attributes in the Attribute Editor. 
 <figure class="aio-ui">

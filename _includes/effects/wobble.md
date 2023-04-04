@@ -11,11 +11,11 @@ In case you can't see the wobble effect, make sure Flair materials also have the
 Once the wobble attribute has been enabled globally, material presets will default as wobbled.
 {: .info}
 
-#### Wobble Amplitude
-Defines the amount of wobble. The amount is also directly linked to the global [World Scale](/flair/getting-started/globals/#world-scale).
-
 #### Wobble Frequency
-Defines the regularity of the effect. A higher frequency will make the wobble more "irregular", whereas a lower frequency will make it more "regular".
+Defines the regularity of the effect. A higher frequency will make the wobble more "irregular", whereas a lower frequency will make it more "regular". The frequency is directly linked to the global [World Scale](/flair/getting-started/globals/#world-scale).
+
+#### Wobble Amplitude
+Defines the amount of wobble. A higher amplitude will deform more than a lower amplitude. The amplitude is directly linked to the global [World Scale](/flair/getting-started/globals/#world-scale).
 
 #### Wobble Phase
 Defines the form of the wobble. Useful when you want a different wobble deformation or want to vary the wobble on a frame-by-frame basis.

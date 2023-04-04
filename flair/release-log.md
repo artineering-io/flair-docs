@@ -29,16 +29,17 @@ The global and per-material controls customize the wobble on-demand, whereas the
 
 The *amplitude* defines the amount of wobble, the *frequency* the regularity of the effect and the *phase* the form of the wobble.
 
-Additionally, inspired by the "Painting with polygons" [paper](https://dl.acm.org/doi/10.1145/1597990.1598012) by Isaac Botkin, we added an additional jitter control to wobble differently at each TAA sample, achieving a similar effect in real-time. So, now artists can use the wobble jitter to add soft edges to the watercolor and fur styles when needed (other shader styles coming soon). 
+Additionally, inspired by the "Painting with polygons" [paper](https://dl.acm.org/doi/10.1145/1597990.1598012) by Isaac Botkin, we added an additional jitter control to wobble differently at each TAA sample, achieving a similar effect in real-time. So, now artists can use the wobble jitter to add soft edges to the watercolor and fur styles when needed (other shader styles coming soon).
 
 ### Fur style
 - *Improved* - Streamlined cryptomattes for production
 - *Improved* - Polished vertexFX and noiseFX controls
+- *Improved* - Frayed feathering look
 
 ### Materials
 - *Improved* - Flair shader material now showing in normal Viewport 2.0
 - *Fixed* - Color plane materials not being excluded from light compositing
-- *Fixed* - Cast shadows matte not supporting multiple lights
+- *Fixed* - Cast shadow matte not supporting multiple lights
 
 ### Miscellaneous
 - *New* - Added support for Maya 2024
@@ -46,8 +47,6 @@ Additionally, inspired by the "Painting with polygons" [paper](https://dl.acm.or
 - *Fixed* - Canvas Tile Blend not working correctly
 - *Fixed* - Inherit preset not handling normals maps properly
 - *Fixed* - VertexFX painting resetting the style every frame with TAA
-
-
 
 ---
 
