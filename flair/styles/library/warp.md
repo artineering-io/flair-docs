@@ -13,8 +13,9 @@ redirect_from:
 </figure>
 
 # Warp shader style
-Previously Frayed shader style
 {: .no_toc }
+
+Previously Frayed shader style
 
 <details close markdown="block">
   <summary>
@@ -25,7 +26,7 @@ Previously Frayed shader style
 {:toc}
 </details>
 
-[Back to Warp Features](https://artineering.io/styles/frayed
+[Back to Warp Features](https://artineering.io/styles/warp
 ){: .aio-btn .d-block}
 
 ## Style breakdown
@@ -55,7 +56,7 @@ In this page, we only document global attributes specific to the warp shader sty
 A series of warped attributes are provided within the [globals node](/flair/getting-started/globals/) to control and refine the style.
 
 <figure class="aio-ui">
-    <img src="/media/styles/frayed/style-attrs.png" alt="Style attributes">
+    <img src="/media/styles/warp/style-attrs.png" alt="Style attributes">
     <figcaption>Style attributes in the configuration node</figcaption>
 </figure>
 
@@ -95,7 +96,7 @@ Creates inflated noise instances of objects in the scene to be used for the warp
 Amount of inflation of the noise objects, default: 0.05. Inflation is required to keep the warped distortions outside of the geometry.
 <figure>
 	<video autoplay loop muted playsinline>
-	    <source src="/media/styles/frayed/inflation.mp4" type="video/mp4">
+	    <source src="/media/styles/warp/inflation.mp4" type="video/mp4">
 	</video>
 	<figcaption>Inflation between 0 and 0.5</figcaption>
 </figure>
@@ -107,7 +108,7 @@ Frequency of the warped distortions, default: 50.0.
 
 <figure>
 	<video autoplay loop muted playsinline>
-	    <source src="/media/styles/frayed/frequency.mp4" type="video/mp4">
+	    <source src="/media/styles/warp/frequency.mp4" type="video/mp4">
 	</video>
 	<figcaption>Frequency between 0 and 200</figcaption>
 </figure>
@@ -120,7 +121,7 @@ Determines the amount of warp distortions, default 1.0.
 
 <figure>
 	<video autoplay loop muted playsinline>
-	    <source src="/media/styles/frayed/amplitude.mp4" type="video/mp4">
+	    <source src="/media/styles/warp/amplitude.mp4" type="video/mp4">
 	</video>
 	<figcaption>Varying amplitude between 0 and 10</figcaption>
 </figure>
@@ -139,7 +140,7 @@ The concentration of pigments, giving the render either a diluted or a more satu
 
 <figure>
 	<video autoplay loop muted playsinline>
-	    <source src="/media/styles/frayed/pigment-density.mp4" type="video/mp4">
+	    <source src="/media/styles/warp/pigment-density.mp4" type="video/mp4">
 	</video>
 	<figcaption>Pigment Density between 0.5 and 2</figcaption>
 </figure>
@@ -149,7 +150,7 @@ The accumulation of pigments on the valleys of the paper (canvas). Concentrates 
 
 <figure>
 	<video autoplay loop muted playsinline>
-	    <source src="/media/styles/frayed/paper-granulation.mp4" type="video/mp4">
+	    <source src="/media/styles/warp/paper-granulation.mp4" type="video/mp4">
 	</video>
 	<figcaption>Paper Granulation between -1 and 5</figcaption>
 </figure>
@@ -160,7 +161,7 @@ The accumulation of pigments on the valleys of the paper (canvas). Concentrates 
 Strength of the edge darkening effect. A higher intensity will concentrate more color on the edges.
 <figure>
 	<video autoplay loop muted playsinline>
-	    <source src="/media/styles/frayed/edge-darkening-intensity.mp4" type="video/mp4">
+	    <source src="/media/styles/warp/edge-darkening-intensity.mp4" type="video/mp4">
 	</video>
 	<figcaption>Edge Darkening Intensity between 0 and 3</figcaption>
 </figure>
@@ -169,7 +170,7 @@ Strength of the edge darkening effect. A higher intensity will concentrate more 
 Width for the edge darkening effect.
 <figure>
 	<video autoplay loop muted playsinline>
-	    <source src="/media/styles/frayed/edge-darkening-width.mp4" type="video/mp4">
+	    <source src="/media/styles/warp/edge-darkening-width.mp4" type="video/mp4">
 	</video>
 	<figcaption>Edge Darkening Width between 0 and 30</figcaption>
 </figure>
@@ -184,7 +185,7 @@ Sharpness of the drybrush application. Using a dry brush will only apply pigment
 
 <figure>
 	<video autoplay loop muted playsinline>
-	    <source src="/media/styles/frayed/drybrush-threshold.mp4" type="video/mp4">
+	    <source src="/media/styles/warp/drybrush-threshold.mp4" type="video/mp4">
 	</video>
 	<figcaption>Drybrush Threshold between 0 and 20</figcaption>
 </figure>
@@ -193,7 +194,7 @@ Sharpness of the drybrush application. Using a dry brush will only apply pigment
 Color of the drybrush application.
 <figure>
 	<video autoplay loop muted playsinline>
-	    <source src="/media/styles/frayed/drybrush-color.mp4" type="video/mp4">
+	    <source src="/media/styles/warp/drybrush-color.mp4" type="video/mp4">
 	</video>
 	<figcaption>Different drybrush colors.</figcaption>
 </figure>
@@ -202,7 +203,7 @@ Color of the drybrush application.
 Maximum width of the gaps & overlaps effect.
 <figure>
 	<video autoplay loop muted playsinline>
-	    <source src="/media/styles/frayed/max-gaps-overlaps-width.mp4" type="video/mp4">
+	    <source src="/media/styles/warp/max-gaps-overlaps-width.mp4" type="video/mp4">
 	</video>
 	<figcaption>Gaps and overlaps width between 1 and 5</figcaption>
 </figure>
@@ -226,7 +227,7 @@ This group is closed by default, but can be opened by clicking on it.
 The Warp settings allow additional functionality for the Warp shader style. The available settings can be found in the [Flair toolbox](/flair/toolbox), once you click on the `Warp settings` button.
 
 <figure class="aio-ui aio-window">
-    <img src="/media/toolbox/frayed_settings.png" alt="The window with warp settings">
+    <img src="/media/toolbox/warp_settings.png" alt="The window with warp settings">
     <figcaption>The Warp settings window</figcaption>
 </figure>
 
