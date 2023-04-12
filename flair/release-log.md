@@ -19,7 +19,7 @@ nav_order: 10
 ---
 
 ## Flair 1.0.3
-> Released 10.04.2023
+> Released 14.04.2023
 
 This patch update includes the new wobble effect, the production-ready fur style (previously cat), support for the Flair material on normal Viewport 2.0, and other smaller fixes/improvements including support for Maya 2024!
 
@@ -43,7 +43,8 @@ Additionally, inspired by the "Painting with polygons" [paper](https://dl.acm.or
 
 ### Miscellaneous
 - *New* - Added support for Maya 2024
-- *Improved* - Removed legacy "textured" presets that were causing confusion
+- *New* - Added global option to properly mix Flair and Maya materials
+- *Improved* - "_textured" presets now prompt for a texture if no texture was present before in the material
 - *Fixed* - Canvas Tile Blend not working correctly
 - *Fixed* - Inherit preset not handling normals maps properly
 - *Fixed* - VertexFX painting resetting the style every frame with TAA
