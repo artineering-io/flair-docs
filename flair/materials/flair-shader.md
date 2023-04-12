@@ -437,6 +437,16 @@ Defines the amount of jitter for each TAA sample, generating a soft edge by avar
     <figcaption>Wobble jitter (0...1).</figcaption>
 </figure>
 
+#### Wobble Motion
+Defines the amount of motion offset of the wobble, generating streaks of motion under animation. For this attribute to show it's effect, make sure that velocity is enabled in the Globals node and in the material.
+
+<figure>
+    <video autoplay loop muted playsinline style="height:152px">
+        <source src="/media/flair-shader/wobble-motion.mp4" type="video/mp4">
+    </video>
+    <figcaption>Wobble motion at 0.5 and 2.5.</figcaption>
+</figure>
+
 ---
 
 ### Light Map

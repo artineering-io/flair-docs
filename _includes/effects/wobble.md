@@ -25,4 +25,3 @@ As wobble is generated from noise in 3D, make sure to toggle the *deformed* attr
 
 #### Wobble Jitter (TAA)
 Defines the amount of jitter for each TAA sample, generating a soft edge by avaraging different wobble positions. This was inspired by the "Painting with polygons" [paper](https://dl.acm.org/doi/10.1145/1597990.1598012) by Isaac Botkin. 
-

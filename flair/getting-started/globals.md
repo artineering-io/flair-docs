@@ -74,6 +74,9 @@ The option to save the stylization (art-direction) of the scene concurrently in 
 When applying VertexFX onto referenced assets, Flair will automatically ask if you wish to only save the stylization in a separate file, instead of in the Maya scene ("Yes, save and replace" option). This is recommended, because if the stylization is saved with the Maya scene, the file size will be orders of magnitude bigger than it should be and may not open anymore. 
 {: .info}
 
+### Mix Maya Materials
+Enables to properly mix Flair materials with Maya materials, at the cost of some performance. Without this option, you will see Flair effects from background objects being applied on top of Maya materials, which might not be desired.
+
 ### Velocity PV
 Enables the calculation of motion vectors of each object in the scene (per vertex). This helps certain effects to remain motion coherent and avoid the _shower door effect_.
 
