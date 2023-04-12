@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 <figure>
- <img src="/media/styles/frayed/header.jpg" alt="Warp header">
+ <img src="/media/styles/warp/header.jpg" alt="Warp header">
 </figure>
 
 # Warp shader style
@@ -59,10 +59,6 @@ A series of warped attributes are provided within the [globals node](/flair/gett
     <img src="/media/styles/warp/style-attrs.png" alt="Style attributes">
     <figcaption>Style attributes in the configuration node</figcaption>
 </figure>
-
----
-
-{% include /effects/bloom.md %}
 
 ---
 
