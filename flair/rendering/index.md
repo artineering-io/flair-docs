@@ -59,7 +59,7 @@ The _Target Sequence Renderer_ is a tool that allows to easily render any target
 The upper section of the _Target Sequence Renderer_ allows you to specify where the image sequence is going to be saved in. By default, your current project's directory will be set, but you can define any directory by clicking on the `Browse` button and navigating to your desired path.
 
 ### Targets
-The left section outlines all internal targets available to render. By default, all targets that are required to replicate the stylization in a compositing application are pre-selected. This allows you to have the same stylization in, for example, _Nuke_ and have complete freedom to push the look further in _comp_. We've already replicated the [watercolor and frayed stylization in _Nuke_](/software/MNPRX/docs/compositing-nuke/).
+The left section outlines all internal targets available to render. By default, all targets that are required to replicate the stylization in a compositing application are pre-selected. This allows you to have the same stylization in, for example, _Nuke_ and have complete freedom to push the look further in _comp_. We've already replicated the [watercolor and warp stylization in _Nuke_](/software/MNPRX/docs/compositing-nuke/).
 
 Internal render targets (all except _outputTarget_) should be exported as _.exr_ to preserve the embedded linear float data of each image.
 {: .info}
