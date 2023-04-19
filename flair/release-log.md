@@ -19,35 +19,138 @@ nav_order: 10
 ---
 
 ## Flair 1.0.3
-> Released 14.04.2023
+> Released 20.04.2023
 
-This patch update includes the new wobble effect, the production-ready fur style (previously cat), support for the Flair material on normal Viewport 2.0, and other smaller fixes/improvements including support for Maya 2024!
+<div>
+	<figure>
+		<video autoplay loop muted playsinline>
+			<source src="/media/release-log/1.0.3/smears_release_log.mp4" type="video/mp4">
+		</video>
+  </figure>
+</div>
+
+This patch update includes the new **_Wobble_ effect**, the production-ready **_Fray_ style** (previously cat), support for the **Flair material on normal Viewport 2.0**, **multi-light fixes** accross the board, the renaming of the frayed edges to **_Warp_ style** and other fixes/improvements including **support for Maya 2024**!
+
+Read below for a full list of changes.
 
 ### Wobble effect
-The wobble effect allows to add imperfections to geometry by deforming it in 3D (see image above). 
-The global and per-material controls customize the wobble on-demand, whereas the vertexFX and noiseFX allows to meticulously art-direct the effect. 
+The wobble effect allows to add imperfections to shader geometry by deforming it in 3D. 
+The [global](/flair/getting-started/globals/#geometry-wobble) and [per-material](/flair/materials/flair-shader/#wobble) controls customize the wobble on-demand, whereas the vertexFX and noiseFX allows to meticulously art-direct the effect.
 
-The *amplitude* defines the amount of wobble, the *frequency* the regularity of the effect and the *phase* the form of the wobble.
+<div class="d-flex">
+	<figure style="width: 20%">
+		<video autoplay loop muted playsinline>
+			<source src="/media/flair-shader/wobble-frequency.mp4" type="video/mp4">
+		</video>
+		<figcaption>Wobble Frequency.</figcaption>
+	</figure>
+	<figure style="width: 20%">
+		<video autoplay loop muted playsinline>
+			<source src="/media/flair-shader/wobble-amplitude.mp4" type="video/mp4">
+		</video>
+		<figcaption>Wobble amplitude.</figcaption>
+	</figure>
+	<figure style="width: 20%">
+		<video autoplay loop muted playsinline>
+			<source src="/media/flair-shader/wobble-phase.mp4" type="video/mp4">
+		</video>
+		<figcaption>Wobble phase.</figcaption>
+	</figure>
+  	<figure style="width: 20%">
+		<video autoplay loop muted playsinline>
+			<source src="/media/flair-shader/wobble-jitter.mp4" type="video/mp4">
+		</video>
+		<figcaption>Wobble jitter.</figcaption>
+	</figure>
+</div>
 
-Additionally, inspired by the "Painting with polygons" [paper](https://dl.acm.org/doi/10.1145/1597990.1598012) by Isaac Botkin, we added an additional jitter control to wobble differently at each TAA sample, achieving a similar effect in real-time. So, now artists can use the wobble jitter to add soft edges to the watercolor and fur styles when needed (other shader styles coming soon).
+The *amplitude* defines the amount of wobble, the *frequency* the regularity of the effect and the *phase* the form of the wobble. Additionally, inspired by the "Painting with polygons" [paper](https://dl.acm.org/doi/10.1145/1597990.1598012) by Isaac Botkin, we added an additional jitter control to wobble differently at each TAA sample, achieving a similar effect in real-time. So, now artists can use the wobble jitter to add soft edges to the watercolor, fray and sketch styles when needed (other shader styles coming soon).
 
-### Fur style
-- *Improved* - Streamlined cryptomattes for production
-- *Improved* - Polished vertexFX and noiseFX controls
-- *Improved* - Frayed feathering look
+<div>
+	<figure>
+		<video autoplay loop muted playsinline>
+			<source src="/media/flair-shader/wobble-motion.mp4" type="video/mp4">
+		</video>
+    <figcaption>Wobble motion (needs velocityPV enabled)</figcaption>
+  </figure>
+</div>
+
+Wobble *motion* can also be set per material to generate motion smears. The effect can be seen in the hummingbird animation above, which is available as a [new demo scene](https://artineering.io/software/flair/demo-scenes)!
+
+### Fray style
+- *New* - The old cat style is now called the **Fray** style.
+- *Improved* - Streamlined cryptomattes for production in Fray style.
+- *Improved* - Polished vertexFX and noiseFX controls.
+- *Improved* - Frayed feathering look.
+
+### Warp style
+- *New* - The Frayed edges style is now called the **Warp** style.
+- *New* - Initial support for warped cryptomattes.
+- *Fixed* - Applying of material presets not working correctly with instances enabled
+
+### Sketch style
+- *Improved* - Sketch amplitude control within NoiseFX and VertexFX.
+- *Improved* - Sketch lines now present in alpha channel
+- *Improved* - Edge thickness scaling under different resolutions.
 
 ### Materials
-- *Improved* - Flair shader material now showing in normal Viewport 2.0
-- *Fixed* - Color plane materials not being excluded from light compositing
-- *Fixed* - Cast shadow matte not supporting multiple lights
+- *Improved* - Flair shader material now showing in normal Viewport 2.0.
+- *Fixed* - Lighting with multiple lights not working correctly.
+- *Fixed* - Color plane materials not being excluded from light compositing.
+- *Fixed* - Cast shadow matte not working correctly.
+- *Fixed* - "Deformed" setting not being applied to all assigned shapes in legacy *ShaderFX* materials when objects were selected.
+
+Simple lighting comparison between previous versions and Flair 1.0.3 using directional, spot, point and ambient lights with color-plane light-shafts.
+
+<!-- HEAD-->
+<link rel="stylesheet" href="https://docs.artineering.io/assets/css/twentytwenty/twentytwenty.css" type="text/css" media="screen"/>
+
+<figure>
+    <div id="1-0-3-comparison" class="twentytwenty-container">
+        <!-- The before image is first -->
+        <img src="/media/release-log/1.0.3/lighting_1_0_2.jpg"/>
+        <!-- The after image is last -->
+        <img src="/media/release-log/1.0.3/lighting_1_0_3.jpg"/>
+    </div>
+    <figcaption>Comparison rendering with multiple lights.</figcaption>
+</figure>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous">
+</script>
+
+<script>
+  $(function(){
+    $("#1-0-3-comparison").twentytwenty({
+    before_label: 'Flair 1.0.2', // Set a custom before label
+    after_label: 'Flair 1.0.3', // Set a custom after label
+    });
+  });
+</script>
+
+### Installation
+- *Fixed* - Demo license for "all users" installation not working properly
+- *Fixed* - Python shell not closing when uninstalling "all users" installations
+- *Fixed* - Shelf not showing when directory had emty spaces for "all users" installations
+- *Fixed* - Flair shelf remaining within Maya after uninstalling "local users" installations
 
 ### Miscellaneous
-- *New* - Added support for Maya 2024
-- *New* - Added global option to properly mix Flair and Maya materials
-- *Improved* - "_textured" presets now prompt for a texture if no texture was present before in the material
-- *Fixed* - Canvas Tile Blend not working correctly
-- *Fixed* - Inherit preset not handling normals maps properly
-- *Fixed* - VertexFX painting resetting the style every frame with TAA
+- *New* - Added support for Maya 2024.
+- *New* - Added global option to properly mix Flair and Maya materials. This fixes ghosting of Flair effects when Maya materials were in front of Flair materials.
+- *Improved* - Alpha channel of watercolor renders for compositing.
+- *Improved* - Motion vectors now available when using TAA quality.
+- *Improved* - Bloom now also modifies the alpha channel and allows for compositing.
+- *Improved* - "_textured" presets now prompt for a texture if no texture was present before in the material.
+- *Improved* - Baking color space in exr images linearly when using the *Viewport Renderer* (not with the *Sequence Renderer*).
+- *Improved* - Guaranteeing a globals node as soon as Flair renders it’s first image
+- *Fixed* - Rendering with linear alpha not working correctly.
+- *Fixed* - Sequence renderer not updating checked targets and file format correctly after only the *outputTarget* was being rendered.
+- *Fixed* - Canvas Tile Blend not working correctly.
+- *Fixed* - Inherit preset not handling normals maps properly.
+- *Fixed* - VertexFX painting resetting the style every frame with TAA.
+- *Fixed* - Shelf detach not working in environment with UNC paths
 
 ---
 
@@ -215,3 +318,7 @@ As a small team (currently only Santiago is at Artineering), we can’t develop 
 Finally, to bid the MNPRX name farewell and welcome Flair, we have decided to release our first demo reel! After three years of existence, you have created some amazing productions, which we wish to celebrate and highlight. Thank you for using MNPRX/Flair and for your continuous support!!
 
 {% include responsive-embed url="https://www.youtube.com/embed/R2Ibp1e7SVo" %}
+
+<!-- FOOTER -->
+<script src="https://docs.artineering.io/assets/js/twentytwenty/jquery.event.move.js" type="text/javascript"></script>
+<script src="https://docs.artineering.io/assets/js/twentytwenty/jquery.twentytwenty.js" type="text/javascript"></script>
