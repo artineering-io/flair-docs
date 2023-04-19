@@ -29,12 +29,12 @@ nav_order: 10
   </figure>
 </div>
 
-This patch update includes the new **_Wobble_ effect**, the production-ready **_Fray_ style** (previously cat), support for the **Flair material on normal Viewport 2.0**, **multi-light fixes** accross the board, the renaming of the frayed edges to **_Warp_ style** and other fixes/improvements including **support for Maya 2024**!
+This patch update includes the new **_Wobble_ effect**, the production-ready **_Fray_ style** (previously cat), support for the **Flair material on normal Viewport 2.0**, **multi-light fixes** across the board, the renaming of the frayed edges to **_Warp_ style**, and other fixes/improvements including **support for Maya 2024**!
 
 Read below for a full list of changes.
 
 ### Wobble effect
-The wobble effect allows to add imperfections to shader geometry by deforming it in 3D. 
+The wobble effect allows for adding imperfections to shader geometry by deforming it in 3D. 
 The [global](/flair/getting-started/globals/#geometry-wobble) and [per-material](/flair/materials/flair-shader/#wobble) controls customize the wobble on-demand, whereas the vertexFX and noiseFX allows to meticulously art-direct the effect.
 
 <div class="d-flex">
@@ -64,7 +64,7 @@ The [global](/flair/getting-started/globals/#geometry-wobble) and [per-material]
 	</figure>
 </div>
 
-The *amplitude* defines the amount of wobble, the *frequency* the regularity of the effect and the *phase* the form of the wobble. Additionally, inspired by the "Painting with polygons" [paper](https://dl.acm.org/doi/10.1145/1597990.1598012) by Isaac Botkin, we added an additional jitter control to wobble differently at each TAA sample, achieving a similar effect in real-time. So, now artists can use the wobble jitter to add soft edges to the watercolor, fray and sketch styles when needed (other shader styles coming soon).
+The *amplitude* defines the amount of wobble, the *frequency* the regularity of the effect, and the *phase* the form of the wobble. Additionally, inspired by the "Painting with polygons" [paper](https://dl.acm.org/doi/10.1145/1597990.1598012) by Isaac Botkin, we added an additional jitter control to wobble differently at each TAA sample, achieving a similar effect in real-time. So, now artists can use the wobble jitter to add soft edges to the watercolor, fray, and sketch styles when needed (other shader styles are coming soon).
 
 <div>
 	<figure>
