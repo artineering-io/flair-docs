@@ -32,11 +32,11 @@ Engine attributes remain the same across styles and contain attributes directly 
 ### Style
 Defines the style that Flair is currently running in.
 * [**Graph**](/flair/styles/graph/) - The Flair Graph style (customizable)
-* [**Watercolor**](/flair/styles/library/watercolor/) - The watercolor style (default)
+* [**Watercolor**](/flair/styles/library/watercolor/) - The Watercolor style (default)
 * [**Cutout**](/flair/styles/library/cutout/) - 3D Cutout style
 * [**Hatching**](/flair/styles/library/hatching/) - Hatching and stippling style
-* [**Frayed**](/flair/styles/library/frayed/) - Frayed edges style
-* [**Cat**](/flair/styles/library/cat/) - Cat style
+* [**Warp**](/flair/styles/library/warp/) - Warp style
+* [**Fray**](/flair/styles/library/fray/) - Fray style
 * [**Sketch**](/flair/styles/library/sketch/) - Sketch and outlines style
 
 ### Quality
@@ -74,6 +74,9 @@ The option to save the stylization (art-direction) of the scene concurrently in 
 When applying VertexFX onto referenced assets, Flair will automatically ask if you wish to only save the stylization in a separate file, instead of in the Maya scene ("Yes, save and replace" option). This is recommended, because if the stylization is saved with the Maya scene, the file size will be orders of magnitude bigger than it should be and may not open anymore. 
 {: .info}
 
+### Mix Maya Materials
+Enables to properly mix Flair materials with Maya materials, at the cost of some performance. Without this option, you will see Flair effects from background objects being applied on top of Maya materials, which might not be desired.
+
 ### Velocity PV
 Enables the calculation of motion vectors of each object in the scene (per vertex). This helps certain effects to remain motion coherent and avoid the _shower door effect_.
 
@@ -95,6 +98,10 @@ These locators can also be constrained/parented to a camera to have the front an
 
 -----------
 
+{% include /effects/bloom.md %}
+{% include /effects/wobble.md %}
+
+-----------
 
 ## Style
 Style attributes contain the attributes of the currently loaded style. In the case of the figure above: watercolor.
@@ -104,8 +111,8 @@ These attributes allow to globally control the parameters the style and are docu
 * [**Watercolor**](/flair/styles/library/watercolor/)
 * [**Cutout**](/flair/styles/library/cutout/)
 * [**Hatching**](/flair/styles/library/hatching/)
-* [**Frayed**](/flair/styles/library/frayed/)
-* [**Cat**](/flair/styles/library/cat/)
+* [**Warp**](/flair/styles/library/warp/)
+* [**Fray**](/flair/styles/library/fray/)
 * [**Sketch**](/flair/styles/library/sketch/)
 
 When using a custom _Graph_ style, the style attributes will auto-populate depending on the _Globals_ defined in the graph.

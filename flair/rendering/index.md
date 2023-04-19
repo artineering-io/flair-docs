@@ -59,7 +59,7 @@ The _Target Sequence Renderer_ is a tool that allows to easily render any target
 The upper section of the _Target Sequence Renderer_ allows you to specify where the image sequence is going to be saved in. By default, your current project's directory will be set, but you can define any directory by clicking on the `Browse` button and navigating to your desired path.
 
 ### Targets
-The left section outlines all internal targets available to render. By default, all targets that are required to replicate the stylization in a compositing application are pre-selected. This allows you to have the same stylization in, for example, _Nuke_ and have complete freedom to push the look further in _comp_. We've already replicated the [watercolor and frayed stylization in _Nuke_](/software/MNPRX/docs/compositing-nuke/).
+The left section outlines all internal targets available to render. By default, all targets that are required to replicate the stylization in a compositing application are pre-selected. This allows you to have the same stylization in, for example, _Nuke_ and have complete freedom to push the look further in _comp_. We've already replicated the [watercolor and warp stylization in _Nuke_](/software/MNPRX/docs/compositing-nuke/).
 
 Internal render targets (all except _outputTarget_) should be exported as _.exr_ to preserve the embedded linear float data of each image.
 {: .info}
@@ -84,5 +84,17 @@ The right section of the _Target Sequence Renderer_ allows you to define all the
 
 The `Render targets` button will start rendering the target sequence with the settings you specified. You can cancel the sequence render anytime by hitting on `cancel` within the render progress dialog.
 
+## Advaced
+
+### Render each light
+
+### Apply color space
+Applies the color space of the viewport onto the rendered image. Supported color spaces are `Raw`, `sRGB gamma`, `2.2 gamma`, `Rec 709 gamma` or `1.8 gamma`. If color space is not applied, the resulting colors will be the same as in the `Raw` color space.
+
+Keep in mind that image formats that default to linear color representations such as _.exr_ and _.tif_ won't show the applied color space until it is set afterwards. If you don't apply the color space to them, the color space will be baked in its linear format (caution with this).
+{: .info}
+
+
+### Bundle AOVs in EXR
 
 ## FAQ
