@@ -21,13 +21,12 @@ nav_order: 10
 ## Flair 1.0.3
 > Released 20.04.2023
 
-<div>
-	<figure>
-		<video autoplay loop muted playsinline>
-			<source src="/media/release-log/1.0.3/smears_release_log.mp4" type="video/mp4">
-		</video>
-  </figure>
-</div>
+<figure>
+	<video autoplay loop muted playsinline>
+		<source src="/media/release-log/1.0.3/smears_release_log.mp4" type="video/mp4">
+	</video>
+	<figcaption>3d model/animation by Gerry Chicalo.</figcaption>
+</figure>
 
 This patch update includes the new **_Wobble_ effect**, the production-ready **_Fray_ style** (previously cat), support for the **Flair material on normal Viewport 2.0**, **multi-light fixes** across the board, the renaming of the frayed edges to **_Warp_ style**, and other fixes/improvements including **support for Maya 2024**!
 
