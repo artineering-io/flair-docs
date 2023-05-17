@@ -689,7 +689,7 @@ The _Feature Noise_ setting activates the fractalized 3D noise that is used for 
 ------------------
 
 ### Color-Plane
-The _Color-Plane_ setting activates a color plane functionality on the material. Objects assigned to a color plane material are not affected by the _Atmosphere Color_ attribute that is set in the globals node. This allows you to use color planes at different distances from the camera, without any color change affecting them.
+The _Color-Plane_ setting activates a color plane functionality on the material. Objects assigned to a color plane material are not affected by lighting or the _Atmosphere Color_ attribute that is set in the globals node. This allows you to use just the color, disregarding what is happening around them.
 
 ------------------
 ------------------
