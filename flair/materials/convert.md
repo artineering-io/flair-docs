@@ -60,7 +60,7 @@ Once the confirmation dialog are accepted, the materials will be automatically c
 
 To automate this process in a script, you can use the `convert_to_flair(objs=None)` function in the `maya/scripts/flair_materials.py` file.
 
-```
+```python
 import flair_materials as fmat
 fmat.convert_to_flair()
 ```
