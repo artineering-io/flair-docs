@@ -223,7 +223,7 @@ This group is closed by default, but can be opened by clicking on it.
 The Warp settings allow additional functionality for the Warp shader style. The available settings can be found in the [Flair toolbox](/flair/toolbox), once you click on the `Warp settings` button.
 
 <figure class="aio-ui aio-window">
-    <img src="/media/toolbox/warp_settings.png" alt="The window with warp settings">
+    <img src="/media/toolbox/warp/warp-settings.png" alt="The window with warp settings">
     <figcaption>The Warp settings window</figcaption>
 </figure>
 
