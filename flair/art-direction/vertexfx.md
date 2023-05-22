@@ -95,8 +95,8 @@ The painted values can be reset or flooded (added) on the selected objects/verti
 ## Showcase
 First we select the object we want to paint. Using the VertexFX tool, we accumulate the pigment and add color bleeding by painting. Afterwards, we flood the granulation effect with paint, then reset its values to flood dry-brush instead. At the end, we reset the dry-brush effect.  
 
-<figure class="float-center aio-ui">
- <video autoplay loop muted playsinline style="max-width:450px">
+<figure>
+ <video autoplay loop muted playsinline style="width:500px">
    <source src="/media/art-direction/vertexfx/showcase.mp4" type="video/mp4">
  </video>
  <figcaption>Using VertexFX on the selected object.</figcaption>

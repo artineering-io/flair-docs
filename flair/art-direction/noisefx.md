@@ -68,8 +68,8 @@ Depending on the widget (see _Edge Manipulation_ widget), it may present differe
 ## Showcase
 Here we select the object that contains the material to which we want to add NoiseFX onto. Using the NoiseFX tool, we modify the _noise_, _scale_ and _offset_ of the density to create a natural-looking pigment turbulence effect.
 
-<figure class="aio-ui">
- <video autoplay loop muted playsinline style="max-width: 502px">
+<figure>
+ <video autoplay loop muted playsinline style="width:500px">
    <source src="/media/art-direction/noisefx/showcase.mp4" type="video/mp4">
  </video>
  <figcaption>Adding and modifying density NoiseFX</figcaption>
