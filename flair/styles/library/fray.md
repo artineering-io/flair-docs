@@ -29,7 +29,7 @@ Previously Fur shader style
 
 ## Style breakdown
 
-The _fray_ shader style, similar to the _warp_ shader style, emulates the broken edges commonly found in paintings, in 3D. It also provides other painterly effects often found using traditional painting media such as pigment turbulence, edge darkening, canvas textures and more.
+The _fray_ shader style, similar to the [_warp_ shader style](/flair/styles/library/warp/), emulates the broken edges commonly found in paintings, in 3D. It also provides other painterly effects often found using traditional painting media such as pigment turbulence, edge darkening, canvas textures and more.
 
 <div class="d-flex">
 	<figure>
