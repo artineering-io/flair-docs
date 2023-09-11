@@ -30,7 +30,7 @@ A _Flair Shader_ material has two types of 'attributes': [**Settings**](.#settin
 The first section of a Flair Shader material within the attribute editor, provides the [**Settings**](.#settings) that allow to enable/disable what features the material should have. Therefore, we document the default material [**Attributes**](.#painterly-shading) first.
 
 ## Painterly Shading
-Painterly shading attributes focus on bringing colors into the foreground of shading control and work differently than most attributes found in PBR materials. This doesn't mean that they can't be combined with normal [_Shading_](#shading) parameters, but they require 3D artists to go back to thinking in terms of colors and light. The first group of attributes control the color in the lit parts of objects, whereas the second group of attributes (from [_Colored Shading_](#colored-shading) onwards) control the color in the shade of objects.
+Painterly shading attributes focus on bringing colors into the foreground of shading control and work differently than most attributes found in PBR materials. This doesn't mean that they can't be combined with normal [_Shading_](#shading) parameters, but they require 3D artists to go back to thinking in terms of colors and light. The first group of attributes control the color in the lit parts of objects, whereas the second group of attributes (from [_Diffuse Factor_](#diffuse-factor) onwards) control the color in the shade of objects.
 
 Painterly shading attributes are baked onto albedo AOVs and can't be separated for compositing purposes.
 {: .info}
@@ -80,15 +80,6 @@ _Custom Light Color_ defines a custom color used by the [_Custom Light_](#custom
     <figcaption>Different custom light colors</figcaption>
 </figure>
 
-### Colored Shading
-_Colored Shading_ toggles colored shading of objects, which is then done with the [_Custom Shade Color_](#custom-shade-color) instead of black.
-<figure>
-    <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/flair-shader/colored-shading.mp4" type="video/mp4">
-    </video>
-    <figcaption>Colored Shading on/off</figcaption>
-</figure>
-
 ### Diffuse Factor
 _Diffuse Factor_ defines the amount of diffuse shading within the material. `0` will be flat shading (entirely lit), `1` will be completely diffuse.
 <figure>
@@ -120,12 +111,21 @@ _Custom Shade Wrap_ defines the area of effect for the _Custom Shade_ attribute.
 </figure>
 
 ### Custom Shade Color
-_Custom Shade Color_ defines a custom color used by the [_Colored Shading_](#colored-shading) and the [_Custom Shade_](#custom-shade) attributes.
+_Custom Shade Color_ defines a custom color used by the [_Custom Shade_](#custom-shade) and [_Shadow Color Offset_](#shadow-color-offset) attributes.
 <figure>
     <video autoplay loop muted playsinline style="width:200px">
         <source src="/media/flair-shader/shade-color.mp4" type="video/mp4">
     </video>
-    <figcaption>Different custom shade colors showcased with the Colored Shading enabled</figcaption>
+    <figcaption>Different custom shade colors showcased with the Shadow Color Offset enabled</figcaption>
+</figure>
+
+### Shadow Color Offset
+_Shadow Color Offset_ offsets the shadow color of a light to the [_Custom Shade Color_](#custom-shade-color).
+<figure>
+    <video autoplay loop muted playsinline style="width:200px">
+        <source src="/media/flair-shader/shadow-color-offset.mp4" type="video/mp4">
+    </video>
+    <figcaption>Shadow Color Offset on/off</figcaption>
 </figure>
 
 -----------------
@@ -688,8 +688,8 @@ The _Feature Noise_ setting activates the fractalized 3D noise that is used for 
 
 ------------------
 
-### Color-Plane
-The _Color-Plane_ setting activates a color plane functionality on the material. Objects assigned to a color plane material are not affected by the _Atmosphere Color_ attribute that is set in the globals node. This allows you to use color planes at different distances from the camera, without any color change affecting them.
+### Final Color
+The _Final Color_ setting makes the albedo its final color. Objects assigned to a final color material are not affected by lighting or the _Atmosphere Color_ attribute that is set in the globals node. This allows you to use just the color, disregarding what is happening around them.
 
 ------------------
 ------------------
