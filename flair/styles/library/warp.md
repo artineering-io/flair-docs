@@ -66,20 +66,8 @@ A series of warped attributes are provided within the [globals node](/flair/gett
 
 ---
 
-## Atmospheric Effects
 
-Atmospheric effects are useful to add depth to bigger scenes by changing the color within a specific range. 
-
-### Atmosphere Tint
-Defines a custom atmospheric perspective color, making things at distance tint towards the specified color.
-
-### Atmosphere Range
-Defines the range at which the atmospheric tint will start and end. Set these values high to _not_ have the atmosphere range affecting your scene.
-
-If you wish to exclude an object from the atmosphere tint affect (e.g., a background plane), enable the _Color Plane_ attribute in the Flair shader material assigned to that object.
-
-The units work as meter/cm, so keep the  _World Scale_ in mind when setting up this attribute.
-{: .info}
+{% include /effects/atmosphere.md %}
 
 ---
 

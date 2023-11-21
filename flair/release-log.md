@@ -22,11 +22,11 @@ nav_order: 10
 
 ### Materials
 - *Improved* - Colored shading being dependent on the shadow color of lights, with *Shadow Color Offset* attribute replacing the previous *Colored Shading* and acting as a per material offset.
+- *Improved* - The *Color Plane* attribute has been renamed to *Final Color* for better understanding of what it does.
 - *Fixed* - ShaderFX materials not working anymore on latest Maya versions due to bug introduced by Autodesk in this update: "MAYA-124764 - Support for multiple paths with SHADERFX_CUSTOMUSERPATH".
 
 ### Miscellaneous
 - *Fixed* - Flair not being able to load when RenderMan or Prism was previously loaded onto Maya
-
 
 ---
 

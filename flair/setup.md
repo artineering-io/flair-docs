@@ -39,7 +39,7 @@ Get a **commercial, non-commercial or demo** version of Flair below.
 
 **Demo versions are free to use** and are limited only in resolution to 1280 x 800.
 
-Upon puchasing Flair, you can download any version through the link you receive via email.  
+Upon purchasing Flair, you can download any version through the link you receive via email.  
 You can also download the demo version and [activate a license](#activation) with your activation key.
 {: info}
 
