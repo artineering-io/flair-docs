@@ -1,5 +1,19 @@
 // Here you can define custom CSS overriding the theme using SCSS
 // media queries (https://just-the-docs.github.io/just-the-docs/docs/utilities/responsive-modifiers/)
+.site-title {
+    padding-right: 0;
+    .docs-logo {
+        display: flex;
+        align-items: center;
+        img {
+            width: 2rem;
+            height: 2rem;
+            margin-right: 0.5rem;
+        }
+        p { font-size: 1.5rem;}
+    }
+}
+
 .main-content h3 {
     margin-bottom: 0.5em;
 }

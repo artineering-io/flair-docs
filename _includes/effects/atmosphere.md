@@ -1,4 +1,6 @@
+
 ### Atmospheric Effects
+
 Atmospheric effects are useful to add atmospheric depth to bigger scenes by changing the color within a specific range.
 
 #### Atmosphere Tint
