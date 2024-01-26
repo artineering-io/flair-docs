@@ -28,8 +28,8 @@ The art-direction tools can be found in the left side of the shelf, ordered from
 1. **GLOB** - selects the global node to change style attributes [[docs](/flair/getting-started/globals/)].
 1. **PRES** - opens the _Material Presets_ to load/save predefined Flair materials and their parameters [[docs](/flair/materials/presets)].  
 1. **MAT** - selects the materials of currently selected objects or components.
-`Double click` shows the material tab within the _Attribute Editor_,  without changing the current selection. If the the material was already shown, it will refresh the UI fixing any issues that might have happened.
-`Right click -> Only show material in AE` will have the same functionality as double clicking on the mat icon.
+`Double click` shows the material tab within the _Attribute Editor_,  without changing the current selection. If the material was already shown, it will refresh the UI fixing any potential issues.
+`Right click -> Only show material in AE` will have the same functionality as double clicking on the `mat` shelf icon.
 `Right click -> Select objects assigned to selected material` will select all objects that share the selected material.
 1. **BULK** - opens the _Bulk Attribute_ tool. An attribute editor that lets you modify multiple Flair materials at once (in bulk).
 1. **NFX** - opens the _NoiseFX_ tool that lets you control effects procedurally on Flair materials [[docs](/flair/art-direction/noisefx)].
