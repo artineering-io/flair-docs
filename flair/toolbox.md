@@ -60,7 +60,7 @@ Clicking on the Warp Settings button opens the _Warp Settings_ window, giving ad
 This button will toggle the inflated instance which generates the warp effect on/off, thereby also enabling and disabling the effect. This is especially useful for transparent objects that should not drive the warped effect.
 
 ### Bake effect position on selected
-This button will automatically check the _Deformed_ attribute in materials assigned to the selected objects. Doing this will keep the warped effect in-place under animation.
+This button will automatically check the _Animated_ attribute in materials assigned to the selected objects. Doing this will keep the warped effect in-place under animation.
 
 ## Delete PaintFX
 Deleting _PaintFX_ (VertexFX) can be useful in a various situations

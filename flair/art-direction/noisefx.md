@@ -33,7 +33,7 @@ From top to bottom, these are the different elements of the NoiseFX tool.
 
 On the top-left, you will find an eye icon which toggles the parameter view. This will allow you to view the control parameters that you are currently affecting through the _Noise Widgets_.
 
-On the top-right, you will find the `Bake 3D` button. This button toggles the `Deformed` setting in the assigned Flair materials, baking the current 3D position of objects. Baking is useful to attach the current NoiseFX patterns to an animated/deformed object. If the 3D position is not baked, NoiseFX will "float" in 3D space, instead of moving with animated objects.
+On the top-right, you will find the `Bake 3D` button. This button toggles the `Animated` setting in the assigned Flair materials, baking the current 3D position of objects. Baking is useful to attach the current NoiseFX patterns to an animated/deformed object. If the 3D position is not baked, NoiseFX will "float" in 3D space, instead of moving with animated objects.
 
 
 ## Noise widgets

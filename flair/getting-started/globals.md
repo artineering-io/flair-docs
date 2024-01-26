@@ -32,12 +32,12 @@ Engine attributes remain the same across styles and contain attributes directly 
 ### Style
 Defines the style that Flair is currently running in.
 * [**Graph**](/flair/styles/graph/) - The Flair Graph style (customizable)
-* [**Watercolor**](/flair/styles/library/watercolor/) - The Watercolor style (default)
-* [**Cutout**](/flair/styles/library/cutout/) - 3D Cutout style
-* [**Hatching**](/flair/styles/library/hatching/) - Hatching and stippling style
-* [**Warp**](/flair/styles/library/warp/) - Warp style
-* [**Fray**](/flair/styles/library/fray/) - Fray style
-* [**Sketch**](/flair/styles/library/sketch/) - Sketch and outlines style
+* [**Watercolor**](/flair/styles/library/watercolor/) - The Watercolor shader style (default)
+* [**Cutout**](/flair/styles/library/cutout/) - 3D Cutout shader style
+* [**Hatching**](/flair/styles/library/hatching/) - Hatching and stippling shader style
+* [**Warp**](/flair/styles/library/warp/) - Warp shader style
+* [**Fray**](/flair/styles/library/fray/) - Fray shader style
+* [**Lines**](/flair/styles/library/lines/) - Toon and sketch lines shader style
 
 ### Quality
 Defines the quality of rendering.
@@ -113,7 +113,7 @@ These attributes allow to globally control the parameters the style and are docu
 * [**Hatching**](/flair/styles/library/hatching/)
 * [**Warp**](/flair/styles/library/warp/)
 * [**Fray**](/flair/styles/library/fray/)
-* [**Sketch**](/flair/styles/library/sketch/)
+* [**Lines**](/flair/styles/library/lines/)
 
 When using a custom _Graph_ style, the style attributes will auto-populate depending on the _Globals_ defined in the graph.
 {: .info}

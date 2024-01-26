@@ -658,21 +658,21 @@ The _VertexFX_ setting toggles the control of stylization effects through the ve
 
 ---
 
-### Deformed
-The _Deformed_ setting bakes the current position of vertices so that the effects that rely on the 3D position of objects can stay in place when objects are deformed/animated. If this setting is not enabled, features like _NoiseFX_ or _FeatureNoise_ would float around in 3D space and not move with the objects.
+### Animated
+The _Animated_ setting bakes the current position of vertices so that the effects that rely on the 3D position of objects can stay in place when objects are deformed/animated. If this setting is not enabled, features like _NoiseFX_ or _FeatureNoise_ would float around in 3D space and not move with the objects.
 
 <figure>
     <video autoplay loop muted playsinline style="height:152px">
         <source src="/media/flair-shader/not-deformed.mp4" type="video/mp4">
     </video>
-    <figcaption>NoiseFX without the Deformed setting.</figcaption>
+    <figcaption>NoiseFX without the Animated setting.</figcaption>
 </figure>
 
 <figure>
     <video autoplay loop muted playsinline style="height:152px">
         <source src="/media/flair-shader/deformed.mp4" type="video/mp4">
     </video>
-    <figcaption>NoiseFX with the Deformed setting.</figcaption>
+    <figcaption>NoiseFX with the Animated setting.</figcaption>
 </figure>
 
 ---

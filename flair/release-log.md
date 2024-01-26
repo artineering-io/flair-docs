@@ -36,9 +36,9 @@ With control and art-direction over the line width globally, locally or based on
 
 <figure>
 	<video muted autoplay loop playsinline>
-		<source src="/media/release-log/1.1/lines_web.mp4"" type="video/mp4">
+		<source src="/media/release-log/1.1/lines_web.mp4" type="video/mp4">
 	</video>
-	<figcaption>3D model by Adrian Cojocaru</figcaption>
+	<figcaption>3D model and animation by Adrian Cojocaru</figcaption>
 </figure>
 
 ### Geometry blur
@@ -46,7 +46,7 @@ The new geometry blur (`Geo Blur`) can generate stylized depth of field by defor
 
 <figure>
 	<video muted autoplay loop playsinline>
-		<source src="/media/release-log/1.1/geo_blur_web.mp4"" type="video/mp4">
+		<source src="/media/release-log/1.1/geo_blur_web.mp4" type="video/mp4">
 	</video>
 	<figcaption>Geo blur for depth of field</figcaption>
 </figure>
