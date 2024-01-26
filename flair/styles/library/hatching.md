@@ -40,7 +40,7 @@ This shader style depends on a [custom material](/flair/materials/others#hatchin
 
 In this page, we only document global attributes specific to the hatching shader style. To learn more about other global attributes, please see the [globals node documentation](/flair/getting-started/globals).
 
-This style is still in early development. If you wish for us to refine it further for your production, [contact us and let's work together]](https://artineering.io/agency) to develop exactly the requirements for your look and pipeline.
+This style is still in early development. If you wish for us to refine it further for your production, [contact us and let's work together](https://artineering.io/agency) to develop exactly the requirements for your look and pipeline.
 {: .warning}
 
 ## Attributes

@@ -1,4 +1,4 @@
-### Pigment Density
+#### Pigment Density
 The concentration of pigments, giving the render either a diluted or a more saturated and darker look.
 
 <figure>
@@ -8,7 +8,7 @@ The concentration of pigments, giving the render either a diluted or a more satu
 	<figcaption>Pigment Density between 0.5 and 2</figcaption>
 </figure>
 
-### Paper Granulation
+#### Paper Granulation
 The accumulation of pigments on the valleys of the paper (canvas). Concentrates the pigments on the valleys and creates a more saturated and darker look.
 
 <figure>

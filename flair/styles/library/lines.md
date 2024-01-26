@@ -24,7 +24,7 @@ nav_order: 7
 
 ## Style breakdown
 
-The _toon_ and _sketch_ shader style is all about generating lines for all kinds of linework. From clean lines to the more rough sketch lines, you can control and art-direct them to match your artwork. The shader style also provides other painterly effects often found using traditional painting media such as pigment turbulence, canvas granulation and dry-brush.
+The _toon_ and _sketch_ shader style is all about generating lines for all kinds of linework to outline the form of 3D geometry. From clean lines to the more rough sketch lines, you can control and art-direct them to match your artwork. The shader style also provides other painterly effects often found using traditional painting media such as pigment turbulence, canvas granulation and dry-brush.
 
 <figure>
 	<video autoplay loop muted playsinline>
@@ -43,16 +43,22 @@ In this page, we only document global attributes specific toon and sketch lines 
 
 ## Attribute breakdown
 
-A series of attributes are provided within the [globals node](/flair/getting-started/globals/) to control and refine the toon and sketch lines shader style.
-
 <figure class="aio-ui">
-    <img src="/media/styles/sketch/style-attrs.png" alt="Style attributes">
+    <img src="/media/styles/lines/style-attrs.png" alt="Style attributes">
     <figcaption>Style attributes in the configuration node</figcaption>
 </figure>
 
 ---
 
-{% include /effects/lines.md %}
+{% include /effects/ao.md %}
+
+---
+
+{% include /effects/atmosphere.md %}
+
+---
+
+{% include /effects/toon-lines.md %}
 
 ---
 
@@ -61,5 +67,14 @@ A series of attributes are provided within the [globals node](/flair/getting-sta
 ---
 
 {% include /effects/advanced-line-controls.md %}
+
+---
+### Others
+
+{% include /effects/pigment.md style="watercolor" %}
+
+---
+
+{% include /effects/pigment-application.md style="watercolor" %}
 
 ---

@@ -64,7 +64,7 @@ In this page, we only document global attributes specific to the warp shader sty
 
 ---
 
-A series of warped attributes are provided within the [globals node](/flair/getting-started/globals/) to control and refine the style.
+## Attribute breakdown
 
 <figure class="aio-ui">
     <img src="/media/styles/warp/style-attrs.png" alt="Style attributes">

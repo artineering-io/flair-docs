@@ -58,8 +58,6 @@ In this page, we only document global attributes specific to the fray shader sty
 
 ## Attribute Breakdown
 
-A series of frayed attributes are provided within the [globals node](/flair/getting-started/globals/) to control and refine the style.
-
 <figure class="aio-ui">
     <img src="/media/styles/fray/style-attrs.png" alt="Style attributes">
     <figcaption>Style attributes in the configuration node</figcaption>
