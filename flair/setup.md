@@ -19,11 +19,10 @@ nav_order: 2
 ## Pre-requisites
 
 - Install latest **Visual C++ Redistributable** ([download](https://aka.ms/vs/17/release/vc_redist.x64.exe))
-- **If _MNPRX May 2021_** or a prior version is currently installed in Maya, you have to **uninstall MNPRX first**.
 
 | Requirements      | Minimum    | Recommended   | Notes                                                                                   |
 |-------------------|------------|---------------|-----------------------------------------------------------------------------------------|
-| **Autodesk Maya** | 2019.3.1   | 2022.4        | Maya 2019, 2020, 2022 and 2023 are supported                                                       |
+| **Autodesk Maya** | 2022.4    | 2023.3        | Maya 2022, 2023 and 2024 are supported                                                       |
 | **OS**            | Windows 10 | Windows 10/11 | Linux/Mac compiled on-demand for Studios, [contact us](https://artineering.io/contact) |
 | **VRAM**          | 4 GB       | 8+ GB          | Higher resolutions and scene complexity require more VRAM                               |
 | **Memory**        | 8 GB       | 16+ GB         | As much as your Maya scene requires                                                     |
