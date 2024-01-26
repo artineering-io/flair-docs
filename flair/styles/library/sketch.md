@@ -32,3 +32,15 @@ A series of attributes are provided within the [globals node](/flair/getting-sta
 </figure>
 
 ---
+
+{% include /effects/lines.md %}
+
+---
+
+{% include /effects/sketch-lines.md %}
+
+---
+
+{% include /effects/advanced-line-controls.md %}
+
+---
