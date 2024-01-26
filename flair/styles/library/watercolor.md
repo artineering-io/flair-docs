@@ -34,9 +34,7 @@ The style is based on the [award-winning PhD research](https://artineering.io/pu
 
 In this page, we only document global attributes specific to the watercolor shader style. To learn more about other global attributes, please see the [globals node documentation](/flair/getting-started/globals).
 
-## Attributes
-
-A series of watercolor attributes are provided within the globals node to control and refine the watercolor shader style.
+## Attribute breakdown
 
 <figure class="aio-ui">
  <img src="/media/styles/watercolor/style-attrs.png" alt="Style attributes">

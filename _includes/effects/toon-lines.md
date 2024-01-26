@@ -2,7 +2,7 @@
 Toon lines can be customized in terms of intensity, width and color. Coloring of toon lines happens in the following order: [Density](#line-density), [Coloration](#line-coloration), [Light Response](#line-light-response).
 
 #### Line Intensity
-Opacity of the generated lines. A lower intensity will make the lines more transparent.
+Opacity of the generated lines. A lower intensity will make the toon lines more transparent.
 
 <figure>
 	<video autoplay loop muted playsinline>
@@ -32,7 +32,7 @@ The depth range at which lines are widened or thinned in the scene. This attribu
 
 Between the _Close Mid_ and _Far Mid_ distances, the global _Line Width_ that has been set will apply. Beyond these distances towards the _Close_ and _Far_ depths, the global _Line Width_ will be multiplied by the _Line Width Factor_, which is defined below.
 
-The distances are relative to the world scale. For example, if the world scale is of _100_, a _1000_ Maya unit distance will be _10_ (1000/100). If the world scale is 1, a _1000_ Maya unit distance will be _1000_.
+The distances are relative to the _World Scale_ global attribute. For example, if the world scale is of _100_, a _1000_ Maya unit distance will be _10_ (1000/100). If the world scale is 1, a _1000_ Maya unit distance will be _1000_.
 {: .info}
 
 <figure class="aio-ui">
@@ -73,7 +73,7 @@ Defines a custom global color for the lines. The amount of line coloration can b
 	<video autoplay loop muted playsinline>
 	    <source src="/media/effects/lines/line-color.mp4" type="video/mp4">
 	</video>
-	<figcaption>Changing line colors.</figcaption>
+	<figcaption>Changing toon line colors.</figcaption>
 </figure>
 
 #### Line Coloration
@@ -87,7 +87,7 @@ The amount of _Line Color_ that should be applied. This can also be art-directed
 </figure>
 
 #### Line Light Response
-The amount of influence lighting will have over the color of the line.
+The influence lighting will have over the color of the line.
 
 <figure>
 	<video autoplay loop muted playsinline>
