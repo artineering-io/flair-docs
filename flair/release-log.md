@@ -18,15 +18,124 @@ nav_order: 10
 
 
 ## Flair 1.1
-> Released 22.09.2023
+> Released 24.01.2024
+
+<figure>
+	<img src="/media/release-log/1.1/flair_1_1_banner.gif" alt="Flair 1.1 banner gif"/>
+    <figcaption>3D model by Marleen Vijge</figcaption>
+</figure>
+
+This update features proper toon and sketch line rendering in Flair, with full control over 
+Flair Demo is now Flair Free
+
+From now on, only the latest three Maya versions will be supported. Support for older versions can be added through customized development.
+
+### Toon Lines and Sketch Lines
+The new toon and sketch lines style adds lines to your renders in real-time! 
+With control and art-direction over the line width globally, locally or based on depth, to control and art-direction over the color using densities, custom colors and even lighting. Inlines (non-silhouette lines) can also be art directed to either be erased or drawn when needed. Additionally, lines can be distorted to form up to two additional sketch lines with control over their sketchiness. Lines are included in the cryptomattes and can be rendered with the final composite, as separate pass and as a custom AOV to extract lines from other renderers.
+
+<figure>
+	<video muted autoplay loop playsinline>
+		<source src="/media/release-log/1.1/lines_web.mp4"" type="video/mp4">
+	</video>
+	<figcaption>3D model by Adrian Cojocaru</figcaption>
+</figure>
+
+### Geometry blur
+The new geometry blur (`Geo Blur`) can generate stylized depth of field by deforming the geometry for each TAA sample in different geometric patterns (`Geo Blur Type`) according to the blur depth range (`Geo Blur Range`) and depth factors (`Geo Blur Factor`). Additionally, the geometric patterns can be randomized (`Geo Blur Randomize`) to avoid any visible repeating patterns. Geometric motion blur (`Geo Motion Blur`) can also be enabled to distort the geometry uniformly (or not uniformly if wobble is being used) along the past motion.
+
+<figure>
+	<video muted autoplay loop playsinline>
+		<source src="/media/release-log/1.1/geo_blur_web.mp4"" type="video/mp4">
+	</video>
+	<figcaption>Geo blur for depth of field</figcaption>
+</figure>
+
+### Flair Demo is now Flair Free
+To avoid confusions regarding price and features, Flair Demo is now Flair Free. That means that you will always be able to use Flair, even after licenses may have expired. The only limitation is the rendering resolution and the Free version watermark on the top left.
+
+### Rendering
+- *New* - Render in batch mode (headless) without opening the Maya UI with `flair_batch.py` supporting rendering in render farms
+- *New* - Render Scale and TAA can now be specified separately from each other
+- *Improved* - WYSIWYG (What You See Is What You Get) compositing when rendering with alpha as canvas color is now also composited at the end of the pipeline
+- *Improved* - Added VRAM estimates at different resolutions to Flair Sequence Renderer
+- *Improved* - Previous frame data available when rendering first frame
+- *Improved* - Resolution independent effects scaling now depend on the maximum resolution, either vertical or horizontal
+- *Fixed* - TAA ghosting when scrubbing the time slider
+- *Fixed* - Negative value glitches with negative lighting
+- *Fixed* - Nurbs surfaces nor appearing when renderig in Maya 2022
+- *Fixed* - Crash while rendering when globals node had animation
+
+### Lighting
+- *New* - Anti-aliased shadow maps for higher quality shadows at lower resolutions
+- *Improved* - Shadow map bias automatically scaling on scenes with bigger world scales
+- *Fixed* - Issue with light linking not working properly when material is assigned to components (faces)
+- *Fixed* - Performance issues on scenes with many objects due to light linking being updated every frame
+- *Fixed* - Full support of light's shadow colors respecting light intensity and diffuse factor
+- *Fixed* - Quadratic and cubic decay rates not working on lights
+- *Fixed* - Negative lights not working as expected
+- *Fixed* - Light color and specular reflections leaking onto cast shadows
+- *Fixed* - Gamma correction on lighting for fray, hatching and sketch styles
 
 ### Materials
-- *Improved* - Colored shading being dependent on the shadow color of lights, with *Shadow Color Offset* attribute replacing the previous *Colored Shading* and acting as a per material offset.
+- *Improved* - Revamped attribute editor widgets for material settings
+- *Improved* - Colored shading being dependent on the shadow color of lights, with *Shadow Color Offset* attribute replacing the previous *Colored Shading* and acting as a per material shadow color offset.
 - *Improved* - The *Color Plane* attribute has been renamed to *Final Color* for better understanding of what it does.
+- *Fixed* - Some objects dissapearing when the same object was connected more than once to the Shading Engine with "Mix Maya Materials" enabled
 - *Fixed* - ShaderFX materials not working anymore on latest Maya versions due to bug introduced by Autodesk in this update: "MAYA-124764 - Support for multiple paths with SHADERFX_CUSTOMUSERPATH".
+- *Fixed* - Crashes appening with non-standard UDIM tiling
+
+### Presets
+- *New* - Default material preset without painterly attributes
+- *New* - Right click contexts to `Edit` or `Rename` presets
+- *Improved* - Saving preset now prompts which material the preset should be saved from in case multiple materials are assigned to selected objects
+- *Fixed* - Style presets always reloading when opened
+
+### Art-direction
+- *New* - Added new relative phase slider to NoiseFX widgets to change the phase of the noise patterns
+- *New* - Added option to change noise type to NoiseFX widgets i.e., None, Simple (previous noise type), Cloud, Custom (can be customized in `flair/maya/shaders/material/include/noise.glsl` [`customNoise(vec4 v)`])
+- *Improved* - Revamped layout of VertexFX widgets
+- *Improved* - Revamped layout of NoiseFX widgets
+- *Improved* - Keying of VertexFX now also works on meshes that do not contain construction history
+- *Improved* - Resetting VertexFX with keyed values will now prompt if the values should be set to 0 or if the effect should be removed altogether
+- *Improved* - Adding support to paint VertexfX on selected faces and edges
+- *Improved* - Flair FX window title changing depending on what mode you are on (VertexFX or NoiseFX)
+- *Improved* - Layout of FlairFX window containing VertexFX and NoiseFX widgets
+- *Fixed* - Issue where paint icon would not toggle when activated
+
+### Watercolor
+- *Improved* - Separated art-direction of Edge Width from Edge Darkening for VertexFX and NoiseFX
+- *Fixed* - Granulation art-direction not working when global was set to 0
+
+### Toon Shading
+- *New* - `Toon Smooth Lighting` has been added to smoothly interpolate toon lighting of various light sources
+- *Improved* - Toggling `Toon Shading` globally will prompt to toggle the `Toon Shaded` attribute on each Flair material if no material had the attribute enabled
+- *Fixed* - Toon shading not responding to custom light colors
+- *Fixed* - `Toon Shade Color` not working correctly
+
+### Wobble
+- *New* - Wobble blur works seamlessly with new Geo Blur
+- *Improved* - Changed `Wobble Jitter` to `Wobble Blur` to be more descriptive about the visual effect
+- *Improved* - Toggling `Wobble` globally will prompt to toggle wobble on each Flair material if no material has wobble enabled
+
+### Playblasts
+- *Improved* - Keeping save directory after playblasting for future playblasts
+- *Fixed* - HUD appearing on playblast for certain styles and qualities
 
 ### Miscellaneous
-- *Fixed* - Flair not being able to load when RenderMan or Prism was previously loaded onto Maya
+- *Improved* - Saving speed on scenes of all sizes
+- *Improved* - Revamped attribute editor widgets for global engine settings
+- *Improved* - `mat` behavior of shelf tool. Clicking it selects the material of selected objects, double clicking it now changes the tab to the assigned material in the attribute editor (without changing selection). Double click with the material attributes shown will refresh the attribute editor.
+- *Improved* - Speed of `Bulk Attribute` tool and small aesthetic changes
+- *Improved* - Iterative filters now dynamically rebuild the pipeline as needed
+- *Improved* - Flair now automatically suggests changing the default clipping planes of cameras depending on the opened/imported/referenced scene
+- *Improved* - Converting to Flair materials not fetching textures within aiMultiply nodes
+- *Improved* - Baked vertex position naming clashes with some pipelines
+- *Fixed* - Flair not being able to load when __RenderMan__ or __Prism__ was previously installed
+- *Fixed* - Delete VertexFX in Flair toolbox not changing relevant material attributes
+- *Fixed* - Cluttered shading engine nodes when automatically converting Maya materials to Flair materials
+- *Fixed* - Disabling velocity per material not working 
+
 
 ---
 

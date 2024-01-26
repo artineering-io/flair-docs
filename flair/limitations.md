@@ -1,7 +1,7 @@
 ---
 title: Limitations
 layout: home
-nav_order: 1
+nav_order: 21
 ---
 
 # Limitations
@@ -34,4 +34,4 @@ As Flair is not a raytracer, some features will not be available. These include 
 
 Global effects can be applied to all elements that appear in the viewport. However, the Flair material and the embedded control it offers can only be used in meshes (polys or nurbs). Nurbs support is limited too, as it won't support the use of VertexFX (as it doesn't contain vertices).
 
-Have you encontered other limitations or ways to get around some limitations? Let us know on [Discord](https://discord.gg/kdTQCRM).
+Have you encountered other limitations or ways to get around some limitations? Let us know on [Discord](https://discord.gg/kdTQCRM).
