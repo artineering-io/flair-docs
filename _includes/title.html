@@ -1,0 +1,9 @@
+
+{% if site.logo %}
+  <div class="docs-logo">
+    <img src="{{ site.logo }}" alt="Documentation logo">
+    <p>{{ site.title }}</p>
+  </div>
+{% else %}
+  {{ site.title }}
+{% endif %}

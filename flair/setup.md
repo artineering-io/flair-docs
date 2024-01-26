@@ -27,7 +27,7 @@ nav_order: 2
 | **VRAM**          | 4 GB       | 8+ GB          | Higher resolutions and scene complexity require more VRAM                               |
 | **Memory**        | 8 GB       | 16+ GB         | As much as your Maya scene requires                                                     |
 
-_Resizable BAR_ (Base Address Register) and _AMD SAM_ (Smart Access Memory) found in modern hardware can significantly increase performance.
+_Resizable BAR_ (Base Address Register) or _AMD SAM_ (Smart Access Memory) found in modern hardware can significantly increase performance.
 {: .info}
 
 ---
@@ -47,7 +47,7 @@ You can also download the demo version and [activate a license](#activation) wit
 Installing Flair is as simple as a drag-and-drop.  
 
 1. Make sure you have all [pre-requisites](#pre-requisites)
-2. Download and extract the contents of the Flair *zip* file in any folder outside of Maya
+2. Download and extract the contents of the Flair *zip* file in any folder outside of Maya that doesn't not require "admin" rights i.e., Documents/Flair, Desktop/Flair, C:/Flair.
 3. Open the folder where you extracted Flair in
 4. Drag-and-drop the `install_maya.mel` file onto the Maya viewport
 5. Select for whom you want to install Flair for and click `Accept` ([see options](#installation-options))
@@ -78,7 +78,7 @@ The license will be placed in `Documents/maya` and the Flair path will be insert
 
 This option installs Flair within your **system folders** and requires administrator rights.
 
-The license will be placed in `Common Files/Autodesk Shared/Modules/Maya` and the Flair module in the same folder for all the supported Maya versions.
+The license will be placed in `Program Files/Common Files/Autodesk Shared/Modules/Maya` and the Flair module in the same folder for all the supported Maya versions.
 
 ---
 ## Activation

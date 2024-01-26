@@ -16,7 +16,7 @@ Defines how the computed ambient occlusion is applied on the final image.
 	* With styles other than the *Graph* styles, the AO modulates the *pigment density*, resulting in darker colors in occluded areas.
 
 #### AO Radius
-Defines the radius used by the ambient occlusion filter: larger radius results in larger darkened areas.
+The radius used by the ambient occlusion filter: larger radius results in larger darkened areas.
 
 #### AO Strength
-Defines the strength of ambient occlusion: higher values make the ambient occlusion darker.
+The strength of ambient occlusion: higher values make the ambient occlusion darker.

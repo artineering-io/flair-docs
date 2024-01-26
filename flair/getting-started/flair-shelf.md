@@ -31,7 +31,7 @@ The art-direction tools can be found in the left side of the shelf, ordered from
 `Double click` shows the material tab within the _Attribute Editor_,  without changing the current selection. If the material was already shown, it will refresh the UI fixing any potential issues.
 `Right click -> Only show material in AE` will have the same functionality as double clicking on the `mat` shelf icon.
 `Right click -> Select objects assigned to selected material` will select all objects that share the selected material.
-1. **BULK** - opens the _Bulk Attribute_ tool. An attribute editor that lets you modify multiple Flair materials at once (in bulk).
+1. **BULK** - opens the _Bulk Attribute_ tool. An attribute editor that lets you modify multiple Flair materials at once (in bulk) [[docs](/flair/art-direction/bulkattr)].
 1. **NFX** - opens the _NoiseFX_ tool that lets you control effects procedurally on Flair materials [[docs](/flair/art-direction/noisefx)].
 1. **VFX** - opens the _VertexFX_ window that lets you paint each effect directly onto your 3D models [[docs](/flair/art-direction/vertexfx)].
 
@@ -49,8 +49,8 @@ The lighting and testing tools allow to easily create the supported lights withi
 `Right click -> Float viewport 1024 x 540` opens a floating viewport with a 1024 x 540 resolution.  
 `Right click -> Float viewport 1920 x 1080` opens a floating viewport with a 1920 x 1080 resolution (Full HD).  
 `Right click -> Custom float viewport` opens a floating viewport with a custom resolution set through a small dialog.
-1. **RENDR** - opens the _Viewport Renderer_, which quickly allows to save screenshots or playblasts [[docs](/flair/rendering/#rendr)].
-1. **SEQ** - opens the _Sequence Renderer_, which allows to render sequences and all different passes for production [[docs](/flair/rendering/#target-sequence-renderer)].
+1. **RENDR** - opens the _Viewport Renderer_, which quickly allows to save screenshots or playblasts [[docs](/flair/rendering/viewport/)].
+1. **SEQ** - opens the _Flair Renderer_, which allows to render sequences and all different AOVs for production [[docs](/flair/rendering/sequence/)].
 1. **IM/EX** - opens the _Import/Export_ tool to import or export _.style_ files [[docs](/flair/styles/import-export)]  
 `Right click -> Custom auto-import` function found in: `flair_import_export.auto_import_style()`.  
 `Right click -> Custom import` function found in: `flair_import_export.custom_import()`.  
