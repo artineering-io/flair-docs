@@ -25,6 +25,10 @@
     letter-spacing: 0;
 }
 
+.main-content h5 {
+    font-weight: 600;
+}
+
 .main-content p {
     text-align: justify;
 }
@@ -42,6 +46,9 @@
     flex-wrap: wrap;
     &.aio-code {
         justify-content: space-evenly;
+    }
+    &.bottom {
+        align-items: flex-end;
     }
 }
 

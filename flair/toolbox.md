@@ -23,31 +23,6 @@ The _Flair toolbox_ is a handy collection of style-specific and miscellaneous  t
 	<figcaption>The Flair Toolbox containing useful style-specific and miscellaneous tools.</figcaption>
 </figure>
 
-## Toon settings
-Clicking on the Toon Settings button opens the _Toon Settings_ window, giving additional toon options.
-
-<figure class="aio-ui aio-window">
-	<img src="/media/toolbox/toon/toon-settings.png" alt="Toon settings window">
-	<figcaption>The available Toon Settings.</figcaption>
-</figure>
-
-### Toon Toolset 
-The _Toon Toolset_ toggles the toon controls on the VertexFX and NoiseFX windows.
-
-<div class="d-flex">
-	<figure class="aio-ui">
-		<img src="/media/toolbox/toon/toon-noisefx.png" alt="NoiseFX toon control widget">
-		<figcaption>NoiseFX toon control widget.</figcaption>
-	</figure>
-	<figure class="aio-ui">
-		<img src="/media/toolbox/toon/toon-vertexfx.png" alt="VertexFX toon control widget">
-		<figcaption>VertexFX toon control widget.</figcaption>
-	</figure>
-</div>
-
-### Toggle ShaderFX Mattes
-This button toggles the renderer to show the RGB mattes of the toon shader. Currently this is only supported in the legacy ShaderFX materials.
-
 ## Warp Settings
 Clicking on the Warp Settings button opens the _Warp Settings_ window, giving additional warp effect options.
 
@@ -62,15 +37,14 @@ This button will toggle the inflated instance which generates the warp effect on
 ### Bake effect position on selected
 This button will automatically check the _Animated_ attribute in materials assigned to the selected objects. Doing this will keep the warped effect in-place under animation.
 
-## Delete PaintFX
-Deleting _PaintFX_ (VertexFX) can be useful in a various situations
-* To start using _PaintFX_ again from scratch
-* To reduce file size, while keeping the _PaintFX_ values in the exported file
-* To recover the construction history of the vertex color sets to animate _PaintFX_ (remember to export the current _PaintFX_ first and import them back in afterwards)
+## Delete VertexFX
+Deleting _VertexFX_ (VertexFX) can be useful in a various situations
+* To start using _VertexFX_ again from scratch
+* To reduce file size, while keeping the _VertexFX_ values in the exported file
 
-To use it, simply select the objects from which you'd like to remove the _PaintFX_, and click on the `Delete PaintFX` button.
+To use it, simply select the objects from which you'd like to remove the _VertexFX_, and click on the `Delete VertexFX` button.
 
-If nothing is selected, the tool will try to delete the _PaintFX_ of **ALL** objects in the scene.
+If nothing is selected, the tool will try to delete the _VertexFX_ of **ALL** objects in the scene.
 {: .info}
 
 ## Unsubdivide Previews

@@ -1,4 +1,4 @@
-### Bloom
+#### Bloom
 Bloom, sometimes also referred to as Glow, leaks light from bright areas into surrounding areas. By enabling bloom globally, the following controls will appear in the globals node.
 
 <figure class="aio-ui">
@@ -6,13 +6,13 @@ Bloom, sometimes also referred to as Glow, leaks light from bright areas into su
 	<figcaption>The global bloom attributes in the Attribute Editor.</figcaption>
 </figure>
 
-#### Bloom intensity
+##### Bloom intensity
 Defines the intensity/amount of the bloom effect.
 
-#### Bloom size
+##### Bloom size
 Defines the threshold at which a pixel is bright enough to be considered for the bloom effect.
 
-#### Bloom Blur
+##### Bloom Blur
 Defines the radious of light leakage to the surrounding areas.
 
 Learn more about how bloom works by watching the clip below.

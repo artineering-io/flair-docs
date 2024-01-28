@@ -25,14 +25,21 @@ nav_order: 10
     <figcaption>3D model by Marleen Vijge</figcaption>
 </figure>
 
-This update features proper toon and sketch line rendering in Flair, with full control over 
-Flair Demo is now Flair Free
+The first big update of Flair is here! 
 
-From now on, only the latest three Maya versions will be supported. Support for older versions can be added through customized development.
+Flair 1.1 introduces production-ready **toon and sketch lines**, geometry blur for **stylized depth of field and motion blur**, and lots of **improvements to rendering, lighting, materials, presets, art-direction tools** and more.
+
+Additionally, **Flair _Demo_ is now Flair _Free_**! The free version of Flair **includes all features** and can be used for any purpose. It is **only restricted in rendering resolution to 1280x800** with a watermark to promote Flair.
+
+From now on, only **the latest three Maya versions will be supported**. Support for older versions could be added through customized development in case they are needed by studio pipelines.
+
+Read below for a full list of changes!
 
 ### Toon Lines and Sketch Lines
-The new toon and sketch lines style adds lines to your renders in real-time! 
-With control and art-direction over the line width globally, locally or based on depth, to control and art-direction over the color using densities, custom colors and even lighting. Inlines (non-silhouette lines) can also be art directed to either be erased or drawn when needed. Additionally, lines can be distorted to form up to two additional sketch lines with control over their sketchiness. Lines are included in the cryptomattes and can be rendered with the final composite, as separate pass and as a custom AOV to extract lines from other renderers.
+The new toon and sketch lines shader style adds lines to your renders in real-time!
+With extensive control and art-direction over the line intensity, width, color and sketchiness. The new lines shader style provides a powerful and intuitive way of rendering linework. Additionally, inlines (non-silhouette lines) can be art directed to either be erased or drawn when needed. Lines appear in the final rendered frame, but also draw their own separate line passes and are added to the depth, normals, velocity and cryptomatte passes to facilitate compositing. Finally, flair lines even render a custom AOV to help extract lines from other renderers.
+
+Learn all about lines in Flair in the [documentation](/flair/styles/library/lines/) and our new tutorial series on [toon lines](https://www.youtube.com/playlist?list=PLqQsRmdLB8t_h71jiVsGcv669-eu4YNXT) and sketch lines (coming soon).
 
 <figure>
 	<video muted autoplay loop playsinline>
@@ -44,19 +51,21 @@ With control and art-direction over the line width globally, locally or based on
 ### Geometry blur
 The new geometry blur (`Geo Blur`) can generate stylized depth of field by deforming the geometry for each TAA sample in different geometric patterns (`Geo Blur Type`) according to the blur depth range (`Geo Blur Range`) and depth factors (`Geo Blur Factor`). Additionally, the geometric patterns can be randomized (`Geo Blur Randomize`) to avoid any visible repeating patterns. Geometric motion blur (`Geo Motion Blur`) can also be enabled to distort the geometry uniformly (or not uniformly if wobble is being used) along the past motion.
 
+Learn all about geometry blur in the [documentation](/flair/getting-started/globals/#geometry-blur).
+
 <figure>
-	<video muted autoplay loop playsinline>
-		<source src="/media/release-log/1.1/geo_blur_web.mp4" type="video/mp4">
+	<video autoplay loop muted playsinline>
+	  <source src="/media/globals/geo-blur.mp4" type="video/mp4">
 	</video>
-	<figcaption>Geo blur for depth of field</figcaption>
+	<figcaption>Visualization of geo blur depth of field (icosahedron).</figcaption>
 </figure>
 
 ### Flair Demo is now Flair Free
 To avoid confusions regarding price and features, Flair Demo is now Flair Free. That means that you will always be able to use Flair, even after licenses may have expired. The only limitation is the rendering resolution and the Free version watermark on the top left.
 
 ### Rendering
-- *New* - Render in batch mode (headless) without opening the Maya UI with `flair_batch.py` supporting rendering in render farms
-- *New* - Render Scale and TAA can now be specified separately from each other
+- *New* - Render in batch mode (headless) without opening the Maya UI with `flair_batch.py` supporting rendering in render farms [[docs](/flair/rendering/standalone/)]
+- *New* - Render Scale and TAA can now be specified separately from each other [[docs](/flair/getting-started/globals/#quality)]
 - *Improved* - WYSIWYG (What You See Is What You Get) compositing when rendering with alpha as canvas color is now also composited at the end of the pipeline
 - *Improved* - Added VRAM estimates at different resolutions to Flair Sequence Renderer
 - *Improved* - Previous frame data available when rendering first frame
@@ -89,10 +98,10 @@ To avoid confusions regarding price and features, Flair Demo is now Flair Free. 
 - *New* - Default material preset without painterly attributes
 - *New* - Right click contexts to `Edit` or `Rename` presets
 - *Improved* - Saving preset now prompts which material the preset should be saved from in case multiple materials are assigned to selected objects
-- *Fixed* - Style presets always reloading when opened
+- *Fixed* - Style presets window always reloading when opened
 
 ### Art-direction
-- *New* - Added new relative phase slider to NoiseFX widgets to change the phase of the noise patterns
+- *New* - Added new relative phase slider to NoiseFX widgets to change the phase of the noise patterns [[docs](/flair/art-direction/noisefx/)]
 - *New* - Added option to change noise type to NoiseFX widgets i.e., None, Simple (previous noise type), Cloud, Custom (can be customized in `flair/maya/shaders/material/include/noise.glsl` [`customNoise(vec4 v)`])
 - *Improved* - Revamped layout of VertexFX widgets
 - *Improved* - Revamped layout of NoiseFX widgets
@@ -108,7 +117,7 @@ To avoid confusions regarding price and features, Flair Demo is now Flair Free. 
 - *Fixed* - Granulation art-direction not working when global was set to 0
 
 ### Toon Shading
-- *New* - `Toon Smooth Lighting` has been added to smoothly interpolate toon lighting of various light sources
+- *New* - `Toon Smooth Lighting` has been added to smoothly interpolate toon lighting of various light sources [[docs](/flair/materials/flair-shader/#toon-smooth-lighting)]
 - *Improved* - Toggling `Toon Shading` globally will prompt to toggle the `Toon Shaded` attribute on each Flair material if no material had the attribute enabled
 - *Fixed* - Toon shading not responding to custom light colors
 - *Fixed* - `Toon Shade Color` not working correctly

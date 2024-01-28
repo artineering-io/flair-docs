@@ -39,16 +39,10 @@ On the top-right, you will find the `Bake 3D` button. This button toggles the `A
 ## Noise widgets
 Each style has different effects, therefore, the noise widgets (sections) will vary depending on the currently loaded style. Each widget handles a specific effect/behaviour within the style e.g., _Lighting_, _Pigment turbulence_, _Color bleeding_.
 
-On the left side of each widget, you will always find a generalized term for the behaviour of each effect. This term also specifies the appearance of the effect icon which is shown as a sphere preview.
+On the left side of each widget, you will always find a generalized term for the behaviour of each effect. Right next to it, there will be a sphere icon that gives a preview of what the effect will do.
 
 ### Toggle/reset
-Underneath the widget icon, you will find two buttons.
-
-<figure class="float-left">
-	<img src="/media/ui/icons/io.png" alt="NoiseFX toggle"  style="max-height: 32px">
-</figure>
-
-This button toggles the NoiseFX on/off to visualize the influence that the noise makes for the style.
+To the right of the preview icon, you will find two buttons.
 
 <figure class="float-left">
  <img src="/media/ui/icons/reset.png" alt="Reset NoiseFX"  style="max-height: 32px">
@@ -56,14 +50,29 @@ This button toggles the NoiseFX on/off to visualize the influence that the noise
 
 This button resets the NoiseFX values for that effect, allowing to start anew or completely remove its influence.
 
+<figure class="float-left">
+	<img src="/media/ui/icons/io.png" alt="NoiseFX toggle"  style="max-height: 32px">
+</figure>
+
+This button toggles the NoiseFX on/off to visualize the influence that the noise makes for the style.
+
+### NoiseFX type
+Directly underneath the preview icon, there is a combo box widget that gives the ability to change between different noise types.
+
+* **None** - No NoiseFX is applied
+* **Simple** - Default simplex noise
+* **Cloud** - Fractalized noise resembling the cloud noise in Photoshop
+* **Custom** - Custom noise, which can be written in glsl `flair/maya/shaders/material/include/noise.glsl` [`customNoise(vec4 v)`].
+
+When multiple materials are selected and each one contains a different noise type, the combo box widget will be highlighted in red.
+
 ### Modifying noise
 Modifying noise is simple, select the object with the material that you wish to modify and use one of the three relative sliders.
 
 * **Scale** - Modifies the scale of the 3D/2D noise for the specified effect [noise frequency]. The scale will be relative to the [World Scale](/flair/getting-started/globals/#world-scale) global attribute.
 * **Noise** - Modifies the contrast (how strong it is) of the noise for the specified effect. Keep in mind that noise is composed out of positive and negative values and the contrast amplifies the noise in both directions [noise amplitude].
-* **Offset** - The offset slider is the vertical slider on the far right, which offsets the noise towards positive or negative values, accordingly [noise offset].
-
-Depending on the widget (see _Edge Manipulation_ widget), it may present different names for the _Noise_ slider, but they also modify the contrast (how strong it is) of the noise for the specified effect.
+* **Phase** - Modifies the phase of the noise to get different patterns at the same scale [noise phase].
+* **Shift** - Shifts the noise towards positive or negative values, accordingly [noise shift].
 
 ## Showcase
 Here we select the object that contains the material to which we want to add NoiseFX onto. Using the NoiseFX tool, we modify the _noise_, _scale_ and _offset_ of the density to create a natural-looking pigment turbulence effect.

@@ -183,27 +183,9 @@ Additional material attributes for optional features can be created on-demand by
 
 Setting attributes are found in the first section of the _Attribute Editor_. Most settings are disabled by default, as to avoid unnecessary computations and clutter for artists. When needed, enabling settings will show the necessary attributes in the Attribute Editor, any copied tabs thereof, and in the Property Editor of the Hypershade window.
 
-### Reflectance Model
-The _Reflectance Model_ setting defines the shading algorithm used by the _Flair Shader_. A shading algorithm dictates how light is reflected along the surface of the object. Here is a visual comparison of each shading algorithm.
-
-<figure>
-    <div class="d-flex">
-        <img src="/media/flair-shader/lambert.png" alt="lambert" style="height:152px">
-        <img src="/media/flair-shader/half-lambert.png" alt="half-lambert" style="height:152px">
-        <img src="/media/flair-shader/extended-lambert.png" alt="extended-lambert" style="height:152px">
-        <img src="/media/flair-shader/angular-lambert.png" alt="angular-lambert" style="height:152px">
-    </div>
-	<figcaption>Available reflectance models: Lambert, Half Lambert, Extended Lambert and Angular Lambert.</figcaption>
-</figure>
-
-Some reflectance models may not be compatible with all material features on this documentation page. Only the _Lambert_ reflectance model will work with cast shadows and has been thoroughly tried and tested.
-{: .warning}
-
-------------------
-
 ### Toon Shaded
 
-The _Toon Shaded_ setting activates toon/cell shading based on the active reflectance model. Toon shading within Flair separates the reflectance of light into three regions i.e., shade, mid and light region. Each region can be controlled through the toon shading attributes in the Attribute Editor.
+The _Toon Shaded_ setting activates toon/cell shading. Toon shading within Flair separates the reflectance of light into three regions i.e., shade, mid and light region. Each region can be controlled through the toon shading attributes in the Attribute Editor.
 
 <figure class="aio-ui">
 	<img src="/media/flair-shader/toon-AE.png" alt="Toon Shading attributes in the Attribute Editor">
@@ -279,187 +261,49 @@ The _Toon Light Color_ defines the color of the light toon region.
     <figcaption>Different toon light colors</figcaption>
 </figure>
 
-
----
-
-### Transparent
-The _Transparent_ setting activates the use of transparency and alpha masks in the material and toggles the attributes in the Attribute Editor.
-<figure class="aio-ui">
-	<img src="/media/flair-shader/transparent-AE.png" alt="Transparency and alpha masking attributes">
-	<figcaption>Transparency and alpha masking section in the Attribute Editor.</figcaption>
-</figure>
-
-#### Transparency Map
-_Transparency Map_ is a greyscale texture which embeds the semi-transparency of the material. Click on the checkerboard icon to select a texture.
-
-<figure>
-    <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/flair-shader/transparency-map.mp4" type="video/mp4">
-    </video>
-    <figcaption>Transparency Map, featuring semi-transparency.</figcaption>
-</figure>
-
-As with [_Alpha Masks_](#alpha-mask): white is opaque, grey values are semi-transparent, black is transparent. The darker the value of the _Transparency Map_, the more transparent the material will be.
-{: .info}
-
-#### Transparency
-_Transparency_ defines the overall semi-transparency of the material.
-<figure>
-    <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/flair-shader/transparency.mp4" type="video/mp4">
-    </video>
-    <figcaption>Transparency (0...1.0)</figcaption>
-</figure>
-
-#### Blend FX
-_Blend FX_ defines if the control masks of effects (NoiseFX, VertexFX) should blend with transparency or not.
-
-#### Blend AOVs
-_Blend AOVs_ defines if AOVs (depth and normals) should blend with transparency or not. This attribute also shows the _AOV Blend_ attribute, which helps to blend AOVs further so that effects can look better on semi-transparent objects.
-
-##### AOV Blend
-_AOV Blend_, which only appears appears once _Blend AOVs_ is enabled, defines how much the AOVs should blend. A value of 0 will make the AOVs (depth and normals) of the material dissapear, while a value of 1 will blend AOVs as much as the color.
-
-#### Alpha Mask
-_Alpha Mask_ is a black and white image which embeds the alpha of the material. Alpha masks are binary and can only distinguish between opaque or fully transparent (white is opaque, black is transparent). Click on the checkerboard icon to select a texture.
-
-Use the alpha masks if you want cast shadows to respect the transparency.
-{: .info}
-
-#### Alpha Mask Cutoff
-The grayscale value at which the [_Alpha Mask_](#alpha-mask) is transparent. Defines the threshold/boundary of the alpha mask in case there are grey values.
-<figure>
-    <video autoplay loop muted playsinline style="width:200px">
-        <source src="/media/flair-shader/alpha-mask.mp4" type="video/mp4">
-    </video>
-    <figcaption>Alpha Mask with Alpha Mask Cutoff (0.1...0.9).</figcaption>
-</figure>
-
----
-
-### Displacement
-The _Displacement_ setting activates the use of displacement within the material and toggles the attributes in the _Attribute Editor_.
-
-<figure class="aio-ui">
-	<img src="/media/flair-shader/displacement-AE.png" alt="Displacement section">
-	<figcaption>The Displacement section in the Attribute Editor.</figcaption>
-</figure>
-
-#### Displacement Map
-_Displacement Map_ is a greyscale texture which embeds the displacement in the form of a heightmap. Click on the checkerboard icon to select a texture.
-
-#### Displacement Multiplier
-_Displacement Multiplier_ defines the amount of displacement to use. The higher the value, the more displacement there will be.
-
-<figure>
-    <video autoplay loop muted playsinline style="width:152px">
-        <source src="/media/flair-shader/displacement-multiplier.mp4" type="video/mp4">
-    </video>
-    <figcaption>Displacement Multiplier (0...0.5).</figcaption>
-</figure>
-
-#### Displacement Offset
-_Displacement Offset_ offsets the displacement inward, so that displacement can be inside and outside of the object.
-
-<figure>
-    <video autoplay loop muted playsinline style="width:152px">
-        <source src="/media/flair-shader/displacement-offset.mp4" type="video/mp4">
-    </video>
-    <figcaption>Displacement Offset (0...1.0).</figcaption>
-</figure>
-
-
-#### Tessellation Factor
-_Tessellation Factor_ defines the amount of subdivision within each polygon. The higher the factor, the more polygons are subdivided, giving more points to displace. There is no magic number, so you will need to find out how much tessellation is enough for your displacement purposes depending on the topology of each model.  
-
-<figure>
-    <video autoplay loop muted playsinline style="width:152px">
-        <source src="/media/flair-shader/tessellation-factor.mp4" type="video/mp4">
-    </video>
-    <figcaption>Displacement with different Tesselation Factors (1.0...10.0).</figcaption>
-</figure>
-
----
-
-### Wobble
-The _Wobble_ setting activates the use of wobble offsets within the material and toggles its attributes in the _Attribute Editor_. These material attributes offset the global wobble values set in the [globals node](/flair/getting-started/globals/#geometry-wobble), so make sure to enable and set the wobble effect globally first.
-
-<figure class="aio-ui">
-	<img src="/media/flair-shader/wobble-ae.png" alt="Wobble offsets section">
-	<figcaption>The Wobble Offsets section in the Attribute Editor.</figcaption>
-</figure>
-
-Once the wobble attribute has been enabled globally, material presets will default as wobbled.
-{: .info}
-
-#### Wobble Frequency
-Offsets the regularity of the wobble. A higher frequency will make the wobble more "irregular", whereas a lower frequency will make it more "regular". The frequency is directly linked to the global [World Scale](/flair/getting-started/globals/#world-scale).
-
-<figure>
-    <video autoplay loop muted playsinline style="width:152px">
-        <source src="/media/flair-shader/wobble-frequency.mp4" type="video/mp4">
-    </video>
-    <figcaption>Wobble Frequency (0...5).</figcaption>
-</figure>
-
-
-#### Wobble Amplitude
-Defines the amount of wobble. A higher amplitude will deform more than a lower amplitude. The amplitude is directly linked to the global [World Scale](/flair/getting-started/globals/#world-scale).
-
-<figure>
-    <video autoplay loop muted playsinline style="width:152px">
-        <source src="/media/flair-shader/wobble-amplitude.mp4" type="video/mp4">
-    </video>
-    <figcaption>Wobble Amplitude (0...2.5).</figcaption>
-</figure>
-
-#### Wobble Phase
-Defines the form of the wobble. Useful when you want a different wobble deformation or want to vary the wobble on a frame-by-frame basis.
-
-<figure>
-    <video autoplay loop muted playsinline style="width:152px">
-        <source src="/media/flair-shader/wobble-phase.mp4" type="video/mp4">
-    </video>
-    <figcaption>Wobble Phase (0...3).</figcaption>
-</figure>
-
-As wobble is generated from noise in 3D, make sure to toggle the *deformed* attribute in materials if they are animated/deformed so that the wobble is baked in place.
-{:.info}
-
-
-#### Wobble Jitter (TAA)
-Defines the amount of jitter for each TAA sample, generating a soft edge by avaraging different wobble positions.
-
-<figure>
-    <video autoplay loop muted playsinline style="width:152px">
-        <source src="/media/flair-shader/wobble-jitter.mp4" type="video/mp4">
-    </video>
-    <figcaption>Wobble jitter (0...1).</figcaption>
-</figure>
-
-#### Wobble Motion
-Defines the amount of motion offset of the wobble, generating streaks of motion under animation. For this attribute to show it's effect, make sure that velocity is enabled in the Globals node and in the material.
-
+#### Toon Smooth Lighting
+The _Toon Smooth Lighting_ smoothly interpolates toon lighting of various light sources
 <figure>
     <video autoplay loop muted playsinline style="height:152px">
-        <source src="/media/flair-shader/wobble-motion.mp4" type="video/mp4">
+        <source src="/media/flair-shader/toon-smooth-lighting.mp4" type="video/mp4">
     </video>
-    <figcaption>Wobble motion at 0.5 and 2.5.</figcaption>
+    <figcaption>Toon smooth lighting (0.005...1)</figcaption>
 </figure>
 
 ---
 
-### Light Map
+### Reflectance Model
+The _Reflectance Model_ setting defines the shading algorithm used by the _Flair Shader_. A shading algorithm dictates how light is reflected along the surface of the object. Here is a visual comparison of each shading algorithm.
+
+<figure>
+    <div class="d-flex">
+        <img src="/media/flair-shader/lambert.png" alt="lambert" style="height:152px">
+        <img src="/media/flair-shader/half-lambert.png" alt="half-lambert" style="height:152px">
+        <img src="/media/flair-shader/extended-lambert.png" alt="extended-lambert" style="height:152px">
+        <img src="/media/flair-shader/angular-lambert.png" alt="angular-lambert" style="height:152px">
+    </div>
+	<figcaption>Available reflectance models: Lambert, Half Lambert, Extended Lambert and Angular Lambert.</figcaption>
+</figure>
+
+Some reflectance models may not be compatible with all material features on this documentation page. Only the _Lambert_ reflectance model will work with cast shadows and has been thoroughly tried and tested.
+{: .warning}
+
+------------------
+
+### Lighting
+This group contains all settings affecting lighting within the material.
+
+#### Light Map
 The _Light Map_ setting activates the use of light maps within the material and toggles light map attributes in the Attribute Editor. 
 <figure class="aio-ui">
 	<img src="/media/flair-shader/light-map-AE.png" alt="Light Map attributes">
 	<figcaption>The Light Map section in the Attribute Editor.</figcaption>
 </figure>
 
-#### Light Map File
+##### Light Map File
 _Light maps_ are grayscale texture maps that add light to the material (white is light). These can be baked from offline renderers, painted with VertexFX or assigned procedurally through NoiseFX. Click on the checkerboard icon to select a texture.
 
-#### Shade in Light Map
+##### Shade in Light Map
 If this attribute is enabled, _Light Maps_ will add both light and shade to the object. White `1.0` will add light, neutral grey `0.5` won't add anything, black `0` will add shade to the object.
 
 <div class="d-flex">
@@ -477,7 +321,7 @@ If this attribute is enabled, _Light Maps_ will add both light and shade to the 
 
 ---
 
-### Specularity
+#### Specularity
 The _Specularity_ setting activates the use of [specular reflectance models](#specular-model) within the material and toggles the attributes in the Specularity section.
 
 <figure class="aio-ui">
@@ -485,7 +329,7 @@ The _Specularity_ setting activates the use of [specular reflectance models](#sp
     <figcaption>Blinn specularity attributes.</figcaption>
 </figure>
 
-#### Specular Model
+##### Specular Model
 The _specularModel_ setting defines the shading algorithm used by the _Flair Shader_ material for specularity (shininess). A shading algorithm dictates how light is reflected along the surface of the object.
 
 <figure>
@@ -504,7 +348,7 @@ Depending on the specular model, different attributes will appear in the _Specul
     <figcaption>Anisotropic specularity attributes.</figcaption>
 </figure>
 
-#### Roll Offs
+##### Roll Offs
 _Specular Roll Off_, _Horizontal Roll Off_ and _Vertical Roll Off_ define the size of the specular highlight.
 
 <div class="d-flex">
@@ -528,7 +372,7 @@ _Specular Roll Off_, _Horizontal Roll Off_ and _Vertical Roll Off_ define the si
 	</figure>
 </div>
 
-#### Specular Diffusion
+##### Specular Diffusion
 _Specular Deffusion_ defines how diffuse or sharp a specular highlight is.
 
 <figure>
@@ -543,7 +387,7 @@ _Specular Deffusion_ defines how diffuse or sharp a specular highlight is.
     <figcaption>Specular Diffusion (0...1.0).</figcaption>
 </figure>
 
-#### Specular Transparency
+##### Specular Transparency
 _Specular Transparency_ defines the transparency of the specular highlight.
 
 <figure>
@@ -553,7 +397,7 @@ _Specular Transparency_ defines the transparency of the specular highlight.
     <figcaption>Specular Transparency (0...1.0).</figcaption>
 </figure>
 
-#### Specular Map
+##### Specular Map
 _Specular Maps_ are greyscale texture maps which mask the specularity within the material. Otherwise, the specularity will be even throughout the material.Click on the checkerboard icon to select a texture.
 
 <figure>
@@ -568,7 +412,7 @@ _Specular Maps_ are greyscale texture maps which mask the specularity within the
 
 ---
 
-### Rim light
+#### Rim light
 The _Rim Light_ settings activates the the use of 3D rim lighting effect around the silhouette of objects on areas facing the light or opposite to it.
 
 <figure class="aio-ui">
@@ -577,7 +421,7 @@ The _Rim Light_ settings activates the the use of 3D rim lighting effect around 
 </figure>
 
 
-#### Rim Light Intensity
+##### Rim Light Intensity
 _Rim Light_ controls the intensity of the rim light. Positive values adds the rim light, whereas negative values subtracts it.
 
 <figure>
@@ -587,7 +431,7 @@ _Rim Light_ controls the intensity of the rim light. Positive values adds the ri
     <figcaption>Rim Light (-1,5...1,5).</figcaption>
 </figure>
 
-#### Rim Light Wrap
+##### Rim Light Wrap
 _Rim Light Wrap_ defines the area of effect of the rim light in either the lit or shaded areas of the object.
 
 <figure>
@@ -597,7 +441,7 @@ _Rim Light Wrap_ defines the area of effect of the rim light in either the lit o
     <figcaption>Rim Light Wrap (-1...1).</figcaption>
 </figure>
 
-#### Rim Light Color
+##### Rim Light Color
 Controls the color of the rim light. The color is additively blended on top of the underlaying shading.
 
 <figure>
@@ -609,14 +453,14 @@ Controls the color of the rim light. The color is additively blended on top of t
 
 ---
 
-### Highlight
+#### Highlight
 The _Highlight_ setting activates the use of highlights to generate a sharp highlight with the [_Custom-Light Color_](#custom-light-color).
 <figure class="aio-ui">
 	<img src="/media/flair-shader/highlight-AE.png" alt="Highlight attributes">
 	<figcaption>The highlight attributes.</figcaption>
 </figure>
 
-#### Highlight Roll Off
+##### Highlight Roll Off
 _Highlight Roll Off_ defines the size of the highlight in the lit area of objects.
 
 <figure>
@@ -626,7 +470,7 @@ _Highlight Roll Off_ defines the size of the highlight in the lit area of object
     <figcaption>Highlight Roll Off with an orange Light Color (0...1.0)</figcaption>
 </figure>
 
-#### Highlight Diffusion
+##### Highlight Diffusion
 _Highlight Diffusion_ defines how diffuse (blurred) the highlight should be.
 
 <figure>
@@ -636,7 +480,7 @@ _Highlight Diffusion_ defines how diffuse (blurred) the highlight should be.
     <figcaption>Highlight Diffusion (0...1.0)</figcaption>
 </figure>
 
-#### Highlight Transparency
+##### Highlight Transparency
 _Highlight Transparency_ defines the transparency of the highlight.
 
 <figure>
@@ -648,17 +492,76 @@ _Highlight Transparency_ defines the transparency of the highlight.
 
 ---
 
-### Flip Back Faces
+
+#### Flip Back Faces
 The _Flip Back Faces_ setting flips the normals of faces that are pointing away from the camera view. This is useful to obtain better results from single polygon objects like tree leaves.
 
 ---
 
-### VertexFX
-The _VertexFX_ setting toggles the control of stylization effects through the vertex colors. The attribute is automatically enabled by Flair and is toggled as soon as you start painting with the [_VertexFX_](/flair/art-direction/vertexfx/) tool.
+#### Final Color
+The _Final Color_ setting makes the albedo its final color. Objects assigned to a final color material are not affected by lighting or the _Atmosphere Color_ attribute that is set in the globals node. This allows you to use just the color, disregarding what is happening around them.
+
+---
+### Features
+This group aggregates various features affecting the type of data that the material renders.
+
+
+#### Transparent
+The _Transparent_ setting activates the use of transparency and alpha masks in the material and toggles the attributes in the Attribute Editor.
+<figure class="aio-ui">
+	<img src="/media/flair-shader/transparent-AE.png" alt="Transparency and alpha masking attributes">
+	<figcaption>Transparency and alpha masking section in the Attribute Editor.</figcaption>
+</figure>
+
+##### Transparency Map
+_Transparency Map_ is a greyscale texture which embeds the semi-transparency of the material. Click on the checkerboard icon to select a texture.
+
+<figure>
+    <video autoplay loop muted playsinline style="width:200px">
+        <source src="/media/flair-shader/transparency-map.mp4" type="video/mp4">
+    </video>
+    <figcaption>Transparency Map, featuring semi-transparency.</figcaption>
+</figure>
+
+As with [_Alpha Masks_](#alpha-mask): white is opaque, grey values are semi-transparent, black is transparent. The darker the value of the _Transparency Map_, the more transparent the material will be.
+{: .info}
+
+##### Transparency
+_Transparency_ defines the overall semi-transparency of the material.
+<figure>
+    <video autoplay loop muted playsinline style="width:200px">
+        <source src="/media/flair-shader/transparency.mp4" type="video/mp4">
+    </video>
+    <figcaption>Transparency (0...1.0)</figcaption>
+</figure>
+
+##### Blend FX
+_Blend FX_ defines if the control masks of effects (NoiseFX, VertexFX) should blend with transparency or not.
+
+##### Blend AOVs
+_Blend AOVs_ defines if AOVs (depth and normals) should blend with transparency or not. This attribute also shows the _AOV Blend_ attribute, which helps to blend AOVs further so that effects can look better on semi-transparent objects.
+
+###### AOV Blend
+_AOV Blend_, which only appears appears once _Blend AOVs_ is enabled, defines how much the AOVs should blend. A value of 0 will make the AOVs (depth and normals) of the material dissapear, while a value of 1 will blend AOVs as much as the color.
+
+##### Alpha Mask
+_Alpha Mask_ is a black and white image which embeds the alpha of the material. Alpha masks are binary and can only distinguish between opaque or fully transparent (white is opaque, black is transparent). Click on the checkerboard icon to select a texture.
+
+Use the alpha masks if you want cast shadows to respect the transparency.
+{: .info}
+
+##### Alpha Mask Cutoff
+The grayscale value at which the [_Alpha Mask_](#alpha-mask) is transparent. Defines the threshold/boundary of the alpha mask in case there are grey values.
+<figure>
+    <video autoplay loop muted playsinline style="width:200px">
+        <source src="/media/flair-shader/alpha-mask.mp4" type="video/mp4">
+    </video>
+    <figcaption>Alpha Mask with Alpha Mask Cutoff (0.1...0.9).</figcaption>
+</figure>
 
 ---
 
-### Animated
+#### Animated
 The _Animated_ setting bakes the current position of vertices so that the effects that rely on the 3D position of objects can stay in place when objects are deformed/animated. If this setting is not enabled, features like _NoiseFX_ or _FeatureNoise_ would float around in 3D space and not move with the objects.
 
 <figure>
@@ -677,19 +580,143 @@ The _Animated_ setting bakes the current position of vertices so that the effect
 
 ---
 
-### Velocity
+#### VertexFX
+The _VertexFX_ setting toggles the control of stylization effects through the vertex colors. The attribute is automatically enabled by Flair and is toggled as soon as you start painting with the [_VertexFX_](/flair/art-direction/vertexfx/) tool.
+
+---
+
+#### Feature Noise
+The _Feature Noise_ setting activates the fractalized 3D noise that is used for shader styles such as hatching, cat and sketch. Fractalized noise will always be the same pixel size, no matter how close or far the camera is from objects. This makes it ideal to recreate 2D effects which also preserve the pixel size on a canvas.
+
+---
+
+#### Velocity
 The _Velocity_ setting activates the calculation and rendering of motion vectors by the material. However, velocity will only be calculated if the [_VelocityPV_ global](/flair/getting-started/globals/#velocity-pv) is enabled. 
 
 Velocity is enabled by default, but it can be deactivated per material if motion vectors are not required.
 {: .info}
 
-### Feature Noise
-The _Feature Noise_ setting activates the fractalized 3D noise that is used for shader styles such as hatching, cat and sketch. Fractalized noise will always be the same pixel size, no matter how close or far the camera is from objects. This makes it ideal to recreate 2D effects which also preserve the pixel size on a canvas.
+---
 
-------------------
+### Geometry
+This group contains all attributes changing the geometry of the material.
 
-### Final Color
-The _Final Color_ setting makes the albedo its final color. Objects assigned to a final color material are not affected by lighting or the _Atmosphere Color_ attribute that is set in the globals node. This allows you to use just the color, disregarding what is happening around them.
+#### Displacement
+The _Displacement_ setting activates the use of displacement within the material and toggles the attributes in the _Attribute Editor_.
+
+<figure class="aio-ui">
+	<img src="/media/flair-shader/displacement-AE.png" alt="Displacement section">
+	<figcaption>The Displacement section in the Attribute Editor.</figcaption>
+</figure>
+
+##### Displacement Map
+_Displacement Map_ is a greyscale texture which embeds the displacement in the form of a heightmap. Click on the checkerboard icon to select a texture.
+
+##### Displacement Multiplier
+_Displacement Multiplier_ defines the amount of displacement to use. The higher the value, the more displacement there will be.
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/displacement-multiplier.mp4" type="video/mp4">
+    </video>
+    <figcaption>Displacement Multiplier (0...0.5).</figcaption>
+</figure>
+
+##### Displacement Offset
+_Displacement Offset_ offsets the displacement inward, so that displacement can be inside and outside of the object.
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/displacement-offset.mp4" type="video/mp4">
+    </video>
+    <figcaption>Displacement Offset (0...1.0).</figcaption>
+</figure>
+
+
+##### Tessellation Factor
+_Tessellation Factor_ defines the amount of subdivision within each polygon. The higher the factor, the more polygons are subdivided, giving more points to displace. There is no magic number, so you will need to find out how much tessellation is enough for your displacement purposes depending on the topology of each model.  
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/tessellation-factor.mp4" type="video/mp4">
+    </video>
+    <figcaption>Displacement with different Tesselation Factors (1.0...10.0).</figcaption>
+</figure>
+
+---
+
+#### Wobble
+The _Wobble_ setting activates the use of wobble offsets within the material and toggles its attributes in the _Attribute Editor_. These material attributes offset the global wobble values set in the [globals node](/flair/getting-started/globals/#geometry-wobble), so make sure to enable and set the wobble effect globally first.
+
+Different types of wobble noise can be specified for different results
+
+* **None** - No wobble is applied
+* **Simple** - Default simplex wobble noise
+* **Cloud** - More detailed fractalized wobble noise resembling the "cloud" noise in Photoshop (appreciated better with higher polygon count).
+* **Custom** - Custom noise, which can be written in glsl `flair/maya/shaders/material/include/noise.glsl` [`customNoise3(vec4 v)`].
+
+<figure class="aio-ui">
+	<img src="/media/flair-shader/wobble-ae.png" alt="Wobble offsets section">
+	<figcaption>The Wobble Offsets section in the Attribute Editor.</figcaption>
+</figure>
+
+Once the wobble attribute has been enabled globally, material presets will default as wobbled (Simple).
+{: .info}
+
+##### Wobble Frequency
+Offsets the regularity of the wobble. A higher frequency will make the wobble more "irregular", whereas a lower frequency will make it more "regular". The frequency is directly linked to the global [World Scale](/flair/getting-started/globals/#world-scale).
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/wobble-frequency.mp4" type="video/mp4">
+    </video>
+    <figcaption>Wobble Frequency (0...5).</figcaption>
+</figure>
+
+
+##### Wobble Amplitude
+Defines the amount of wobble. A higher amplitude will deform more than a lower amplitude. The amplitude is directly linked to the global [World Scale](/flair/getting-started/globals/#world-scale).
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/wobble-amplitude.mp4" type="video/mp4">
+    </video>
+    <figcaption>Wobble Amplitude (0...2.5).</figcaption>
+</figure>
+
+##### Wobble Phase
+Defines the form of the wobble. Useful when you want a different wobble deformation or want to vary the wobble on a frame-by-frame basis.
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/wobble-phase.mp4" type="video/mp4">
+    </video>
+    <figcaption>Wobble Phase (0...3).</figcaption>
+</figure>
+
+As wobble is generated from noise in 3D, make sure to toggle the *deformed* attribute in materials if they are animated/deformed so that the wobble is baked in place.
+{:.info}
+
+
+##### Wobble Blur
+Defines the amount wobble blur for each TAA sample, generating a soft edge by avaraging different wobble positions.
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/wobble-jitter.mp4" type="video/mp4">
+    </video>
+    <figcaption>Wobble Blur (0...1).</figcaption>
+</figure>
+
+##### Wobble Motion
+Defines the amount of motion offset of the wobble, generating streaks of motion under animation. For this attribute to show it's effect, make sure that velocity is enabled in the _Globals_ node and in the material.
+
+<figure>
+    <video autoplay loop muted playsinline style="height:152px">
+        <source src="/media/flair-shader/wobble-motion.mp4" type="video/mp4">
+    </video>
+    <figcaption>Wobble motion at 0.5 and 2.5.</figcaption>
+</figure>
 
 ------------------
 ------------------

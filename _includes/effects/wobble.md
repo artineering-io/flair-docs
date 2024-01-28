@@ -23,5 +23,8 @@ Defines the form of the wobble. Useful when you want a different wobble deformat
 As wobble is generated from noise in 3D, make sure to toggle the *deformed* attribute in materials if they are animated/deformed so that the wobble is baked in place.
 {:.info}
 
-#### Wobble Jitter (TAA)
-Defines the amount of jitter for each TAA sample, generating a soft edge by avaraging different wobble positions. This was inspired by the "Painting with polygons" [paper](https://dl.acm.org/doi/10.1145/1597990.1598012) by Isaac Botkin. 
+#### Wobble Blur
+Defines the amount wobble blur for each TAA sample, generating a soft edge by avaraging different wobble positions. This was inspired by the "Painting with polygons" [paper](https://dl.acm.org/doi/10.1145/1597990.1598012) by Isaac Botkin. 
+
+TAA needs to be enabled to show this effect.
+{: .info}

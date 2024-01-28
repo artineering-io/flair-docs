@@ -23,6 +23,6 @@ There are many ways to render images out of _Maya_, but we strongly recommend th
 
 * [**Flair Renderer**](sequence), `SEQ` in the [Flair shelf](/flair/getting-started/flair-shelf/), is the go-to interface to render image _sequences_ and AOVs.
 
-* [**Standalone Renderer**](standalone) allows to render in batch mode without opening the Maya interface using _mayapy_. An example script on how to use the Flair API is found under `scripts/flair_standalone.py`.
+* [**Standalone Renderer**](standalone) allows to render in batch mode without opening the Maya interface. An example script on how to do this is found under `flair/maya/scripts/flair_batch.py`.
 
 These tools will allow you to render images of up to 16K resolution  (16384×16384) with a graphics card supporting it (enough VRAM).

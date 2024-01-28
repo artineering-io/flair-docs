@@ -59,12 +59,16 @@ The folder stucture defines the folders that will be created within the director
 
 ### Render settings 
 The render settings customizes the _quality_, _alpha_ and _format_ of the image sequence.
-* _Quality_ - Defines the quality of the viewport rendering and correlates with the [quality settings of the globals node](/flair/getting-started/globals/#quality). _TAA_ gives the best visual quality and is the default in Flair.
-* _Alpha_ - Defines how the alpha (transparency) is handled in the rendered image sequence. The options are _None_ (no alpha), _Linear_ (linear alpha) and _Premult._ (premultiplied alpha).
-* _Format_ - Defines the image file format to save the image sequence as i.e., _.png, .jpg, .exr, .tif, .iff_.
+* **Quality** - Defines the quality of the viewport rendering, either standard or with _TAA_.
+* **Alpha** - Defines how the alpha (transparency) is handled in the rendered frames. The options are _None_ (no alpha), _Linear_ (linear alpha) and _Premult._ (premultiplied alpha).
+* **Format** - Defines the image file format to save the image as i.e., _.png, .jpg, .exr, .tif, .iff_.
 
 ### Resolution
-The resolution defines the resolution to render with. You can specify the width and height individually up to 16384 pixels. Just be mindful that your graphics card might not have enough VRAM to support extravagant resolutions.
+The resolution defines the resolution to render with.
+* **Width** - The target horizontal resolution to render in pixels
+* **Height** - The target vertical resolution to render in pixels 
+* **Render Scale** - The render scale to render with, from 50% to 200% of the specified _Width_ and _Height_. The current maximum resolution is of 16384 pixels, but keep in mind that your graphics card might not have enough VRAM to support extravagant resolutions.
+* **VRAM** - A rough VRAM estimate required to render the images.
 
 By default, the render resolution is grabbed from _Maya_'s [_Render Settings_](https://help.autodesk.com/view/MAYAUL/2024/ENU/?guid=GUID-59DFB8B7-776B-4243-B404-A3D602FF8CFD) and set back accordingly if changed within the Flair Renderer.
 

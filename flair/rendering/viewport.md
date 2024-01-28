@@ -30,9 +30,9 @@ The upper section of the _Viewport Renderer_ contains all options to capture a f
 On the left side, you can define a custom resolution to render at. If left unchecked, the viewport resolution will be taken when rendering.
 
 On the right side, you can find the settings to render with.
-* _Quality_ - Defines the quality of the viewport rendering and correlates with the [quality settings of the globals node](/flair/getting-started/globals/#quality). _TAA_ gives the best visual quality and is the default in Flair.
-* _Alpha_ - Defines how the alpha (transparency) is handled in the rendered frames. The options are _None_ (no alpha), _Linear_ (linear alpha) and _Premult._ (premultiplied alpha).
-* _Format_ - Defines the image file format to save the image as i.e., _.png, .jpg, .exr, .tif, .iff_.
+* **!uality** - Defines the quality of the viewport rendering, either standard or with _TAA_.
+* **Alpha** - Defines how the alpha (transparency) is handled in the rendered frames. The options are _None_ (no alpha), _Linear_ (linear alpha) and _Premult._ (premultiplied alpha).
+* **Format** - Defines the image file format to save the image as i.e., _.png, .jpg, .exr, .tif, .iff_.
 
 Captured _.exr_ images will have the color space baked-in, as to facilitate its quick use for single images. Use the Flair Renderer if you do not want this behavior.
 {: .info}
@@ -45,7 +45,11 @@ The lower section of the _Viewport Renderer_ contains all options to create a qu
 On the left side, you can define where to get the playblast resolution from. _From Viewport_ will get the viewport resolution to playblast with. _From Render Settings_ will get the [_Render Settings_](https://help.autodesk.com/view/MAYAUL/2024/ENU/?guid=GUID-59DFB8B7-776B-4243-B404-A3D602FF8CFD) resolution to playblast with.  
 
 On the right side, you can find the settings to playblast with.
-* _Quality_ - Defines the quality of the viewport rendering and correlates with the [quality settings of the globals node](/flair/getting-started/globals/#quality). _4x SSAA_ gives the best visual quality within playblasts. To use _TAA_ quality, you'll have to render an image sequence with the [_Flair Renderer_](/flair/rendering/sequence/) and create the video yourself.
-* _Format_ - Defines the video file format to save the playblast as i.e., _.avi, .mov (qt)_. The video file format will depend on what codecs your computer currently supports.
+* **R. scale** - Defines the render scale of the original vertical and horizotal resolutions to render with.  
+The options range from 50% to 200%. Refer to the Globals [documentation](/flair/getting-started/globals/#render-scale) to learn about the impact this has on performance and memory footprint.  
+* **Format** - Defines the video file format to save the playblast as i.e., _.avi, .mov (qt)_. The video file format will depend on what codecs your computer currently supports.
+
+To use _TAA_, you'll have to render an image sequence with the [_Flair Renderer_](/flair/rendering/sequence/) and create the video yourself.
+{: .info}
 
 The `Playblast` button will playblast the video in the directory you specify.

@@ -46,7 +46,7 @@ Presets can be loaded into the current scene at any time.
 The loading options give you more refined control over the loading process:
 
 * **Load world scale** - Whether to load the _World Scale_ attribute from the style. By default this is unchecked and the current world scale will be preserved when loading the style.
-* **Load quality** -  Whether to load the _Quality_ attribute from the style. If this is unchecked, the current quality setting will be preserved when loading the style.
+* **Load quality** -  Whether to load all _Quality_ attributes from the style including _TAA_, _Samples_, _Render Scale_ and _colorDepth_.
 * **Load attributes** - Whether to load the main attributes of the style preset. This is on by default, but you can uncheck this option if you want to load only the canvas attributes.
 * **Load canvases** - Whether to load the canvas-related attributes. If this is unchecked, the current canvas attributes will be preserved when loading the style.
 
@@ -64,3 +64,14 @@ Presets can be deleted at any time.
 Each style preset is saved under `Flair/maya/presets/styles` as a _\*.json_ and _\*.jpg_ file. Each individual installation will have their own presets, but these can also be shared if Flair is stored in a shared/network folder.
 
 If you or someone else adds/deletes/modifies presets manually within the presets folder, you need to refresh the _Style presets_ window to grab the changes made: click on the `Refresh` button at the bottom.
+
+## Editing and renaming presets
+When you right-click on a preset, a context menu will appear with options to `Edit` or `Rename` the preset.
+
+<figure class="aio-ui aio-window">
+	<img src="/media/style-presets/style-preset-right-click.png" alt="Right click context menu on a preset">
+	<figcaption>Right click context menu on a preset.</figcaption>
+</figure>
+
+* Editing the preset will open the _\*.json_ preset in a text editor to modify to your liking. Remember to refresh the presets after any edits.
+* Renaming the preset will prompt to enter a new name for the preset.

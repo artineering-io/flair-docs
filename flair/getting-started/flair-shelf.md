@@ -27,9 +27,9 @@ The art-direction tools can be found in the left side of the shelf, ordered from
 1. **STYLE** - opens the _Style Presets_ to load/save styles and their parameters [[docs](/flair/styles/presets/)].
 1. **GLOB** - selects the global node to change style attributes [[docs](/flair/getting-started/globals/)].
 1. **PRES** - opens the _Material Presets_ to load/save predefined Flair materials and their parameters [[docs](/flair/materials/presets)].  
-1. **MAT** - selects the materials of currently selected objects or components.
-`Double click` shows the material tab within the _Attribute Editor_,  without changing the current selection. If the material was already shown, it will refresh the UI fixing any potential issues.
-`Right click -> Only show material in AE` will have the same functionality as double clicking on the `mat` shelf icon.
+1. **MAT** - selects the materials of currently selected objects or components.  
+`Double click` shows the material tab within the _Attribute Editor_,  without changing the current selection. If the material was already shown, it will refresh the UI fixing any potential issues.  
+`Right click -> Only show material in AE` will have the same functionality as double clicking on the `mat` shelf icon.  
 `Right click -> Select objects assigned to selected material` will select all objects that share the selected material.
 1. **BULK** - opens the _Bulk Attribute_ tool. An attribute editor that lets you modify multiple Flair materials at once (in bulk) [[docs](/flair/art-direction/bulkattr)].
 1. **NFX** - opens the _NoiseFX_ tool that lets you control effects procedurally on Flair materials [[docs](/flair/art-direction/noisefx)].
@@ -39,7 +39,7 @@ The art-direction tools can be found in the left side of the shelf, ordered from
 ## Lighting/Testing
 The lighting and testing tools allow to easily create the supported lights within Flair and to troubleshoot if things are not looking quite right.
 1. **Supported lights** - shelf icons for the four different supported lights: ambient, directional, point (no shadow maps) and spot light.
-1. **PASS** - opens the _Pass Inspector_, which lets you toggle on/off each style pass and troubleshoot the inner workings of the style itself.
+1. **PASS** - opens the _Inspector_, which lets you toggle on/off each style pass and troubleshoot the inner workings of the style itself.
 1. **TEST** - creates our favourite sphere with default lighting.
 
 

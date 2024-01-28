@@ -17,7 +17,7 @@ nav_order: 2
 {:toc}
 </details>
 
-The Flair Globals node gets selected when clicking on the `GLOB` icon in the [*Flair shelf*](../flair-shelf) and looks somewhat similar to the figure below---depending on the active styke. This node contains every global parameter available in the active style and each value is usually applied over the entire image.
+The Flair Globals node gets selected after clicking on the `GLOB` icon in the [*Flair shelf*](../flair-shelf) and looks somewhat similar to the figure below---depending on the active style. This node contains every global parameter available in the active style and each value is usually applied over the entire image.
 
 It is imperative to understand what each attribute does and how it affects the style, but it is also fun to simply experiment with them and make happy accidents. The attributes in the style configuration node are separated into three groups: [*Engine*](#engine), [*Style*](#style) and [*Canvas*](#canvas).
 
@@ -26,8 +26,16 @@ It is imperative to understand what each attribute does and how it affects the s
 	<figcaption>The globals node showing all the watercolor style attributes.</figcaption>
 </figure>
 
+---
+
 ## Engine
-Engine attributes remain the same across styles and contain attributes directly related to the Flair engine. These attributes can change the fidelity and performance of the stylization.
+Engine attributes remain the same across styles and contain attributes directly related to the Flair engine. These attributes can change the behavior, fidelity and performance of the stylization or toggle optional features.
+
+### World Scale
+Defines how many _Maya_ units is considered one "meter" in the virtual world. Since most projects work with assets at different scales, setting up the _World Scale_ right will help the style behave correctly.
+
+Example: if your character is supposed to be one meter high in his world, but is actually 5 units high in _Maya_, the _World Scale_ attribute should be set to 5.
+{: .info}
 
 ### Style
 Defines the style that Flair is currently running in.
@@ -39,13 +47,22 @@ Defines the style that Flair is currently running in.
 * [**Fray**](/flair/styles/library/fray/) - Fray shader style
 * [**Lines**](/flair/styles/library/lines/) - Toon and sketch lines shader style
 
+### Separate Stylization
+The option to save the stylization (art-direction) of the scene concurrently in a separate file.
+* **No** - The stylization will only be saved with the scene
+* **Yes, only save** - The stylization will be saved with the scene and in a `*.style` file next to it (default)
+* **Yes, save and replace** - The stylization will only be saved in a `*.style` file and be automatically applied upon opening the scene
+
+When applying VertexFX onto referenced assets, Flair will automatically ask if you wish to only save the stylization in a separate file, instead of in the Maya scene ("Yes, save and replace" option). This is recommended, because if the stylization is saved with the Maya scene, the file size will be orders of magnitude bigger than it should be and may even not open anymore. 
+{: .info}
+
+---
+
 ### Quality
-Defines the quality of rendering.
-* **Half** - Renders at half the resolution, performing faster with slower computers, at the cost of pixelation.
-* **Standard** - Render at the normal resolution, without any bells and whistles.
-* **FXAA** - Render at the normal resolution with _Fast Approximate Anti-Aliasing_, giving results with less jaggies (staircase effect).
-* **4x SSAA** - Render at 4 times the normal resolution, to later bring it back to the normal resolution with _Super Sampling Anti-Aliasing_. You have much more detail and less jaggies (staircase effect).
-* **TAA** - Renders many images at normal resolution with _Temporal Anti-Aliasing_ to perform progressive, super-sampled results. You will have more detail and **NO** jaggies (staircase effect). Enabling TAA will also show a _TAA Samples_ attribute directly underneath. Within this attribute, you can define the amount of image samples that the _TAA_ quality uses to create the final result.
+Contains the quality-related global attributes within Flair.
+
+#### TAA
+Renders many images with _Temporal Anti-Aliasing_ to perform progressive, super-sampled results. Because of this, the rendered results will have more detail and less jaggies (staircase effect). Enabling TAA will also enable the _Samples_ attribute to the right.
 
 Anti-aliasing makes edges appear smoother and less pixelated, you can find more about what aliasing is [here](https://www.youtube.com/watch?v=hqi0114mwtY).
 
@@ -54,30 +71,28 @@ Anti-aliasing makes edges appear smoother and less pixelated, you can find more 
 	    <img src="/media/globals/AA1.png" alt="Close-up without antialiasing" style="max-width: 150px">
 	    <img src="/media/globals/AA2.png" alt="Close-up with antialiasing" style="max-width: 150px">
 	</div>
-    <figcaption>Close-up of image at Standard quality and with FXAA quality.</figcaption>
+    <figcaption>Close-up of image without and with anti-aliasing.</figcaption>
 </figure>
 
-### World Scale
-Defines how many _Maya_ units is considered one "meter" in the virtual world. Since most projects work with assets at different scales, setting up the _World Scale_ right will help the style behave correctly.
+#### Samples
+The amount of image samples that the _TAA_ uses to create the final result. Default is 64, but you can also get acceptable results rendering less samples.
 
-Example: if your character is supposed to be one meter high in his world, but is actually 5 units high in _Maya_, the _World Scale_ attribute should be set to 5.
-{: .info}
-### Color Depth
+#### Render Scale
+Renders at different resolution scales. 
+* **50%** renders at half the normal horizontal and vertical resolution and can be useful when working in monitors with ridiculously high resolutions or weaker GPUs.
+* **100%** is the normal rendering resolution
+* **150%** renders at 1.5x horizontal and vertical resolution, bringing out more detail without impacting performance too much.
+* **200%** renders at double the horizontal and vertical resolution, lifting up the quality substantially, but also quadrupling the amount of pixels that need to be rendered and stored (VRAM).
+
+#### Color Depth
+
 Defines the color depth of most render targets. This generally translates to: higher is better. However, slower systems should consider using 8bit targets if the performance is too slow, provided you can sacrifice some color fidelity.
 
-### Separate Stylization
-The option to save the stylization (art-direction) of the scene concurrently in a separate file.
-* **No** - The stylization will only be saved with the scene
-* **Yes, only save** - The stylization will be saved with the scene and in a `*.style` file next to it (default)
-* **Yes, save and replace** - The stylization will only be saved in a `*.style` file and be automatically applied upon opening the scene
+---
 
-When applying VertexFX onto referenced assets, Flair will automatically ask if you wish to only save the stylization in a separate file, instead of in the Maya scene ("Yes, save and replace" option). This is recommended, because if the stylization is saved with the Maya scene, the file size will be orders of magnitude bigger than it should be and may not open anymore. 
-{: .info}
+### Optional Features
 
-### Mix Maya Materials
-Enables to properly mix Flair materials with Maya materials, at the cost of some performance. Without this option, you will see Flair effects from background objects being applied on top of Maya materials, which might not be desired.
-
-### Velocity PV
+#### Velocity PV
 Enables the calculation of motion vectors of each object in the scene (per vertex). This helps certain effects to remain motion coherent and avoid the _shower door effect_.
 
 <figure>
@@ -90,16 +105,44 @@ Enables the calculation of motion vectors of each object in the scene (per verte
 Velocity PV does **NOT** work with subdivided previews (`3` on the keyboard), as vertices won't be in the same place. Consider subdividing the required objects with normal geometry instead.
 {: .warning}
 
-### Effect Focal Range
+---
+
+#### Effect Focal Range
 Creates the effect focal range locators in the scene. These locators allow you to define the center of interest and an effect factor at the front and back. Based on these factors, effects that support this (i.e., watercolor bleeding) will be reduced or increased at different distances from the effect focal point.
 
 These locators can also be constrained/parented to a camera to have the front and back factors relative to the distance to the camera.
 {: .info}
 
------------
+---
+
+#### Mix Maya Materials
+Enables to properly mix Flair materials with Maya materials, at the cost of some performance. Without this option, you will see Flair effects from background objects being applied on top of Maya materials, which might not be desired.
+
+---
 
 {% include /effects/bloom.md %}
+
+---
+
+{% include /effects/geo-blur.md %}
+
+---
+
 {% include /effects/wobble.md %}
+
+#### Toon Shading
+Toon shading adds the ability to art-direct toon shading to sharpen or soften toon regions in different objects. When no materials in the scene are toon shaded, enabling Toon Shading will prompt the artist if Toon Shading should be enabled on every Flair material, as well. 
+
+<div class="d-flex bottom">
+	<figure class="aio-ui">
+		<img src="/media/globals/toon-vertexfx.png" alt="VertexFX toon control widget">
+		<figcaption>VertexFX toon control widget.</figcaption>
+	</figure>
+	<figure class="aio-ui">
+		<img src="/media/globals/toon-noisefx.png" alt="NoiseFX toon control widget">
+		<figcaption>NoiseFX toon control widget.</figcaption>
+	</figure>
+</div>
 
 -----------
 

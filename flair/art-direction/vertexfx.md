@@ -46,7 +46,7 @@ The next row of icons allow you to set the brush stamp to use when painting the 
 ## Paint Widgets
 Each style has different effects, therefore, the paint widgets (sections) will vary depending on the currently loaded style. Each widget handles a specific effect/behaviour within the style e.g., _Lighting_, _Pigment turbulence_, _Color bleeding_.
 
-On the left side of each widget, you will always find a generalized term for the behaviour of each effect. This term also specifies the appearance of the effect icon which is shown as a _Brush_ preview.
+On the left side of each widget, you will always find a generalized term for the behaviour of each effect. Right next to it, there will be a brush icon that gives a preview of what the effect will do.
 
 By clicking on the brush icon, you can quickly start painting the effect with the currently defined values on selected objects. Before going into more details on painting, let's break down the widget.
 
@@ -63,28 +63,28 @@ This button will key the painted values of selected vertices at the current fram
 	<img src="/media/ui/icons/timeline.png" alt="Show timeline of selected vertices"  style="max-height: 32px">
 </figure>
 
-This button will show the keyframes in the timeline of selected vertices/objects allowing you to adjust timing or delete keyframes of the painted effects. It will also show the keyframes in _Maya_'s _Graph Editor_.
+This button will show the keyframes in the timeline of selected vertices/objects allowing you to adjust timing or delete keyframes of painted effects. It will also show the keyframes in _Maya_'s _Graph Editor_.
 
 <figure class="float-left" style="margin: 0.5em 18px 0">
 	<img src="/media/ui/icons/removeKey.png" alt="Remove key on selected vertices"  style="max-height: 32px">
 </figure>
 
-This button will remove the key of painted values from selected vertices at the current frame.
+This button will remove the key of painted values of the specific effect from selected vertices at the current frame.
 
-Keying of VertexFX requires the construction history of the vertex color sets and should be done with caution, as _Maya_ stores the value of each vertex internally on adjacent faces. This means that, if you are keying one vertex with four values (RGBA), that is shared with four adjacent faces, you will be keying 16 values---for only one vertex. This escalates exponentially when keying objects with hundreds of vertices. Therefore, try to use proxies and animate them instead, whenever possible.
+As _Maya_ stores the value of each vertex internally on adjacent faces. This means that, if you are keying one vertex with four values (RGBA), that is shared with four adjacent faces, you will be keying 16 values---for only one vertex. This escalates exponentially when keying objects with hundreds of vertices. Therefore, try to use proxies and animate them instead, whenever possible.
 
-To keep complex scenes light, we recommend deleting _Non-Deformer History_ (`Edit->Delete by Type->Non-Deformer History_`) whenever possible from objects whose _VertexFX_ will not be animated.
+To keep complex scenes light after working with VertexFX, we recommend deleting _Non-Deformer History_ (`Edit->Delete by Type->Non-Deformer History_`) whenever possible.
 {: .info}
 
 
 ### Modifying Paint Values
-To modify the painting values of each widget, you can use the radio buttons to quickly change between the two or more painting modes and adjust the vertical slider at the right of the widget to set the painting value/intensity. The painting value/intensity is specified underneath the vertical slider and can also be modified by manually entering the desired numerical value in the spin box.
+To modify the painting values of each widget, you can use the radio buttons to quickly change between the two painting modes and adjust the horizontal slider at the bottom of the widget to set the painting value/intensity. The painting value/intensity can also be entered manually to the left of the slider.
 
 By modifying a painting value, the tool will automatically change to painting mode, so there is no need to click on the painting icon anymore.
 {: .info }
 
 ### Reset and Flood
-The painted values can be reset or flooded (added) on the selected objects/vertices. There are two buttons for this at the bottom of each widget. These buttons are useful when you need to assign a specific value to a lot of vertices in an object, be it to reset the _VertexFX_ values or to add the effect evenly to the selected objects/components. Reset will put the values of the selected objects/vertices to zero (0) whereas flooding will add the numerical value set by the vertical slider or entered manually in the spin box.
+The painted values can be reset or flooded (added) on the selected objects/vertices. There are two buttons for this at the right of each widget. These buttons are useful when you need to assign a specific value to a lot of vertices of an object, be it to reset the _VertexFX_, or to add the effect evenly to the selected objects/components. Reset will put the values of the selected objects/vertices to zero (0) whereas flooding will add the numerical value of the painting value.
 
 ### Shortcuts
 

@@ -84,3 +84,14 @@ Presets can be deleted at any time.
 Each material preset is saved under `Flair/maya/presets/materials` as a _\*.json_ and _\*.jpg_ file. Each individual installation will have their own presets, but these can also be shared if Flair is stored in a shared/network folder.
 
 If you or someone else adds/deletes/modifies presets manually within the presets folder, you need to refresh the _Material presets_ window to grab the changes made: click on the `Refresh` button at the bottom.
+
+## Editing and renaming presets
+When you right-click on a preset, a context menu will appear with options to `Edit` or `Rename` the preset.
+
+<figure class="aio-ui aio-window">
+	<img src="/media/materials/presets/material-preset-right-click.png" alt="Right click context menu on a preset">
+	<figcaption>Right click context menu on a preset.</figcaption>
+</figure>
+
+* Editing the preset will open the _\*.json_ preset in a text editor to modify to your liking. Remember to refresh the presets after any edits.
+* Renaming the preset will prompt to enter a new name for the preset.

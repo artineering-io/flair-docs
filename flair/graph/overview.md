@@ -111,9 +111,9 @@ The control definition panel dynamically defines the _noiseFX_ and _vertexFX_ co
 Each control definition group will automatically modify the _NoiseFX_ and _VertexFX_ interface within Maya.
 
 <figure class="aio-ui">
-    <div class="d-flex">
-	<img src="/media/graph/control_noisefx.png" alt="The newly defined control in the NoiseFX tool">
+    <div class="d-flex bottom">
 	<img src="/media/graph/control_vertexfx.png" alt="The newly defined control in the VertexFX tool">
+	<img src="/media/graph/control_noisefx.png" alt="The newly defined control in the NoiseFX tool">
 	</div>
 	<figcaption>The newly created control within the NoiseFX and VertexFX tools based on the control definition.</figcaption>
 </figure>
