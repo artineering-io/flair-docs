@@ -15,7 +15,7 @@ As lines are generated at the middle of an edge, blending the intensity will rev
 {: .info}
 
 #### Line Width
-Width of the generated lines. The width of lines can also be art-directed with [VertexFX](/flair/art-direction/vertexfx/) and [NoiseFX](/flair/art-direction/noisefx/).
+Width of the generated toon and sketch lines. The width of lines can also be art-directed with [VertexFX](/flair/art-direction/vertexfx/) and [NoiseFX](/flair/art-direction/noisefx/).
 
 <figure>
 	<video autoplay loop muted playsinline>
@@ -25,10 +25,10 @@ Width of the generated lines. The width of lines can also be art-directed with [
 </figure>
 
 #### Line Width Max
-Defines the maximum width the generated line may have.
+Defines the maximum width the generated toon and sketch lines may have.
 
 #### Line Width Range
-The depth range at which lines are widened or thinned in the scene. This attribute consists of four (4) values that define the different distances from the camera to modify the line width. From left to right: Close, Close Mid, Far Mid, Far.
+The depth range at which toon and sketch lines are widened or thinned in the scene. This attribute consists of four (4) values that define the different distances from the camera to modify the line width. From left to right: Close, Close Mid, Far Mid, Far.
 
 Between the _Close Mid_ and _Far Mid_ distances, the global _Line Width_ that has been set will apply. Beyond these distances towards the _Close_ and _Far_ depths, the global _Line Width_ will be multiplied by the _Line Width Factor_, which is defined below.
 
@@ -41,7 +41,7 @@ The distances are relative to the _World Scale_ global attribute. For example, i
 </figure>
 
 #### Line Width Factor
-The factor to multiply the line width, depending on the distance to the camera defined in the _Line Width Range_. The first value is at _Close_ distance and the second value is at _Far_ distance. 
+The factor to multiply the toon and sketch line width, depending on the distance to the camera defined in the _Line Width Range_. The first value is at _Close_ distance and the second value is at _Far_ distance. 
 
 <figure>
 	<video autoplay loop muted playsinline>
