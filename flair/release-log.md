@@ -27,9 +27,7 @@ nav_order: 10
 
 The first big update of Flair is here! 
 
-Flair 1.1 introduces production-ready **toon and sketch lines**, geometry blur for **stylized depth of field and motion blur**, and lots of **improvements to rendering, lighting, materials, presets, art-direction tools** and more.
-
-Additionally, **Flair _Demo_ is now Flair _Free_**! The free version of Flair **includes all features** and can be used for any purpose. It is **only restricted in rendering resolution to 1280x800** with a watermark to promote Flair.
+Flair 1.1 introduces production-ready **toon and sketch lines**, geometry blur for **stylized depth of field and motion blur**, and lots of **improvements to rendering, lighting, materials, presets, art-direction tools**, and more.
 
 From now on, only **the latest three Maya versions will be supported**. Support for older versions could be added through customized development in case they are needed by studio pipelines.
 
@@ -61,7 +59,7 @@ Learn all about geometry blur in the [documentation](/flair/getting-started/glob
 </figure>
 
 ### Flair Demo is now Flair Free
-To avoid confusions regarding price and features, Flair Demo is now Flair Free. That means that you will always be able to use Flair, even after licenses may have expired. The only limitation is the rendering resolution and the Free version watermark on the top left.
+To avoid confusions regarding price and features, Flair Demo is now Flair Free. That means that you will always be able to use Flair, even after licenses may have expired. The only limitation is the rendering resolution and the Free version watermark on the top left to promote Flair.
 
 ### Rendering
 - *New* - Render in batch mode (headless) without opening the Maya UI with `flair_batch.py` supporting rendering in render farms [[docs](/flair/rendering/standalone/)]
