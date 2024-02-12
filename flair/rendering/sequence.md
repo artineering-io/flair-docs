@@ -30,7 +30,7 @@ The upper section of the _Flair Renderer_ allows you to specify where the image 
 If changed, the specified path will be saved within the scene globals node and be the same the next time the scene is opened.
 
 ## AOVs to render
-The left section outlines all AOVs (targets) available to render.
+The left section outlines all AOVs (targets) available to render. If you wish to learn exactly what data each AOV contains, please refer to the [AOV documentation](/flair/rendering/aovs/).
 
 By default, all AOVs required to replicate the shader style in compositing are pre-selected. This allows to have the same stylization in, for example, _Nuke_ and have complete freedom to push the look further in _comp_. To change the default AOVs that are pre-selected, you can modify the `maya/prefs/sequence_renderer.py` file.
 
