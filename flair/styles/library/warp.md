@@ -50,8 +50,6 @@ This shader style depends on the [Flair material](/flair/materials/flair-shader)
 
 While production-proven, the warp shader style may not have all features that you need. So please let us know if [we can help](https://artineering.io/agency) polish the look exactly to your requirements and pipeline.
 
-In this page, we only document global attributes specific to the warp shader style. To learn more about other global attributes, please see the [globals node documentation](/flair/getting-started/globals).
-
 ---
 
 ## Tutorials
@@ -65,6 +63,8 @@ In this page, we only document global attributes specific to the warp shader sty
 ---
 
 ## Attribute breakdown
+
+In this section, we only document global attributes specific to the warp shader style. To learn more about other global attributes, please see the [globals node documentation](/flair/getting-started/globals).
 
 <figure class="aio-ui">
     <img src="/media/styles/warp/style-attrs.png" alt="Style attributes">

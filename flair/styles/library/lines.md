@@ -39,9 +39,20 @@ This shader style depends on the [Flair material](/flair/materials/flair-shader)
 
 The toon and sketch line shader style may not have all features that you need. So please let us know if [we can help](https://artineering.io/agency) polish the look exactly to your requirements and pipeline.
 
-In this page, we only document global attributes specific toon and sketch lines shader style. To learn more about other global attributes, please refer to the [globals node documentation](/flair/getting-started/globals).
+---
+
+## Tutorials
+
+<div class="d-flex flex-justify-around">
+{% include responsive-embed url="https://www.youtube.com/embed/videoseries?si=kyQSf-WSCExdRzL2&amp;list=PLqQsRmdLB8t_h71jiVsGcv669-eu4YNXT" width="80%" caption="Tutorial Series - All about Toon Lines in Flair for Maya" %}
+</div>
+
+---
 
 ## Attribute breakdown
+
+In this section, we only document global attributes specific toon and sketch lines shader style. To learn more about other global attributes, please refer to the [globals node documentation](/flair/getting-started/globals).
+
 
 <figure class="aio-ui">
     <img src="/media/styles/lines/style-attrs.png" alt="Style attributes">
