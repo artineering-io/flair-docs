@@ -23,10 +23,10 @@ What each one of these AOVs contains is documented below.
 ## General AOVs
 
 ### Cryptomatte
-The `cryptomatte` AOV contains id masks for different type of data.
-* **Object** - A unique id for each object
-* **Material** - A unique id for each material
-* **Asset** - A unique id for each asset (grouped objects)
+The `cryptomatte` AOV contains ID masks for different type of data.
+* **Object** - A unique ID for each object
+* **Material** - A unique ID for each material
+* **Asset** - A unique ID for each asset (grouped objects)
 
 Currently only two ranks are supported per cryptomatte.
 {: .warning}
@@ -98,7 +98,7 @@ The `altCanvasTarget` AOV contains the data from the Alternate Canvas.
 * **B** - Heightmap
 
 ### Ambient Occlusion
-The `ambientOcclusionTarget` AOV contains the ambient occlusion.
+The `ambientOcclusion` AOV contains the ambient occlusion.
 
 ### Bloom
 The `bloomTarget` AOV contains the bloom contribution.

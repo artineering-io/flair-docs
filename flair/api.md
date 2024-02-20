@@ -82,6 +82,21 @@ Returns the path to the Flair environment or to a folder within the Flair enviro
 
 
 <div class="maya-api-flag" markdown="1">
+#### forceDistortionBlending (fDB)
+list
+
+C
+</div>
+Targets (AOVs) to force alpha blending of distortions onto.
+
+By default, different blending modes are applied depending on the type of data within the AOV--as alpha blending depth, normals or world positions is normally of little use.
+
+This flag can be used to override target-specific blending behavior and force alpha blending onto it. 
+
+> Note: This flag will only apply if the target is also set to distort using the _targetsToDistort_ flag.
+
+
+<div class="maya-api-flag" markdown="1">
 #### listOperations (lsO)
 bool
 
@@ -175,11 +190,23 @@ list
 
 C
 </div>
-Targets to render as an image.
+Targets (AOVs) to render as an image.
 
 Use in combination with the _render_ flag to render the specified targets. 
 
 Note: Only ".exr" image format can store more than one target in a single file. If another file format is used, only the first target specified will be rendered.
+
+
+<div class="maya-api-flag" markdown="1">
+#### targetsToDistort (tD)
+list
+
+C
+</div>
+Targets (AOVs) to apply distortions onto. By default, only the `outputTarget` and the `cryptomatte` targets will have distortions, including TAA. 
+This flag can be used to specify exactly which targets should be distorted.
+
+Note: Exiting the render state (rS) will revert the specified _targetsToDistort_ to their default values.
 
 
 <div class="maya-api-flag" markdown="1">
