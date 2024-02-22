@@ -17,8 +17,68 @@ nav_order: 10
 </details>
 
 
+
+## Flair 1.1.1
+> Released 23.02.2024 [[**Download**](https://artineering.io/software/flair#pricing)]
+
+<figure>
+	<img src="/media/release-log/1.1/flair_1_1_1_banner.gif" alt="Flair 1.1.1 banner gif"/>
+    <figcaption>3D model by Marleen Vijge</figcaption>
+</figure>
+
+The first patch update of Flair 1.1 is here!
+
+Flair 1.1.1 **focuses on stability**, but also brings sought after **updates to rendering** like the ability to **render only every X frames** and **render any AOV with TAA and its respective effects** i.e., geo/wobble blur. Additionally, the **Cutout shader style has been fixed** and the **Warp shader style art-direction has been restored**, even with Arnold materials. **Crashes** happening upon opening different scenes or assigning materials to components **have been fixed** and a lot of other bugs have been ironed out, as documented below.
+
+All [demo scenes](https://artineering.io/software/flair/demo-scenes) have also been updated and optimized to work with Flair 1.1.
+{: .info}
+
+### [Flair Renderer](/flair/rendering/sequence/)
+The Flair Renderer has been revamped to include the ability to render at different frame steps and to distort arbitrary AOVs. Distorted AOVs have TAA and geo/wobble blur applied to them. Within the UI, this option can be found under `Advanced->Distortion Control`. As each AOV contains different types of data, the most suitable blending option will be applied to them. However, this can still be overwritten by forcing alpha/linear blending onto them on the sequence renderer preferences or directly through the batch rendering script.
+
+- *New* - _Frame Step_ to render only every X frames
+- *New* - Render out any AOV with TAA and its respective distortions
+- *New* - _Distortion Control_ toggle to show the AOV distortion checkboxes and pick the AOVs to distort
+- *New* - Set which AOVs are checked to distort and to force blend by default in `flair/maya/prefs/sequence_renderer.py`
+- *Improved* - [Batch rendering script](/flair/rendering/standalone/) updated to reflect the latest features.
+- *Improved* - First frame having a different look than the rest of frames
+- *Improved* - More accurate estimated VRAM usage in UI
+- *Fixed* - _Render each light_ option showing light leaks from other lights
+- *Fixed* - _Render each light_ not working with other formats except for `.exr`
+- *Fixed* - _Render each light_ progress bar not reflecting the correct progress
+- *Fixed* - View camera not restoring after rendering and showing an error in the script editor
+
+### Warp Style
+- *Fixed* - Warp amplitude art-direction not working
+- *Fixed* - Warp style and art-direction not working with Arnold materials
+- *Fixed* - Bug with endless loop when shading engine was connected, but not first plug in array
+- *Improved* - Avoid selecting instance material with `mat` button
+- *Fixed* - Instance rendering passes being applied to all styles if instances attribute was enabled
+
+### Material presets
+- *Improved* - Setting materials to use existing shading engines instead of creating new ones
+- *Improved* - Material presets also load when no materials are assigned onto objects/components
+- *Fixed* - Crashes when assigning materials to components due to light linking not being updated
+- *Fixed* - Default wobble and toon shading not being applied when enabled globally
+
+### Flair Toolbox
+- *Improved* - _Re-link Textures_ will prompt to select the right texture when multiple textures with the same name are found
+- *Improved* - _Re-link Textures_ will relativize textures if found in the current Maya project
+- *Improved* - Accurate [VRAM log](/flair/toolbox/#vram-info)
+
+### Miscellaneous
+- *New* - Flair commands in the API: [vram](/flair/api/#vram-vrm), [targetsToDistort](/flair/api/#targetstodistort-td) and [forceDistortionBlending](/flair/api/#forcedistortionblending-fdb).
+- *Fixed* - Crashes sometimes when opening scenes due to light linking not being updated
+- *Fixed* - Cutout style - Not working correctly in Flair 1.1
+- *Fixed* - Watercolor style - Rendering of cryptomattes not working
+- *Fixed* - Light painting not affecting painterly attributes in material
+- *Fixed* - Style import being stuck when MFnMesh could not be attached to shape
+- *Fixed* - Save/replace option of _Separate Stylization_ global not sticking after being prompted to it while saving
+
+---
+
 ## Flair 1.1
-> Released 24.01.2024
+> Released 29.01.2024
 
 <figure>
 	<img src="/media/release-log/1.1/flair_1_1_banner.gif" alt="Flair 1.1 banner gif"/>
