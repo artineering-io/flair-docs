@@ -93,7 +93,7 @@ By default, different blending modes are applied depending on the type of data w
 
 This flag can be used to override target-specific blending behavior and force alpha blending onto it. 
 
-> Note: This flag will only apply if the target is also set to distort using the _targetsToDistort_ flag.
+> Note: This flag will only work when set together with the _targetsToDistort_ flag.
 
 
 <div class="maya-api-flag" markdown="1">
@@ -216,6 +216,15 @@ bool
 C
 </div>
 Returns the version of Flair.
+
+
+<div class="maya-api-flag" markdown="1">
+#### vram (vrm)
+bool
+
+C
+</div>
+Returns the amount of video ram currently in use by Flair.
 
 
 </div>
