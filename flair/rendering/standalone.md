@@ -33,24 +33,28 @@ The usage of standalone rendering in Flair will depend a lot on what is being se
 In a nutshell, the `flair_batch.py` file will run on the scene you open through Maya batch with either the arguments you initialize the Flair `Renderer` class with, or whatever has been saved in the opened scene.
 
 ``` python
-# initialize the renderer (check flair_render.py for full list of options)
-renderer = fr.Renderer(name="<Scene>.<Camera>.<####>",  # tag options: <Scene>, <Camera>, <Target>, <RenderLayer>, <####> (empty: grab _sequenceName global)
-                       directory="",  # a specific directory to render onto, (empty: grab _sequenceDir global or "project/images")
+# initialize the renderer
+# check flair_render.py for full list of options
+renderer = fr.Renderer(name = "<Scene>.<Camera>.<####>",  # tag options: <Scene>, <Camera>, <Target>, <RenderLayer>, <####> (empty: grab _sequenceName global)
+                       directory = "",  # a specific directory to render onto, (empty: grab _sequenceDir global or "project/images")
                        sequence = True,  # if a sequence or an individual frame
-                       frame_range=[],  # entire playback range of scene if left empty
-                       targets=["albedo", "outputTarget"],
-                       cryptomatte=True,
-                       resolution=[1920, 1080],
-                       taa=True,
-                       render_scale=1.0,  # options: "1.0", "1.5", "2.0"
-                       alpha="Premult.",  # options: "None", "Linear", "Premult."
-                       img_format=".exr",  # options: ".png", ".jpg", ".exr", ".tiff", ".iff"
-                       cameras=["|shotcam_rig|shotcam_h"],  # all renderable cameras of the scene if left empty
-                       each_light=False,  # if each light should be rendered separately
-                       bundle_aovs=True)  # if the aovs should be bundled into one (only applies to ".exr")
+                       frame_range = [],  # entire playback range of scene if left empty
+                       frame_step = 1,  # render only every X frames
+                       targets = ["albedo", "outputTarget"],  # AOVs to render
+                       targets_to_distort = ["outputTarget"],  # AOVs to distort (TAA, canvas disitortion, etc)
+                       force_distortion_blending = [],  # AOVs to force distortion blending onto
+                       cryptomatte = True,  # if cryptomattes should be rendered
+                       taa = True,  # if TAA should be enabled
+                       resolution = [1920, 1080],
+                       render_scale = 1.0,  # options: "1.0", "1.5", "2.0"
+                       alpha = "Premult.",  # options: "None", "Linear", "Premult."
+                       img_format = ".exr",  # options: ".png", ".jpg", ".exr", ".tiff", ".iff"
+                       cameras = ["|shotcam"],  # all renderable cameras of the scene if left empty
+                       each_light = False,  # if each light should be rendered separately
+                       )
 ```
 
-After initialization, the `flair_batch.py` will then render with everthing that has been specified when opened together with the desired Maya scene file in batch, as follows.
+After initialization, the `flair_batch.py` will then render with everything that has been specified when opened together with the desired Maya scene file in batch, as follows.
 
 ### Windows:    
 #### Powershell

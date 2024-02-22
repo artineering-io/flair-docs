@@ -216,11 +216,15 @@ p .aio-btn {
         }
     }
 
-    p, ul {
+    p, ul, blockquote {
         font-size: 0.9rem;
         margin-left: 1.5rem;
         margin-top: 0.2rem;
         margin-bottom: 0.2rem;
+    }
+
+    blockquote {
+        padding-left: 0;
     }
 }
 

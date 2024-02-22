@@ -84,7 +84,7 @@ Only the two sheets of paper need to be lit within the cutout shader style. Ther
 
 ## Attributes
 
-A series of cutout attributes are provided within the [globals node](/flair/getting-started/globals/) to control and refine the style.
+In this section, we only document global attributes specific to the warp shader style. To learn more about other global attributes, please see the [globals node documentation](/flair/getting-started/globals).
 
 <figure class="aio-ui">
     <img src="/media/styles/cutout/style-attrs.png" alt="Style attributes">
