@@ -30,7 +30,7 @@ The first patch update of Flair 1.1 is here!
 
 Flair 1.1.1 **focuses on stability** but also brings sought after **updates to rendering** like the ability to **render only every X frames** and to **render any AOV with TAA and its respective effects**, i.e., geo/wobble blur. Additionally, the **Cutout shader style has been fixed**, and the **Warp shader style art-direction has been restored**, even with Arnold materials. **Crashes** happening upon opening different scenes or assigning materials to components **have been fixed**, and a lot of other bugs have been ironed out, as documented below.
 
-All [demo scenes](https://artineering.io/software/flair/demo-scenes) have also been updated and optimized to work with Flair 1.1.
+**All [demo scenes](https://artineering.io/software/flair/demo-scenes)** have also been updated and optimized to work with Flair 1.1.
 {: .info}
 
 ### [Flair Renderer](/flair/rendering/sequence/)
@@ -47,6 +47,10 @@ The Flair Renderer has been revamped to include the ability to render at differe
 - *Fixed* - _Render each light_ not working with other formats except for `.exr`
 - *Fixed* - _Render each light_ progress bar not reflecting the correct progress
 - *Fixed* - View camera not restoring after rendering and showing an error in the script editor
+
+<div class="d-flex flex-justify-around">
+{% include responsive-embed url="https://www.youtube.com/embed/-6L4p02gdYQ" width="480px" caption="Latest rendering tutorial showcases distorted AOVS in Flair 1.1.1!" %}
+</div>
 
 ### Warp Style
 - *Improved* - Avoid selecting instance material with `mat` button
