@@ -22,7 +22,7 @@ nav_order: 10
 > Released 23.02.2024 [[**Download**](https://artineering.io/software/flair#pricing)]
 
 <figure>
-	<img src="/media/release-log/1.1/flair_1_1_1_banner.gif" alt="Flair 1.1.1 banner gif"/>
+	<img src="/media/release-log/1.1.1/banner.gif" alt="Flair 1.1.1 banner gif"/>
     <figcaption>3D model by Marleen Vijge</figcaption>
 </figure>
 
@@ -49,10 +49,10 @@ The Flair Renderer has been revamped to include the ability to render at differe
 - *Fixed* - View camera not restoring after rendering and showing an error in the script editor
 
 ### Warp Style
+- *Improved* - Avoid selecting instance material with `mat` button
 - *Fixed* - Warp amplitude art-direction not working
 - *Fixed* - Warp style and art-direction not working with Arnold materials
 - *Fixed* - Bug with endless loop when shading engine was connected, but not first plug in array
-- *Improved* - Avoid selecting instance material with `mat` button
 - *Fixed* - Instance rendering passes being applied to all styles if instances attribute was enabled
 
 ### Material presets
