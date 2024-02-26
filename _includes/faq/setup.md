@@ -29,7 +29,7 @@ If the license still has not arrived within an hour [contact us](https://artinee
 I receive an activation failure
 <div markdown="1">
 If activation key is not valid, or the existing license is no longer valid, an error message will appear.
-`Retry` will prompt you to enter a valid activation key, and `Cancel` will run Flair as demo this session.
+`Retry` will prompt you to enter a valid activation key, and `Cancel` will run Flair as the free version this session.
 </div>
 
 The viewport is all black and I get the Error compiling GLSL code. 

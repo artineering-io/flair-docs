@@ -1,6 +1,6 @@
 Can I use Flair for my student production?
 <div markdown="1">
-Yes, of course! As a student, you can either use the Demo version or support us on Patreon for 5€ per month to get a community license and render at any resolution. Additionally, you can also ask your university to purchase Flair Indie for Education so that you can use it.
+Yes, of course! As a student, you can either use the Free version or support us on Patreon for 5€ per month to get a community license and render at any resolution. Additionally, you can also ask your university to purchase Flair Indie for Education so that you can use it.
 </div>
 
 Are there floating licenses available?
