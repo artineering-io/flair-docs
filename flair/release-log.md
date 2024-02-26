@@ -70,6 +70,12 @@ The Flair Renderer has been revamped to include the ability to render at differe
 - *Improved* - _Re-link Textures_ will relativize textures if found in the current Maya project
 - *Improved* - Accurate [VRAM log](/flair/toolbox/#vram-info)
 
+### Import/Export
+- *Fixed* - Style import only on selected objects not working
+- *Fixed* - Style import stuck when MFnMesh could not be attached to shape
+- *Fixed* - Style import sometimes failing due to backslashes in sequence directory
+- *Fixed* - ShaderFX materials being applied sometimes on old Flair scenes
+
 ### Miscellaneous
 - *New* - Nuke comp to combine toon and sketch lines with other renderers
 - *New* - Flair commands in the API: [vram](/flair/api/#vram-vrm), [targetsToDistort](/flair/api/#targetstodistort-td) and [forceDistortionBlending](/flair/api/#forcedistortionblending-fdb).
@@ -77,7 +83,6 @@ The Flair Renderer has been revamped to include the ability to render at differe
 - *Fixed* - Cutout style - Not working correctly in Flair 1.1
 - *Fixed* - Watercolor style - Rendering of cryptomattes not working
 - *Fixed* - Light painting not affecting painterly attributes in material
-- *Fixed* - Style import stuck when MFnMesh could not be attached to shape
 - *Fixed* - Save/replace option of _Separate Stylization_ global not sticking after being prompted to it while saving
 
 ---
