@@ -75,13 +75,18 @@ The Flair Renderer has been revamped to include the ability to render at differe
 - *Fixed* - Style import stuck when MFnMesh could not be attached to shape
 - *Fixed* - Style import sometimes failing due to backslashes in sequence directory
 - *Fixed* - ShaderFX materials being applied sometimes on old Flair scenes
+- *Fixed* - Style always auto-loading after importing a *.style file with proxies
+- *Fixed* - Style not saving ShaderFX materials properly
+- *Fixed* - Style import stuck if a texture was previously assigned and un-assigned from an attribute
 
 ### Miscellaneous
 - *New* - Nuke comp to combine toon and sketch lines with other renderers
 - *New* - Flair commands in the API: [vram](/flair/api/#vram-vrm), [targetsToDistort](/flair/api/#targetstodistort-td) and [forceDistortionBlending](/flair/api/#forcedistortionblending-fdb).
+- *New* - "What's New" splash window now shows direct download link for latest version if artist is using an outdated Flair version.
 - *Fixed* - Crashes sometimes when opening scenes due to light linking not being updated
 - *Fixed* - Cutout style - Not working correctly in Flair 1.1
 - *Fixed* - Watercolor style - Rendering of cryptomattes not working
+- *Fixed* - Painting VertexFX on ShaderFX materials not working (proxies, cutout and hatching materials)
 - *Fixed* - Light painting not affecting painterly attributes in material
 - *Fixed* - Save/replace option of _Separate Stylization_ global not sticking after being prompted to it while saving
 
