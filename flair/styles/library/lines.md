@@ -6,6 +6,10 @@ grand_parent: Styles
 nav_order: 7
 ---
 
+<figure>
+ <img src="/media/styles/lines/lines_header.jpg" alt="Lines header">
+</figure>
+
 # Toon and sketch lines shader style
 
 <details close markdown="block">
@@ -17,10 +21,8 @@ nav_order: 7
 {:toc}
 </details>
 
-<!-- 
-[Back to Sketch Features](https://artineering.io/styles/warp
+[Back to Lines Features](https://artineering.io/styles/lines
 ){: .aio-btn .d-block}
--->
 
 ## Style breakdown
 
@@ -44,7 +46,9 @@ The toon and sketch line shader style may not have all features that you need. S
 ## Tutorials
 
 <div class="d-flex flex-justify-around">
-{% include responsive-embed url="https://www.youtube.com/embed/videoseries?si=kyQSf-WSCExdRzL2&amp;list=PLqQsRmdLB8t_h71jiVsGcv669-eu4YNXT" width="80%" caption="Tutorial Series - All about Toon Lines in Flair for Maya" %}
+{% include responsive-embed url="https://www.youtube.com/embed/videoseries?si=kyQSf-WSCExdRzL2&amp;list=PLqQsRmdLB8t_h71jiVsGcv669-eu4YNXT" width="380px" caption="Tutorial Series - All about Toon Lines in Flair for Maya" %}
+
+{% include responsive-embed url="https://www.youtube.com/embed/videoseries?si=kyQSf-WSCExdRzL2&amp;list=PLqQsRmdLB8t_-ZEP29BQKavbcvX_HtqwX" width="380px" caption="Tutorial Series - All about Sketch Lines in Flair for Maya" %}
 </div>
 
 ---

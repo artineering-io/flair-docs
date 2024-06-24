@@ -36,10 +36,10 @@ Get a **commercial**, **non-commercial** or **free** version of Flair below.
 
 [Get Flair](https://artineering.io/software/flair#download){: target="_blank" .aio-btn .d-block}
 
-Free versions and are limited only in resolution to 1280 x 800.
+**Free versions** are limited only in resolution to 1280 x 800.
 
 Upon purchasing Flair, you can download any version through the link you receive via email.  
-You can also download the demo version and [activate a license](#activation) with your activation key.
+You can also download the free version and [activate a license](#activation) with your activation key.
 {: info}
 
 ---
@@ -106,7 +106,7 @@ After installation and activation, artists will find their **presets and prefere
 Purchasing a Flair **license enables the full functionality of Flair** upon activation.  
 Activate Flair by entering and **validating an activation key** that is sent to you via email shorly after purchase.
 
-**An internet connection is required** to activate and validate Flair licenses, except for the Demo version.
+**An internet connection is required** to activate and validate Flair licenses, except for the Free version.
 
 A **single Flair license** can be active on **only one computer at a time**.  
 Licenses can be **migrated between computers after 12 hours** have passed from a previous activation.
@@ -121,8 +121,8 @@ The first time Flair is run, you will be prompted with the following dialog:
 </figure>
 
 * **Activate with key** lets you to enter the activation key of your license.  
-* **Activate demo** activates the demo version of Flair, with limited resolution of 1280 x 800 pixels.
-* **Cancel** runs Flair as demo this time only. You will be prompted again the next time Flair loads.
+* **Activate free version** activates the free version of Flair, with limited resolution of 1280 x 800 pixels.
+* **Cancel** runs Flair as the free version this time only. You will be prompted again the next time Flair loads.
 
 After clicking `Activate with key`, enter the activation key you received when purchasing Flair and click `OK`.
 
@@ -142,7 +142,7 @@ The EULAs for each version of Flair can be found below:
 * [Flair Studio EULA](https://artineering.io/legal/flair-studio-eula)
 * [Flair Indie EULA](https://artineering.io/legal/flair-indie-eula)
 * [Flair Community EULA](https://artineering.io/legal/flair-community-eula)
-* [Flair Demo EULA](https://artineering.io/legal/flair-demo-eula)
+* [Flair Free EULA](https://artineering.io/legal/flair-free-eula)
 
 Once you have read and agreed to the End-User License Agreement, click on **I Agree**. You will then be asked to confirm the activation on this computer. 
 
@@ -157,7 +157,7 @@ Click **Activate** to confirm and activate, or **Cancel** to abort the activatio
 
 If a license has been previously activated, you may want to remove the activated license and **activate a different license** instead.
 
-This is useful when upgrading/downgrading between the Demo, Community, Indie or Studio licenses.
+This is useful when upgrading/downgrading between the Free, Community, Indie or Studio licenses.
 {: .info}
 
 You can activate a different license by **re-installing Flair** again and choosing to **Delete the existing license**.
@@ -191,7 +191,7 @@ After inputting the **activation key on the new computer**, you will be prompted
 	<figcaption>Flair license prompt that appears if an existing license is found.</figcaption>
 </figure>
 
-Click `Activate` to confirm, or `Cancel` to abort activation and run as demo for this session.
+Click `Activate` to confirm, or `Cancel` to abort activation and run the free version for this session.
 
 After a successful migration, the license in the **other computer will automatically deactivate** and you can **use Flair in the new computer**.
 
