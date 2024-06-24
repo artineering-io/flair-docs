@@ -22,21 +22,21 @@ nav_order: 2
 
 | Requirements      | Minimum    | Recommended   | Notes                                                                                   |
 |-------------------|------------|---------------|-----------------------------------------------------------------------------------------|
-| **Autodesk Maya** | 2022.4    | 2023.3        | Maya 2022, 2023 and 2024 are supported                                                       |
-| **OS**            | Windows 10 | Windows 10/11 | Linux/Mac compiled on-demand for Studios, [contact us](https://artineering.io/contact) |
+| **Autodesk Maya** | 2022.4    | 2023.3        | Maya 2022, 2023, 2024 and 2025 are supported                                                       |
+| **OS**            | Windows 10<br>RHEL 7.9 | Windows 11<br>RHEL 8 | Linux available on-demand for Studios, [contact us](https://artineering.io/contact) |
 | **VRAM**          | 4 GB       | 8+ GB          | Higher resolutions and scene complexity require more VRAM                               |
 | **Memory**        | 8 GB       | 16+ GB         | As much as your Maya scene requires                                                     |
 
-_Resizable BAR_ (Base Address Register) or _AMD SAM_ (Smart Access Memory) found in modern hardware can significantly increase performance.
+_Resizable BAR_ (Base Address Register) or _AMD SAM_ (Smart Access Memory) found in modern hardware can significantly increase performance when using the Flair Graph.
 {: .info}
 
 ---
 ## Download
-Get a **commercial, non-commercial or demo** version of Flair below.
+Get a **commercial**, **non-commercial** or **free** version of Flair below.
 
 [Get Flair](https://artineering.io/software/flair#download){: target="_blank" .aio-btn .d-block}
 
-**Demo versions are free to use** and are limited only in resolution to 1280 x 800.
+Free versions and are limited only in resolution to 1280 x 800.
 
 Upon purchasing Flair, you can download any version through the link you receive via email.  
 You can also download the demo version and [activate a license](#activation) with your activation key.
@@ -47,8 +47,9 @@ You can also download the demo version and [activate a license](#activation) wit
 Installing Flair is as simple as a drag-and-drop.  
 
 1. Make sure you have all [pre-requisites](#pre-requisites)
-2. Download and extract the contents of the Flair *zip* file in any folder outside of Maya that doesn't not require "admin" rights i.e., Documents/Flair, Desktop/Flair, C:/Flair.
-3. Open the folder where you extracted Flair in
+2. Download and extract all the contents of the Flair *zip* file into any folder outside of Maya  
+e.g., `Documents/Flair`, `C:/Flair`, a shared drive.
+3. Open the folder where you extracted Flair into, this will become your installation folder
 4. Drag-and-drop the `install_maya.mel` file onto the Maya viewport
 5. Select for whom you want to install Flair for and click `Accept` ([see options](#installation-options))
 	<figure class="aio-ui aio-window">
@@ -61,24 +62,44 @@ Installing Flair is as simple as a drag-and-drop.
         <figcaption>Flair has been successfully installed.</figcaption>
     </figure>
 7. Restart Maya
-8. Click on the test file in the shelf to load our favourite sphere
-9. [Activate Flair](#activation) if not done previously.
+8. After restarting, the Flair shelf should appear in Maya
+9. Click on the `glob` or `test` shelf button to verify the installation and prompt the Flair activation
+9. [Activate Flair](#activation) if needed.
 
 
 
 ### Installation options
 
-**Only for me - Recommended for individuals** to install and keep different versions of Flair on different versions of Maya.
+#### Only for me
+*Recommended for individuals* for simple installations without admin rights.
 
-This option installs Flair within your **user folder** and does not require administrator rights.
+The installer will only insert the Flair paths into your `Maya.env` file for the Maya version in use.
 
-The license will be placed in `Documents/maya` and the Flair path will be inserted into the `Maya.env` file of the Maya where you are installing Flair in.
+All flair-related files are kept within the Flair installation folder, except for the license file, which is placed in:
+* Windows: `Documents/maya`
+* Linux: `~/maya`
 
-**For all users - Recommended for institutions** where multiple users will use Flair on the same computer.
+The "Only for me" option allows keeping different versions of Flair on different versions of Maya. However, you will need read/write permissions to the Flair installation folder.
+{: .info}
 
-This option installs Flair within your **system folders** and requires administrator rights.
+#### For all users
+*Recommended for studios or institutions* where multiple artists use Flair from the same workstation/server.
 
-The license will be placed in `Program Files/Common Files/Autodesk Shared/Modules/Maya` and the Flair module in the same folder for all the supported Maya versions.
+This method allows installing Flair automatically in all supported Maya versions, even in environments with strict read-only policies e.g., *Rez* repo.
+
+The Flair installation "For all users" requires admin/sudo privileges to place files in:
+
+##### License and modules
+* Windows: `%CommonProgramFiles%/Autodesk Shared/Modules/maya`
+* Linux: `/usr/autodesk/modules/maya`
+
+##### Canvas caches
+* Windows: `%ProgramData%/Flair`
+* Linux: `opt/Flair`
+
+After installation and activation, artists will find their **presets and preferences** in:
+* Windows: `Documents/AppDocuments/Flair`
+* Linux: `~/AppDocuments/Flair`
 
 ---
 ## Activation
@@ -139,18 +160,19 @@ If a license has been previously activated, you may want to remove the activated
 This is useful when upgrading/downgrading between the Demo, Community, Indie or Studio licenses.
 {: .info}
 
-You can activate a different license by **installing Flair** again and choosing to **delete the existing license**.
+You can activate a different license by **re-installing Flair** again and choosing to **Delete the existing license**.
+
+<figure class="aio-ui aio-window">
+	<img src="/media/setup/re-install_delete_license.png" alt="Installation dialog with Delete the existing license selected">
+	<figcaption>Re-installation dialog with license deletion.</figcaption>
+</figure>
 
 1. Open the folder where Flair was installed from
 2. Drag-and-drop the `install_maya.mel` file onto the Maya viewport
-3. When prompted if you wish to keep the existing license, click `No`
-    <figure class="aio-ui aio-window">
-        <img src="/media/setup/installation_license_confirmation.png" alt="License found prompt">
-        <figcaption>License found prompt.</figcaption>
-    </figure>
-4. Proceed with the [normal installation](#installation)
+3. Within the installation dialog, check "Delete the existing license"
+4. Proceed with the installation
 4. Restart Maya
-3. Load Flair to activate the new license
+3. Load Flair to trigger the license activation again
 
 
 ### License Migration
