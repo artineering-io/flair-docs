@@ -597,6 +597,34 @@ Velocity is enabled by default, but it can be deactivated per material if motion
 {: .info}
 
 ---
+#### NoiseFX
+The _NoiseFX_ setting toggles the use of NoiseFX in the material and enables the NoiseFX section within the bottom of the Attribute Editor. This attribute is generally toggled automatically when the [NoiseFX](/flair/art-direction/noisefx/) tool is used and allows you to key and animate NoiseFX attributes when needed.
+
+<figure class="aio-ui">
+	<img src="/media/flair-shader/noisefx.png" alt="Stylization (procedural) attributes">
+	<figcaption>The beginning of the NoiseFX attributes</figcaption>
+</figure>
+
+---
+
+#### Threshold Offsets
+The _Threshold Offsets_ setting toggles the available threshold offsets per material and the respective section within the Attribute Editor. The effects of these attributes will only be visible on effects and styles that work with thresholds i.e., lines (toon and sketch).
+
+<figure class="aio-ui">
+	<img src="/media/flair-shader/threshold-offsets.png" alt="Stylization (procedural) attributes">
+	<figcaption>The beginning of the NoiseFX attributes</figcaption>
+</figure>
+
+##### Depth Threshold Offset
+_Depth Threshold Offset_ modifies the global depth threshold for this material
+
+#### Flow Threshold Offset
+_Flow Threshold Offset_ modifies the global flow (normals) threshold for this material
+
+#### Color Threshold Offset
+_Color Threshold Offset_ modifies the global color threshold for this material
+
+---
 
 ### Geometry
 This group contains all attributes changing the geometry of the material.
@@ -652,7 +680,7 @@ Different types of wobble noise can be specified for different results
 
 * **None** - No wobble is applied
 * **Simple** - Default simplex wobble noise
-* **Cloud** - More detailed fractalized wobble noise resembling the "cloud" noise in Photoshop (appreciated better with higher polygon count).
+* **Cloud** - More detailed fractalized wobble noise resembling the "cloud" noise in Photoshop (better appreciated higher polygon count).
 * **Custom** - Custom noise, which can be written in glsl `flair/maya/shaders/material/include/noise.glsl` [`customNoise3(vec4 v)`].
 
 <figure class="aio-ui">
@@ -699,7 +727,7 @@ As wobble is generated from noise in 3D, make sure to toggle the *deformed* attr
 
 
 ##### Wobble Blur
-Defines the amount wobble blur for each TAA sample, generating a soft edge by avaraging different wobble positions.
+Defines the amount wobble blur for TAA samples, generating a soft edge by avaraging different wobble positions as layers.
 
 <figure>
     <video autoplay loop muted playsinline style="width:152px">
@@ -707,6 +735,19 @@ Defines the amount wobble blur for each TAA sample, generating a soft edge by av
     </video>
     <figcaption>Wobble Blur (0...1).</figcaption>
 </figure>
+
+##### Wobble Blur Layers
+Defines the amount of wobble blur layers i.e., the amount of wobbled positions to use during the wobble blur.
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/wobble-layers.mp4" type="video/mp4">
+    </video>
+    <figcaption>Wobble Blur Layers (32...1).</figcaption>
+</figure>
+
+With a low layer amount, you can use Wobble Blur to achieve a layered watercolor look!
+{: .info}
 
 ##### Wobble Motion
 Defines the amount of motion offset of the wobble, generating streaks of motion under animation. For this attribute to show it's effect, make sure that velocity is enabled in the _Globals_ node and in the material.
@@ -718,17 +759,6 @@ Defines the amount of motion offset of the wobble, generating streaks of motion 
     <figcaption>Wobble motion at 0.5 and 2.5.</figcaption>
 </figure>
 
-------------------
-------------------
-
-
-## NoiseFX
-The _NoiseFX_ section (closed by default) at the bottom contains the attributes that are automatically set by the [_NoiseFX_](/art-direction/noisefx) tool. You can mostly ignore these attributes within the material, unless you want to key and animate NoiseFX values.
-
-<figure class="aio-ui">
-	<img src="/media/flair-shader/noisefx.png" alt="Stylization (procedural) attributes">
-	<figcaption>All NoiseFX attributes</figcaption>
-</figure>
 
 ------------------
 ------------------

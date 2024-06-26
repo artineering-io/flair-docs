@@ -23,7 +23,7 @@ nav_order: 2
 | Requirements      | Minimum    | Recommended   | Notes                                                                                   |
 |-------------------|------------|---------------|-----------------------------------------------------------------------------------------|
 | **Autodesk Maya** | 2022.4    | 2023.3        | Maya 2022, 2023, 2024 and 2025 are supported                                                       |
-| **OS**            | Windows 10<br>RHEL 7.9 | Windows 11<br>RHEL 8 | Linux available on-demand for Studios, [contact us](https://artineering.io/contact) |
+| **OS**            | Windows 10<br>RHEL 7.9 | Windows 11<br>RHEL 8+ | Linux available on-demand for Studios, [contact us](https://artineering.io/contact) |
 | **VRAM**          | 4 GB       | 8+ GB          | Higher resolutions and scene complexity require more VRAM                               |
 | **Memory**        | 8 GB       | 16+ GB         | As much as your Maya scene requires                                                     |
 
