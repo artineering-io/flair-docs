@@ -24,6 +24,9 @@ nav_order: 12
 ## Setup
 {% include faq/section.html file="setup.md" %}
 
+## Viewport
+{% include faq/section.html file="viewport.md" %}
+
 ## NoiseFX
 {% include faq/section.html file="noisefx.md"%}
 
