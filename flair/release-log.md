@@ -17,6 +17,52 @@ nav_order: 10
 </details>
 
 
+---
+
+## Flair 1.1.2
+> Released 25.07.2024
+
+Battle testing Flair!
+
+Flair 1.1.2 brings a revamped installation experience, improved stability, and useful small new features to bring effects like wobble blur to the next level! Additionally, Flair now fully supports Maya 2025 and runs on RHEL-based Linux distributions!
+
+### Installation
+The entire installation process has been revamped
+
+- *Improved* - Only allow to agree EULA after it has loaded
+- *Improved* - New cache location for precomputed canvases
+
+### Materials
+- *New* - Added support for albedo textures with transparency. You no longer need to create a separate alpha map to define transparent parts within objects. Assigning alpha maps will override the contents of the alpha channel in albedo textures.
+- *New* - Wobble blur layers per material
+- *New* - Threshold offsets per material for styles that support it (lines)
+- *New* - *NoiseFX* setting to toggle NoiseFX within materials
+
+### Import/Export
+- *Fixed* - Importing VertexFX erroring out on referenced materials
+- *Fixed* - VertexFX sometimes not being imported correctly when materials were also imported
+- *Improved* - Performance of setting materials onto components
+- *Improved* - Progress dialog flickering after completion
+- *Improved* - Adding support for materials assigned to nurb surfaces
+- *Improved* - File dialog now opens on the last active directory
+- *Improved* - Importing only to selected objects when no selection has been made shows an error
+
+### Lines Style
+* *Fixed* - Artifacts when toon and sketch line density were set to 0.0
+* *Fixed* - Pigment application affecting lines
+* *Fixed* - Toggling velocity on materials affecting sketch lines
+* *Improved* - Material threshold offsets allow for different thresholds for each material
+* *Improved* - Renamed `Line Width Range`  to `Line Width Depth Range` and `Line Width Factor` to `Line Width Depth Factor`
+
+### Fray Style
+* *New* - Added edge width control
+
+### Miscellaneous
+* *New* - Added substract option to merge shader node in Flair Graph
+- *Improved* - Surface shaders can now also be converted to Flair materials.
+- *Improved* - Default behavior of distorting the normalsDepth AOV will be blended
+
+---
 
 ## Flair 1.1.1
 > Released 23.02.2024 [[**Download**](https://artineering.io/software/flair#pricing)]
