@@ -66,6 +66,8 @@ e.g., `Documents/Flair`, `C:/Flair`, a shared drive.
 9. Click on the `glob` or `test` shelf button to verify the installation and prompt the Flair activation
 9. [Activate Flair](#activation) if needed.
 
+If the drag-and-drop of the `install_maya.mel` file fails, make sure that its directory only contains valid [ASCII characters](https://en.wikipedia.org/wiki/ASCII), or Maya won't be able to read the _MEL_ file.
+{: .warning}
 
 
 ### Installation options
