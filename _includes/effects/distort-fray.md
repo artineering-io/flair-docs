@@ -37,7 +37,28 @@ Defines the maximum amount that the frayed distortion can grow iteratively, even
 </figure>
 
 Longer frayed edges are much more prone to flicker than shorter ones.
-{: .info} 
+{: .info}
+
+#### Frayed Depth Range
+The depth range at which frayed distortions are reduced or increased by the _Frayed Depth Factor_. This attribute consists of four (4) values that define the different distances from the camera to modify the amount of frayed distortions. From left to right: Close, Close Mid, Far Mid, Far.
+
+Between the _Close Mid_ and _Far Mid_ distances, the global _Frayed_ value that has been set will apply. Beyond these distances towards the _Close_ and _Far_ depths, the global _Frayed_ value will be multiplied by the _Frayed Depth Factor_, which is defined below.
+
+The distances are relative to the _World Scale_ global. For example, if the world scale is of _100_, a _1000_ Maya unit distance will be _10_ (1000/100). If the world scale is 1, a _1000_ Maya unit distance will be _1000_.
+{: .info}
+
+#### Frayed Depth Factor
+The factor to multiply the frayed distortions with, depending on the distance to the camera defined in the _Frayed Depth Range_. The first value is at _Close_ distance and the second value is at _Far_ distance. 
+
+<figure>
+	<video autoplay loop muted playsinline>
+	    <source src="/media/effects/fray/frayed-depth-range.mp4" type="video/mp4">
+	</video>
+	<figcaption>Frayed distortion changes according to the Frayed Depth Range and Frayed Depth Factor.</figcaption>
+</figure>
+
+You can set both of these values to 1.0 if you do not wish to modify the _Frayed_ distortions along the depth.
+{: .info}
 
 #### Frayed Feathering
 Fades the frayed distortion towards the tips of the distortion.

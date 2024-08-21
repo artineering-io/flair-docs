@@ -20,59 +20,104 @@ nav_order: 10
 ---
 
 ## Flair 1.1.2
-> Released 25.07.2024
+> Released 21.08.2024 [[**Download**](https://artineering.io/software/flair#pricing)]
 
-Battle testing Flair!
+<figure class="release-log">
+<video autoplay loop muted playsinline>
+	<source src="/media/release-log/1.1.2/banner_1_1_2_web.mp4" type="video/mp4">
+</video>
+<figcaption>3D model by Jose Díaz.</figcaption>
+</figure>
 
-Flair 1.1.2 brings a revamped installation experience, improved stability, and useful small new features to bring effects like wobble blur to the next level! Additionally, Flair now fully supports Maya 2025 and runs on RHEL-based Linux distributions!
+> Battle testing Flair!
+
+Flair 1.1.2 brings a **revamped installation experience**, improved **stability and speed**, and **tons of small but useful new features** to bring effects like **wobble blur, toon/sketch lines and the fray style to the next level!** Additionally, Flair now fully **supports Maya 2025** and **runs on RHEL-based Linux distributions!** We have also included a **new demo scene** for Indie/Studio artists and all patreons!
+
+Thanks to everyone for their feedback, Flair has never been this good!
 
 ### Installation
-The entire installation process has been revamped
-
+The entire installation process has been revamped to better guide the artist and added proper support for read-only installations (all-users).
+- *New* - Installation UI letting you uninstall, install, and delete existing license [[docs](/flair/setup/#re-activation)]
+- *New* - Specify the location of presets/preferences and canvas caches when installing for all-users [[docs](/flair/setup/#for-all-users)]
 - *Improved* - Only allow to agree EULA after it has loaded
 - *Improved* - New cache location for precomputed canvases
 
+### Lines Style
+* *New* - Added `Line Width Light Response` global control line thickness through lighting [[docs](/flair/styles/library/lines/#line-width-light-response)]
+* *New* - Material `Offsets` to set line thresholds offsets for each material (depth, flow and color thresholds and depth bias) [[docs](/flair/materials/flair-shader/#offsets)]
+* *Fixed* - In-between line width transitions looking bad
+* *Fixed* - Artifacts when toon and sketch line density were set to 0.0
+* *Fixed* - Pigment application affecting lines
+* *Fixed* - Toggling velocity on materials affecting sketch lines
+* *Fixed* - Line compositing showing dark halos
+* *Improved* - Separated sketch lines in individual AOVs for better compositing
+* *Improved* - Updated Nuke comps and added simplified comp for adding lines to external images
+* *Improved* - Renamed `Line Width Range`  to `Line Width Depth Range` and `Line Width Factor` to `Line Width Depth Factor`
+
+<figure class="release-log">
+<video autoplay loop muted playsinline>
+	<source src="/media/release-log/1.1.2/edge_width_web.mp4" type="video/mp4">
+</video>
+<figcaption>Before and after the new line dilation algorithm.</figcaption>
+</figure>
+
+### Fray Style
+* *New* - Added `Frayed Depth Range` and `Frayed Depth Factor` global control [[docs](/flair/styles/library/fray/#frayed-depth-range)]
+* *New* - Added edge width control within _VertexFX_ and _NoiseFX_
+
 ### Materials
-- *New* - Added support for albedo textures with transparency. You no longer need to create a separate alpha map to define transparent parts within objects. Assigning alpha maps will override the contents of the alpha channel in albedo textures.
-- *New* - Wobble blur layers per material
-- *New* - Threshold offsets per material for styles that support it (lines)
-- *New* - *NoiseFX* setting to toggle NoiseFX within materials
+- *New* - Added support for albedo textures with transparency [[docs](/flair/materials/flair-shader/#albedo)]
+- *New* - `Wobble Blur Layers` [[docs](/flair/materials/flair-shader/#wobble-blur-layers)]
+- *New* - `Offsets` setting for supported styles (depth/flow/color thresholds and depth bias) [[docs](/flair/materials/flair-shader/#offsets)]
+- *New* - `Culling Mode` setting [[docs](/flair/materials/flair-shader/#culling)]
+- *New* - `Light linking` setting to enable light-linking on-demand [[docs](/flair/materials/flair-shader/#light-linking)]
+- *New* - `NoiseFX` setting to toggle NoiseFX within materials [[docs](/flair/materials/flair-shader/#noisefx)]
+- *Improved* - Highlight diffussion not looking right
+- *Improved* - Negative *Bump Depth* now flips the U normal
+- *Removed* - Alternative reflectance models as they don't work with shadow maps
+
+<figure class="release-log">
+<video autoplay loop muted playsinline>
+	<source src="/media/release-log/1.1.2/wobble_blur_layers_web.mp4" type="video/mp4">
+</video>
+<figcaption>Wobble blur layers being featured in the new demo scene.</figcaption>
+</figure>
 
 ### Import/Export
 - *Fixed* - Importing VertexFX erroring out on referenced materials
 - *Fixed* - VertexFX sometimes not being imported correctly when materials were also imported
+- *Fixed* - _OverFlowError_ in Maya 2023 and 2024 when style file becomes too big
 - *Improved* - Performance of setting materials onto components
 - *Improved* - Progress dialog flickering after completion
-- *Improved* - Adding support for materials assigned to nurb surfaces
+- *Improved* - Adding support for materials assigned to nurbs surfaces
 - *Improved* - File dialog now opens on the last active directory
 - *Improved* - Importing only to selected objects when no selection has been made shows an error
 
-### Lines Style
-* *Fixed* - Artifacts when toon and sketch line density were set to 0.0
-* *Fixed* - Pigment application affecting lines
-* *Fixed* - Toggling velocity on materials affecting sketch lines
-* *Improved* - Material threshold offsets allow for different thresholds for each material
-* *Improved* - Renamed `Line Width Range`  to `Line Width Depth Range` and `Line Width Factor` to `Line Width Depth Factor`
-
-### Fray Style
-* *New* - Added edge width control
-
 ### Miscellaneous
-* *New* - Added substract option to merge shader node in Flair Graph
-- *Improved* - Surface shaders can now also be converted to Flair materials.
+- *Fixed* - Rendering progress bar not showing correct progress with custom frame steps
+- *Improved* - Surface shaders can also be converted to Flair materials
+- *Improved* - Renderer shows an error when saving with non-ASCII characters
 - *Improved* - Default behavior of distorting the normalsDepth AOV will be blended
+- *Improved* - Reduced small memory footprint by discarding unused render targets
+
+<figure>
+<video autoplay loop muted playsinline>
+	<source src="/media/release-log/1.1.2/cranes_web.mp4" type="video/mp4">
+</video>
+<figcaption>Thank you for reading this far!</figcaption>
+</figure>
 
 ---
 
 ## Flair 1.1.1
-> Released 23.02.2024 [[**Download**](https://artineering.io/software/flair#pricing)]
+> Released 23.02.2024
 
 <figure>
 	<img src="/media/release-log/1.1.1/banner.gif" alt="Flair 1.1.1 banner gif"/>
     <figcaption>3D model by Marleen Vijge</figcaption>
 </figure>
 
-The first patch update of Flair 1.1 is here!
+> The first patch update of Flair 1.1 is here!
 
 Flair 1.1.1 **focuses on stability** but also brings sought after **updates to rendering** like the ability to **render only every X frames** and to **render any AOV with TAA and its respective effects**, i.e., geo/wobble blur. Additionally, the **Cutout shader style has been fixed**, and the **Warp shader style art-direction has been restored**, even with Arnold materials. **Crashes** happening upon opening different scenes or assigning materials to components **have been fixed**, and a lot of other bugs have been ironed out, as documented below.
 
@@ -493,7 +538,7 @@ We will continue releasing patch updates alongside feature updates to improve th
 <div class="d-flex">
 	<figure>
 		<video autoplay loop muted playsinline style="max-height:480px;">
-			<source src="/media/release-log/1.0.1.mp4" type="video/mp4">
+			<source src="/media/release-log/1.0.1/1.0.1.mp4" type="video/mp4">
 		</video>
     <figcaption>Steam Cowboy 3D model by Black Spire.</figcaption>
   </figure>
@@ -536,13 +581,13 @@ All MNPRX styles have been ported over to Flair to use OpenGL instead of DirectX
 <div class="d-flex">
 	<figure>
 		<video autoplay loop muted playsinline style="max-height:350px;">
-			<source src="/media/release-log/bristleback_web.mp4" type="video/mp4">
+			<source src="/media/release-log/1.0.0/bristleback_web.mp4" type="video/mp4">
 		</video>
     <figcaption>3D model by Nikolay Tsys.</figcaption>
   </figure>
   <figure>
 		<video autoplay loop muted playsinline style="max-height:350px;">
-			<source src="/media/release-log/cat_web.mp4" type="video/mp4">
+			<source src="/media/release-log/1.0.0/cat_web.mp4" type="video/mp4">
 		</video>
 		<figcaption>3D model by Jose Diaz.</figcaption>
 	</figure>
@@ -553,7 +598,7 @@ All MNPRX styles have been ported over to Flair to use OpenGL instead of DirectX
 The biggest limitation of MNPRX was that you could only use the styles it came with. That starts to change with Flair, as you can use the new Flair Graph to modify and even create your own shader styles from scratch! While still in beta stages, we have decided to release it to gather feedback as soon as possible and learn your thoughts and wishes for it.
 
 <figure>
-    <img src="/media/release-log/flair-graph-beta.jpg" alt="Flair graph beta screenshot">
+    <img src="/media/release-log/1.0.0/flair-graph-beta.jpg" alt="Flair graph beta screenshot">
     <figcaption>Using the Flair graph to mix/match/write shaders to create your own style in Flair</figcaption>
 </figure>
 

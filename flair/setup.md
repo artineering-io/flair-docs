@@ -103,6 +103,9 @@ After installation and activation, artists will find their **presets and prefere
 * Windows: `Documents/AppDocuments/Flair`
 * Linux: `~/AppDocuments/Flair`
 
+If you need to customize where the _program data_ (caches) and _app documents_ (presets/preferences) are stored, you can follow the instructons within `flair/maya/scripts/coop/_custom_dirs_example.json`.
+{: .warning}
+
 ---
 ## Activation
 Purchasing a Flair **license enables the full functionality of Flair** upon activation.  

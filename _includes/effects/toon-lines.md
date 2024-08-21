@@ -21,18 +21,28 @@ Width of the generated toon and sketch lines. The width of lines can also be art
 	<video autoplay loop muted playsinline>
 	    <source src="/media/effects/lines/line-width.mp4" type="video/mp4">
 	</video>
-	<figcaption>Line width between 1 and 10.</figcaption>
+	<figcaption>Line width between 0 and 10.</figcaption>
 </figure>
 
 #### Line Width Max
 Defines the maximum width the generated toon and sketch lines may have.
 
-#### Line Width Range
+#### Line Width Light Response
+The influence lighting will have over the width of the line. Positive _Line Width Light Response_ will thin the line on lit parts, whereas a negative _Line Width Light Response_ will thin the line on parts within the shade.
+
+<figure>
+	<video autoplay loop muted playsinline>
+	    <source src="/media/effects/lines/line-width-light-response.mp4" type="video/mp4">
+	</video>
+	<figcaption>Line width light response between -1 and 1.</figcaption>
+</figure>
+
+#### Line Width Depth Range
 The depth range at which toon and sketch lines are widened or thinned in the scene. This attribute consists of four (4) values that define the different distances from the camera to modify the line width. From left to right: Close, Close Mid, Far Mid, Far.
 
-Between the _Close Mid_ and _Far Mid_ distances, the global _Line Width_ that has been set will apply. Beyond these distances towards the _Close_ and _Far_ depths, the global _Line Width_ will be multiplied by the _Line Width Factor_, which is defined below.
+Between the _Close Mid_ and _Far Mid_ distances, the global _Line Width_ that has been set will apply. Beyond these distances towards the _Close_ and _Far_ depths, the global _Line Width_ will be multiplied by the _Line Width Depth Factor_, which is defined below.
 
-The distances are relative to the _World Scale_ global attribute. For example, if the world scale is of _100_, a _1000_ Maya unit distance will be _10_ (1000/100). If the world scale is 1, a _1000_ Maya unit distance will be _1000_.
+The distances are relative to the _World Scale_ global. For example, if the world scale is of _100_, a _1000_ Maya unit distance will be _10_ (1000/100). If the world scale is 1, a _1000_ Maya unit distance will be _1000_.
 {: .info}
 
 <figure class="aio-ui">
@@ -40,14 +50,14 @@ The distances are relative to the _World Scale_ global attribute. For example, i
  <figcaption>Breakdown - Line Width Range and Line Width Factor</figcaption>
 </figure>
 
-#### Line Width Factor
-The factor to multiply the toon and sketch line width, depending on the distance to the camera defined in the _Line Width Range_. The first value is at _Close_ distance and the second value is at _Far_ distance. 
+#### Line Width Depth Factor
+The factor to multiply the toon and sketch line width, depending on the distance to the camera defined in the _Line Width Depth Range_. The first value is at _Close_ distance and the second value is at _Far_ distance. 
 
 <figure>
 	<video autoplay loop muted playsinline>
 	    <source src="/media/effects/lines/line-range-factor.mp4" type="video/mp4">
 	</video>
-	<figcaption>Line width changes according to the Line Width Range and Line Width Factor.</figcaption>
+	<figcaption>Line width changes according to the Line Width Depth Range and Line Width Depth Factor.</figcaption>
 </figure>
 
 You can set both of these values to 1.0 if you do not wish to modify the _Line Width_ along the depth.

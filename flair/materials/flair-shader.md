@@ -161,6 +161,8 @@ _Albedo_ contains the raw colors of the object, without any lighting information
     <figcaption>Albedo Texture with different tint colors and a Diffuse Factor of 0.85</figcaption>
 </figure>
 
+Albedo textures with an alpha channel will only show transparency if the [Transparent](#transparent) setting is activated. Any albedo transparency will be overriden if you specify a custom _transparency map_ or _alpha mask_.
+
 ### Normal Map
 _Normal Map_ is a texture which contains normal inclination deviations of the surface in the red and green channels, adding geometric detail without using polygons. Click on the checkerboard icon to select a texture.
 
@@ -182,6 +184,8 @@ Defines the intensity of the normal inclinations in the [_Normal Map_](#normal-m
 Additional material attributes for optional features can be created on-demand by enabling different settings.
 
 Setting attributes are found in the first section of the _Attribute Editor_. Most settings are disabled by default, as to avoid unnecessary computations and clutter for artists. When needed, enabling settings will show the necessary attributes in the Attribute Editor, any copied tabs thereof, and in the Property Editor of the Hypershade window.
+
+---
 
 ### Toon Shaded
 
@@ -272,26 +276,30 @@ The _Toon Smooth Lighting_ smoothly interpolates toon lighting of various light 
 
 ---
 
-### Reflectance Model
-The _Reflectance Model_ setting defines the shading algorithm used by the _Flair Shader_. A shading algorithm dictates how light is reflected along the surface of the object. Here is a visual comparison of each shading algorithm.
+### Animated
+The _Animated_ setting bakes the current position of vertices so that the effects that rely on the 3D position of objects can stay in place when objects are deformed/animated. If this setting is not enabled, features like _NoiseFX_ or _FeatureNoise_ would float around in 3D space and not move with the objects.
 
 <figure>
-    <div class="d-flex">
-        <img src="/media/flair-shader/lambert.png" alt="lambert" style="height:152px">
-        <img src="/media/flair-shader/half-lambert.png" alt="half-lambert" style="height:152px">
-        <img src="/media/flair-shader/extended-lambert.png" alt="extended-lambert" style="height:152px">
-        <img src="/media/flair-shader/angular-lambert.png" alt="angular-lambert" style="height:152px">
-    </div>
-	<figcaption>Available reflectance models: Lambert, Half Lambert, Extended Lambert and Angular Lambert.</figcaption>
+    <video autoplay loop muted playsinline style="height:152px">
+        <source src="/media/flair-shader/not-deformed.mp4" type="video/mp4">
+    </video>
+    <figcaption>NoiseFX without the Animated setting.</figcaption>
 </figure>
 
-Some reflectance models may not be compatible with all material features on this documentation page. Only the _Lambert_ reflectance model will work with cast shadows and has been thoroughly tried and tested.
-{: .warning}
+<figure>
+    <video autoplay loop muted playsinline style="height:152px">
+        <source src="/media/flair-shader/deformed.mp4" type="video/mp4">
+    </video>
+    <figcaption>NoiseFX with the Animated setting.</figcaption>
+</figure>
 
-------------------
+---
 
 ### Lighting
 This group contains all settings affecting lighting within the material.
+
+#### Light Linking
+The _Light Linking_ setting toggles the ability to link lights within the material. This will allow `Windows->Relationship Editors->Light Linking` to work within the viewport. Keep in mind that allowing this on all materials can impact performance depending on how many lights you have in the scene.
 
 #### Light Map
 The _Light Map_ setting activates the use of light maps within the material and toggles light map attributes in the Attribute Editor. 
@@ -492,12 +500,6 @@ _Highlight Transparency_ defines the transparency of the highlight.
 
 ---
 
-
-#### Flip Back Faces
-The _Flip Back Faces_ setting flips the normals of faces that are pointing away from the camera view. This is useful to obtain better results from single polygon objects like tree leaves.
-
----
-
 #### Final Color
 The _Final Color_ setting makes the albedo its final color. Objects assigned to a final color material are not affected by lighting or the _Atmosphere Color_ attribute that is set in the globals node. This allows you to use just the color, disregarding what is happening around them.
 
@@ -561,32 +563,8 @@ The grayscale value at which the [_Alpha Mask_](#alpha-mask) is transparent. Def
 
 ---
 
-#### Animated
-The _Animated_ setting bakes the current position of vertices so that the effects that rely on the 3D position of objects can stay in place when objects are deformed/animated. If this setting is not enabled, features like _NoiseFX_ or _FeatureNoise_ would float around in 3D space and not move with the objects.
-
-<figure>
-    <video autoplay loop muted playsinline style="height:152px">
-        <source src="/media/flair-shader/not-deformed.mp4" type="video/mp4">
-    </video>
-    <figcaption>NoiseFX without the Animated setting.</figcaption>
-</figure>
-
-<figure>
-    <video autoplay loop muted playsinline style="height:152px">
-        <source src="/media/flair-shader/deformed.mp4" type="video/mp4">
-    </video>
-    <figcaption>NoiseFX with the Animated setting.</figcaption>
-</figure>
-
----
-
 #### VertexFX
 The _VertexFX_ setting toggles the control of stylization effects through the vertex colors. The attribute is automatically enabled by Flair and is toggled as soon as you start painting with the [_VertexFX_](/flair/art-direction/vertexfx/) tool.
-
----
-
-#### Feature Noise
-The _Feature Noise_ setting activates the fractalized 3D noise that is used for shader styles such as hatching, cat and sketch. Fractalized noise will always be the same pixel size, no matter how close or far the camera is from objects. This makes it ideal to recreate 2D effects which also preserve the pixel size on a canvas.
 
 ---
 
@@ -597,6 +575,12 @@ Velocity is enabled by default, but it can be deactivated per material if motion
 {: .info}
 
 ---
+
+#### Feature Noise
+The _Feature Noise_ setting activates the fractalized 3D noise that is used for shader styles such as hatching, cat and sketch. Fractalized noise will always be the same pixel size, no matter how close or far the camera is from objects. This makes it ideal to recreate 2D effects which also preserve the pixel size on a canvas.
+
+---
+
 #### NoiseFX
 The _NoiseFX_ setting toggles the use of NoiseFX in the material and enables the NoiseFX section within the bottom of the Attribute Editor. This attribute is generally toggled automatically when the [NoiseFX](/flair/art-direction/noisefx/) tool is used and allows you to key and animate NoiseFX attributes when needed.
 
@@ -607,22 +591,25 @@ The _NoiseFX_ setting toggles the use of NoiseFX in the material and enables the
 
 ---
 
-#### Threshold Offsets
-The _Threshold Offsets_ setting toggles the available threshold offsets per material and the respective section within the Attribute Editor. The effects of these attributes will only be visible on effects and styles that work with thresholds i.e., lines (toon and sketch).
+#### Offsets
+The _Offsets_ setting toggles the available offsets per material and the respective section within the Attribute Editor. The effects of these attributes will only be visible on effects and styles that work with thresholds and depth i.e., lines (toon and sketch).
 
 <figure class="aio-ui">
-	<img src="/media/flair-shader/threshold-offsets.png" alt="Stylization (procedural) attributes">
+	<img src="/media/flair-shader/offsets.png" alt="Stylization (procedural) attributes">
 	<figcaption>The beginning of the NoiseFX attributes</figcaption>
 </figure>
 
 ##### Depth Threshold Offset
 _Depth Threshold Offset_ modifies the global depth threshold for this material
 
-#### Flow Threshold Offset
+##### Flow Threshold Offset
 _Flow Threshold Offset_ modifies the global flow (normals) threshold for this material
 
-#### Color Threshold Offset
+##### Color Threshold Offset
 _Color Threshold Offset_ modifies the global color threshold for this material
+
+##### Depth Bias
+_Depth Bias_ offsets the depth of objects assigned to the material to help fix potential depth-based artifacts with overlapping geometries.
 
 ---
 
@@ -759,6 +746,19 @@ Defines the amount of motion offset of the wobble, generating streaks of motion 
     <figcaption>Wobble motion at 0.5 and 2.5.</figcaption>
 </figure>
 
+---
+
+#### Flip Back Faces
+The _Flip Back Faces_ setting flips the normals of faces that are pointing away from the camera view. This is useful to obtain better results from single polygon objects like tree leaves.
+
+---
+
+#### Culling
+The _Culling_ setting defines which faces should be culled within the material.
+
+* **None** - No culling, all objects with the material are rendered as double sided.
+* **Front** - The front-facing faces are going to be culled, only rendering the back faces.
+* **Back** - The back-facing faces are going to be culled, only rendering front-faces. This can help performance on objects with many polygons.
 
 ------------------
 ------------------

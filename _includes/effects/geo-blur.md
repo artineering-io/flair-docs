@@ -33,7 +33,7 @@ The depth range at which geometry should be deformed (blurred) in the scene. Thi
 
 Between the _Close Mid_ and _Far Mid_ distances, no deformation will take place and objects will be sharp. Beyond these distances towards the _Close_ and _Far_ depths, the geometry will be deformed by the _Geo Blur Factor_, which is defined below.
  
-The distances are relative to the _World Scale_ global attribute. For example, if the world scale is of _100_, a _1000_ Maya unit distance will be _10_ (1000/100). If the world scale is 1, a _1000_ Maya unit distance will be _1000_.
+The distances are relative to the _World Scale_ global. For example, if the world scale is of _100_, a _1000_ Maya unit distance will be _10_ (1000/100). If the world scale is 1, a _1000_ Maya unit distance will be _1000_.
 {: .info}
 
 ##### Geo Blur Factor
