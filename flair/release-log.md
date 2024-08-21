@@ -31,7 +31,7 @@ nav_order: 10
 
 > Battle testing Flair!
 
-Flair 1.1.2 brings a **revamped installation experience**, improved **stability and speed**, and **tons of small but useful new features** to bring effects like **wobble blur, toon/sketch lines and the fray style to the next level!** Additionally, Flair now fully **supports Maya 2025** and **runs on RHEL-based Linux distributions!** We have also included a **new demo scene** for Indie/Studio artists and all patreons!
+Flair 1.1.2 brings a **revamped installation experience**, improved **stability and speed**, and **tons of small but useful new features** to bring effects like **wobble blur, toon/sketch lines and the fray style to the next level!** Additionally, Flair now fully **supports Maya 2025** and **runs on RHEL-based Linux distributions!** We have also included a [**new demo scene**](https://artineering.io/software/flair/demo-scenes) for Indie/Studio artists and all patreons!
 
 Thanks to everyone for their feedback, Flair has never been this good!
 
