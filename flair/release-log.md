@@ -564,7 +564,7 @@ More changes under the hood that will become evident in future releases.
 ## Flair 1.0.0
 > Released 25.09.2022
 
-Finally, after more than 3 years of development, MNPRX has become [Flair](https://artineering.io/flair).
+Finally, after more than 3 years of development, MNPRX has become [Flair](https://artineering.io/software/flair).
 
 This change is not only a rebranding but a whole evolution of our plugin. There are so many internal and external changes that it is impossible to write them all down here. What matters is that Flair is getting closer to our vision of our ideal stylized renderer, as seen in our new feature reel.
 
