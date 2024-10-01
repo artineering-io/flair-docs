@@ -1,6 +1,7 @@
 ---
 layout: default
 title: API
+description: The Flair Python API provides entrypoints to automate workflows and develop your own tools.
 nav_order: 20
 has_children: true
 has_toc: true
@@ -12,4 +13,4 @@ The Flair Python API allows to query and modify render states, save render targe
 
 Everything exposed in this documentation is our front-facing API, which is well documented and thoroughly tested, as these are directly used within our native tools.
 
-Need us to expose other entrypoints? Let the developers know on [Discord](/discord).
+Need us to expose other entrypoints? Let the developers know on [Discord]({{site.discord-invite}}).

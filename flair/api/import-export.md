@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Import/Export
+description: Flair Import/Export API entrypoints to automate workflows and develop your own tools.
 parent: API
 nav_order: 5
 ---
