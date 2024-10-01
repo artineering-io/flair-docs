@@ -172,7 +172,7 @@ The Flair Renderer has been revamped to include the ability to render at differe
 
 ### Miscellaneous
 - *New* - Nuke comp to combine toon and sketch lines with other renderers
-- *New* - Flair commands in the API: [vram](/flair/api/#vram-vrm), [targetsToDistort](/flair/api/#targetstodistort-td) and [forceDistortionBlending](/flair/api/#forcedistortionblending-fdb).
+- *New* - Flair commands in the API: [vram](/flair/api/cmds/#vram-vrm), [targetsToDistort](/flair/api/cmds/#targetstodistort-td) and [forceDistortionBlending](/flair/api/cmds/#forcedistortionblending-fdb).
 - *New* - "What's New" splash window now shows direct download link for latest version if artist is using an outdated Flair version.
 - *Fixed* - Crashes sometimes when opening scenes due to light linking not being updated
 - *Fixed* - Cutout style - Not working correctly in Flair 1.1

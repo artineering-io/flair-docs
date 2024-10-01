@@ -73,29 +73,28 @@ This generated _*.style_ file is saved in the same directory as the Maya scene. 
 Also, if for whatever any reason the style in the Maya scene gets corrupted, you can import the automatically saved _.style_ file to recover the style and art-direction.
 
 ## Importing and Exporting in custom pipelines
-Custom production pipelines may have further importing and exporting requiremets. This section is meant to facilitate integration of the Flair import/export tool onto them.
+Custom production pipelines may have further importing and exporting requiremets. This section is meant to facilitate integration of the Flair import/export tool into them.
 
 ### Import/Export API
-The import/export tool programatically calls the `import_stylization()` and `export_stylization()` functions, which are found in the `flair_import_export.py` file within the `maya/scripts/` folder of the Flair installation. You can use these functions to create your own import and export procedures within your custom pipeline. 
+The import/export tool programatically calls the `import_stylization()` and `export_stylization()` functions, which are found in the `flair_import_export` module. As documented in the [Flair API](/flair/api/import-export/), you can use these functions to create your own import and export procedures within your custom pipeline. 
 
 The _*.style_ files that Flair uses are text files containing a python dictionary. Therefore, these files can easily be loaded by calling `eval()` on their contents.
 {: .info}
 
 ### Custom imports
-There are two custom import functions available for integration onto pipelines. These can be found by right clicking on the `im/ex` [shelf icon](/flair/getting-started/flair-shelf/).
+There are two custom import functions available. These can be used by right clicking on the `im/ex` [shelf icon](/flair/getting-started/flair-shelf/).
 
 <figure class="float-right aio-ui">
 	<img src="/media/styles/import-export/custom.png" alt="Custom import options">
 	<figcaption>Custom import options.</figcaption>
 </figure>
 
-**Custom auto-import** - `auto_import_style()`  
-This function will automatically extract the asset name from the reference namespace and try to find the corresponding `*._style` file thereof. The preferences where the `*.style` file is searched in can be found in the `maya/prefs/import-export.py` file within the Flair installation.
+[**Custom auto-import**](/flair/api/import-export/#function-customimport)  
+Can be customized within the _custom_import_export.py module to automatically browse the style of assets in the scene and apply them with predetermined values.
 
-You can override the `_post_auto_import()` function to perform any post import cleanup.
+[**Custom import**](/flair/api/import-export/#function-customimport)  
+Can be customized within the _custom_import_export.py module to have any kind of predefined options, namespace changes and even prefixes applied.
 
-**Custom import** - `custom_import()`  
-This function will perform a custom import with the namespace changes defined in the import-export preferences found in the `maya/prefs/import-export.py` file within the Flair installation.
-
+Refer to the `_custom_import_export_example.py` file within `flair->maya->scripts` for an example on how these functions can be customized.
 
 

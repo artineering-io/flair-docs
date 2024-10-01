@@ -1,10 +1,11 @@
 ---
 layout: default
-title: API
-nav_order: 20
+title: CMDS
+parent: API
+nav_order: 1
 ---
 
-# API
+# CMDS
 {: .no_toc }
 
 <details close markdown="block">
@@ -16,11 +17,11 @@ nav_order: 20
 {:toc}
 </details>
 
-The Flair API is divided in the different hosts Flair supports. Below you can find the available entrypoints to interact with Flair.
+The Flair commands allow to directly interact with the C++ plugin mainly to query engine settings and execute renders.
 
 ## Flair for Maya
 ### Commands
-<div class="maya-api" markdown="1">
+<div class="api-cmds" markdown="1">
 <div class="maya-api-flag api-header" markdown="1">
 #### Long name (short name)
 {: .no_toc }

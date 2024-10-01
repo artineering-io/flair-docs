@@ -181,8 +181,45 @@ p .aio-btn {
 
 // API
 // ====================================
-.maya-api {
+.api-toc {
+    kbd {
+        font-size: 0.6rem;
+    }
+    #markdown-toc ol li:first-child {
+        display: none;  
+    }
+}
 
+.api {
+    h2 + .highlighter-rouge {
+        .rouge-gutter {
+            display: none;
+        }
+    }
+    
+    h1 kbd{
+        font-size: 0.7rem;
+        background-color: #d4e6fe;
+        border-radius: 5px;
+        padding: 4px;
+    }
+    
+    h2 kbd{
+        font-size: 0.7rem;
+        background-color: #e9dbd0;
+        border-radius: 5px;
+        padding: 4px;
+    }
+    
+    #global-variables {
+        display: none;
+        & + ul {
+            display: none;
+        }
+    }
+}
+
+.api-cmds {
     .maya-api-flag.api-header {
         background-color: #CCC;
         font-weight: 600;

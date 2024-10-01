@@ -1,0 +1,15 @@
+---
+layout: default
+title: API
+nav_order: 20
+has_children: true
+has_toc: true
+---
+
+# API
+
+The Flair Python API allows to query and modify render states, save render targets (AOVs), automate processes within custom pipelines and even create your own tools to facilitate Flair workflows!
+
+Everything exposed in this documentation is our front-facing API, which is well documented and thoroughly tested, as these are directly used within our native tools.
+
+Need us to expose other entrypoints? Let the developers know on [Discord](/discord).
