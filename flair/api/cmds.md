@@ -232,6 +232,8 @@ Returns the amount of video ram currently in use by Flair.
 
 #### Examples
 ``` python
+import maya.cmds as cmds
+
 # get the environment where Flair is installed
 cmds.flair(env=True)  # Result: yourdir/flair/maya
 

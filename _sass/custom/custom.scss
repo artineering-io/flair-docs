@@ -185,32 +185,59 @@ p .aio-btn {
     kbd {
         font-size: 0.6rem;
     }
+    // remove global variables
     #markdown-toc ol li:first-child {
         display: none;  
     }
 }
 
 .api {
+    // spacing between elements
+    p {
+        margin-bottom: 0.2rem;
+    }
+    ul {
+        margin-top: 0;
+    }
+    pre {
+        line-height: 1.5 !important;
+    }
+
+    // remove line numbers in function declarations
     h2 + .highlighter-rouge {
         .rouge-gutter {
             display: none;
         }
+        .rouge-code {
+            padding-left: 1rem;
+        }
+    }
+    h3 + .highlighter-rouge {
+        .rouge-gutter {
+            display: none;
+        }
+        .rouge-code {
+            padding-left: 1rem;
+        }
     }
     
-    h1 kbd{
+    // format kbd elements
+    kbd {
         font-size: 0.7rem;
+        border-radius: 5px;
+        padding: 4px;
+    }
+    h1 kbd {
         background-color: #d4e6fe;
-        border-radius: 5px;
-        padding: 4px;
     }
-    
-    h2 kbd{
-        font-size: 0.7rem;
+    h2 kbd {
         background-color: #e9dbd0;
-        border-radius: 5px;
-        padding: 4px;
+    }
+    h3 kbd {
+        background-color: #d0e9e3;
     }
     
+    // remove global variables
     #global-variables {
         display: none;
         & + ul {
