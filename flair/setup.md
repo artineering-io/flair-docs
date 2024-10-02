@@ -81,13 +81,13 @@ All flair-related files are kept within the Flair installation folder, except fo
 * Windows: `Documents/maya`
 * Linux: `~/maya`
 
-The "Only for me" option allows keeping different versions of Flair on different versions of Maya. However, you will need read/write permissions to the Flair installation folder.
+The "Only for me" option allows keeping different versions of Flair on different versions of Maya. However, everyone using Flair will need read/write permissions to the Flair installation folder.
 {: .info}
 
 #### For all users
 *Recommended for studios or institutions* where multiple artists use Flair from the same workstation/server.
 
-This method allows installing Flair automatically in all supported Maya versions, even in environments with strict read-only policies e.g., *Rez* repo.
+This method allows installing Flair automatically in all supported Maya versions, even in environments with strict read-only policies e.g., **Rez**.
 
 The Flair installation "For all users" requires admin/sudo privileges to place files in:
 
@@ -105,6 +105,13 @@ After installation and activation, artists will find their **presets and prefere
 
 If you need to customize where the _program data_ (caches) and _app documents_ (presets/preferences) are stored, you can follow the instructons within `flair/maya/scripts/coop/_custom_dirs_example.json`.
 {: .warning}
+
+#### Only for me - but read-only
+There is a third hidden option where you can make an _"Only for me"_ installation read-only by setting the environment variable `FLAIR_READ_ONLY=1`. This will force Flair to behave as if it was installed _"For all users"_.
+
+For this installation to work properly, make sure the directories to save canvas caches, presets and preferences have read/write access for artists using Flair, as these will default to the _"For all users"_ directories (which can be customized within the `_custom_dirs_example.json` file). 
+
+Keep in mind that the license will remain within the local Maya folder, so it won't be available for other users.
 
 ---
 ## Activation
