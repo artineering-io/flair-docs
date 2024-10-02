@@ -73,7 +73,7 @@ This button will remove the key of painted values of the specific effect from se
 
 As _Maya_ stores the value of each vertex internally on adjacent faces. This means that, if you are keying one vertex with four values (RGBA), that is shared with four adjacent faces, you will be keying 16 values---for only one vertex. This escalates exponentially when keying objects with hundreds of vertices. Therefore, try to use proxies and animate them instead, whenever possible.
 
-To keep complex scenes light after working with VertexFX, we recommend deleting _Non-Deformer History_ (`Edit->Delete by Type->Non-Deformer History_`) whenever possible.
+To keep complex scenes light after working with VertexFX, we recommend deleting _Non-Deformer History_ (`Edit->Delete by Type->Non-Deformer History`) whenever possible.
 {: .info}
 
 

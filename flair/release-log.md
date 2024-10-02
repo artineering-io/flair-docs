@@ -31,7 +31,7 @@ nav_order: 10
 
 > Battle testing Flair!
 
-Flair 1.1.2 brings a **revamped installation experience**, improved **stability and speed**, and **tons of small but useful new features** to bring effects like **wobble blur, toon/sketch lines and the fray style to the next level!** Additionally, Flair now fully **supports Maya 2025** and **runs on RHEL-based Linux distributions!** We have also included a **new demo scene** for Indie/Studio artists and all patreons!
+Flair 1.1.2 brings a **revamped installation experience**, improved **stability and speed**, and **tons of small but useful new features** to bring effects like **wobble blur, toon/sketch lines and the fray style to the next level!** Additionally, Flair now fully **supports Maya 2025** and **runs on RHEL-based Linux distributions!** We have also included a [**new demo scene**](https://artineering.io/software/flair/demo-scenes) for Indie/Studio artists and all patreons!
 
 Thanks to everyone for their feedback, Flair has never been this good!
 
@@ -172,7 +172,7 @@ The Flair Renderer has been revamped to include the ability to render at differe
 
 ### Miscellaneous
 - *New* - Nuke comp to combine toon and sketch lines with other renderers
-- *New* - Flair commands in the API: [vram](/flair/api/#vram-vrm), [targetsToDistort](/flair/api/#targetstodistort-td) and [forceDistortionBlending](/flair/api/#forcedistortionblending-fdb).
+- *New* - Flair commands in the API: [vram](/flair/api/cmds/#vram-vrm), [targetsToDistort](/flair/api/cmds/#targetstodistort-td) and [forceDistortionBlending](/flair/api/cmds/#forcedistortionblending-fdb).
 - *New* - "What's New" splash window now shows direct download link for latest version if artist is using an outdated Flair version.
 - *Fixed* - Crashes sometimes when opening scenes due to light linking not being updated
 - *Fixed* - Cutout style - Not working correctly in Flair 1.1
@@ -564,7 +564,7 @@ More changes under the hood that will become evident in future releases.
 ## Flair 1.0.0
 > Released 25.09.2022
 
-Finally, after more than 3 years of development, MNPRX has become [Flair](https://artineering.io/flair).
+Finally, after more than 3 years of development, MNPRX has become [Flair](https://artineering.io/software/flair).
 
 This change is not only a rebranding but a whole evolution of our plugin. There are so many internal and external changes that it is impossible to write them all down here. What matters is that Flair is getting closer to our vision of our ideal stylized renderer, as seen in our new feature reel.
 

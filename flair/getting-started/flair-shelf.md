@@ -9,12 +9,12 @@ nav_order: 1
 
 <figure class="">
 	<img src="/media/ui/flair-shelf.png" alt="Flair shelf">
-	<figcaption>The Flair shelf with its three segments: Art-direction, Lighting/Testing and Rendering.</figcaption>
+	<figcaption>The Flair shelf with its three segments: Art-direction, Lighting/Inspection and Rendering.</figcaption>
 </figure>
 
 The _Flair shelf_ contains all tools required to work with Flair, separated into three segments:
 1. [Art-direction](#art-direction)
-2. [Lighting/Testing](#lightingtesting)
+2. [Lighting/Inspection](#lightinginspection)
 3. [Rendering](#rendering)
 
 While most users will find themselves working with the first segment, it's important to understand what the remaining two segments are for. 
@@ -37,8 +37,8 @@ The art-direction tools can be found in the left side of the shelf, ordered from
 1. **VFX** - opens the _VertexFX_ window that lets you paint each effect directly onto your 3D models [[docs](/flair/art-direction/vertexfx)].
 
 
-## Lighting/Testing
-The lighting and testing tools allow to easily create the supported lights within Flair and to troubleshoot if things are not looking quite right.
+## Lighting/Inspection
+The lighting and inspecting tools allow to easily create the supported lights within Flair and to troubleshoot if things are not looking quite right.
 1. **Supported lights** - shelf icons for the four different supported lights: ambient, directional, point (no shadow maps) and spot light.
 1. **PASS** - opens the _Inspector_, which lets you toggle on/off each style pass and troubleshoot the inner workings of the style itself.
 1. **TEST** - creates our favourite sphere with default lighting.
@@ -48,7 +48,9 @@ The lighting and testing tools allow to easily create the supported lights withi
 1. **TBOX** - opens the _Flair Toolbox_, containing useful functions to work with Flair in production [[docs](/flair/toolbox/)].
 1. **FLOAT** - opens a floating viewport with a 1280 x 720 resolution.  
 `Right click -> Float viewport 1024 x 540` opens a floating viewport with a 1024 x 540 resolution.  
+`Right click -> Float viewport 1080 x 1080` opens a floating viewport with a 1080 x 1080 square resolution.  
 `Right click -> Float viewport 1920 x 1080` opens a floating viewport with a 1920 x 1080 resolution (Full HD).  
+`Right click -> Float viewport 2048 x 1152` opens a floating viewport with a 2048 x 1152 resolution (2K).  
 `Right click -> Custom float viewport` opens a floating viewport with a custom resolution set through a small dialog.
 1. **RENDR** - opens the _Viewport Renderer_, which quickly allows to save screenshots or playblasts [[docs](/flair/rendering/viewport/)].
 1. **SEQ** - opens the _Flair Renderer_, which allows to render sequences and all different AOVs for production [[docs](/flair/rendering/sequence/)].

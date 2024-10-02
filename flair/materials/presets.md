@@ -95,3 +95,7 @@ When you right-click on a preset, a context menu will appear with options to `Ed
 
 * Editing the preset will open the _\*.json_ preset in a text editor to modify to your liking. Remember to refresh the presets after any edits.
 * Renaming the preset will prompt to enter a new name for the preset.
+
+## Material Presets API
+
+The Material Presets tool manages an instance of the material presets library, available within the [material presets module](/flair/api/material-presets/) of the Flair API. You can use this API to automatically save or load different presets within your custom pipeline.

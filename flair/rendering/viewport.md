@@ -30,7 +30,7 @@ The upper section of the _Viewport Renderer_ contains all options to capture a f
 On the left side, you can define a custom resolution to render at. If left unchecked, the viewport resolution will be taken when rendering.
 
 On the right side, you can find the settings to render with.
-* **!uality** - Defines the quality of the viewport rendering, either standard or with _TAA_.
+* **Quality** - Defines the quality of the viewport rendering, either standard or with _TAA_.
 * **Alpha** - Defines how the alpha (transparency) is handled in the rendered frames. The options are _None_ (no alpha), _Linear_ (linear alpha) and _Premult._ (premultiplied alpha).
 * **Format** - Defines the image file format to save the image as i.e., _.png, .jpg, .exr, .tif, .iff_.
 
