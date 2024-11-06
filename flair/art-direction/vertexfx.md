@@ -28,19 +28,23 @@ Each Flair material (including proxies) supports VertexFX, but the effects drive
 
 From top to bottom, these are the different elements of the VertexFX tool.
 
-<figure class="float-left" style="margin: 0.5em 18px 0">
+<figure class="float-left">
 	<img src="/media/ui/icons/viewPassive.png" alt="View VertexFX"  style="max-height: 32px">
 </figure>
 
 On the top-left, you will find an eye icon which toggles the parameter view. This will allow you to view the control parameters that you are currently painting.
 
-On the top-right, you will find `View vertices`, a checkbox which allows to show the vertices underneath the brush where _VertexFX_ are being applied to.
+<figure class="float-left">
+	<img src="/media/ui/icons/reset.png" alt="Reset button"  style="max-height: 32px">
+</figure>
 
-<figure class="float-left" style="margin: 0.5em 18px 0">
+On the top-right, you will find the reset button, which resets ALL VertexFX of either, the selected objects, or ALL objects in the scene when no selection is active. A prompt will ask for confirmation, listing the objects that will have their VertexFX removed.
+
+<figure style="margin: 0.5em 18px 0">
 	<img src="/media/ui/icons/brushes.jpg" alt="Brush types"  style="max-height: 32px">
 </figure>
 
-The next row of icons allow you to set the brush stamp to use when painting the different effects.
+On the next row, there are buttons to set the brush stamp to use when painting the different effects. To their right, you will find `View vertices`, if enabled, the brushes will show the vertices underneath where _VertexFX_ are being painted onto.
 
 
 ## Paint Widgets
