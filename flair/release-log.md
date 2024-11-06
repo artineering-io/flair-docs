@@ -21,7 +21,7 @@ nav_order: 10
 
 ---
 ## Flair 1.1.3
-> Released 07.11.2024 [[**Download**](https://artineering.io/software/flair#pricing)] 
+<!-- > Released 07.11.2024 [[**Download**](https://artineering.io/software/flair#pricing)] 
 
 <figure class="release-log">
 <video autoplay loop muted playsinline>
@@ -30,9 +30,11 @@ nav_order: 10
 <figcaption>3D model and animation by Jose Díaz.</figcaption>
 </figure>
 
-> Pixel pushing the envelope!
+> Pixel pushing the envelope! -->
 
-Flair 1.1.3 **improves upon toon and sketch lines**, exposes our **API to automate style import/export and preset load/save** procedures, **increases saving/importing speed** and **fixes batch rendering on Linux** along with other smaller fixes and improvements. Additionally, **all Nuke and Fusion files** have been **updated to pixel-match Flair** renders and a new **_lines_ fuse has been released**, to also apply Flair lines to passes from other renderers in DaVinci Resolve.
+> Release imminent
+
+Flair 1.1.3 **improves upon toon and sketch lines**, exposes our **API to automate style import/export and preset load/save** procedures, **increases saving/importing speed** and **fixes batch rendering on Linux** along other smaller fixes and improvements. Additionally, **all Nuke and Fusion files** have been **updated to pixel-match Flair** renders and a new **_lines_ fuse has been released**, to also apply Flair lines to passes from other renderers in DaVinci Resolve.
 
 ### Toon and Sketch lines
 * *New* - Toon and Sketch lines fuse for DaVinci Resolve
