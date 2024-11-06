@@ -3,6 +3,8 @@ layout: default
 title: Release Log
 nav_order: 10
 ---
+<!-- HEAD-->
+<link rel="stylesheet" href="https://docs.artineering.io/assets/css/twentytwenty/twentytwenty.css" type="text/css" media="screen"/>
 
 # Release Log
 {: .no_toc }
@@ -18,6 +20,89 @@ nav_order: 10
 
 
 ---
+## Flair 1.1.3
+> Coming soon
+
+<!-- <figure class="release-log">
+<video autoplay loop muted playsinline>
+	<source src="/media/release-log/1.1.2/banner_1_1_2_web.mp4" type="video/mp4">
+</video>
+<figcaption>3D model by Jose Díaz.</figcaption>
+</figure> -->
+
+> Pixel pushing the envelope!
+
+Flair 1.1.3 **improves upon toon and sketch lines**, exposes our **API to automate style import/export and preset load/save** procedures, fixes **batch rendering on Linux**, **increases saving/importing speed** along various smaller improvements and fixes. Additionally, **all Nuke and Fusion files** have been **updated to pixel-match Flair** renders and a new **_lines_ fuse has been released** to also apply Flair lines to passes from other renders in DaVinci Resolve.
+
+### Toon and Sketch lines
+* *New* - Toon and Sketch lines fuse for DaVinci Resolve
+* *Improved* - Less fragmented sketch lines (solid sketch lines)
+* *Fixed* - Sketch line flickering when applied onto geometry planes (high frequency might still flicker)
+* *Fixed* - Rounding error causing artifacts in the Nuke comp
+* *Fixed* - Sketch line artifacts when sketchiness went beyond max sketchiness value
+* *Fixed* - Line clippings at some transitions of widths
+* *Fixed* - Removed single pixel line noise
+
+<figure>
+    <div class="twentytwenty-container 1-1-3-comparison">
+        <!-- The before image is first -->
+        <img src="/media/release-log/1.1.3/nuke_1_1_2.jpg"/>
+        <!-- The after image is last -->
+        <img src="/media/release-log/1.1.3/nuke_1_1_3.jpg"/>
+    </div>
+    <figcaption>Fixed rounding errors causing artifacts in the Nuke comp (900% magnification).</figcaption>
+</figure>
+
+### NoiseFX and VertexFX
+* *New* - Buttons to reset all VertexFX and NoiseFX of selected objects within the tools
+* *New* - Automatically enable features in the material if NoiseFX or VertexFX changes the feature
+
+### Style and material presets
+* *Improved* - Material presets to show material attributes after loading
+* *Improved* - Removing unnecessary warnings when loading older presets
+* *Improved* - Adding basic support for converting Redshift and usdPreviewSurface materials to FlairShader materials
+* *Fixed* - Preset renamer prompt not working after cancelling operation
+
+### Lighting
+* *Improved* - Forward lighting for transparent materials with blendAOVs enabled
+* *Reverted* - "Soft" cast shadow with TAA, as these were creating polygonal artifacts and flickering
+
+<figure>
+    <div class="twentytwenty-container 1-1-3-comparison">
+        <!-- The before image is first -->
+        <img src="/media/release-log/1.1.3/lighting_1_1_2.jpg"/>
+        <!-- The after image is last -->
+        <img src="/media/release-log/1.1.3/lighting_1_1_3.jpg"/>
+    </div>
+    <figcaption>Edge lighting case with transparency - 3D model by Gregory Khodyrev, original concept by Pascal Campion.</figcaption>
+</figure>
+
+### Rendering
+* *Improved* - Render scale of "50%" with nearest-neighbour magnification instead linear, for better faster results in 4K screens
+* *Fixed* - Batch renderng not working on Linux
+* *Fixed* - Color management not working when batch rendering
+
+### Import/Export
+* *New* - Added example to implement your own custom import/export functions within the `_custom_import_export_example.py` file
+* *Fixed* - Issue where non-existing textures would auto-load on scenes done with older Flair versions
+* *Fixed* - Color management error prompt that would appear when importing a style file onto a scene that was not using _legacy sRGB_
+
+### Installation
+* *New* - Adding `FLAIR_READ_ONLY` environment variable to force read-only local installations
+* *Improved* - Added fallback to accept EULA if it doesn't load on Linux
+
+### API
+* *New* - Documenting and exposing the Import/Export API [docs](/flair/api/import-export/)
+* *New* - Documenting and exposing the Style Presets API [docs](/flair/api/style-presets/)
+* *New* - Documenting and exposing the Material Presets API [docs](/flair/api/material-presets/)
+
+### Miscellaneous
+* *Improved* - Watercolor Nuke comp
+* *Improved* - Warp Nuke comp and Fusion fuse (DaVinci Resolve)
+* *Improved* - `Flair` shelf icon renamed to `Docs` for clarity
+* *Improved* - Speed while saving the Maya scene and importing the Flair style
+* *Improved* - Removing trailing whitespaces from sequence render and preset names
+
 
 ## Flair 1.1.2
 > Released 21.08.2024 [[**Download**](https://artineering.io/software/flair#pricing)]
@@ -395,9 +480,6 @@ Wobble *motion* can also be set per material to generate motion smears. The effe
 
 Simple lighting comparison between previous versions and Flair 1.0.3 using directional, spot, point and ambient lights with color-plane light-shafts.
 
-<!-- HEAD-->
-<link rel="stylesheet" href="https://docs.artineering.io/assets/css/twentytwenty/twentytwenty.css" type="text/css" media="screen"/>
-
 <figure>
     <div id="1-0-3-comparison" class="twentytwenty-container">
         <!-- The before image is first -->
@@ -419,6 +501,10 @@ Simple lighting comparison between previous versions and Flair 1.0.3 using direc
     $("#1-0-3-comparison").twentytwenty({
     before_label: 'Flair 1.0.2', // Set a custom before label
     after_label: 'Flair 1.0.3', // Set a custom after label
+    });
+	$(".1-1-3-comparison").twentytwenty({
+    before_label: 'Flair 1.1.2', // Set a custom before label
+    after_label: 'Flair 1.1.3', // Set a custom after label
     });
   });
 </script>
