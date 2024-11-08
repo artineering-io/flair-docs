@@ -21,7 +21,7 @@ nav_order: 10
 
 ---
 ## Flair 1.1.3
-<!-- > Released 07.11.2024 [[**Download**](https://artineering.io/software/flair#pricing)] 
+> Released 12.11.2024 [[**Download**](https://artineering.io/software/flair#pricing)] 
 
 <figure class="release-log">
 <video autoplay loop muted playsinline>
@@ -30,11 +30,9 @@ nav_order: 10
 <figcaption>3D model and animation by Jose Díaz.</figcaption>
 </figure>
 
-> Pixel pushing the envelope! -->
+> Pixel pushing the envelope!
 
-> Release imminent
-
-Flair 1.1.3 **improves upon toon and sketch lines**, exposes our **API to automate style import/export and preset load/save** procedures, **increases saving/importing speed** and **fixes batch rendering on Linux** along other smaller fixes and improvements. Additionally, **all Nuke and Fusion files** have been **updated to pixel-match Flair** renders and a new **_lines_ fuse has been released**, to also apply Flair lines to passes from other renderers in DaVinci Resolve.
+Flair 1.1.3 **improves upon toon and sketch lines**, exposes our **API to automate style import/export and preset load/save** procedures, **increases saving/importing speed** and **fixes batch rendering on Linux** along with other smaller fixes and improvements. Additionally, **all Nuke and Fusion files** have been **updated to pixel-match Flair** renders and a new **_lines_ fuse has been released**, to also apply Flair lines to passes from other renderers in DaVinci Resolve.
 
 ### Toon and Sketch lines
 * *New* - Toon and Sketch lines fuse for DaVinci Resolve
@@ -93,17 +91,24 @@ Flair 1.1.3 **improves upon toon and sketch lines**, exposes our **API to automa
 * *New* - Adding `FLAIR_READ_ONLY` environment variable to force read-only local installations
 * *Improved* - Added fallback to accept EULA if it doesn't load on Linux
 
-### API
-* *New* - Documentation of the Import/Export API [docs](/flair/api/import-export/)
-* *New* - Documentation of the Style Presets API [docs](/flair/api/style-presets/)
-* *New* - Documentation of the Material Presets API [docs](/flair/api/material-presets/)
-
 ### Miscellaneous
 * *Improved* - Watercolor Nuke comp
 * *Improved* - Warp Nuke comp and warp fuse (DaVinci Resolve)
 * *Improved* - `Flair` shelf icon renamed to `Docs` for clarity
 * *Improved* - Speed while saving the Maya scene and importing the Flair style
 * *Improved* - Removing trailing whitespaces from sequence render and preset names
+
+### API
+* *New* - Documentation of the Import/Export API [docs](/flair/api/import-export/)
+* *New* - Documentation of the Style Presets API [docs](/flair/api/style-presets/)
+* *New* - Documentation of the Material Presets API [docs](/flair/api/material-presets/)
+
+<figure class="release-log">
+<video autoplay loop muted playsinline style="max-height: 400px;">
+	<source src="/media/release-log/1.1.3/api_example.mp4" type="video/mp4">
+</video>
+<figcaption>Demonstrating the Import/Export API - model and animation by Jose Díaz.</figcaption>
+</figure>
 
 
 ## Flair 1.1.2

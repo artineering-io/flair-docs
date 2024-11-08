@@ -6,7 +6,11 @@ nav_order: 11
 
 # Uninstall Flair
 
-Uninstalling Flair is as easy as installing it, just follow the steps below.
+Uninstalling Flair is as easy as installing it, just follow the steps shown in the video below:
+
+{% include responsive-embed url="https://www.youtube.com/embed/SLUsiF4zC0w" width="70%" caption="Uninstalling Flair for Maya" %}
+
+Or follow these written steps, instead:
 
 1. Open the folder where Flair was installed from
 2. Drag-and-drop the `install_maya.mel` file onto the Maya viewport

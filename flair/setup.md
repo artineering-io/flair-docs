@@ -46,6 +46,12 @@ You can also download the free version and [activate a license](#activation) wit
 ## Installation
 Installing Flair is as simple as a drag-and-drop.  
 
+<div class="d-flex flex-justify-around">
+{% include responsive-embed url="https://www.youtube.com/embed/GiXa6NPbT4c" width="380px" caption="Installing and activating Flair for Maya" %}
+
+{% include responsive-embed url="https://www.youtube.com/embed/ABOvM372LZw" width="380px" caption="Updating Flair for Maya!"%}
+</div>
+
 1. Make sure you have all [pre-requisites](#pre-requisites)
 2. Download and extract all the contents of the Flair *zip* file into any folder outside of Maya  
 e.g., `Documents/Flair`, `C:/Flair`, a shared drive.
@@ -171,6 +177,8 @@ If a license has been previously activated, you may want to remove the activated
 
 This is useful when upgrading/downgrading between the Free, Community, Indie or Studio licenses.
 {: .info}
+
+{% include responsive-embed url="https://www.youtube.com/embed/KtiFdePYM-Q" width="70%" caption="Changing the Flair license" %}
 
 You can activate a different license by **re-installing Flair** again and choosing to **Delete the existing license**.
 
