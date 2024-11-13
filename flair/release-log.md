@@ -79,6 +79,7 @@ Flair 1.1.3 **improves upon toon and sketch lines**, exposes our **API to automa
 
 ### Rendering
 * *Improved* - Render scale of "50%" with integer scaling, for better and faster results on 4K screens
+* *Improved* - Batch rendering forcing ogs naming for temporary images
 * *Fixed* - Batch rendering not working on Linux
 * *Fixed* - Color management not working when batch rendering
 
