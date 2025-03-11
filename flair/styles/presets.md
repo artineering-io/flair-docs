@@ -17,7 +17,7 @@ nav_order: 1
 {:toc}
 </details>
 
-_Style presets_ allow artists to easily switch between styles and their attributes within Flair. The tool can be opened by clicking on the `STYLE` [shelf icon](/flair/getting-started/flair-shelf/).
+_Style presets_ allow artists to easily switch between shader styles and their attributes within Flair. The tool can be opened by clicking on the `STYLE` [shelf icon](/flair/getting-started/flair-shelf/) or used procedurally with the Flair [style presets API](#style-presets-api).
 
 <figure class="aio-ui">
 	<img src="/media/style-presets/presets.png" alt="Style presets window">
@@ -26,6 +26,13 @@ _Style presets_ allow artists to easily switch between styles and their attribut
 
 A style preset contains all the attributes found in the Flair [globals node](/flair/getting-started/globals/) (the node that gets selected when you press the `GLOB` [shelf icon](/flair/getting-started/flair-shelf/)), together with a small thumbnail of the current view.
 
+---
+
+## Video tutorial
+
+{% include responsive-embed url="https://www.youtube.com/embed/SKA45fPAtug" width="70%" caption="Learn all about shader style presets in under 4 minutes" %}
+
+---
 
 ## Saving presets
 You can save as many presets as you want and these can be created at the top of the _Style presets_ window.

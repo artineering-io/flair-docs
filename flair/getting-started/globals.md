@@ -28,6 +28,12 @@ It is imperative to understand what each attribute does and how it affects the s
 
 ---
 
+## Video tutorial
+
+{% include responsive-embed url="https://www.youtube.com/embed/JzHHlWIg9UE" width="70%" caption="Learn all about style globals in under 7 minutes" %}
+
+---
+
 ## Engine
 Engine attributes remain the same across styles and contain attributes directly related to the Flair engine. These attributes can change the behavior, fidelity and performance of the stylization or toggle optional features.
 
