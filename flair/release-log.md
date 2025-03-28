@@ -20,6 +20,38 @@ nav_order: 10
 
 
 ---
+---
+## Flair 1.1.4
+> Released 28.03.2025 [[**Download**](https://artineering.io/software/flair#pricing)] 
+
+<figure class="release-log">
+<video autoplay loop muted playsinline>
+	<source src="/media/release-log/1.1.4/banner_1_1_4_web.mp4" type="video/mp4">
+</video>
+<figcaption>3D model and animation by Efrain Frias.</figcaption>
+</figure>
+
+> Finding Flair zen
+
+Flair 1.1.4 **brings Flair to Maya 2026** and includes the **latest bug fixes, ironing out the Flair 1.1 release**.
+
+### Material Presets
+- *Fixed* - Custom saved presets could not be loaded onto objects with Maya materials
+- *Fixed* - Older material presets not working when *Wobble* was activated in the globals node
+- *Fixed* -Material presets loaded onto objects with Maya default materials being assigned to all objects with the default material, instead of only onto the selected objects (Maya 2024+)
+
+### Rendering
+- *Fixed* - First frame of a TAA render with one additional sample that could cause artifacts
+- *Fixed* - Headless rendering not working on certain Linux environments when the `DISPLAY` environment variable was not set
+- *Fixed* - Pixel coordinate rounding issues causing artifacts on cryptomattes from lines
+- *Fixed* - Negative line pixels appearing due to strong line color art-direction
+
+### Miscellaneous
+- *New* - Adding support to convert RenderMan materials to Flair shader materials
+- *Improved* - Flair will not change the viewport if it has been used but was not active upon saving
+- *Fixed  - Wobble* always changing to `Simple` **even though it was set to `Cloud` once material attributes where applied (presets or during import)
+
+
 ## Flair 1.1.3
 > Released 12.11.2024 [[**Download**](https://artineering.io/software/flair#pricing)] 
 
