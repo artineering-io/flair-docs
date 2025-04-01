@@ -33,7 +33,7 @@ nav_order: 10
 
 > Finding Flair zen
 
-Flair 1.1.4 brings **Flair to Maya 2026**, initial support to **convert RenderMan materials** to Flair shader materials and the **latest bug fixes, ironing out the Flair 1.1 release**.
+Flair 1.1.4 brings **Flair to Maya 2026**, initial support to automatically **convert RenderMan materials** to Flair shader materials and the **latest bug fixes, ironing out the Flair 1.1 release**.
 
 ### Material Presets
 - *Fixed* - Custom saved presets could not be loaded onto objects with Maya materials

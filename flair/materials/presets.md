@@ -26,6 +26,13 @@ The _Material presets_ tool allows artists to easily create and load stylized ma
 
 A material preset contains all the available attributes found in the _[Flair shader](../flair-shader)_, _[cutout](../others/#cutout-material)_, _[hatching](../others/#hatching-material)_ or the _[proxy](../proxy-material)_ materials, together with a small thumbnail captured from objects where the material was set as it was saved.
 
+---
+
+## Video tutorial
+
+{% include responsive-embed url="https://www.youtube.com/embed/HPDmS1xFbww" width="70%" caption="Learn all about Flair shader material presets in 6 minutes" %}
+
+---
 
 ## Special presets
 While most material presets just contain and set the saved settings and attributes, presets prepended with `_` are special, as described below:
