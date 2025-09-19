@@ -30,12 +30,6 @@ The email is most likely in your spam folder. Please double-check the spam folde
 If the license still has not arrived within an hour [contact us](https://artineering.io/contact) to help you get started.
 </div>
 
-I receive an activation failure
-<div markdown="1">
-If activation key is not valid, or the existing license is no longer valid, an error message will appear.
-`Retry` will prompt you to enter a valid activation key, and `Cancel` will run Flair as the free version this session.
-</div>
-
 The viewport is all black and I get the Error compiling GLSL code. 
 <div markdown="1">
 This can happen when the viewport is forced to use DirectX (e.g., with an environment variable) instead of OpenGL. During installation, we try to automatically set the Viewport 2.0 rendering engine to OpenGL, but this can fail depending on your setup.  Check your Maya setup for anything that might force the viewport to use DirectX and remove it. Then, manually set the rendering engine to OpenGL (Preferences->Display->Viewport 2.0->Rendering Engine->OpenGL Core Profile). Maya will prompt to restart the application and Flair will be able to run after restarting.

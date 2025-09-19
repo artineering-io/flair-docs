@@ -82,15 +82,20 @@ figure {
     }
     &.aio-ui {
         img {
-            width: 100%;
+            width: 80%;
             display: none;
+            border-radius: 5px;
+        }
+    }
+    &.aio-ui-highres {
+        img {
+            width: 65%;
             border-radius: 5px;
         }
     }
     &.aio-window{
         img{
             box-shadow: 0px 4px 20px -5px rgba(0,0,0,0.5);
-
         }
     }
 }
