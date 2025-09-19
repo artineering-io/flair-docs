@@ -37,6 +37,27 @@ Offset of the sketch line(s) in relation to the outline. This can also be art-di
 #### Sketchiness Max
 Maximum offset the generated sketch line(s) may have.
 
+#### Sketchiness Depth Range
+The depth range at which sketch lines are offset in the scene. These attributes work in the same way as the [Line Width Depth Range](#line-width-depth-range) and also consists of four (4) values that define the different distances from the camera to modify the _sketchiness_. From left to right: Close, Close Mid, Far Mid, Far.
+
+Between the _Close Mid_ and _Far Mid_ distances, the global _Sketchiness_ that has been set will apply. Beyond these distances towards the _Close_ and _Far_ depths, the global _Sketchiness_ will be multiplied by the _Sketchiness Depth Factor_, which is defined below.
+
+The distances are relative to the _World Scale_ global. For example, if the world scale is of _100_, a _1000_ Maya unit distance will be _10_ (1000/100). If the world scale is 1, a _1000_ Maya unit distance will be _1000_.
+{: .info}
+
+#### Sketchiness Depth Factor
+The factor to multiply the sketch line offsets, depending on the distance to the camera defined in the _Sketchiness Depth Range_. The first value is at _Close_ distance and the second value is at _Far_ distance. 
+
+<figure>
+	<video autoplay loop muted playsinline>
+	    <source src="/media/effects/lines/sketchiness-range-factor.mp4" type="video/mp4">
+	</video>
+	<figcaption>Sketch offset changes according to the Sketchiness Depth Range and Sketchiness Depth Factor.</figcaption>
+</figure>
+
+You can set both of these values to 1.0 if you do not wish to modify the _Sketchiness_ along the depth.
+{: .info}
+
 #### Sketchiness Frequency
 Base frequency of the feature noise controlling the sketch offsets. A higher frequency will shorten the distance between the sketch line(s) peaks, whereas a lower frequency elongates the distance, resulting in smoother and longer waves. The frequency is directly linked to the global [World Scale](/flair/getting-started/globals/#world-scale) attribute.
 
