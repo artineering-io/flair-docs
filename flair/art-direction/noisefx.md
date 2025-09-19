@@ -31,9 +31,15 @@ From top to bottom, these are the different elements of the NoiseFX tool.
 	<img src="/media/ui/icons/viewPassive.png" alt="View NoiseFX"  style="max-height: 32px">
 </figure>
 
-On the top-left, you will find an eye icon which toggles the parameter view. This will allow you to view the control parameters that you are currently affecting through the _Noise Widgets_.
+On the top-left, you will find an eye button which toggles the parameter view. This will allow you to view the control parameters that you are currently affecting through the _NoiseFX Widgets_.
 
-On the top-right, you will find the `Bake 3D` button. This button toggles the `Animated` setting in the assigned Flair materials, baking the current 3D position of objects. Baking is useful to attach the current NoiseFX patterns to an animated/deformed object. If the 3D position is not baked, NoiseFX will "float" in 3D space, instead of moving with animated objects.
+<figure class="float-left">
+	<img src="/media/ui/icons/reset.png" alt="Reset button"  style="max-height: 32px">
+</figure>
+
+On the top-right, you will find the reset button, which resets ALL NoiseFX of either, the selected objects, or ALL objects in the scene when no selection is active. A prompt will ask for confirmation, listing the objects that will have their NoiseFX removed.
+
+Next to the reset button is the `Bake 3D` button. This button toggles the `Animated` setting in the assigned Flair materials, baking the current 3D position of objects. Baking is useful to attach the current NoiseFX patterns to an animated/deformed object. If the 3D position is not baked, NoiseFX will "float" in 3D space, instead of moving with animated objects.
 
 
 ## Noise widgets
@@ -48,7 +54,7 @@ To the right of the preview icon, you will find two buttons.
  <img src="/media/ui/icons/reset.png" alt="Reset NoiseFX"  style="max-height: 32px">
 </figure>
 
-This button resets the NoiseFX values for that effect, allowing to start anew or completely remove its influence.
+This button resets the NoiseFX values for that effect, allowing to start anew or completely remove its influence. This button is smaller than the reset _ALL_ NoiseFX button at the top-right of the window.
 
 <figure class="float-left">
 	<img src="/media/ui/icons/io.png" alt="NoiseFX toggle"  style="max-height: 32px">

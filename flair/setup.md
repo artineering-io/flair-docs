@@ -22,8 +22,8 @@ nav_order: 2
 
 | Requirements      | Minimum    | Recommended   | Notes                                                                                   |
 |-------------------|------------|---------------|-----------------------------------------------------------------------------------------|
-| **Autodesk Maya** | 2022.4    | 2023.3        | Maya 2022, 2023, 2024 and 2025 are supported                                                       |
-| **OS**            | Windows 10<br>RHEL 7.9 | Windows 11<br>RHEL 8+ | Linux available on-demand for Studios, [contact us](https://artineering.io/contact) |
+| **Autodesk Maya** | 2022.4    | 2024.2         | Maya 2022, 2023, 2024 2025 and 2026 are supported                                       |
+| **OS**            | Windows 10<br>RHEL 7.9 | Windows 11<br>RHEL 8+ | Linux available only for Flair Indie and Studio licenses |
 | **VRAM**          | 4 GB       | 8+ GB          | Higher resolutions and scene complexity require more VRAM                               |
 | **Memory**        | 8 GB       | 16+ GB         | As much as your Maya scene requires                                                     |
 
@@ -45,6 +45,12 @@ You can also download the free version and [activate a license](#activation) wit
 ---
 ## Installation
 Installing Flair is as simple as a drag-and-drop.  
+
+<div class="d-flex flex-justify-around">
+{% include responsive-embed url="https://www.youtube.com/embed/GiXa6NPbT4c" width="380px" caption="Installing and activating Flair for Maya" %}
+
+{% include responsive-embed url="https://www.youtube.com/embed/ABOvM372LZw" width="380px" caption="Updating Flair for Maya!"%}
+</div>
 
 1. Make sure you have all [pre-requisites](#pre-requisites)
 2. Download and extract all the contents of the Flair *zip* file into any folder outside of Maya  
@@ -194,6 +200,8 @@ If you want to remove a Flair license and activate a different one instead you n
 
 This is useful when upgrading/downgrading between the Free, Community, Indie or Studio licenses.
 {: .info}
+
+{% include responsive-embed url="https://www.youtube.com/embed/KtiFdePYM-Q" width="70%" caption="Changing the Flair license" %}
 
 You can activate a different license by **re-installing Flair** again and choosing to **Delete the existing license**.
 

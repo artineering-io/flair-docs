@@ -20,28 +20,60 @@ nav_order: 10
 
 
 ---
-## Flair 1.1.3
-> Coming soon
+---
+## Flair 1.1.4
+> Released 28.03.2025 [[**Download**](https://artineering.io/software/flair#pricing)] 
 
-<!-- <figure class="release-log">
+<figure class="release-log">
 <video autoplay loop muted playsinline>
-	<source src="/media/release-log/1.1.2/banner_1_1_2_web.mp4" type="video/mp4">
+	<source src="/media/release-log/1.1.4/banner_1_1_4_web.mp4" type="video/mp4">
 </video>
-<figcaption>3D model by Jose Díaz.</figcaption>
-</figure> -->
+<figcaption>3D model and animation by Efrain Frias.</figcaption>
+</figure>
+
+> Finding Flair zen
+
+Flair 1.1.4 brings **Flair to Maya 2026**, initial support to automatically **convert RenderMan materials** to Flair shader materials and the **latest bug fixes, ironing out the Flair 1.1 release**.
+
+### Material Presets
+- *Fixed* - Custom saved presets could not be loaded onto objects with Maya materials
+- *Fixed* - Older material presets not working when *Wobble* was activated in the globals node
+- *Fixed* - Material presets loaded onto objects with Maya default materials being assigned to all objects with the default material, instead of only onto the selected objects (Maya 2024+)
+
+### Rendering
+- *Fixed* - First frame of a TAA render with one additional sample that could cause artifacts
+- *Fixed* - Headless rendering not working on certain Linux environments when the `DISPLAY` environment variable was not set
+- *Fixed* - Pixel coordinate rounding issues causing artifacts on cryptomattes from lines
+- *Fixed* - Negative line pixels appearing due to strong line color art-direction
+
+### Miscellaneous
+- *New* - Adding support to convert RenderMan materials to Flair shader materials
+- *Improved* - Flair will not change the viewport if it has been used but was not active upon saving
+- *Fixed  - Wobble* always changing to `Simple` even though it was set to `Cloud` once material attributes where applied (presets or during import)
+
+
+## Flair 1.1.3
+> Released 12.11.2024 [[**Download**](https://artineering.io/software/flair#pricing)] 
+
+<figure class="release-log">
+<video autoplay loop muted playsinline>
+	<source src="/media/release-log/1.1.3/banner_1_1_3_web.mp4" type="video/mp4">
+</video>
+<figcaption>3D model and animation by Jose Díaz.</figcaption>
+</figure>
 
 > Pixel pushing the envelope!
 
-Flair 1.1.3 **improves upon toon and sketch lines**, exposes our **API to automate style import/export and preset load/save** procedures, fixes **batch rendering on Linux**, **increases saving/importing speed** along various smaller improvements and fixes. Additionally, **all Nuke and Fusion files** have been **updated to pixel-match Flair** renders and a new **_lines_ fuse has been released** to also apply Flair lines to passes from other renders in DaVinci Resolve.
+Flair 1.1.3 **improves upon toon and sketch lines**, exposes our **API to automate style import/export and preset load/save** procedures, **increases saving/importing speed** and **fixes batch rendering on Linux** along with other smaller fixes and improvements. Additionally, **all Nuke and Fusion files** have been **updated to pixel-match Flair** renders and a new **_lines_ fuse has been released**, to also apply Flair lines to passes from other renderers in DaVinci Resolve.
 
 ### Toon and Sketch lines
 * *New* - Toon and Sketch lines fuse for DaVinci Resolve
-* *Improved* - Less fragmented sketch lines (solid sketch lines)
+* *Improved* - Sketch lines to be more solid and less fragmented
 * *Fixed* - Sketch line flickering when applied onto geometry planes (high frequency might still flicker)
 * *Fixed* - Rounding error causing artifacts in the Nuke comp
 * *Fixed* - Sketch line artifacts when sketchiness went beyond max sketchiness value
 * *Fixed* - Line clippings at some transitions of widths
-* *Fixed* - Removed single pixel line noise
+* *Fixed* - Removed noise from single pixels
 
 <figure>
     <div class="twentytwenty-container 1-1-3-comparison">
@@ -55,17 +87,17 @@ Flair 1.1.3 **improves upon toon and sketch lines**, exposes our **API to automa
 
 ### NoiseFX and VertexFX
 * *New* - Buttons to reset all VertexFX and NoiseFX of selected objects within the tools
-* *New* - Automatically enable features in the material if NoiseFX or VertexFX changes the feature
+* *New* - Automatically enable features in the material, if NoiseFX or VertexFX modify the feature
 
 ### Style and material presets
-* *Improved* - Material presets to show material attributes after loading
+* *New* - Basic support for converting _Redshift_ and _usdPreviewSurface_ materials to flairShader materials
+* *Improved* - Material presets show material attributes after loading
 * *Improved* - Removing unnecessary warnings when loading older presets
-* *Improved* - Adding basic support for converting Redshift and usdPreviewSurface materials to FlairShader materials
-* *Fixed* - Preset renamer prompt not working after cancelling operation
+* *Fixed* - Renaming presets not working after cancelling the operation
 
 ### Lighting
-* *Improved* - Forward lighting for transparent materials with blendAOVs enabled
-* *Reverted* - "Soft" cast shadow with TAA, as these were creating polygonal artifacts and flickering
+* *Improved* - Forward lighting for transparent materials when _blendAOVs_ is enabled
+* *Reverted* - "Soft" cast shadow with TAA, as these were creating polygonal artifacts and shadow flickering
 
 <figure>
     <div class="twentytwenty-container 1-1-3-comparison">
@@ -74,44 +106,52 @@ Flair 1.1.3 **improves upon toon and sketch lines**, exposes our **API to automa
         <!-- The after image is last -->
         <img src="/media/release-log/1.1.3/lighting_1_1_3.jpg"/>
     </div>
-    <figcaption>Edge lighting case with transparency - 3D model by Gregory Khodyrev, original concept by Pascal Campion.</figcaption>
+    <figcaption>Edge case of lighting with transparency - 3D model by Gregory Khodyrev, original concept by Pascal Campion.</figcaption>
 </figure>
 
 ### Rendering
-* *Improved* - Render scale of "50%" with nearest-neighbour magnification instead linear, for better faster results in 4K screens
-* *Fixed* - Batch renderng not working on Linux
+* *Improved* - Render scale of "50%" with integer scaling, for better and faster results on 4K screens
+* *Improved* - Batch rendering forcing ogs naming for temporary images
+* *Fixed* - Batch rendering not working on Linux
 * *Fixed* - Color management not working when batch rendering
 
 ### Import/Export
 * *New* - Added example to implement your own custom import/export functions within the `_custom_import_export_example.py` file
-* *Fixed* - Issue where non-existing textures would auto-load on scenes done with older Flair versions
+* *Fixed* - Issue where non-existing textures would auto-load on older Flair scenes.
 * *Fixed* - Color management error prompt that would appear when importing a style file onto a scene that was not using _legacy sRGB_
 
 ### Installation
 * *New* - Adding `FLAIR_READ_ONLY` environment variable to force read-only local installations
 * *Improved* - Added fallback to accept EULA if it doesn't load on Linux
 
-### API
-* *New* - Documenting and exposing the Import/Export API [docs](/flair/api/import-export/)
-* *New* - Documenting and exposing the Style Presets API [docs](/flair/api/style-presets/)
-* *New* - Documenting and exposing the Material Presets API [docs](/flair/api/material-presets/)
-
 ### Miscellaneous
 * *Improved* - Watercolor Nuke comp
-* *Improved* - Warp Nuke comp and Fusion fuse (DaVinci Resolve)
+* *Improved* - Warp Nuke comp and warp fuse (DaVinci Resolve)
 * *Improved* - `Flair` shelf icon renamed to `Docs` for clarity
 * *Improved* - Speed while saving the Maya scene and importing the Flair style
 * *Improved* - Removing trailing whitespaces from sequence render and preset names
 
+### API
+* *New* - Documentation of the Import/Export API [docs](/flair/api/import-export/)
+* *New* - Documentation of the Style Presets API [docs](/flair/api/style-presets/)
+* *New* - Documentation of the Material Presets API [docs](/flair/api/material-presets/)
+
+<figure class="release-log">
+<video autoplay loop muted playsinline style="max-height: 400px;">
+	<source src="/media/release-log/1.1.3/api_example.mp4" type="video/mp4">
+</video>
+<figcaption>Demonstrating the Import/Export API - model and animation by Jose Díaz.</figcaption>
+</figure>
+
 
 ## Flair 1.1.2
-> Released 21.08.2024 [[**Download**](https://artineering.io/software/flair#pricing)]
+> Released 21.08.2024
 
 <figure class="release-log">
 <video autoplay loop muted playsinline>
 	<source src="/media/release-log/1.1.2/banner_1_1_2_web.mp4" type="video/mp4">
 </video>
-<figcaption>3D model by Jose Díaz.</figcaption>
+<figcaption>3D model and animation by Jose Díaz.</figcaption>
 </figure>
 
 > Battle testing Flair!
