@@ -21,8 +21,54 @@ nav_order: 10
 
 ---
 ---
+
+## Flair 1.1.5
+> Release TBA [[**Download**](https://artineering.io/software/flair#pricing)] 
+
+<figure class="release-log">
+<video autoplay loop muted playsinline>
+	<source src="/media/release-log/1.1.5/banner_1_1_5_web.mp4" type="video/mp4">
+</video>
+<figcaption>3D model and animation by...</figcaption>
+</figure>
+
+> Flairing it up!
+
+Flair 1.1.5 brings...
+
+### Licensing
+- *New* - Revamped Flair licensing to support _floating_ and _permanent_ licenses.
+- *Improved* - Online licenses can now be migrated after 6 hours from a previous activation.
+- *Fixed* - Brand new Windows computers not being able to activate Flair because `wmic` is now optional.
+
+### Sketch Style
+- *New* - Added [depth-based sketchiness control](/flair/styles/library/lines/#sketchiness-depth-range).
+
+### Sequence Renderer
+- *Improved* - Sequence Renderer can now list unlimited cameras
+- *Fixed* - Sequence Renderer camera list not updating under certain conditions
+
+### Flair Materials
+- *Fixed* - AOV blend to follow alpha/transparency textures
+- *Fixed* - Flair material attributes now appear on the Attribute Spreadsheet
+- *Improved* - All Flair material attributes now appear in the Channel Box
+- *Improved* - Adding “Animated” setting to proxy materials
+- *Fixed* - GPU Memory leak when materials were assigned to components and the timeline was scrubbed
+
+### Bulk Attribute Tool
+- *Fixed* - Bulk Attribute tool not showing widgets in some Maya versions
+- *Fixed* - Bulk Attribute tool refresh button not working under certain conditions
+- *Fixed* - Bulk Attribute tool scroll value not being kept when changing selections
+
+### Miscellaneous
+- *New* - *Sanitize Flair* button in the [Flair Toolbox](/flair/toolbox/) to remove all Flair traces from a scene.
+- *Improved* - Adding tooltip with full names on presets
+- *Fixed* - Appearance of certain windows on high-resolution screens
+- *Fixed* - flairGlobals node being created in non-Flair scenes when Flair was previously active in the viewport
+
+
 ## Flair 1.1.4
-> Released 28.03.2025 [[**Download**](https://artineering.io/software/flair#pricing)] 
+> Released 28.03.2025
 
 <figure class="release-log">
 <video autoplay loop muted playsinline>
@@ -53,7 +99,7 @@ Flair 1.1.4 brings **Flair to Maya 2026**, initial support to automatically **c
 
 
 ## Flair 1.1.3
-> Released 12.11.2024 [[**Download**](https://artineering.io/software/flair#pricing)] 
+> Released 12.11.2024
 
 <figure class="release-log">
 <video autoplay loop muted playsinline>
