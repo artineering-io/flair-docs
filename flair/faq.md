@@ -21,8 +21,11 @@ nav_order: 12
 ## Use of Flair
 {% include faq/section.html file="useofflair.md" %}
 
-## Setup
-{% include faq/section.html file="setup.md" %}
+## Installation
+{% include faq/section.html file="installation.md" %}
+
+## Activation
+{% include faq/section.html file="activation.md" %}
 
 ## Viewport
 {% include faq/section.html file="viewport.md" %}
