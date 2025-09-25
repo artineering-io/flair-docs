@@ -37,16 +37,6 @@ This button will toggle the inflated instance which generates the warp effect on
 ### Bake effect position on selected
 This button will automatically check the _Animated_ attribute in materials assigned to the selected objects. Doing this will keep the warped effect in-place under animation.
 
-## Delete VertexFX
-Deleting _VertexFX_ (VertexFX) can be useful in a various situations
-* To start using _VertexFX_ again from scratch
-* To reduce file size, while keeping the _VertexFX_ values in the exported file
-
-To use it, simply select the objects from which you'd like to remove the _VertexFX_, and click on the `Delete VertexFX` button.
-
-If nothing is selected, the tool will try to delete the _VertexFX_ of **ALL** objects in the scene.
-{: .info}
-
 ## Unsubdivide Previews
 _Unsubdivide Previews_ can be useful in a various situations where you need to work with unsubdivided meshes.
 * When advecting (attaching) the canvas to the underlaying motion to correctly advect the canvas to the underlaying motion.
@@ -68,6 +58,9 @@ Prints out details of the current Video Ram (VRAM) usage in Maya's _Script Edito
 
 ## Reset Viewport
 Resets the viewport in case you are encountering glitching issues.
+
+## Sanitize Flair
+Unloads the plugin and tries to remove all traces of Flair from the open scene. This is not undoable so a confirmation dialog will appear before it happens.
 
 ## Convert Materials
 These buttons can quickly and automatically convert Maya materials to Flair or ShaderFX materials, inheriting attributes and textures. This is especially useful for quickly loading existing Maya scenes and seeing how they render in Flair. 

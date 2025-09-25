@@ -577,7 +577,36 @@ Velocity is enabled by default, but it can be deactivated per material if motion
 ---
 
 #### Feature Noise
-The _Feature Noise_ setting activates the fractalized 3D noise that is used for shader styles such as hatching, cat and sketch. Fractalized noise will always be the same pixel size, no matter how close or far the camera is from objects. This makes it ideal to recreate 2D effects which also preserve the pixel size on a canvas.
+The _Feature Noise_ setting toggles the fractalized dynamic 3D noise that is used for certain sheder effects such as hatching, fray and sketch lines. Because it is dynamic, the feature noise will always be of the same pixel size, no matter how close or far the camera is from objects. When enabled, a new section within the Attribute Editor appears with attributes to customize the feature noise per material.
+
+<figure class="aio-ui">
+	<img src="/media/flair-shader/feature_noise_offsets.png" alt="Feature noise offsets attributes">
+	<figcaption>The base Feature Noise Offset attributes</figcaption>
+</figure>
+
+##### Noise Frequency
+Offsets the Feature Noise frequency within the material.
+
+##### Noise Phase
+Offsets the Feature Noise phase within the material.
+
+<figure>
+    <video autoplay loop muted playsinline style="width:450px">
+        <source src="/media/flair-shader/feature_noise_offsets.mp4" type="video/mp4">
+    </video>
+    <figcaption>Left: Noise Frequency Offset - Right: Noise Phase Offset</figcaption>
+</figure>
+
+##### Noise Steps
+Adds control over the noise _smoothsteps_ to change the appearance of feature noise by toggling two additional attributes underneath: `Noise Smoothstep Low` and `Noise Smoothstep High`.
+
+<figure class="aio-ui">
+	<img src="/media/flair-shader/feature_noise_offsets_steps.png" alt="Feature noise offsets steps">
+	<figcaption>Additional control over the feature noise appearance.</figcaption>
+</figure>
+
+To visualize the appearance of the feature noise in the viewport, use the _Pass Inspector_ (`PASS` in the _Flair_ shelf) and change the `Active Target` to _featureNoiseTarget_.
+{: .info}
 
 ---
 
