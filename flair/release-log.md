@@ -43,6 +43,7 @@ Flair 1.1.5 brings...
 
 ### Licensing
 - *New* - [Revamped Flair licensing](/flair/setup/activation/) to support _floating_ and _permanent_ licenses.
+- *New* - [Licensing server](/flair/setup/relay/) to manage floating licenses.
 - *Improved* - Online licenses can now be migrated after 6 hours from a previous activation.
 - *Fixed* - Brand new Windows computers not being able to activate Flair because `wmic` was removed.
 

@@ -4,8 +4,11 @@ title: Licensing Server
 nav_order: 3
 parent: Setup
 ---
-# Licensing server (Flair Relay)
+# Licensing server
 {: .no_toc }
+
+Flair 1.1.5
+{: .label .label-green}
 
 <details close markdown="block">
   <summary>
