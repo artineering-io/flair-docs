@@ -60,6 +60,10 @@ Prints out details of the current Video Ram (VRAM) usage in Maya's _Script Edito
 Resets the viewport in case you are encountering glitching issues.
 
 ## Sanitize Flair
+
+Flair 1.1.5
+{: .label .label-green}
+
 Unloads the plugin and tries to remove all traces of Flair from the open scene. This is not undoable so a confirmation dialog will appear before it happens.
 
 ## Convert Materials

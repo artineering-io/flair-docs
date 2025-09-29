@@ -45,7 +45,7 @@ Example: if your character is supposed to be one meter high in his world, but is
 
 ### Style
 Defines the style that Flair is currently running in.
-* [**Graph**](/flair/styles/graph/) - The Flair Graph style (customizable)
+* [**Graph**](/flair/styles/library/graph/) - The Flair Graph style (customizable)
 * [**Watercolor**](/flair/styles/library/watercolor/) - The Watercolor shader style (default)
 * [**Cutout**](/flair/styles/library/cutout/) - 3D Cutout shader style
 * [**Hatching**](/flair/styles/library/hatching/) - Hatching and stippling shader style

@@ -65,7 +65,7 @@ The Flair [_globals node_](./globals/) (`GLOB` button in the [_Flair Shelf_](./f
 
 
 ## Material presets and material control
-At the top of the mid-level of control are [_Material Presets_](/flair/materials/material-presets/) (`PRES` button in the [_Flair Shelf_](./flair-shelf/)), which allow to quickly create or change the materials of selected objects or components.
+At the top of the mid-level of control are [_Material Presets_](/flair/materials/presets/) (`PRES` button in the [_Flair Shelf_](./flair-shelf/)), which allow to quickly create or change the materials of selected objects or components.
 
 <figure>
  <video autoplay loop muted playsinline>

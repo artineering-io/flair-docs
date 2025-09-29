@@ -2,7 +2,7 @@ title: Flair Docs
 description: Flair/MNPRX documentation to get started!
 theme: "just-the-docs"
 
-url: "https://docs.artineering.io/"
+url: "https://docs.artineering.io"
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]

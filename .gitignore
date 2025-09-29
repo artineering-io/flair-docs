@@ -1,4 +1,5 @@
 _site/
+httrack/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata

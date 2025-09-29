@@ -29,7 +29,7 @@ Once you **receive the Flair Relay files** from us, follow the steps below to se
 3. **Open that folder within the Terminal** or PowerShell.
 4. **Run** `./relay serve` to start the floating license sever.
 5. (Optional) Relay will be served on port `6349` by default. To define a custom port, serve by specifying the port: `./relay serve --port ####`.
-6. Open another Terminal/PowerShell in the same folder and run `./relay ls` to check the status of the server.
+6. Open another Terminal/PowerShell in the same folder and run `./relay ls --plain` to check the status of the server.
     
 <figure class="aio-ui aio-window">
 	<img src="/media/setup/relay_ls.png" alt="The available licenses are listed by running: ./relay ls">

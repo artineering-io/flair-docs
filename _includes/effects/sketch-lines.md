@@ -37,7 +37,11 @@ Offset of the sketch line(s) in relation to the outline. This can also be art-di
 #### Sketchiness Max
 Maximum offset the generated sketch line(s) may have.
 
-#### Sketchiness Depth Range
+#### Sketchiness Depth Range 
+
+Flair 1.1.5
+{: .label .label-green}
+
 The depth range at which sketch lines are offset in the scene. These attributes work in the same way as the [Line Width Depth Range](#line-width-depth-range) and also consists of four (4) values that define the different distances from the camera to modify the _sketchiness_. From left to right: Close, Close Mid, Far Mid, Far.
 
 Between the _Close Mid_ and _Far Mid_ distances, the global _Sketchiness_ that has been set will apply. Beyond these distances towards the _Close_ and _Far_ depths, the global _Sketchiness_ will be multiplied by the _Sketchiness Depth Factor_, which is defined below.

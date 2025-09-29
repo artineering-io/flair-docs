@@ -20,10 +20,13 @@ nav_order: 10
 
 
 ---
----
+
 
 ## Flair 1.1.5
-> Release TBA [[**Download**](https://artineering.io/software/flair#pricing)] 
+> Release TBA 
+
+<!-- 
+[[**Download**](https://artineering.io/software/flair#pricing)] 
 
 <figure class="release-log">
 <video autoplay loop muted playsinline>
@@ -34,12 +37,14 @@ nav_order: 10
 
 > Flairing it up!
 
+-->
+
 Flair 1.1.5 brings...
 
 ### Licensing
-- *New* - Revamped Flair licensing to support _floating_ and _permanent_ licenses.
+- *New* - [Revamped Flair licensing](/flair/setup/activation/) to support _floating_ and _permanent_ licenses.
 - *Improved* - Online licenses can now be migrated after 6 hours from a previous activation.
-- *Fixed* - Brand new Windows computers not being able to activate Flair because `wmic` is now optional.
+- *Fixed* - Brand new Windows computers not being able to activate Flair because `wmic` was removed.
 
 ### Sketch Style
 - *New* - Added [depth-based sketchiness control](/flair/styles/library/lines/#sketchiness-depth-range).
@@ -61,7 +66,7 @@ Flair 1.1.5 brings...
 - *Fixed* - Bulk Attribute tool scroll value not being kept when changing selections
 
 ### Miscellaneous
-- *New* - *Sanitize Flair* button in the [Flair Toolbox](/flair/toolbox/) to remove all Flair traces from a scene.
+- *New* - [Sanitize Flair](/flair/toolbox/#sanitize-flair) button in the Flair Toolbox to remove all Flair traces from a scene.
 - *Improved* - Adding tooltip with full names on presets
 - *Fixed* - Appearance of certain windows on high-resolution screens
 - *Fixed* - flairGlobals node being created in non-Flair scenes when Flair was previously active in the viewport

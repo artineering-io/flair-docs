@@ -7,6 +7,9 @@ parent: Setup
 # Activation
 {: .no_toc }
 
+Flair 1.1.5
+{: .label .label-green}
+
 <details close markdown="block">
   <summary>
     Table of contents

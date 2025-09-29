@@ -148,6 +148,15 @@ p .aio-btn {
     font-size: small;
 }
 
+.label {
+    float: right;
+    margin-top: -2em;
+}
+
+.label::after {
+    content: " - Coming soon"; /* Add a string after the element's content */
+}
+
 
 // FAQ - Accordion
 // ====================================

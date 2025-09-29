@@ -12,7 +12,7 @@ has_toc: false
  <img src="/media/styles/header.png" alt="Styles header image">
 </figure>
 
-Styles within Flair are created through shader pipelines that are defined either internally or using the [Flair graph](./graph).
+Styles within Flair are created through shader pipelines that are defined either internally or using the [Flair graph](/flair/styles/library/graph/).
 These pipelines are controlled via parameters that are normally exposed as attributes in the [globals node](/flair/getting-started/globals/) of the style.
 
 The documentation herein covers everything there is to know about working with Flair styles.
