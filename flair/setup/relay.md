@@ -24,7 +24,25 @@ A licensing server can be used to **_Relay_ Flair licenses through a local netwo
 Floating licenses are available when purchasing multiple Flair _STUDIO_ or _INDIE for Education_ licenses. [Get in touch](https://artineering.io/contact) with our sales team for more information on purchasing floating licenses.
 {: .info}
 
-# Setup
+---
+
+## License distribution
+
+The Flair Relay licensing server distributes the available licenses to whichever _node_ claims it, be it an artist workstation or a computer in the farm in headless mode.
+
+All Maya/Flair instances (sessions) opened on the same node share a claimed license. So if an artist has 5 Maya sessions open using Flair on their workstation, they are only using _one_ Flair license.
+
+Licenses are claimed the moment the Flair plugin loads, so make sure to turn off `Auto load` within the _Plug-in Manager_ (`Windows -> Settings/Preferences -> Plug-in Manager -> flairEngine`) so that licenses are not automatically claimed even though they are not in use. The Flair plugin auto-loads whenever it is required by a node in the scene or a tool within the Flair Shelf.
+
+Claimed licenses are released in two ways:
+* Once the last instance of Flair in a node is closed by either unloading the plugin or closing Maya where the Flair plugin was loaded.
+* The relay server doesn't receive a heartbeat from the node within 60 seconds.
+
+Once released, the license is free to be claimed by a new node again.
+
+---
+
+## Setup
 Once you **receive the Flair Relay files** from us, follow the steps below to setup the licensing server.
 
 1. Make sure the server has a human-readable hostname or a static IP address within your network
@@ -40,13 +58,13 @@ Once you **receive the Flair Relay files** from us, follow the steps below to se
 
 ---
 
-## Adding firewall rules
+### Adding firewall rules
 
 Relay will need to be **permitted through the firewall** of the server machine for computers on the network **to connect to it**. Contact your network administrator so that they can configure the firewall for your environment.
 
 Below are some basic instructions for Linux (Rocky 9) and Windows, but these may be quite different depending on how your environment is setup.
 
-### On Linux
+#### On Linux
 
 1. Check what firewall zone your Linux server is operating in
     
@@ -68,7 +86,7 @@ Below are some basic instructions for Linux (Rocky 9) and Windows, but these may
     ```
     
 
-### On Windows
+#### On Windows
 
 **Add a program exception**
 
@@ -83,29 +101,29 @@ Below are some basic instructions for Linux (Rocky 9) and Windows, but these may
 
 ---
 
-# Troubleshooting
+## Troubleshooting
 
-## Test communication with Relay
+### Test communication with Relay
 
 Once the relay server is running, you can **check if it is reachable** with curl
 
-### On Linux
+#### On Linux
 
 ```bash
-curl -v -X GET "http://SERVERNAME:PORT/v1/health"  # HTTP/1.1 200 OK
+curl -v -X GET "http://SERVERNAME:PORT/v1/health"  ## HTTP/1.1 200 OK
 ```
 
-### On Windows (PowerShell)
+#### On Windows (PowerShell)
 
 ```powershell
-& curl.exe -v -X GET "http://SERVERNAME:PORT/v1/health"  # HTTP/1.1 200 OK
+& curl.exe -v -X GET "http://SERVERNAME:PORT/v1/health"  ## HTTP/1.1 200 OK
 ```
 
 If host cannot be reached, check your [firewall configuration](#adding-firewall-rules) and enable the necessary ports.
 
-## Setting a hostname
+### Setting a hostname
 
-### On Linux (RHEL 7+)
+#### On Linux (RHEL 7+)
 
 Run the following command where `NEW-HOSTNAME` is the new hostname of the server 
 
@@ -113,7 +131,7 @@ Run the following command where `NEW-HOSTNAME` is the new hostname of the server
 sudo hostnamectl set-hostname NEW-HOSTNAME
 ```
 
-### On Windows
+#### On Windows
 
 1. Open **Settings** (`Win + I`)
 2. Go to **System > About**
