@@ -16,7 +16,6 @@ Instance the style presets library and load a style
 import flair_style_presets
 
 style_preset_lib = flair_style_presets.StylePresetLibrary()
-style_preset_lib.find()  # not needed to manually find starting Flair 1.1.3+
 
 # load a style with all options enabled
 options = { "worldScale": False, "quality": True, "canvases": True, "attributes": True }
@@ -67,7 +66,6 @@ Load library and print available presets
 ```python
 # load preset library
 style_preset_lib = flair_style_presets.StylePresetLibrary()
-style_preset_lib.find()  # not needed to manually find starting Flair 1.1.3+
 
 # print available presets
 preset_names = style_preset_lib.keys()
@@ -79,13 +77,30 @@ print(preset_names)
 
 ---
 
+### <kbd>method</kbd> `StylePresetLibrary.delete`
+
+```python
+delete(name)
+```
+
+Deletes the preset from the library. 
+
+**Args:**
+ 
+ - <b>`name`</b> (unicode):  Name of the preset to delete 
+
+---
+
 ### <kbd>method</kbd> `StylePresetLibrary.find`
 
 ```python
 find()
 ```
 
-Finds all available style presets and populates the library class. 
+Finds all available style presets and populates the library class.   Style presets are searched on disk in the following locations: 
+- Specified presets folder in environment variable `FLAIR_PRESETS_PATH` (`FLAIR_PRESETS_PATH/styles`) 
+- User presets folder (`AppDocuments/Flair/presets/styles`) 
+- Installation presets folder 
 
 ---
 
@@ -116,13 +131,31 @@ Options are a requirement for this method and can be defined as follows:
 
 ---
 
+### <kbd>method</kbd> `StylePresetLibrary.rename_preset`
+
+```python
+rename_preset(name, new_name)
+```
+
+Rename an existing preset. 
+
+**Args:**
+ 
+ - <b>`name`</b> (unicode):  name of the preset to rename 
+ - <b>`new_name`</b> (unicode):  new name of the preset 
+
+---
+
 ### <kbd>method</kbd> `StylePresetLibrary.save`
 
 ```python
 save(name, obj)
 ```
 
-Save the shader style attributes of the flairGlobals node into a preset with the specified name 
+Save the shader style attributes of the flairGlobals node into a preset with the specified name.   The preset is saved on disk in the first location that is writable among the following: 
+- Specified presets folder in environment variable `FLAIR_PRESETS_PATH` (`FLAIR_PRESETS_PATH/styles`) 
+- User presets folder (`AppDocuments/Flair/presets/styles`) 
+- Installation presets folder 
 
 **Args:**
  

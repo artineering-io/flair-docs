@@ -42,6 +42,7 @@ mat_preset_lib.load("green", options, object)
 ---------------
 - **SFX_MATERIAL**
 - **FLAIR_MATERIAL**
+- **MAYA_DEFAULT_MATERIALS**
 
 ---
 
@@ -124,7 +125,6 @@ Load library and print available presets
 ```python
 # load preset library
 mat_preset_lib = flair_material_presets.MaterialPresetLibrary()
-mat_preset_lib.find()  # not needed to manually find starting Flair 1.1.3+
 
 # print available presets
 preset_names = mat_preset_lib.keys()
@@ -136,13 +136,30 @@ print(preset_names)
 
 ---
 
+### <kbd>method</kbd> `MaterialPresetLibrary.delete`
+
+```python
+delete(name)
+```
+
+Deletes the preset from the library. 
+
+**Args:**
+ 
+ - <b>`name`</b> (unicode):  Name of the preset to delete 
+
+---
+
 ### <kbd>method</kbd> `MaterialPresetLibrary.find`
 
 ```python
 find()
 ```
 
-Finds all available material presets and populates the library class. 
+Finds all available material presets and populates the library class.   Material presets are searched on disk in the following locations: 
+- Specified presets folder in environment variable `FLAIR_PRESETS_PATH` (`FLAIR_PRESETS_PATH/materials`) 
+- User presets folder (`AppDocuments/Flair/presets/materials`) 
+- Installation presets folder 
 
 ---
 
@@ -176,13 +193,31 @@ Options are a requirement for this method and can be defined as follows:
 
 ---
 
+### <kbd>method</kbd> `MaterialPresetLibrary.rename_preset`
+
+```python
+rename_preset(name, new_name)
+```
+
+Rename an existing preset. 
+
+**Args:**
+ 
+ - <b>`name`</b> (unicode):  name of the preset to rename 
+ - <b>`new_name`</b> (unicode):  new name of the preset 
+
+---
+
 ### <kbd>method</kbd> `MaterialPresetLibrary.save`
 
 ```python
 save(name, mat)
 ```
 
-Save the material attributes into a preset under the specified name 
+Save the material attributes into a preset under the specified name.   The preset is saved on disk in the first location that is writable among the following: 
+- Specified presets folder in environment variable `FLAIR_PRESETS_PATH` (`FLAIR_PRESETS_PATH/materials`) 
+- User presets folder (`AppDocuments/Flair/presets/materials`) 
+- Installation presets folder 
 
 **Args:**
  

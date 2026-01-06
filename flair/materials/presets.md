@@ -86,7 +86,6 @@ Presets can be deleted at any time.
  A deleted preset cannot be recovered by undoing changes.
  {: .warning}
 
-
 ## Refreshing presets
 Each material preset is saved under `Flair/maya/presets/materials` as a _\*.json_ and _\*.jpg_ file. Each individual installation will have their own presets, but these can also be shared if Flair is stored in a shared/network folder.
 
@@ -102,6 +101,14 @@ When you right-click on a preset, a context menu will appear with options to `Ed
 
 * Editing the preset will open the _\*.json_ preset in a text editor to modify to your liking. Remember to refresh the presets after any edits.
 * Renaming the preset will prompt to enter a new name for the preset.
+
+## Material presets location
+Presets are stored in the following locations:
+1. Specified presets folder in environment variable `FLAIR_PRESETS_PATH` (`FLAIR_PRESETS_PATH/materials`) [optional]
+2. User presets folder (`AppDocuments/Flair/presets/materials`) [In system-wide installations: `For all users`]
+3. Installation presets folder
+
+In case a preset exists in multiple locations, the preset on the first locations will override presets in later locations.
 
 ## Material Presets API
 

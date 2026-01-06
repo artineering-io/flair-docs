@@ -28,7 +28,7 @@ flair_import_export.export_stylization(export_path="PATH/TO/SAVE/ONTO.style", ma
 
 ```python
 import_stylization(
-    import_path,
+    import_data,
     selected=False,
     namespace_changes=None,
     maya_attrs=True,
@@ -45,7 +45,7 @@ Imports the stylization from a `.style` file into the scene.
 
 **Args:**
  
- - <b>`import_path`</b> (unicode):  Path to import stylization from 
+ - <b>`import_data`</b> (unicode, dict):  Path to import stylization from or dict of cached stylization 
  - <b>`selected`</b> (bool):  If import should only happen to selected objects (default: entire scene) 
  - <b>`namespace_changes`</b> (dict):  Dictionary with name changes (default: no changes) 
  - <b>`maya_attrs`</b> (bool):  If the maya attributes need to be imported (default: True) 
