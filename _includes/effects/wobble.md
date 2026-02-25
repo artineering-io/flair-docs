@@ -24,7 +24,7 @@ As wobble is generated from noise in 3D, make sure to toggle the *deformed* attr
 {:.info}
 
 #### Wobble Blur
-Defines the amount wobble blur for each TAA sample, generating a soft edge by avaraging different wobble positions. This was inspired by the "Painting with polygons" [paper](https://dl.acm.org/doi/10.1145/1597990.1598012) by Isaac Botkin. 
+Defines the amount of wobble blur for each TAA sample, generating a soft edge by averaging different wobble positions. This was inspired by the "Painting with polygons" [paper](https://dl.acm.org/doi/10.1145/1597990.1598012) by Isaac Botkin. 
 
 TAA needs to be enabled to show this effect.
 {: .info}

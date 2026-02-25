@@ -22,44 +22,56 @@ nav_order: 10
 ---
 
 
-## Flair 1.1.5
-> Release TBA 
-
-<!-- 
+## Flair 1.2
+> Released 03.03.2026
 [[**Download**](https://artineering.io/software/flair#pricing)] 
 
 <figure class="release-log">
 <video autoplay loop muted playsinline>
-	<source src="/media/release-log/1.1.5/banner_1_1_5_web.mp4" type="video/mp4">
+	<source src="/media/release-log/1.2/banner_1_2_web.mp4" type="video/mp4">
 </video>
-<figcaption>3D model and animation by...</figcaption>
+<figcaption>3D model and animation by <a href="https://fab.com/s/da482b10be5b" target="_blank">Tom Breuer</a></figcaption>
 </figure>
 
-> Flairing it up!
 
--->
+> Flair for everyone!
 
-Flair 1.1.5 brings...
+Flair 1.2 is the **biggest update to Flair yet**, as we finally **added support for macOS** in Maya 2024+. This means that we now officially support all major operating systems! 
 
-### Licensing
-- *New* - [Revamped Flair licensing](/flair/setup/activation/) to support _floating_ and _permanent_ licenses.
-- *New* - [Licensing server](/flair/setup/relay/) to manage floating licenses.
-- *Improved* - Online licenses can now be migrated after 6 hours from a previous activation.
-- *Fixed* - Brand new Windows computers not being able to activate Flair because `wmic` was removed.
+As part of this update, we have also revamped licensing so that we can now **offer floating and permanent licenses**, in addition to our subscription-based licenses. We hope this now accommodates everyone's preferences :).
 
-### Sketch Style
-- *New* - Added [depth-based sketchiness control](/flair/styles/library/lines/#sketchiness-depth-range).
+Alongside this refactoring, we have focused a lot on **performance improvements**, which can be felt most in **complex scenes, during saving/opening and rendering**. The **flairShader material has been extended to also function as a proxy** and styles with **lines have new features** to control the sketchiness based on depth, have more control over outlines and inlines and even have negative light response to achieve some cool noir styles! We have also made a lot of other improvements and fixes that can be read in detail below.
+
+> **Upgrading from version 1.1 should be seamless** and there should only be minor visual changes in case you are using the `Wobble Blur` effect or had a very small `Color Edge Threshold` for generating Lines.
+
+### Licensing and Installation
+- *New* - [Revamped Flair licensing](/flair/setup/activation/) to support _floating_ and _permanent_ licenses
+- *New* - [Licensing server](/flair/setup/relay/) to manage floating licenses
+- *Improved* - Online licenses can now be migrated after 6 hours from a previous activation
+- *Fixed* - Brand new Windows computers not being able to activate Flair because `wmic` was removed
+- *Fixed* - Installation not working if the previous installation folder was missing
 
 ### Sequence Renderer
+- *Improved* - Async saving of images to speed up rendering
+- *Improved* - Rendering beyond 32 TAA samples improving anti-aliasing (up to 254 samples)
 - *Improved* - Sequence Renderer can now list unlimited cameras
 - *Fixed* - Sequence Renderer camera list not updating under certain conditions
 
 ### Flair Materials
-- *Fixed* - AOV blend to follow alpha/transparency textures
-- *Fixed* - Flair material attributes now appear on the Attribute Spreadsheet
+- *New* - Extended the flairShader material to replace the old ShaderFX proxy material. This means that any flairShader material can now become a proxy material with just a toggle! Therefore, the new proxies now also support `Wobble`, `Offsets` and different types of *NoiseFX*.
+- *Improved* - Keyed attributes in flairShader materials now also work in Parallel and Serial evaluation modes
 - *Improved* - All Flair material attributes now appear in the Channel Box
-- *Improved* - Adding “Animated” setting to proxy materials
+- *Improved* - Flair material attributes now appear on the Attribute Spreadsheet
 - *Fixed* - GPU Memory leak when materials were assigned to components and the timeline was scrubbed
+- *Fixed* - AOV blend to follow alpha/transparency textures
+- *Fixed* - Vertex-baking not working when materials were also assigned to unsupported shapes
+
+### Clean and Rough lines (Toon and Sketch lines)
+- *New* - Added [depth-based sketchiness control](/flair/styles/library/lines/#sketchiness-depth-range)
+- *New* - Added `Outline Width Offset` to modify the [line width of outlines](/flair/styles/library/lines/#outline-width-offset)
+- *New* - Added control over [Outline and Inline Light Response](/flair/styles/library/lines/#outline-and-inline-light-response) for both clean and rough lines
+- *New* - Updated Nuke scripts and Fusion fuses to support Outline and Inline colorations
+- *New* - Added negative light response to show lines in shaded parts of the scene (noir style)
 
 ### Bulk Attribute Tool
 - *Fixed* - Bulk Attribute tool not showing widgets in some Maya versions
@@ -67,10 +79,18 @@ Flair 1.1.5 brings...
 - *Fixed* - Bulk Attribute tool scroll value not being kept when changing selections
 
 ### Miscellaneous
-- *New* - [Sanitize Flair](/flair/toolbox/#sanitize-flair) button in the Flair Toolbox to remove all Flair traces from a scene.
-- *Improved* - Adding tooltip with full names on presets
+- *New* - Added [`Canvas Override`](/flair/getting-started/globals/#canvas-override) global attribute to replace the `Beauty` pass with the canvas color
+- *New* - [Sanitize Flair](/flair/toolbox/#sanitize-flair) button in the Flair Toolbox to remove all Flair traces from a scene
+- *New* - Added `FLAIR_READ_ONLY` environment variable to force read-only local installations
+- *New* - Added `FLAIR_PRESETS_PATH` environment variable to force different preset paths
+- *Improved* - Substantial performance improvements on complex scenes interactively and during saving/opening of scenes
+- *Improved* - Wobble deformations are now equally averaged to achieve better diffusion
+- *Improved* - Default NoiseFX amount is now set to 0.0 to shift NoiseFX values without noise when needed (offsetting the effect evenly)
+- *Improved* - Added tooltip with full names on presets
 - *Fixed* - Appearance of certain windows on high-resolution screens
 - *Fixed* - flairGlobals node being created in non-Flair scenes when Flair was previously active in the viewport
+- *Fixed* - Converting materials to Flair not working correctly when attributes were plain color
+- *Fixed* - Incorrect viewport API information if `MAYA_VP2_DEVICE_OVERRIDE` environment variable was set
 
 
 ## Flair 1.1.4
@@ -99,7 +119,7 @@ Flair 1.1.4 brings **Flair to Maya 2026**, initial support to automatically **c
 - *Fixed* - Negative line pixels appearing due to strong line color art-direction
 
 ### Miscellaneous
-- *New* - Adding support to convert RenderMan materials to Flair shader materials
+- *New* - Added support to convert RenderMan materials to Flair shader materials
 - *Improved* - Flair will not change the viewport if it has been used but was not active upon saving
 - *Fixed  - Wobble* always changing to `Simple` even though it was set to `Cloud` once material attributes where applied (presets or during import)
 

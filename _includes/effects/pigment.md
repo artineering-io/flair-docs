@@ -1,4 +1,8 @@
 #### Pigment Density
+
+[Art-directable](#art-directable-attributes)
+{: .btn .btn-label}
+
 The concentration of pigments, giving the render either a diluted or a more saturated and darker look.
 
 <figure>
@@ -9,6 +13,10 @@ The concentration of pigments, giving the render either a diluted or a more satu
 </figure>
 
 #### Paper Granulation
+
+[Art-directable](#art-directable-attributes)
+{: .btn .btn-label}
+
 The accumulation of pigments on the valleys of the paper (canvas). Concentrates the pigments on the valleys and creates a more saturated and darker look.
 
 <figure>

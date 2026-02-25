@@ -10,7 +10,7 @@ nav_order: 7
  <img src="/media/styles/lines/lines_header.jpg" alt="Lines header">
 </figure>
 
-# Toon and sketch lines shader style
+# Lines shader style
 
 <details close markdown="block">
   <summary>
@@ -26,7 +26,7 @@ nav_order: 7
 
 ## Style breakdown
 
-The _toon_ and _sketch_ shader style is all about generating lines for all kinds of linework to outline the form of 3D geometry. From clean lines to the more rough sketch lines, you can control and art-direct them to match your artwork. The shader style also provides other painterly effects often found using traditional painting media such as pigment turbulence, canvas granulation and dry-brush.
+The lines shader style is all about generating lines for all kinds of linework to outline the form of 3D geometry. From clean toon lines to the more rough sketch lines, you can control and art-direct them to match your artwork. The shader style also provides other painterly effects often found using traditional painting media such as pigment turbulence, canvas granulation and dry-brush.
 
 <figure>
 	<video autoplay loop muted playsinline>
@@ -35,11 +35,11 @@ The _toon_ and _sketch_ shader style is all about generating lines for all kinds
 	<figcaption>3D model and animation by Adrian Cojocaru</figcaption>
 </figure>
 
-The lines in the toon and sketch shader style are generated from three different types of data: color, normals and depth. So, whenever there is a high enough difference between neighboring pixels of the specific data type, a line is generated. This line is then dilated to become wider or narrower and offset from its original position in the case of sketch lines.
+The lines in this shader style are generated from three different types of data: color, normals and depth. So, whenever there is a high enough difference between neighboring pixels of the specific data type, a line is generated. This line is then dilated to become wider or narrower and offset from its original position in the case of rough sketch lines.
 
-This shader style depends on the [Flair material](/flair/materials/flair-shader), which can be assigned onto any mesh object. The material embeds painterly reflectance models and supports the art-direction framework of Flair. The material also contains a	`Animated` setting attribute, which allows to attach sketch line offsets to animated objects.
+This shader style depends on the [Flair material](/flair/materials/flair-shader), which can be assigned onto any mesh object. The material embeds painterly reflectance models and supports the art-direction framework of Flair. The material also contains an	`Animated` setting attribute, which allows to attach rough sketch line offsets to animated objects.
 
-The toon and sketch line shader style may not have all features that you need. So please let us know if [we can help](https://artineering.io/agency) polish the look exactly to your requirements and pipeline.
+The lines shader style may not have all features that you need. So please let us know if [we can help](https://artineering.io/agency) polish the look exactly to your requirements and pipeline.
 
 ---
 
@@ -73,6 +73,10 @@ In this section, we only document global attributes specific toon and sketch lin
 
 ---
 
+{% include /effects/lines.md %}
+
+---
+
 {% include /effects/toon-lines.md %}
 
 ---
@@ -93,3 +97,6 @@ In this section, we only document global attributes specific toon and sketch lin
 {% include /effects/pigment-application.md style="watercolor" %}
 
 ---
+
+## Art-directable Attributes
+Attributes labeled as art-directable can be controlled further with [NoiseFX](/flair/art-direction/noisefx/), [VertexFX](/flair/art-direction/vertexfx/) and [proxy materials](/flair/materials/proxy-material/).

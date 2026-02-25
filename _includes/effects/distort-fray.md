@@ -17,6 +17,10 @@ The frayed type dictates where the frayed distortion should happen.
 </figure>
 
 #### Frayed
+
+[Art-directable](#art-directable-attributes)
+{: .btn .btn-label}
+
 The amount of frayed distortion. 
 
 <figure>

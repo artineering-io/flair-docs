@@ -95,7 +95,6 @@ In this page, we only document global attributes specific to the fray shader sty
 {% include /effects/post-processing.md %}
 
 ---
----
 
 ## Considerations
 
@@ -104,3 +103,8 @@ Activate the `Animated` attribute within the materials to bake the frayed distor
 
 ### Nurbs surfaces
 Nurbs surfaces can't save any data in vertex colors, so warped distortions won't stick onto the objects and it won't be possible to use VertexFX on them.
+
+---
+
+## Art-directable Attributes
+Attributes labeled as art-directable can be controlled further with [NoiseFX](/flair/art-direction/noisefx/), [VertexFX](/flair/art-direction/vertexfx/) and [proxy materials](/flair/materials/proxy-material/).

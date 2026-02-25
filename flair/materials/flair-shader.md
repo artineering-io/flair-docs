@@ -277,7 +277,7 @@ The _Toon Smooth Lighting_ smoothly interpolates toon lighting of various light 
 ---
 
 ### Animated
-The _Animated_ setting bakes the current position of vertices so that the effects that rely on the 3D position of objects can stay in place when objects are deformed/animated. If this setting is not enabled, features like _NoiseFX_ or _FeatureNoise_ would float around in 3D space and not move with the objects.
+The _Animated_ setting bakes the current position of vertices so that effects that rely on the 3D positions can stay in place when objects are deformed/animated. If this setting is not enabled, features like _NoiseFX_ or _FeatureNoise_ would float around in 3D space and not move with the objects.
 
 <figure>
     <video autoplay loop muted playsinline style="height:152px">
@@ -291,6 +291,23 @@ The _Animated_ setting bakes the current position of vertices so that the effect
         <source src="/media/flair-shader/deformed.mp4" type="video/mp4">
     </video>
     <figcaption>NoiseFX with the Animated setting.</figcaption>
+</figure>
+
+---
+
+
+### Proxy
+
+Flair 1.2
+{: .label .label-green}
+
+The _Proxy_ setting changes the behavior of the flairShader material to become a proxy. When toggled, the objects assigned to the material become invisible and most of the available attributes in the Attribute Editor change. This is the normal behavior, as proxy materials do not render color, but effect controls. This means that any 3D mesh can become an art-direction tool!
+
+As this is a behavioral change and a powerful art-direction tool, you can read more about it in the dedicated [proxy material page](/flair/materials/proxy-material).
+
+<figure class="aio-ui">
+	<img src="/media/flair-shader/proxy-AE.png" alt="Flair proxy material node">
+	<figcaption>The proxy attributes in the Attribute Editor.</figcaption>
 </figure>
 
 ---
@@ -421,7 +438,7 @@ _Specular Maps_ are greyscale texture maps which mask the specularity within the
 ---
 
 #### Rim light
-The _Rim Light_ settings activates the the use of 3D rim lighting effect around the silhouette of objects on areas facing the light or opposite to it.
+The _Rim Light_ settings activates the use of 3D rim lighting effect around the silhouette of objects on areas facing the light or opposite to it.
 
 <figure class="aio-ui">
     <img src="/media/flair-shader/rim-light-AE.png" alt="Rim light attributes in the Attribute Editor">
@@ -564,7 +581,7 @@ The grayscale value at which the [_Alpha Mask_](#alpha-mask) is transparent. Def
 ---
 
 #### VertexFX
-The _VertexFX_ setting toggles the control of stylization effects through the vertex colors. The attribute is automatically enabled by Flair and is toggled as soon as you start painting with the [_VertexFX_](/flair/art-direction/vertexfx/) tool.
+The _VertexFX_ setting toggles the control of effects through vertex colors. The attribute is automatically enabled by Flair and is toggled as soon as you start painting with the [_VertexFX_](/flair/art-direction/vertexfx/) tool.
 
 ---
 
@@ -611,10 +628,10 @@ To visualize the appearance of the feature noise in the viewport, use the _Pass 
 ---
 
 #### NoiseFX
-The _NoiseFX_ setting toggles the use of NoiseFX in the material and enables the NoiseFX section within the bottom of the Attribute Editor. This attribute is generally toggled automatically when the [NoiseFX](/flair/art-direction/noisefx/) tool is used and allows you to key and animate NoiseFX attributes when needed.
+The _NoiseFX_ setting toggles the use of NoiseFX in the material and enables the NoiseFX section at the bottom of the Attribute Editor. _NoiseFX_ is generally toggled automatically when the [NoiseFX](/flair/art-direction/noisefx/) tool is used and allows you to key and animate NoiseFX attributes when needed.
 
 <figure class="aio-ui">
-	<img src="/media/flair-shader/noisefx.png" alt="Stylization (procedural) attributes">
+	<img src="/media/flair-shader/noisefx.png" alt="NoiseFX attributes">
 	<figcaption>The beginning of the NoiseFX attributes</figcaption>
 </figure>
 
@@ -624,8 +641,8 @@ The _NoiseFX_ setting toggles the use of NoiseFX in the material and enables the
 The _Offsets_ setting toggles the available offsets per material and the respective section within the Attribute Editor. The effects of these attributes will only be visible on effects and styles that work with thresholds and depth i.e., lines (toon and sketch).
 
 <figure class="aio-ui">
-	<img src="/media/flair-shader/offsets.png" alt="Stylization (procedural) attributes">
-	<figcaption>The beginning of the NoiseFX attributes</figcaption>
+	<img src="/media/flair-shader/offsets.png" alt="Offset attributes">
+	<figcaption>The available Offset attributes</figcaption>
 </figure>
 
 ##### Depth Threshold Offset
@@ -696,7 +713,7 @@ Different types of wobble noise can be specified for different results
 
 * **None** - No wobble is applied
 * **Simple** - Default simplex wobble noise
-* **Cloud** - More detailed fractalized wobble noise resembling the "cloud" noise in Photoshop (better appreciated higher polygon count).
+* **Cloud** - More detailed fractalized wobble noise resembling the "cloud" noise in Photoshop (better appreciated at a higher polygon count).
 * **Custom** - Custom noise, which can be written in glsl `flair/maya/shaders/material/include/noise.glsl` [`customNoise3(vec4 v)`].
 
 <figure class="aio-ui">
@@ -743,7 +760,7 @@ As wobble is generated from noise in 3D, make sure to toggle the *deformed* attr
 
 
 ##### Wobble Blur
-Defines the amount wobble blur for TAA samples, generating a soft edge by avaraging different wobble positions as layers.
+Defines the amount of wobble blur for TAA samples, generating a soft edge by averaging different wobble positions as layers.
 
 <figure>
     <video autoplay loop muted playsinline style="width:152px">
@@ -766,7 +783,7 @@ With a low layer amount, you can use Wobble Blur to achieve a layered watercolor
 {: .info}
 
 ##### Wobble Motion
-Defines the amount of motion offset of the wobble, generating streaks of motion under animation. For this attribute to show it's effect, make sure that velocity is enabled in the _Globals_ node and in the material.
+Defines the amount of motion offset of the wobble, generating streaks of motion under animation. For this attribute to show its effect, make sure that velocity is enabled in the _Globals_ node and in the material.
 
 <figure>
     <video autoplay loop muted playsinline style="height:152px">

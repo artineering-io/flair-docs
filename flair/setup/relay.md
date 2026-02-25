@@ -7,7 +7,7 @@ parent: Setup
 # Licensing server
 {: .no_toc }
 
-Flair 1.1.5
+Flair 1.2
 {: .label .label-green}
 
 <details close markdown="block">

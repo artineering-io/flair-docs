@@ -25,7 +25,7 @@ The _display_ node can show whatever is connected to it. This helps troubleshoot
 </figure>
 
 ## Open display panel
-Click on this option to open the display panel. By default, the panel is minimized underneath the properties panel. Click-and-drag to undock the panel and resize it to accomodate the image it should display.
+Click on this option to open the display panel. By default, the panel is minimized underneath the properties panel. Click-and-drag to undock the panel and resize it to accommodate the image it should display.
 
 <figure class="aio-ui">
 	<img src="/media/graph/nodes/read_display.png" alt="The connection to show the contents of a read node.">

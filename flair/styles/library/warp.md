@@ -103,8 +103,7 @@ In this section, we only document global attributes specific to the warp shader 
 
 {% include /effects/post-processing.md %}
 
-------------------------
-------------------------
+---
 
 ## Warp Settings
 
@@ -121,8 +120,7 @@ This button will toggle the inflated instance on the selected objects on/off. Es
 ### Bake effect positions on selected
 On Flair materials, this button is a convenience function that will check the `Animated` setting attribute on materials where the selected objects have been assigned into. With non-Flair materials, this is the **only way** to attach the warp distortions to animated objects.
 
-------------------------
-------------------------
+---
 
 
 ## Considerations
@@ -140,3 +138,8 @@ Nurbs surfaces can't save any data in vertex colors, so warped distortions won't
 ### Warnings
 `...due to multiply-instanced child`
 Whenever you get this warning, uncheck the *Enable* attribute in the Warp globals to remove the instances, make the edits that you previously wanted to do and re-enable the instances.
+
+---
+
+## Art-directable Attributes
+Attributes labeled as art-directable can be controlled further with [VertexFX](/flair/art-direction/vertexfx/) and [proxy materials](/flair/materials/proxy-material/).

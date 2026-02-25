@@ -1,5 +1,5 @@
-### Toon Lines
-Toon lines can be customized in terms of intensity, width and color. Coloring of toon lines happens in the following order: [Density](#line-density), [Coloration](#line-coloration), [Light Response](#line-light-response).
+### Clean Lines
+Clean lines can be customized in terms of intensity and color. Coloring of lines happens in the following order: [Density](#line-density), [Coloration](#line-coloration), [Light Response](#line-light-response).
 
 #### Line Intensity
 Opacity of the generated lines. A lower intensity will make the toon lines more transparent.
@@ -12,55 +12,6 @@ Opacity of the generated lines. A lower intensity will make the toon lines more 
 </figure>
 
 As lines are generated at the middle of an edge, blending the intensity will reveal the edge underneath.
-{: .info}
-
-#### Line Width
-Width of the generated toon and sketch lines. The width of lines can also be art-directed with [VertexFX](/flair/art-direction/vertexfx/) and [NoiseFX](/flair/art-direction/noisefx/).
-
-<figure>
-	<video autoplay loop muted playsinline>
-	    <source src="/media/effects/lines/line-width.mp4" type="video/mp4">
-	</video>
-	<figcaption>Line width between 0 and 10.</figcaption>
-</figure>
-
-#### Line Width Max
-Defines the maximum width the generated toon and sketch lines may have.
-
-#### Line Width Light Response
-The influence lighting will have over the width of the line. Positive _Line Width Light Response_ will thin the line on lit parts, whereas a negative _Line Width Light Response_ will thin the line on parts within the shade.
-
-<figure>
-	<video autoplay loop muted playsinline>
-	    <source src="/media/effects/lines/line-width-light-response.mp4" type="video/mp4">
-	</video>
-	<figcaption>Line width light response between -1 and 1.</figcaption>
-</figure>
-
-#### Line Width Depth Range
-The depth range at which toon and sketch lines are widened or thinned in the scene. This attribute consists of four (4) values that define the different distances from the camera to modify the line width. From left to right: Close, Close Mid, Far Mid, Far.
-
-Between the _Close Mid_ and _Far Mid_ distances, the global _Line Width_ that has been set will apply. Beyond these distances towards the _Close_ and _Far_ depths, the global _Line Width_ will be multiplied by the _Line Width Depth Factor_, which is defined below.
-
-The distances are relative to the _World Scale_ global. For example, if the world scale is of _100_, a _1000_ Maya unit distance will be _10_ (1000/100). If the world scale is 1, a _1000_ Maya unit distance will be _1000_.
-{: .info}
-
-<figure class="aio-ui">
- <img src="/media/globals/line_width_range+factor.png" alt="Line Width Range and Factor Illustration">
- <figcaption>Breakdown - Line Width Range and Line Width Factor</figcaption>
-</figure>
-
-#### Line Width Depth Factor
-The factor to multiply the toon and sketch line width, depending on the distance to the camera defined in the _Line Width Depth Range_. The first value is at _Close_ distance and the second value is at _Far_ distance. 
-
-<figure>
-	<video autoplay loop muted playsinline>
-	    <source src="/media/effects/lines/line-range-factor.mp4" type="video/mp4">
-	</video>
-	<figcaption>Line width changes according to the Line Width Depth Range and Line Width Depth Factor.</figcaption>
-</figure>
-
-You can set both of these values to 1.0 if you do not wish to modify the _Line Width_ along the depth.
 {: .info}
 
 #### Line Density
@@ -77,7 +28,7 @@ To see the full effect, the [Line Coloration](#line-coloration) and [Line Light 
 {: .info}
 
 #### Line Color
-Defines a custom global color for the lines. The amount of line coloration can be adjusted with the _Line Coloration_ attribute below.
+Global color for the lines. The amount of line coloration can be adjusted with the _Line Coloration_ attribute below.
 
 <figure>
 	<video autoplay loop muted playsinline>
@@ -87,7 +38,11 @@ Defines a custom global color for the lines. The amount of line coloration can b
 </figure>
 
 #### Line Coloration
-The amount of _Line Color_ that should be applied. This can also be art-directed with [VertexFX](/flair/art-direction/vertexfx/) and [NoiseFX](/flair/art-direction/noisefx/). A negative art-directed coloration will bring the line color back to the object's original color.
+
+[Art-directable](#art-directable-attributes)
+{: .btn .btn-label}
+
+The amount of _Line Color_ that should be applied. A negative art-directed coloration will bring the line color back to the object's original color.
 
 <figure>
 	<video autoplay loop muted playsinline>
@@ -96,15 +51,29 @@ The amount of _Line Color_ that should be applied. This can also be art-directed
 	<figcaption>Line coloration between 0 and 1 at a line density of 1.</figcaption>
 </figure>
 
-#### Line Light Response
-The influence lighting will have over the color of the line.
+#### Outline and Inline Light Response
 
-<figure>
-	<video autoplay loop muted playsinline>
-	    <source src="/media/effects/lines/line-light.mp4" type="video/mp4">
-	</video>
-	<figcaption>Line light response between 0 and 1.</figcaption>
-</figure>
+Flair 1.2
+{: .label .label-green}
 
-You can also use lines with line light response to make rim lights.
+The influence lighting will have over the color of the outline (silhouette) or inline.
+
+<div class="d-flex">
+	<figure>
+		<video autoplay loop muted playsinline>
+	    	<source src="/media/effects/lines/line-light-response.mp4" type="video/mp4">
+		</video>
+		<figcaption>Outline and Inline light response (-1...1).</figcaption>
+	</figure>
+	<figure>
+		<video autoplay loop muted playsinline>
+	    	<source src="/media/effects/lines/outline-light-response.mp4" type="video/mp4">
+		</video>
+		<figcaption>Outline light response (-1...1).</figcaption>
+	</figure>
+</div>
+
+In this example, we set the flairShader `Diffuse Factor` to `1.0`, but toggle the [`Final Color`](/flair/materials/flair-shader/#final-color) setting so that lighting does not affect the material. That way, only the line responds to light. In cases where there is _z-fighting_ when coloring lines, make use of the `Offsets` setting within flairShader materials and modify the [`Depth Bias`](/flair/materials/flair-shader/#depth-bias) as needed.
+
+You can use the Outline Light Response to make 2D rim lights!
 {: .info}

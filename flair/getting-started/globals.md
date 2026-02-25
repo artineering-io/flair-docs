@@ -38,13 +38,13 @@ It is imperative to understand what each attribute does and how it affects the s
 Engine attributes remain the same across styles and contain attributes directly related to the Flair engine. These attributes can change the behavior, fidelity and performance of the stylization or toggle optional features.
 
 ### World Scale
-Defines how many _Maya_ units is considered one "meter" in the virtual world. Since most projects work with assets at different scales, setting up the _World Scale_ right will help the style behave correctly.
+How many _Maya_ units is considered one "meter" in the virtual world. Since most projects work with assets at different scales, setting up the _World Scale_ right will help the style behave correctly.
 
 Example: if your character is supposed to be one meter high in his world, but is actually 5 units high in _Maya_, the _World Scale_ attribute should be set to 5.
 {: .info}
 
 ### Style
-Defines the style that Flair is currently running in.
+The style that Flair is currently running in.
 * [**Graph**](/flair/styles/library/graph/) - The Flair Graph style (customizable)
 * [**Watercolor**](/flair/styles/library/watercolor/) - The Watercolor shader style (default)
 * [**Cutout**](/flair/styles/library/cutout/) - 3D Cutout shader style
@@ -92,7 +92,7 @@ Renders at different resolution scales.
 
 #### Color Depth
 
-Defines the color depth of most render targets. This generally translates to: higher is better. However, slower systems should consider using 8bit targets if the performance is too slow, provided you can sacrifice some color fidelity.
+The color depth of most render targets. This generally translates to: higher is better. However, slower systems should consider using 8bit targets if the performance is too slow, provided you can sacrifice some color fidelity.
 
 ---
 
@@ -173,13 +173,20 @@ When using a custom _Graph_ style, the style attributes will auto-populate depen
 Canvas attributes contain the attributes of the texture where paint is applied on, be it paper or canvas. Altering these attributes will affect all effects that depend on the canvas for its style.
 
 ### Canvas Synthesis
-Defines if an infinite canvas should be created from the given texture. Infinite canvases are completely seamless and can be generated from any heightmap texture within the `textures` folder of Flair.
+If an infinite canvas should be created from the given texture. Infinite canvases are completely seamless and can be generated from any heightmap texture within the `textures` folder of Flair.
+
+### Canvas Override
+
+Flair 1.2
+{: .label .label-green}
+
+How much the [Canvas Color](#canvas-color) should override (replace) the rendered color (beauty pass).
 
 ###	Canvas Distortion
-Defines the global amount of distortion caused by the _Canvas Roughness_.
+Global amount of distortion caused by the _Canvas Roughness_.
 
 ### Canvas Blend
-Defines the blending between the _Canvas Texture_ (_Main Canvas_ group) and the _Canvas Texture Alt_ (_Alternate Canvas_ group), allowing you to combine profile properties of different canvases.
+Blending between the _Canvas Texture_ (_Main Canvas_ group) and the _Canvas Texture Alt_ (_Alternate Canvas_ group), allowing you to combine profile properties of different canvases.
 <figure>
 	<video autoplay loop muted playsinline>
 	  <source src="/media/canvas/canvas-blend.mp4" type="video/mp4">
@@ -188,7 +195,7 @@ Defines the blending between the _Canvas Texture_ (_Main Canvas_ group) and the 
 </figure>
 
 ###	Canvas Light Dir.
-Defines the side where the external light is shining from. `0` degrees is from the bottom, `90` degrees is from the left, `180` degrees from the top and `270` degrees is from the right.
+Side where the external light is shining from. `0` degrees is from the bottom, `90` degrees is from the left, `180` degrees from the top and `270` degrees is from the right.
 
 <figure>
 	<video autoplay loop muted playsinline>
@@ -201,7 +208,7 @@ The effect of this attribute can only be seen if _Canvas Shading_ is more than `
 {: .notice--warning}
 
 ###	Canvas Light Tilt
-Defines the tilt angle of the external light in relation to the canvas, 90 degrees is perpendicular to the canvas.
+Tilt angle of the external light in relation to the canvas, 90 degrees is perpendicular to the canvas.
 <figure>
 	<video autoplay loop muted playsinline>
 	  <source src="/media/canvas/canvas-light-tilt.mp4" type="video/mp4">
@@ -213,10 +220,10 @@ The effect of this attribute can only be seen if _Canvas Shading_ is more than `
 {: .warning}
 
 ### Canvas Position X
-Defines how much the canvas should be panned horizontally.
+How much the canvas should be panned horizontally.
 
 ### Canvas Position Y
-Defines how much the canvas should be panned vertically.
+How much the canvas should be panned vertically.
 
 ---
 
@@ -232,7 +239,7 @@ Big amounts of motion will distort canvas-based effects. It is recommended to re
 {: .info}
 
 #### Canvas Regeneration
-Defines the speed of regeneration in seconds for distorted canvases.
+The speed of regeneration in seconds for distorted canvases.
 
 Advection can only be seen if the _VelocityPV_ attribute is checked and the animation is playing.
 {: .warning}
@@ -243,22 +250,22 @@ Advection can only be seen if the _VelocityPV_ attribute is checked and the anim
 Contains the attributes that define the main canvas texture of the style.
 
 #### Canvas Texture
-Defines the main texture that is going to be used as the canvas. Flair comes with more than 10 different canvas heightmaps to choose from. You can load any heightmap, as long as they are in the `textures` folder within Flair.
+The main texture that is going to be used as the canvas. Flair comes with more than 10 different canvas heightmaps to choose from. You can load any heightmap, as long as they are in the `textures` folder within Flair.
 
 The _Canvas Synthesis_ attribute will automatically make an infinite canvas of any heightmap texture. Feel free to add your own textures and experiment with different canvas blends.
 {: .info}
 
 #### Canvas Color
-Defines the color of the canvas.
+The color of the canvas.
 
 ####	Canvas Scale
-Defines the linear scale of the canvas texture.
+The linear scale of the canvas texture.
 
 #### Canvas Rotation
-Defines the rotation in degrees of the canvas texture. The center of the viewport is used as the rotation pivot.
+The rotation in degrees of the canvas texture. The center of the viewport is used as the rotation pivot.
 
 ####	Canvas Roughness
-Defines the global roughness of the canvas.
+The global roughness of the canvas.
 
 <figure>
 	<video autoplay loop muted playsinline>
@@ -271,7 +278,7 @@ _Canvas Roughness_ will affect **ALL** canvas-based effects.
 {: .warning}
 
 ####	Canvas Shading
-Defines the amount of external diffuse shading of the canvas.
+The amount of external diffuse shading of the canvas.
 
 <figure>
 	<video autoplay loop muted playsinline>
@@ -312,5 +319,5 @@ Contains the attributes that control the alternate canvas texture of the style, 
 This group is closed by default, but can be opened by clicking on it.  
 The attributes are the same as the main canvas: see above for the corresponding documentation.
 
-The alternate canvas is used if the _Canvas Blend_ option is not 0 or in in styles that depend on more than one canvas e.g., Cutout.
+The alternate canvas is used if the _Canvas Blend_ option is not 0 or in styles that depend on more than one canvas e.g., Cutout.
 {: .info}

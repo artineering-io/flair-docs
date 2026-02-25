@@ -16,38 +16,28 @@ nav_order: 3
 {:toc}
 </details>
 
-Proxy materials are invisible materials that only render to the stylization control maps within Flair, thereby only modifying effects on the final image.
+Proxy materials are invisible materials that only render effect control maps within Flair, thereby not rendering any color but only modifying effects on the final image, instead.
 
-Being separate stylization elements in the scene, these provide unique versatility. They can help art-direct effects at all levels of control. For example, they can affect the entire image by being placed in front of the camera as a proxy card, or affect only a specific part of the scene in 3D space by being placed in front of it. The tutorial below showcases this versatility.
+Any mesh assigned to a proxy material becomes an art-direction tool to stylize elements in the scene. This makes them extremely versatile as they can change effects at all levels of control. For example, they can affect the entire image by being placed in front of the camera as a proxy card, or affect only a specific part of the scene in 3D space by being placed in front of it. The tutorial below showcases this versatility.
 
 {% include responsive-embed url="https://www.youtube.com/embed/A_gdVg4K7Uc" %}
 
-The proxy material can be created and assigned from the [material presets tool](/flair/materials/presets/#special-presets) and are divided into optional _Settings_ and _Attributes_.
+Any flairShader material can become a proxy material by toggling the [proxy setting](/flair/materials/flair-shader/#proxy), but proxies can also easily be created or assigned from the [material presets tool](/flair/materials/presets/#special-presets) using the _proxy_ preset.
+
+As flairShader materials, proxies are divided into optional _Proxy Settings_ and _Proxy_ attributes. The proxy attributes are always present no matter what settings are enabled, so let's introduce them first.
 
 <figure class="aio-ui">
-	<img src="/media/other-materials/proxy_AE.png" alt="Flair proxy material node">
-	<figcaption>The proxy material in the Attribute Editor.</figcaption>
+	<img src="/media/flair-shader/proxy-AE.png" alt="Flair proxy material node">
+	<figcaption>The proxy attributes in the Attribute Editor.</figcaption>
 </figure>
 
-The first element within the _proxy_ material is the `Open ShaderFX` button, which opens the _ShaderFX Graph_. This graph allows complete control to customize the material with nodes. The graph is intended for shader writers or advanced users who know how to manipulate and work with the _ShaderFX_ framework. Using the _ShaderFX_ framework is outside of the scope of this documentation, but you can learn a lot by watching [these tutorials](https://www.youtube.com/playlist?list=PLtiFs_CcTAQ5bewy6WwDrak9q9Pw2O6pu).
-
 ---
 
-## Settings
-
-The first section, when opened, provides the material **Settings** that allow to customize what optional features the _proxy_ material should have.
-
-### VtxControl
-The _VtxControl_ setting enables the control of stylization effects through the vertex colors. This attribute is automatically managed by Flair and is activated as soon as you start using [_VertexFX_](/flair/art-direction/vertexfx).
-
----
-
-
-## Attributes
-The proxy material offers only a few default parameters, as it is mostly controlled through the [_VertexFX_](/flair/art-direction/vertexfx) and [_NoiseFX_](/flair/art-direction/noisefx) tools
+## Proxy
+Proxies show few parameters by default, as effect control is achieved mostly through the [_VertexFX_](/flair/art-direction/vertexfx) and [_NoiseFX_](/flair/art-direction/noisefx) tools being applied onto the material.
 
 ### Color Tint
-_Color Tint_ darkens the material with a specified color. This attribute is especially useful for materials like tinted windows.
+_Color Tint_ darkens pixels with a specified color. This attribute is especially useful for materials like tinted windows.
 
 <div>
 	<figure>
@@ -59,7 +49,7 @@ _Color Tint_ darkens the material with a specified color. This attribute is espe
 </div>
 
 ### Feathering
-_Feathering_ softens the hard edges of the proxy materials to create a soft transition. This effect works best when the material is applied to round proxy objects.
+_Feathering_ softens the hard edges of the proxy materials. This effect works as a fresnel, so it shows best when the material is applied to round objects.
 
 <div>
 	<figure>
@@ -70,13 +60,14 @@ _Feathering_ softens the hard edges of the proxy materials to create a soft tran
 	</figure>
 </div>
 
-### Cookie Mask
-_Cookie Mask_ is an image which contains a mask of the proxy. It is especially useful if you place a proxy plane (card) in front of the camera to create effect vignettes. This attribute toggles the use of the [_Cookie Mask File_](#cookie-mask-file).
+When proxies clip with other objects, a hard edge might be visible due to the compenetration of meshes.  Use the [Wobble Blur](/flair/materials/proxy-material/#wobble-blur) effect to achieve a smoother transition and feathering when compenetration becomes an issue.
+{: .info}
 
-### Cookie Mask File
-Specifies the file path to the _Cookie Mask_. The path can be absolute or relative to the project root directory.  
+### Cookie Mask
+_Cookie Mask_ specifies an image containing a mask of the proxy. It is especially useful if you place a proxy plane (card) in front of the camera to create effect vignettes.
+
 <figure>
-    <video autoplay loop muted playsinline style="width:200px">
+    <video autoplay loop muted playsinline style="width:150px">
         <source src="/media/other-materials/cookie-mask.mp4" type="video/mp4">
     </video>
     <figcaption>Cookie mask applied on a proxy material.</figcaption>
@@ -86,18 +77,169 @@ Specifies the file path to the _Cookie Mask_. The path can be absolute or relati
 _Invert Cookie_ inverts the applied _Cookie Mask_ values.
 
 <figure>
-    <video autoplay loop muted playsinline style="width:200px">
+    <video autoplay loop muted playsinline style="width:150px">
         <source src="/media/other-materials/cookie-invert.mp4" type="video/mp4">
     </video>
     <figcaption>Cookie mask inverted on a proxy material.</figcaption>
 </figure>
 
-------------------
 
-## Stylization (procedural)
-When the [_NoiseFX_](/flair/art-direction/noisefx) tool has been used on the material, the _Stylization (procedural)_ section will appear at the bottom of the _Attribute Editor_. This section contains all the procedural attributes that the _NoiseFX_ tool creates and modifies. Therefore, you can mostly ignore these attributes within the material.
+---
+
+## Proxy Settings
+
+The first section provides the **Proxy Settings** that allow to customize what optional features the proxy material should have.
+
+### Animated
+The _Animated_ setting bakes the current position of vertices so that effects that rely on the 3D positions can stay in place when proxies are deformed/animated. If this setting is not enabled, features like _NoiseFX_ or _Wobble_ would float around in 3D space and not move with the proxies.
+
+---
+
+### Proxy
+The _Proxy_ setting enables the proxy material behavior. When disabled, the proxy material will become a normal [flairShader material](/flair/materials/flair-shader/).
+
+---
+
+### VertexFX
+The _VertexFX_ setting toggles the control of effects through vertex colors. The attribute is automatically enabled by Flair and is toggled as soon as you start painting with the [_VertexFX_](/flair/art-direction/vertexfx/) tool.
+
+---
+
+### NoiseFX
+The _NoiseFX_ setting toggles the use of NoiseFX in the material and enables the NoiseFX section at the bottom of the Attribute Editor. _NoiseFX_ is generally toggled automatically when the [NoiseFX](/flair/art-direction/noisefx/) tool is used and allows you to key and animate NoiseFX attributes when needed.
 
 <figure class="aio-ui">
-	<img src="/media/other-materials/stylization_proc_AE.png" alt="Stylization (procedural) attributes">
-	<figcaption>Some procedural stylization attributes created through NoiseFX.</figcaption>
+	<img src="/media/flair-shader/noisefx.png" alt="NoiseFX attributes">
+	<figcaption>The beginning of the NoiseFX attributes</figcaption>
 </figure>
+
+---
+
+### Offsets
+
+Flair 1.2
+{: .label .label-green}
+
+The _Offsets_ setting toggles the available offsets and the respective section within the Attribute Editor. The effects of these attributes will only be visible on effects and styles that work with thresholds and depth i.e., lines.
+
+For example, with the right thresholding offsets, you can have only outlines (silhouette) appear behind a proxy plane, thereby changing how lines draw at a certain depth.
+
+<figure class="aio-ui">
+	<img src="/media/flair-shader/offsets.png" alt="Offset attributes">
+	<figcaption>The available Offset attributes</figcaption>
+</figure>
+
+#### Depth Threshold Offset
+_Depth Threshold Offset_ modifies the global depth threshold on everything inside or behind the proxy material
+
+#### Flow Threshold Offset
+_Flow Threshold Offset_ modifies the global flow (normals) threshold on everything inside or behind the proxy material
+
+#### Color Threshold Offset
+_Color Threshold Offset_ modifies the global color threshold on everything inside or behind the proxy material
+
+#### Depth Bias
+_Depth Bias_ offsets the depth of the proxy material to help fix potential depth-based artifacts with overlapping geometries.
+
+---
+
+### Wobble
+
+Flair 1.2
+{: .label .label-green}
+
+The _Wobble_ setting activates the use of wobble offsets within the proxy and toggles its attributes in the _Attribute Editor_. These material attributes offset the global wobble values set in the [globals node](/flair/getting-started/globals/#geometry-wobble), so make sure to enable and set the wobble effect globally first.
+
+Different types of wobble noise can be specified for different results
+
+* **None** - No wobble is applied
+* **Simple** - Default simplex wobble noise
+* **Cloud** - More detailed fractalized wobble noise resembling the "cloud" noise in Photoshop (better appreciated at a higher polygon count).
+* **Custom** - Custom noise, which can be written in glsl `flair/maya/shaders/material/include/noise.glsl` [`customNoise3(vec4 v)`].
+
+<figure class="aio-ui">
+	<img src="/media/flair-shader/wobble-ae.png" alt="Wobble offsets section">
+	<figcaption>The Wobble Offsets section in the Attribute Editor.</figcaption>
+</figure>
+
+Once the wobble attribute has been enabled globally, material presets will default as wobbled (Simple).
+{: .info}
+
+It is difficult to clearly visualize the wobble on a proxy, so the examples below feature the normal flairShader material. However, the exact same deformation and diffusion applies to proxy materials, as well.
+
+#### Wobble Frequency
+Offsets the regularity of the wobble. A higher frequency will make the wobble more "irregular", whereas a lower frequency will make it more "regular". The frequency is directly linked to the global [World Scale](/flair/getting-started/globals/#world-scale).
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/wobble-frequency.mp4" type="video/mp4">
+    </video>
+    <figcaption>Wobble Frequency (0...5) - Visualized in a normal flairShader material.</figcaption>
+</figure>
+
+
+#### Wobble Amplitude
+Defines the amount of wobble. A higher amplitude will deform more than a lower amplitude. The amplitude is directly linked to the global [World Scale](/flair/getting-started/globals/#world-scale).
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/wobble-amplitude.mp4" type="video/mp4">
+    </video>
+    <figcaption>Wobble Amplitude (0...2.5) - Visualized in a normal flairShader material.</figcaption>
+</figure>
+
+#### Wobble Phase
+Defines the form of the wobble. Useful when you want a different wobble deformation or want to vary the wobble on a frame-by-frame basis.
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/wobble-phase.mp4" type="video/mp4">
+    </video>
+    <figcaption>Wobble Phase (0...3) - Visualized in a normal flairShader material.</figcaption>
+</figure>
+
+As wobble is generated from noise in 3D, make sure to toggle the *deformed* attribute in materials if they are animated/deformed so that the wobble is baked in place.
+{:.info}
+
+
+#### Wobble Blur
+Defines the amount of wobble blur for TAA samples, generating a soft edge by averaging different wobble positions as layers.
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/wobble-jitter.mp4" type="video/mp4">
+    </video>
+    <figcaption>Wobble Blur (0...1) - Visualized in a normal flairShader material.</figcaption>
+</figure>
+
+#### Wobble Blur Layers
+Defines the amount of wobble blur layers i.e., the amount of wobbled positions to use during the wobble blur.
+
+<figure>
+    <video autoplay loop muted playsinline style="width:152px">
+        <source src="/media/flair-shader/wobble-layers.mp4" type="video/mp4">
+    </video>
+    <figcaption>Wobble Blur Layers (32...1) - Visualized in a normal flairShader material.</figcaption>
+</figure>
+
+With a low layer amount, you can use Wobble Blur to achieve a layered watercolor look!
+{: .info}
+
+#### Wobble Motion
+Defines the amount of motion offset of the wobble, generating streaks of motion under animation. For this attribute to show its effect, make sure that velocity is enabled in the _Globals_ node and in the material.
+
+<figure>
+    <video autoplay loop muted playsinline style="height:152px">
+        <source src="/media/flair-shader/wobble-motion.mp4" type="video/mp4">
+    </video>
+    <figcaption>Wobble motion at 0.5 and 2.5 - Visualized in a normal flairShader material.</figcaption>
+</figure>
+
+---
+
+### Culling
+The _Culling_ setting defines which faces should be culled within the proxy.
+
+* **None** - No culling, all objects with the material are rendered as double sided.
+* **Front** - The front-facing faces are going to be culled, only rendering the back faces.
+* **Back** - The back-facing faces are going to be culled, only rendering front-faces. This can help performance on objects with many polygons.

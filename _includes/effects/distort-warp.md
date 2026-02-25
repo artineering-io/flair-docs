@@ -30,6 +30,9 @@ Note: if the frequency is too high and the noise enters the sub-pixel size, it w
 #### Amplitude
 Determines the amount of warp distortions, default 1.0. 
 
+[Art-directable](#art-directable-attributes)
+{: .btn .btn-label}
+
 <figure>
 	<video autoplay loop muted playsinline>
 	    <source src="/media/styles/warp/amplitude.mp4" type="video/mp4">
@@ -42,6 +45,9 @@ Note: Increasing the _Amplitude_ will also require a higher _Inflation_ amount.
 
 #### Feathering
 Determines the softness of warped distortions, default 0.0. 
+
+[Art-directable](#art-directable-attributes)
+{: .btn .btn-label}
 
 <figure>
 	<video autoplay loop muted playsinline>

@@ -74,7 +74,7 @@ At the top of the mid-level of control are [_Material Presets_](/flair/materials
  <figcaption>Switching between material presets</figcaption>
 </figure>
 
-[_Material Presets_](/flair/materials/material-presets/) save and load predefined attributes from the painterly [_Flair Shader_](/flair/materials/flair-shader/) and [_proxy_](/flair/materials/proxy-material/) materials.
+[_Material Presets_](/flair/materials/presets/) save and load predefined attributes from the painterly [_Flair Shader_](/flair/materials/flair-shader/) and [_proxy_](/flair/materials/proxy-material/) materials.
 
 The [_Flair Shader_](/flair/materials/flair-shader/) node (selected by clicking on the `MAT` button in the [_Flair Shelf_](./flair-shelf/) on selected objects/components) contains all shader attributes. These values are applied on all objects that share the same material.
 

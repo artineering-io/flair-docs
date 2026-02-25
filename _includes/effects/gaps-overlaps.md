@@ -1,4 +1,8 @@
 ### Max Gaps Overlaps Width
+
+[Art-directable](#art-directable-attributes)
+{: .btn .btn-label}
+
 Maximum width of the gaps & overlaps effect.
 <figure>
 	<video autoplay loop muted playsinline>

@@ -1,10 +1,10 @@
-### Sketch Lines
-Sketch lines can be customized in terms of number of sketch lines, intensity, width, sketchiness and color. To simplify control, the width control of sketch lines is shared with [toon lines](#line-width). The remaining controls are documented below.
+### Rough Lines
+Rough lines can be customized in terms of number of sketch lines, intensity, sketchiness and color. Remember that the width of rough lines is shared with [clean lines](#line-width).
 
 [Feature Noise](/flair/materials/flair-shader/#feature-noise) attribute must be enabled in the Flair material to activate the sketch line(s) offset.
 {: .info}
 
-#### Sketch Type
+#### Sketch Lines
 The number of sketch lines that will be drawn.
 
 <figure>
@@ -15,7 +15,11 @@ The number of sketch lines that will be drawn.
 </figure>
 
 #### Sketch Intensity
-Opacity of the generated sketch line(s). A lower intensity will make the sketch lines more transparent. This can also be art-directed with [VertexFX](/flair/art-direction/vertexfx/) and [NoiseFX](/flair/art-direction/noisefx/).
+
+[Art-directable](#art-directable-attributes)
+{: .btn .btn-label}
+
+Opacity of the generated sketch line(s). A lower intensity will make the sketch lines more transparent.
 
 <figure>
 	<video autoplay loop muted playsinline>
@@ -25,7 +29,11 @@ Opacity of the generated sketch line(s). A lower intensity will make the sketch 
 </figure>
 
 #### Sketchiness
-Offset of the sketch line(s) in relation to the outline. This can also be art-directed with [VertexFX](/flair/art-direction/vertexfx/) and [NoiseFX](/flair/art-direction/noisefx/). Materials should have the `Feature Noise` attribute enabled for sketchiness to work.
+
+[Art-directable](#art-directable-attributes)
+{: .btn .btn-label}
+
+Offset of the sketch line(s) in relation to the outline. Materials should have the `Feature Noise` attribute enabled for sketchiness to work.
 
 <figure>
 	<video autoplay loop muted playsinline>
@@ -35,11 +43,14 @@ Offset of the sketch line(s) in relation to the outline. This can also be art-di
 </figure>
 
 #### Sketchiness Max
-Maximum offset the generated sketch line(s) may have.
+Maximum possible offset the generated sketch line(s) may have after art-direction.
+
+Set this attribute as low as needed to optimize performance.
+{: .info}
 
 #### Sketchiness Depth Range 
 
-Flair 1.1.5
+Flair 1.2
 {: .label .label-green}
 
 The depth range at which sketch lines are offset in the scene. These attributes work in the same way as the [Line Width Depth Range](#line-width-depth-range) and also consists of four (4) values that define the different distances from the camera to modify the _sketchiness_. From left to right: Close, Close Mid, Far Mid, Far.
@@ -109,7 +120,11 @@ Defines a custom global color for the sketch line(s). The amount of sketch line(
 </figure>
 
 #### Sketch Coloration
-How much the sketch line(s) should be of the set _Sketch Color_. This can also be art-directed with [VertexFX](/flair/art-direction/vertexfx/) and [NoiseFX](/flair/art-direction/noisefx/). A negative art-directed coloration will bring the sketch line(s) color back to the albedo.
+
+[Art-directable](#art-directable-attributes)
+{: .btn .btn-label}
+
+How much the sketch line(s) should be of the set _Sketch Color_. A negative art-directed coloration will bring the sketch line(s) color back to the albedo.
 
 <figure>
 	<video autoplay loop muted playsinline>
@@ -118,15 +133,29 @@ How much the sketch line(s) should be of the set _Sketch Color_. This can also b
 	<figcaption>Sketch coloration between 0 and 1 at a sketch density of 1.</figcaption>
 </figure>
 
-#### Sketch Light Response
-The influence lighting will have over the color of the sketch line(s).
+#### Outsketch and Insketch Light Response
 
-<figure>
-	<video autoplay loop muted playsinline>
-	    <source src="/media/effects/lines/sketch-light.mp4" type="video/mp4">
-	</video>
-	<figcaption>Sketch light response between 0 and 1.</figcaption>
-</figure>
+Flair 1.2
+{: .label .label-green}
+
+The influence lighting will have over the color of the outsketch (silhouette) or insketch line(s).
+
+<div class="d-flex">
+	<figure>
+		<video autoplay loop muted playsinline>
+	    	<source src="/media/effects/lines/sketch-light-response.mp4" type="video/mp4">
+		</video>
+		<figcaption>Outsketch and Insketch light response (-1...1).</figcaption>
+	</figure>
+	<figure>
+		<video autoplay loop muted playsinline>
+	    	<source src="/media/effects/lines/outsketch-light-response.mp4" type="video/mp4">
+		</video>
+		<figcaption>Outsketch light response (-1...1).</figcaption>
+	</figure>
+</div>
+
+We break down how to set up this example in the [Outline and Inline Light Response](#outline-and-inline-light-response).
 
 You can also use sketch lines with sketch light response to make sketchy rim lights.
 {: .info}

@@ -9,6 +9,10 @@ Edge darkening accumulates the pigments (color) gradually towards the edges, gen
 {% endif %}
 
 #### Edge Darkening Intensity
+
+[Art-directable](#art-directable-attributes)
+{: .btn .btn-label}
+
 Strength of the edge darkening effect. A higher intensity will concentrate more color on the edges.
 <figure>
 	<video autoplay loop muted playsinline>
@@ -18,6 +22,10 @@ Strength of the edge darkening effect. A higher intensity will concentrate more 
 </figure>
 
 #### Edge Darkening Width
+
+[Art-directable](#art-directable-attributes)
+{: .btn .btn-label}
+
 Width for the edge darkening effect.
 <figure>
 	<video autoplay loop muted playsinline>

@@ -78,3 +78,8 @@ In this page, we only document global attributes specific to the watercolor shad
 ---
 
 {% include /effects/post-processing.md %}
+
+---
+
+## Art-directable Attributes
+Attributes labeled as art-directable can be controlled further with [NoiseFX](/flair/art-direction/noisefx/), [VertexFX](/flair/art-direction/vertexfx/) and [proxy materials](/flair/materials/proxy-material/).

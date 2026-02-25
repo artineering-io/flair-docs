@@ -153,8 +153,32 @@ p .aio-btn {
     margin-top: -2em;
 }
 
-.label::after {
-    content: " - Coming soon"; /* Add a string after the element's content */
+.label::before {
+    content: "New: "; /* Add a string before the element's content */
+}
+
+.btn.btn-label {
+    position:relative;
+    z-index: 1;
+    margin-top: -2em !important;
+    font-size: 0.75rem;
+    padding: 0.3em 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 1em;
+    float: right;
+    background-color: $link-color;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    &:hover {
+        a {
+            color: $link-color;
+            text-decoration: none;
+        }
+        background-color: #DDD;    
+    }
 }
 
 

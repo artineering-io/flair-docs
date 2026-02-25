@@ -61,7 +61,7 @@ Resets the viewport in case you are encountering glitching issues.
 
 ## Sanitize Flair
 
-Flair 1.1.5
+Flair 1.2
 {: .label .label-green}
 
 Unloads the plugin and tries to remove all traces of Flair from the open scene. This is not undoable so a confirmation dialog will appear before it happens.

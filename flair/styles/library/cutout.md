@@ -195,3 +195,7 @@ Intensity of the gradient shading effect. The gradient shading is a lighting gra
 	<figcaption>Gradient shading between 0 and 1.0. The gradient follows the direction of the Canvas Light attribute.</figcaption>
 </figure>
 
+---
+
+## Art-directable Attributes
+Attributes labeled as art-directable can be controlled further with [NoiseFX](/flair/art-direction/noisefx/), [VertexFX](/flair/art-direction/vertexfx/) and [proxy materials](/flair/materials/proxy-material/).

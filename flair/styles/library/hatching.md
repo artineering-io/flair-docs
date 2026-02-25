@@ -114,3 +114,8 @@ Hatching is currently sensitive to the resolution that you are working/rendering
 
 ### Nurbs surfaces
 Nurbs surfaces can't save any data in vertex colors, so hatching/stippling won't stick onto the objects and it won't be possible to use VertexFX on them.
+
+---
+
+## Art-directable Attributes
+Attributes labeled as art-directable can be controlled further with [NoiseFX](/flair/art-direction/noisefx/), [VertexFX](/flair/art-direction/vertexfx/) and [proxy materials](/flair/materials/proxy-material/).
