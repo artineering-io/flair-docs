@@ -62,7 +62,30 @@ Once you **receive the Flair Relay files** from us, follow the steps below to se
 
 Relay will need to be **permitted through the firewall** of the server machine for computers on the network **to connect to it**. Contact your network administrator so that they can configure the firewall for your environment.
 
-Below are some basic instructions for Linux (Rocky 9) and Windows, but these may be quite different depending on how your environment is setup.
+Below are some basic instructions for Windows, macOS and Linux, but these may be quite different depending on how your environment is setup.
+
+#### On Windows
+
+**Add a program exception**
+
+1. Go to Settings → Privacy and Security → Windows Security → `Firewall and Network Protection`
+2. Click on `Advanced Settings`
+3. Navigate to `Inbound Rules` and click on `New Rule...`
+4. Select `Program` and click on `Next >`
+5. Choose `This program path:` , `Browse...` to the folder where relay is located and double-click on `relay.exe`. Click on `Next >` to continue.
+6. Choose `Allow the connection` and click on `Next >`
+7. Select all the checkboxes that apply to the rule. Domain, Private, and Public and click on `Next >`
+8. Specify a name for the rule e.g., `Flair Server` and click on `Finish` to complete the process
+
+
+#### On macOS
+Usually, a prompt will appear asking if you want the application "relay" to accept incoming network connections. When prompted, press on `Allow`.
+
+If this does not occur, you can manually add an exception as follows:
+1. Open the `Apple menu -> System Settings...`
+2. Go to `Network -> Firewall` and click on `Options...`
+3. At the bottom of the list on the left, click on the `+` button
+4. Select the `relay` application from the folder where you have placed the Flair relay files
 
 #### On Linux
 
@@ -84,20 +107,7 @@ Below are some basic instructions for Linux (Rocky 9) and Windows, but these may
     sudo firewall-cmd --permanent --zone=work --add-port=6349/tcp
     sudo firewall-cmd --reload
     ```
-    
 
-#### On Windows
-
-**Add a program exception**
-
-1. Go to Settings → Privacy and Security → Windows Security → `Firewall and Network Protection`
-2. Click on `Advanced Settings`
-3. Navigate to `Inbound Rules` and click on `New Rule...`
-4. Select `Program` and click on `Next >`
-5. Choose `This program path:` , `Browse...` to the folder where relay is located and double-click on `relay.exe`. Click on `Next >` to continue.
-6. Choose `Allow the connection` and click on `Next >`
-7. Select all the checkboxes that apply to the rule. Domain, Private, and Public and click on `Next >`
-8. Specify a name for the rule e.g., `Flair Server` and click on `Finish` to complete the process
 
 ---
 
@@ -107,21 +117,34 @@ Below are some basic instructions for Linux (Rocky 9) and Windows, but these may
 
 Once the relay server is running, you can **check if it is reachable** with curl
 
-#### On Linux
-
-```bash
-curl -v -X GET "http://SERVERNAME:PORT/v1/health"  ## HTTP/1.1 200 OK
-```
-
 #### On Windows (PowerShell)
 
 ```powershell
 & curl.exe -v -X GET "http://SERVERNAME:PORT/v1/health"  ## HTTP/1.1 200 OK
 ```
 
+#### On macOS and Linux
+
+```bash
+curl -v -X GET "http://SERVERNAME:PORT/v1/health"  ## HTTP/1.1 200 OK
+```
+
 If host cannot be reached, check your [firewall configuration](#adding-firewall-rules) and enable the necessary ports.
 
 ### Setting a hostname
+
+#### On Windows
+
+1. Open **Settings** (`Win + I`)
+2. Go to **System > About**
+3. Click **Rename this PC**
+4. Enter a new name and restart your computer
+
+#### On macOS
+1. Open the `Apple menu -> System Settings...`
+2. Go to `General -> Sharing`
+3. Under Local hostname click on `Edit...`
+4. Enter a new name and restart your computer
 
 #### On Linux (RHEL 7+)
 
@@ -130,10 +153,3 @@ Run the following command where `NEW-HOSTNAME` is the new hostname of the server
 ```bash
 sudo hostnamectl set-hostname NEW-HOSTNAME
 ```
-
-#### On Windows
-
-1. Open **Settings** (`Win + I`)
-2. Go to **System > About**
-3. Click **Rename this PC**
-4. Enter a new name and restart your computer

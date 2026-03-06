@@ -20,14 +20,14 @@ has_toc: false
 
 ## Pre-requisites
 
-- Install latest **Visual C++ Redistributable** ([download](https://aka.ms/vs/17/release/vc_redist.x64.exe))
-
 | Requirements      | Minimum    | Recommended   | Notes                                                                                   |
 |-------------------|------------|---------------|-----------------------------------------------------------------------------------------|
-| **Autodesk Maya** | 2022.4    | 2024.2         | Maya 2022, 2023, 2024 2025 and 2026 are supported                                       |
-| **OS**            | Windows 10<br>RHEL 7.9 | Windows 11<br>RHEL 8+ | Linux available only for Flair Indie and Studio licenses |
-| **VRAM**          | 4 GB       | 8+ GB          | Higher resolutions and scene complexity require more VRAM                               |
+| **Autodesk Maya** | 2022.4    | 2024.2         | Maya 2023, 2024 2025 and 2026 are supported                                       |
+| **OS**            | Windows 10<br>macOS 14<br>RHEL 7.9 | Windows 11<br>macOS 26<br>RHEL 8+ | Linux available only for Flair Indie and Studio licenses |
+| **VRAM**          | 6 GB       | 8+ GB          | Higher resolutions and scene complexity require more VRAM                               |
 | **Memory**        | 8 GB       | 16+ GB         | As much as your Maya scene requires                                                     |
+
+On Windows, you might need to install the latest **Visual C++ Redistributable** ([download](https://aka.ms/vs/17/release/vc_redist.x64.exe)) if you haven't done so before.
 
 _Resizable BAR_ (Base Address Register) or _AMD SAM_ (Smart Access Memory) found in modern hardware can significantly increase performance when using the Flair Graph.
 {: .info}

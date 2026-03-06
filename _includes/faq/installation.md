@@ -17,3 +17,43 @@ To do this manually, follow the steps below:
 1. (Windows) Copy the edited _flair.mod_ and paste it in `Program Files/Common Files/Autodesk Shared/Modules/Maya/202X` (paste it in the Maya version that you want to install Flair in).
 1. Restart Maya.
 </div>
+
+Flair doesn't load on macOS
+<div markdown="1">
+macOS is particularly strict when an app has not been “vetted” through the App Store. You will need to allow `flairEngine.bundle` and `libomp.dylib` to run in your system.
+
+<div class="d-flex">
+	<figure class="aio-ui-mac">
+    <img src="/media/setup/macos_warning_flair.png" alt="macOS warning prompt about flairEngine.bundle">
+		<figcaption>flairEngine.bundle is the Flair plugin.</figcaption>
+	</figure>
+	<figure class="aio-ui-mac">
+        <img src="/media/setup/macos_warning_libomp.png" alt="macOS warning prompt about libomp.dylib">
+		<figcaption>libomp.dylib is a Flair dependency.</figcaption>
+	</figure>
+</div>
+
+When these prompts appear, just click on `Done` to dismiss them. Then go to `Apple menu -> System Settings...->Privacy and Security`. At the bottom, you will find the blocked applications with the option to `Allow Anyway`. Do so for both the `flairEngine.bundle` and `libomp.dylib`.
+
+<div class="d-flex">
+	<figure class="aio-ui-mac">
+    <img src="/media/setup/macos_allow.png" alt="Privacy and Security section of System Settings with the Allow Anyway button">
+		<figcaption>Click on Allow Anyway to allow the Flair plugin to run on your system.</figcaption>
+	</figure>
+</div>
+
+Once you do so, the prompts will appear again, but this time with an option to `Open Anyway`.
+
+<div class="d-flex">
+	<figure class="aio-ui-mac">
+    <img src="/media/setup/macos_warning_flair_allow.png" alt="macOS warning prompt about flairEngine.bundle with the Allow option">
+		<figcaption>Click on Open Anyway to run the Flair plugin.</figcaption>
+	</figure>
+	<figure class="aio-ui-mac">
+        <img src="/media/setup/macos_warning_libomp_allow.png" alt="macOS warning prompt about libomp.dylib with the Allow option">
+		<figcaption>Click on Open Anyway to run the Flair plugin.</figcaption>
+	</figure>
+</div>
+
+Click on `Open Anyway` to allow Flair to run on your Mac.
+</div>

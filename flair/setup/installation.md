@@ -26,7 +26,7 @@ Installing Flair is as simple as a drag-and-drop.
 
 1. Make sure you have all [pre-requisites](/flair/setup/#pre-requisites)
 2. Download and extract all the contents of the Flair *zip* file into any folder outside of Maya  
-e.g., `Documents/Flair`, `C:/Flair`, a shared drive.
+e.g., `Documents/Flair`, `Downloads/Flair`, a shared drive.
 3. Open the folder where you extracted Flair into, this will become your installation folder
 4. Drag-and-drop the `install_maya.mel` file onto the Maya viewport
 5. Select for whom you want to install Flair for and click `Accept` ([see options](#installation-options))
@@ -57,6 +57,7 @@ The installer will only insert the Flair paths into your `Maya.env` file for the
 
 All flair-related files are kept within the Flair installation folder, except for the license file, which is placed in:
 * Windows: `Documents/maya`
+* macOS: `~/Library/Preferences/Autodesk/maya/`
 * Linux: `~/maya`
 
 The "Only for me" option allows keeping different versions of Flair on different versions of Maya. However, everyone using Flair will need read/write permissions to the Flair installation folder.
@@ -71,14 +72,17 @@ The Flair installation "For all users" requires admin/sudo privileges to place f
 
 **License and modules**
 * Windows: `%CommonProgramFiles%/Autodesk Shared/Modules/maya`
+* macOS: `/Users/Shared/Autodesk/modules/maya/`
 * Linux: `/usr/autodesk/modules/maya`
 
 **Canvas caches**
 * Windows: `%ProgramData%/Flair`
+* macOS: `/Users/Shared/Flair`
 * Linux: `opt/Flair`
 
 After installation and activation, artists will find their **presets and preferences** in:
 * Windows: `Documents/AppDocuments/Flair`
+* macOS: `~/Library/Preferences/Autodesk/AppDocuments/Flair`
 * Linux: `~/AppDocuments/Flair`
 
 If you need to customize where the _program data_ (caches) and _app documents_ (presets/preferences) are stored, you can follow the instructons within `flair/maya/scripts/coop/_custom_dirs_example.json`.

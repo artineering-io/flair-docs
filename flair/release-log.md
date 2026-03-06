@@ -23,7 +23,7 @@ nav_order: 10
 
 
 ## Flair 1.2
-> Released 03.03.2026
+> Released 0X.03.2026
 [[**Download**](https://artineering.io/software/flair#pricing)] 
 
 <figure class="release-log">
@@ -38,9 +38,9 @@ nav_order: 10
 
 Flair 1.2 is the **biggest update to Flair yet**, as we finally **added support for macOS** in Maya 2024+. This means that we now officially support all major operating systems! 
 
-As part of this update, we have also revamped licensing so that we can now **offer floating and permanent licenses**, in addition to our subscription-based licenses. We hope this now accommodates everyone's preferences :).
+As part of this update, we have also revamped licensing to also **offer floating and permanent licenses**, in addition to our subscription-based licenses. We hope this now accommodates everyone's preferences :).
 
-Alongside this refactoring, we have focused a lot on **performance improvements**, which can be felt most in **complex scenes, during saving/opening and rendering**. The **flairShader material has been extended to also function as a proxy** and styles with **lines have new features** to control the sketchiness based on depth, have more control over outlines and inlines and even have negative light response to achieve some cool noir styles! We have also made a lot of other improvements and fixes that can be read in detail below.
+Alongside this refactoring, we have focused a lot on **performance improvements**, which can be felt most in **complex scenes, during saving/opening and rendering**. The **flairShader material has been extended to also function as a proxy** and styles with **lines have new features** to control the **sketchiness based on depth**, have more **control over outlines and inlines** and even have negative light response to achieve some cool **noir styles**! We have also made a lot of other improvements and fixes that detailed below.
 
 > **Upgrading from version 1.1 should be seamless** and there should only be minor visual changes in case you are using the `Wobble Blur` effect or had a very small `Color Edge Threshold` for generating Lines.
 
@@ -50,6 +50,11 @@ Alongside this refactoring, we have focused a lot on **performance improvements*
 - *Improved* - Online licenses can now be migrated after 6 hours from a previous activation
 - *Fixed* - Brand new Windows computers not being able to activate Flair because `wmic` was removed
 - *Fixed* - Installation not working if the previous installation folder was missing
+
+<figure class="aio-ui-highres aio-window">
+    <img src="/media/setup/activation_server.png" alt="Flair server activation">
+    <figcaption>Enter the port number and hostname or ip address in the text fields.</figcaption>
+</figure>
 
 ### Sequence Renderer
 - *Improved* - Async saving of images to speed up rendering
@@ -73,6 +78,17 @@ Alongside this refactoring, we have focused a lot on **performance improvements*
 - *New* - Updated Nuke scripts and Fusion fuses to support Outline and Inline colorations
 - *New* - Added negative light response to show lines in shaded parts of the scene (noir style)
 
+<figure>
+    <div class="twentytwenty-container before-after">
+        <!-- The before image is first -->
+        <img src="/media/release-log/1.2/baker.jpg"/>
+        <!-- The after image is last -->
+        <img src="/media/release-log/1.2/baker_noir.jpg"/>
+    </div>
+    <figcaption>Before and after negative light response. 3D model by Conrad Justin.</figcaption>
+</figure>
+
+
 ### Bulk Attribute Tool
 - *Fixed* - Bulk Attribute tool not showing widgets in some Maya versions
 - *Fixed* - Bulk Attribute tool refresh button not working under certain conditions
@@ -91,6 +107,11 @@ Alongside this refactoring, we have focused a lot on **performance improvements*
 - *Fixed* - flairGlobals node being created in non-Flair scenes when Flair was previously active in the viewport
 - *Fixed* - Converting materials to Flair not working correctly when attributes were plain color
 - *Fixed* - Incorrect viewport API information if `MAYA_VP2_DEVICE_OVERRIDE` environment variable was set
+
+<figure>
+	<img src="/media/release-log/1.2/baker_noir_geo_blur.jpg" alt="Baker and the Bridge scene in a noir style with Geo Blur"/>
+    <figcaption>Same scene with negative light response and Geo Blur. 3D model by Conrad Justin.</figcaption>
+</figure>
 
 
 ## Flair 1.1.4
@@ -148,7 +169,7 @@ Flair 1.1.3 **improves upon toon and sketch lines**, exposes our **API to automa
 * *Fixed* - Removed noise from single pixels
 
 <figure>
-    <div class="twentytwenty-container 1-1-3-comparison">
+    <div class="twentytwenty-container comparison-1-1-3">
         <!-- The before image is first -->
         <img src="/media/release-log/1.1.3/nuke_1_1_2.jpg"/>
         <!-- The after image is last -->
@@ -172,7 +193,7 @@ Flair 1.1.3 **improves upon toon and sketch lines**, exposes our **API to automa
 * *Reverted* - "Soft" cast shadow with TAA, as these were creating polygonal artifacts and shadow flickering
 
 <figure>
-    <div class="twentytwenty-container 1-1-3-comparison">
+    <div class="twentytwenty-container comparison-1-1-3">
         <!-- The before image is first -->
         <img src="/media/release-log/1.1.3/lighting_1_1_2.jpg"/>
         <!-- The after image is last -->
@@ -593,7 +614,7 @@ Wobble *motion* can also be set per material to generate motion smears. The effe
 Simple lighting comparison between previous versions and Flair 1.0.3 using directional, spot, point and ambient lights with color-plane light-shafts.
 
 <figure>
-    <div id="1-0-3-comparison" class="twentytwenty-container">
+    <div id="comparison-1-0-3" class="twentytwenty-container">
         <!-- The before image is first -->
         <img src="/media/release-log/1.0.3/lighting_1_0_2.jpg"/>
         <!-- The after image is last -->
@@ -610,11 +631,15 @@ Simple lighting comparison between previous versions and Flair 1.0.3 using direc
 
 <script>
   $(function(){
-    $("#1-0-3-comparison").twentytwenty({
+    $("#comparison-1-0-3").twentytwenty({
     before_label: 'Flair 1.0.2', // Set a custom before label
     after_label: 'Flair 1.0.3', // Set a custom after label
     });
-	$(".1-1-3-comparison").twentytwenty({
+	$(".before-after").twentytwenty({
+    before_label: 'Before', // Set a custom before label
+    after_label: 'After', // Set a custom after label
+    });
+	$(".comparison-1-1-3").twentytwenty({
     before_label: 'Flair 1.1.2', // Set a custom before label
     after_label: 'Flair 1.1.3', // Set a custom after label
     });
