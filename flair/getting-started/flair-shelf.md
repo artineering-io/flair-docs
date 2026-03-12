@@ -46,7 +46,7 @@ The lighting and inspecting tools allow to easily create the supported lights wi
 
 ## Rendering
 1. **TBOX** - opens the _Flair Toolbox_, containing useful functions to work with Flair in production [[docs](/flair/toolbox/)].
-1. **FLOAT** - opens a floating viewport with a 1280 x 720 resolution.  
+1. **FLOAT** - opens a floating viewport with a 1280 x 720 resolution, or a resolution defined in the `FLAIR_FV_CUSTOM_RES` environment variable e.g., `FLAIR_FV_CUSTOM_RES=1280x720`.  
 `Right click -> Float viewport 1024 x 540` opens a floating viewport with a 1024 x 540 resolution.  
 `Right click -> Float viewport 1080 x 1080` opens a floating viewport with a 1080 x 1080 square resolution.  
 `Right click -> Float viewport 1920 x 1080` opens a floating viewport with a 1920 x 1080 resolution (Full HD).  
