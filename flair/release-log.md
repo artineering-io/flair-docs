@@ -42,7 +42,7 @@ As part of this update, we have also revamped licensing to also **offer floating
 
 Alongside this refactoring, we have focused a lot on **performance improvements**, which can be felt most in **complex scenes, during saving/opening and rendering**. The **flairShader material has been extended to also function as a proxy** and styles with **lines have new features** to control the **sketchiness based on depth**, have more **control over outlines and inlines** and even have negative light response to achieve some cool **noir styles**! We have also made a lot of other improvements and fixes that detailed below.
 
-> **Upgrading from version 1.1 should be seamless** and there should only be minor visual changes in case you are using the `Wobble Blur` effect or had a very small `Color Edge Threshold` for generating Lines.
+> **Upgrading from version 1.1 should be seamless** and there should only be minor visual changes in case you are heavily using the `Wobble Blur` effect, ambient occlusion, or had a very small `Color Edge Threshold` for generating Lines.
 
 ### Licensing and Installation
 - *New* - [Revamped Flair licensing](/flair/setup/activation/) to support _floating_ and _permanent_ licenses
@@ -103,6 +103,7 @@ Alongside this refactoring, we have focused a lot on **performance improvements*
 - *Improved* - Wobble deformations are now equally averaged to achieve better diffusion
 - *Improved* - Default NoiseFX amount is now set to 0.0 to shift NoiseFX values without noise when needed (offsetting the effect evenly)
 - *Improved* - Added tooltip with full names on presets
+- *Fixed* - Ambient Occlusion always darkening/saturating the color with TAA
 - *Fixed* - Appearance of certain windows on high-resolution screens
 - *Fixed* - flairGlobals node being created in non-Flair scenes when Flair was previously active in the viewport
 - *Fixed* - Converting materials to Flair not working correctly when attributes were plain color
