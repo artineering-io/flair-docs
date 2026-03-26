@@ -23,7 +23,7 @@ nav_order: 10
 
 
 ## Flair 1.2
-> Released 0X.03.2026
+> Released 26.03.2026
 [[**Download**](https://artineering.io/software/flair#pricing)] 
 
 <figure class="release-log">
@@ -40,14 +40,18 @@ Flair 1.2 is the **biggest update to Flair yet**, as we finally **added support 
 
 As part of this update, we have also revamped licensing to also **offer floating and permanent licenses**, in addition to our subscription-based licenses. We hope this now accommodates everyone's preferences :).
 
-Alongside this refactoring, we have focused a lot on **performance improvements**, which can be felt most in **complex scenes, during saving/opening and rendering**. The **flairShader material has been extended to also function as a proxy** and styles with **lines have new features** to control the **sketchiness based on depth**, have more **control over outlines and inlines** and even have negative light response to achieve some cool **noir styles**! We have also made a lot of other improvements and fixes that detailed below.
+Alongside these changes, we have focused a lot on **performance improvements**, which can be felt most in **complex scenes, during saving/opening and rendering**. The **flairShader material has been extended to also function as a proxy** and styles with **lines have new features** to control the **sketchiness based on depth**, have more **control over outlines and inlines** and even have negative light response to achieve some cool **noir styles**! 
+
+We have also made a lot of other improvements and fixes detailed below.
+
+{% include responsive-embed url="https://www.youtube.com/embed/OQbQdRzUxRM" width="60%"  caption="Flair 1.2 - new features!" %}
 
 > **Upgrading from version 1.1 should be seamless** and there should only be minor visual changes in case you are heavily using the `Wobble Blur` effect, ambient occlusion, or had a very small `Color Edge Threshold` for generating Lines.
 
 ### Licensing and Installation
 - *New* - [Revamped Flair licensing](/flair/setup/activation/) to support _floating_ and _permanent_ licenses
 - *New* - [Licensing server](/flair/setup/relay/) to manage floating licenses
-- *Improved* - Online licenses can now be migrated after 6 hours from a previous activation
+- *Improved* - Online licenses can now be migrated to a new machine 6 hours after the previous activation
 - *Fixed* - Brand new Windows computers not being able to activate Flair because `wmic` was removed
 - *Fixed* - Installation not working if the previous installation folder was missing
 
@@ -58,16 +62,16 @@ Alongside this refactoring, we have focused a lot on **performance improvements*
 
 ### Sequence Renderer
 - *Improved* - Async saving of images to speed up rendering
-- *Improved* - Rendering beyond 32 TAA samples improving anti-aliasing (up to 254 samples)
+- *Improved* - Rendering beyond 32 TAA samples continuously improves anti-aliasing (up to 254 samples)
 - *Improved* - Sequence Renderer can now list unlimited cameras
 - *Fixed* - Sequence Renderer camera list not updating under certain conditions
 
 ### Flair Materials
-- *New* - Extended the flairShader material to replace the old ShaderFX proxy material. This means that any flairShader material can now become a proxy material with just a toggle! Therefore, the new proxies now also support `Wobble`, `Offsets` and different types of *NoiseFX*.
+- *New* - Any flairShader material can now double as a proxy with a single toggle, replacing the old ShaderFX proxy material. The new proxies now also support `Wobble`, `Offsets` and different types of *NoiseFX*.
 - *Improved* - Keyed attributes in flairShader materials now also work in Parallel and Serial evaluation modes
 - *Improved* - All Flair material attributes now appear in the Channel Box
 - *Improved* - Flair material attributes now appear on the Attribute Spreadsheet
-- *Fixed* - GPU Memory leak when materials were assigned to components and the timeline was scrubbed
+- *Fixed* - GPU memory leak when materials were assigned to components and the timeline was scrubbed
 - *Fixed* - AOV blend to follow alpha/transparency textures
 - *Fixed* - Vertex-baking not working when materials were also assigned to unsupported shapes
 
@@ -103,7 +107,7 @@ Alongside this refactoring, we have focused a lot on **performance improvements*
 - *Improved* - Wobble deformations are now equally averaged to achieve better diffusion
 - *Improved* - Default NoiseFX amount is now set to 0.0 to shift NoiseFX values without noise when needed (offsetting the effect evenly)
 - *Improved* - Added tooltip with full names on presets
-- *Fixed* - Ambient Occlusion always darkening/saturating the color with TAA
+- *Fixed* - Ambient Occlusion always darkening/saturating the color slightly with TAA
 - *Fixed* - Appearance of certain windows on high-resolution screens
 - *Fixed* - flairGlobals node being created in non-Flair scenes when Flair was previously active in the viewport
 - *Fixed* - Converting materials to Flair not working correctly when attributes were plain color
