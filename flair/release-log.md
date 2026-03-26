@@ -118,6 +118,7 @@ We have also made a lot of other improvements and fixes detailed below.
     <figcaption>Same scene with negative light response and Geo Blur. 3D model by Conrad Justin.</figcaption>
 </figure>
 
+---
 
 ## Flair 1.1.4
 > Released 28.03.2025
@@ -149,6 +150,7 @@ Flair 1.1.4 brings **Flair to Maya 2026**, initial support to automatically **c
 - *Improved* - Flair will not change the viewport if it has been used but was not active upon saving
 - *Fixed  - Wobble* always changing to `Simple` even though it was set to `Cloud` once material attributes where applied (presets or during import)
 
+---
 
 ## Flair 1.1.3
 > Released 12.11.2024
@@ -241,6 +243,7 @@ Flair 1.1.3 **improves upon toon and sketch lines**, exposes our **API to automa
 <figcaption>Demonstrating the Import/Export API - model and animation by Jose Díaz.</figcaption>
 </figure>
 
+---
 
 ## Flair 1.1.2
 > Released 21.08.2024
