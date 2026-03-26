@@ -56,4 +56,6 @@ Once you do so, the prompts will appear again, but this time with an option to `
 </div>
 
 Click on `Open Anyway` to allow Flair to run on your Mac.
+
+If you can't see the _flairShader_ material render, restart Maya one last time so that Flair can run normally with all permissions set.
 </div>
