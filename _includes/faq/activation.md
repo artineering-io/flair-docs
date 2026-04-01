@@ -9,7 +9,13 @@ The email is most likely in your spam folder. Please double-check the spam folde
 If the license still has not arrived within an hour [contact us](https://artineering.io/contact) to help you get started.
 </div>
 
-The viewport is all black and I get the Error compiling GLSL code. 
+Flair freezes on Linux during activation
+<div markdown="1">
+If Maya freezes after claiming a license, it could be that the required QtWebEngine dependencies are not found. The easiest workaround is to add an environment variable to auto-accept the Flair EULA with `FLAIR_ACCEPT_EULA=1`.  
+Yes, Linux can be a pain sometimes as every Linux distribution is different.
+</div>
+
+The viewport is all black and I get the Error compiling GLSL code on Windows. 
 <div markdown="1">
 This can happen when the viewport is forced to use DirectX (e.g., with an environment variable) instead of OpenGL. 
 
