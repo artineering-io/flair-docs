@@ -5,7 +5,7 @@ Yes, of course! As a student, you can either use the Free version or support us 
 
 Are there floating licenses available?
 <div markdown="1">
-Not at the moment, though if you are looking to purchase many licenses and need this flexibility, we can add this option. Currently, we only offer online or custom offline licenses. Online licenses are only node-locked to a computer for 12 hours after a previous activation, which means that they could be migrated on the next working day.
+Yes, floating licenses are available when purchasing multiple Flair _STUDIO_ or _INDIE for Education_ licenses [directly through us](https://artineering.io/contact). More details on floating licenses can be found [here](/flair/setup/activation/#floating-licenses).
 </div>
 
 Are there offline licenses available?
