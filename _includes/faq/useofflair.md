@@ -10,5 +10,5 @@ Yes, floating licenses are available when purchasing multiple Flair _STUDIO_ or 
 
 Are there offline licenses available?
 <div markdown="1">
-Yes, custom offline licenses can be offered to studios whose workstations don't have internet access due to security reasons. These are only offered when purchasing 10 or more licenses and are a bit more expensive as they require custom branded builds of Flair for each release.
+Yes, floating licenses work entirely offline and can be used by studios whose workstations don't have internet access due to security reasons.
 </div>
