@@ -21,16 +21,41 @@ nav_order: 10
 
 ---
 
+## Flair 1.2.1
+> Released 29.08.2026
+[[**Download**](https://artineering.io/software/flair#pricing)] 
+
+<figure class="release-log">
+<video autoplay loop muted playsinline>
+	<source src="/media/release-log/1.2.1/banner_1_2_1_web.mp4" type="video/mp4">
+</video>
+<figcaption>3D model and animation by <a href="https://create3dcharacters.com/" target="_blank">Create 3d Characters</a>.</figcaption>
+</figure>
+
+> Flair for Maya 2027
+
+Flair 1.2.1 brings **support for Maya 2027**, fixes a regression issue when rendering shadow maps of materials with displacement, restores auto-conversion of Standard Surface materials under certain conditions, brings back the footer buttons of the Bulk Attribute tool, and improves the robustness of existing functionality.
+
+### Miscellaneous
+- *New* - Added support for Maya 2027 (windows/macOS/linux)
+- *Fixed* - Shadow maps of materials with displacement not working correctly
+- *Fixed* - Auto-converting Standard Surface materials to Flair materials not working correctly under certain conditions
+- *Fixed* - Bulk Attribute tool not showing footer buttons
+- *Improved* - Robustness when importing styles
+- *Improved* - Bulk Attribute tool properly handles inflated instances in Warp style
+- *Improved* - Error handling within floating licenses to ease troubleshooting
+
+
+
 
 ## Flair 1.2
 > Released 26.03.2026
-[[**Download**](https://artineering.io/software/flair#pricing)] 
 
 <figure class="release-log">
 <video autoplay loop muted playsinline>
 	<source src="/media/release-log/1.2/banner_1_2_web.mp4" type="video/mp4">
 </video>
-<figcaption>3D model and animation by <a href="https://fab.com/s/da482b10be5b" target="_blank">Tom Breuer</a></figcaption>
+<figcaption>3D model and animation by <a href="https://fab.com/s/da482b10be5b" target="_blank">Tom Breuer.</a></figcaption>
 </figure>
 
 
