@@ -46,7 +46,7 @@ Flair 1.2.1 brings **support for Maya 2027**, fixes a regression issue when rend
 - *Improved* - Error handling within floating licenses to ease troubleshooting
 
 
-
+---
 
 ## Flair 1.2
 > Released 26.03.2026
