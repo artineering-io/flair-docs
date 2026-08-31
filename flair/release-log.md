@@ -22,7 +22,7 @@ nav_order: 10
 ---
 
 ## Flair 1.2.1
-> Released 29.08.2026
+> Released 31.08.2026
 [[**Download**](https://artineering.io/software/flair#pricing)] 
 
 <figure class="release-log">
