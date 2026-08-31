@@ -32,9 +32,9 @@ nav_order: 10
 <figcaption>3D model and animation by <a href="https://create3dcharacters.com/" target="_blank">Create 3d Characters</a>.</figcaption>
 </figure>
 
-> Flair for Maya 2027
+> Keeping up with Maya!
 
-Flair 1.2.1 brings **support for Maya 2027**, fixes a regression issue when rendering shadow maps of materials with displacement, restores auto-conversion of Standard Surface materials under certain conditions, brings back the footer buttons of the Bulk Attribute tool, and improves the robustness of existing functionality.
+Flair 1.2.1 brings **support for Maya 2027**, fixes a regression issue when rendering shadow maps of materials with displacement, restores auto-conversion of Standard Surface materials, brings back the footer buttons of the Bulk Attribute tool, and improves the robustness of existing functionality.
 
 ### Miscellaneous
 - *New* - Added support for Maya 2027 (windows/macOS/linux)
